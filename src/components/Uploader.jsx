@@ -5,7 +5,7 @@ import DragImage from "./DragImage"
 const Uploader = () => {
     const [ loading, setLoading] = useState(false)
   return (
-    <section>
+    <section className="w-full flex justify-center ">
         {loading ? <LoaderImage/> : <DragImage/>}
     </section>
   )

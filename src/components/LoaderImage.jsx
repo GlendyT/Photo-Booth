@@ -2,8 +2,8 @@ import React from 'react'
 
 const LoaderImage = () => {
   return (
-    <div>
-      <h3>Uploading....</h3>
+    <div className=''>
+      <h3 className=''>Uploading....</h3>
 
 
     <div>
