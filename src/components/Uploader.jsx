@@ -1,17 +1,10 @@
-import React, { useState } from "react";
-import LoaderImage from "./LoaderImage";
-import DragImage from "./DragImage";
+import React from "react";
+import DragImage from "./DragImage/DragImage";
 
 const Uploader = () => {
-  const [loading, setLoading] = useState(false);
-  const [file, setFile] = useState(null);
   return (
     <section className="w-full flex justify-center ">
-      {loading ? (
-        <LoaderImage file={file} setFile={setFile} setLoading={setLoading} />
-      ) : (
-        <DragImage setMedia={setFile} setLoading={setLoading} />
-      )}
+      <DragImage />
     </section>
   );
 };

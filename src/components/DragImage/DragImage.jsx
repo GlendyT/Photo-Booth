@@ -1,12 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
+//import background from "../components/img/bg-upload.svg"
 import "./Dragimage.css";
 
-const DragImage = ({ setMedia, setLoading }) => {
-  const [file, setFile] = useState(null);
+
+const DragImage = () => {
+  //const [file, setFile] = useState(null);
+  const [polaroid, setPolaroid] = useState([])
   const [error, setError] = useState(false);
   const [messageError, setMessageError] = useState("");
   const [image, setImage] = useState(null);
-  const [classDrag, setClassDrag] = useState("drag_image");
+  const [changeColor, setChangeColor] = useState(false)
 
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
   const refInputFile = useRef(null);
@@ -15,8 +18,8 @@ const DragImage = ({ setMedia, setLoading }) => {
     refInputFile.current.click();
   };
 
-  const isImageValid = (file) => {
-    if (file && typeImages.includes(file.type)) {
+  const isImageValid = (polaroid) => {
+    if (polaroid && typeImages.includes(polaroid.type)) {
       setError(false);
       return true;
     } else {
@@ -27,54 +30,57 @@ const DragImage = ({ setMedia, setLoading }) => {
     }
   };
 
-  const showImage = (file) => {
+  const showImage = (polaroid) => {
     const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
+    fileReader.readAsDataURL(polaroid);
 
     fileReader.addEventListener("load", (e) => {
       setImage(e.target.result);
     });
-    setFile(file);
-    /*Guardamos el archivo para pasarlo a su padre*/
-    setMedia(file);
+    setPolaroid(polaroid);
   };
   const addImage = (e) => {
     e.preventDefault();
 
     refInputFile.current.files = e.dataTransfer.files;
-    const file = refInputFile.current.files[0];
+    const polaroid = refInputFile.current.files[0];
 
-    showImage(file);
+    showImage(polaroid);
   };
 
   const uploadImage = (e) => {
     const files = e.target.files;
-    const file = files[0];
+    const polaroid = files[0];
 
-    const valid = isImageValid(file);
+    const valid = isImageValid(polaroid);
 
     if (valid) {
-      showImage(file);
+      showImage(polaroid);
     } else {
-      setFile(null);
+      setPolaroid(null);
     }
   };
 
   const handleSave = () => {
-    const valid = isImageValid(file);
-    if (valid && file) {
-      setLoading(true);
+    const valid = isImageValid(polaroid);
+    if (valid && polaroid) {
     } else {
       setError(true);
       setMessageError("Upload a correct image");
     }
   };
 
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setChangeColor(!changeColor)
+// Restaura la clase por defecto
+  };
+
   const handleDragLeave = (e) => {
     e.preventDefault();
-    setClassDrag("drag_image"); // Restaura la clase por defecto
+    setChangeColor(!changeColor)
+
   };
-  
 
   useEffect(() => {
     setTimeout(() => {
@@ -83,7 +89,7 @@ const DragImage = ({ setMedia, setLoading }) => {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center  p-4 ">
       <h2 className=" uppercase font-bold text-purple-900 text-2xl">
         Upload Your Image
       </h2>
@@ -96,25 +102,22 @@ const DragImage = ({ setMedia, setLoading }) => {
         ref={refInputFile}
         onChange={uploadImage}
       />
+
       <div
-        className={classDrag}
+        className={` w-48 bg-dragimg bg-no-repeat bg-contain  ${(changeColor === true) ? '' : 'border-transparent'}`}
         onClick={selectImage}
         onDrop={addImage}
-        onDragOver={(e) => {
-          e.preventDefault();
-          setClassDrag("drag_image");
-        }}
+        onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
       >
-        <img src={image} alt="" className="drag_image_prev" />
-        <span className="text-black ">Click or Drag your Image Here</span>
+        <img src={image} alt="" className="bg-white px-4 pt-4 pb-10" />
+        <h1 className="text-black text-center">Click or Drag your Image Here</h1>
       </div>
 
       <button
-        className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-4"
+        className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-12 disabled:opacity-10"
         onClick={handleSave}
       >
-        {" "}
         Take the Picture
       </button>
     </div>
