@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 //import background from "../components/img/bg-upload.svg"
 import "./Dragimage.css";
+import Loader from "../Loader/Loader";
 
 
 const DragImage = () => {
@@ -16,6 +17,7 @@ const DragImage = () => {
 
   const selectImage = (e) => {
     refInputFile.current.click();
+    setChangeColor(!changeColor)
   };
 
   const isImageValid = (polaroid) => {
@@ -72,7 +74,7 @@ const DragImage = () => {
 
   const handleDragOver = (e) => {
     e.preventDefault();
-    setChangeColor(!changeColor)
+
 // Restaura la clase por defecto
   };
 
@@ -89,7 +91,7 @@ const DragImage = () => {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center  p-4 ">
+    <div className="flex flex-col items-center  p-4 bg-white">
       <h2 className=" uppercase font-bold text-purple-900 text-2xl">
         Upload Your Image
       </h2>
@@ -104,22 +106,23 @@ const DragImage = () => {
       />
 
       <div
-        className={` w-48 bg-dragimg bg-no-repeat bg-contain  ${(changeColor === true) ? '' : 'border-transparent'}`}
+        className={` bg-dragimg bg-no-repeat bg-contain  ${(changeColor === true) ? " w-72 border-transparent" : "w-64 h-56 border-dashed border-4 border-gray-600"} `}
         onClick={selectImage}
         onDrop={addImage}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
       >
         <img src={image} alt="" className="bg-white px-4 pt-4 pb-10" />
-        <h1 className="text-black text-center">Click or Drag your Image Here</h1>
+        <h1 className={`text-center ${(changeColor === true ) ? "text-transparent" : "text-black pt-32"}`}>Click or Drag your Image Here</h1>
       </div>
 
       <button
-        className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-12 disabled:opacity-10"
+        className="bg-purple-800 rounded-lg text-white font-bold p-2 disabled:opacity-10"
         onClick={handleSave}
       >
         Take the Picture
       </button>
+      
     </div>
   );
 };
