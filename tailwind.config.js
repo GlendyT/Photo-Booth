@@ -5,7 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      backgroundImage: theme => ({
+        "dragimg" :"url('/src/components/img/bg-upload.svg')",
+      })
     },
   },
   plugins: [],
