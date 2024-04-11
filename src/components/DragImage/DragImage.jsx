@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-//import background from "../components/img/bg-upload.svg"
 import "./Dragimage.css";
-import Loader from "../Loader/Loader";
+//import Loader from "../Loader/Loader";
 
 
 const DragImage = () => {
@@ -91,12 +90,12 @@ const DragImage = () => {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center  p-4 bg-white">
+    <div className="flex flex-col items-center  p-4 backdrop-blur-sm bg-white/50 ">
       <h2 className=" uppercase font-bold text-purple-900 text-2xl">
-        Upload Your Image
+        Are you ready?
       </h2>
       <div className="font-bold">File Should be in jpge or png</div>
-      {error && <div>{messageError}</div>}
+      {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
 
       <input
         type="file"
@@ -117,10 +116,11 @@ const DragImage = () => {
       </div>
 
       <button
-        className="bg-purple-800 rounded-lg text-white font-bold p-2 disabled:opacity-10"
+        className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-4 disabled:opacity-10"
         onClick={handleSave}
+        
       >
-        Take the Picture
+       
       </button>
       
     </div>

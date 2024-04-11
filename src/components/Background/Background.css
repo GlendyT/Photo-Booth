@@ -1,44 +1,43 @@
 body {
-    padding: 0;
-    margin: 0;
-    background: rgb(222, 157, 252);
-    min-height: 100vh;
+
+  background: #7e5fa0;
+
 }
 
 .rain-container {
-    inset: 0;
-    overflow: hidden;
-    position: fixed;
-    z-index: -4;
+  inset: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: -4;
 }
-@keyframes animation{
-    0%{
-        transform: translate(var(--x-start), var(--y-start))rotate(0);
-    }100%{
-        transform: translate(var(--x-end), var(--y-end))rotate(50deg);
-    }
+@keyframes animation {
+  0% {
+    transform: translate(var(--x-start), var(--y-start)) rotate(0);
+  }
+  100% {
+    transform: translate(var(--x-end), var(--y-end)) rotate(50deg);
+  }
 }
 
 .rainDrop {
-    font-size: var(--sz);
-    animation: animation 15s linear infinite;
-    transform: translate(var(--x-start), -15vh) rotate(0);
-    opacity: var(--a);
+  animation: animation 10s linear infinite;
+  transform: translate(var(--x-start), var(--y-start)) rotate(0);
+  opacity: var(--a);
 }
 
 .rainDrop--s {
     --sz: 5rem;
-    --a: 0.8;
-    --x-start:25vw;
-    --x-end:50;
-    --y-start:50;
-    --y-end:25vh;
-    position: absolute;
+    --a: 10;
+    --x-start: 25vw;/* Posición intermedia para crear el efecto de oscilación */
+    --x-end: 50vw;
+    --y-start: -20vh; /* Posición inicial arriba de la pantalla *//* Posición media para la oscilación */
+    --y-end: 25vh;
+    z-index: 20;
 }
 
 .rainDrop--m {
     --sz: 2rem;
-    --a: 0.8;
+    --a: 5;
     --x-start:50vw
     --x-end:50;
     --y-start:50;
@@ -48,17 +47,17 @@ body {
 }
 .rainDrop--l {
     --sz: 3rem;
-    --a: 0.8;
-    --x-start:75vw;
-    --x-end:0;
-    --y-start:0;
-    --y-end:75vh;
+    --a: 15;
+    --x-start:25vw;
+    --x-end:50;
+    --y-start:-20;
+    --y-end:25vh;
     position: absolute;
     z-index: 80;
 }
 .rainDrop--xl {
     --sz: 6rem;
-    --a: 0.5;
+    --a: 0.8;
     --x-start:75vw;
     --x-end:0;
     --y-start:0;
