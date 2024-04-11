@@ -21,7 +21,7 @@ body {
 
 .rainDrop {
     font-size: var(--sz);
-    animation: animation 30s linear infinite;
+    animation: animation 15s linear infinite;
     transform: translate(var(--x-start), -15vh) rotate(0);
     opacity: var(--a);
 }
