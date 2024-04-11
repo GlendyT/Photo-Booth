@@ -1,22 +1,20 @@
-import React, { useState, useRef, useEffect } from "react";
-import "./Dragimage.css";
+import React, { useState,useEffect } from "react";
+
 //import Loader from "../Loader/Loader";
 
-
-const DragImage = () => {
-  const [polaroid, setPolaroid] = useState([])
+const Photo2 = ({changeColor, refInputFile, selectImage, setChangeColor}) => {
+  //const [file, setFile] = useState(null);
+  const [polaroid, setPolaroid] = useState([]);
   const [error, setError] = useState(false);
-  const [messageError, setMessageError] = useState("");
+  const [setMessageError] = useState("");
   const [image, setImage] = useState(null);
-  const [changeColor, setChangeColor] = useState(false)
+ 
 
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
-  const refInputFile = useRef(null);
 
-  const selectImage = (e) => {
-    refInputFile.current.click();
-    setChangeColor(!changeColor)
-  };
+  const handleSelect = () => {
+    selectImage();
+  }
 
   const isImageValid = (polaroid) => {
     if (polaroid && typeImages.includes(polaroid.type)) {
@@ -64,15 +62,13 @@ const DragImage = () => {
   const handleDragOver = (e) => {
     e.preventDefault();
 
-// Restaura la clase por defecto
+    // Restaura la clase por defecto
   };
 
   const handleDragLeave = (e) => {
     e.preventDefault();
-    setChangeColor(!changeColor)
-
+    setChangeColor(!changeColor);
   };
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -81,10 +77,7 @@ const DragImage = () => {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center  backdrop-blur-sm bg-white/50 ">
-
-      {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
-
+    <div className="flex flex-col items-center backdrop-blur-sm bg-white/50 pb-10 ">
       <input
         type="file"
         name="file"
@@ -93,19 +86,27 @@ const DragImage = () => {
       />
 
       <div
-        className={` bg-dragimg bg-no-repeat bg-contain  ${(changeColor === true) ? " w-72 border-transparent bg-none" : "w-64 h-56 border-dashed border-4 border-gray-600"} `}
-        onClick={selectImage}
+        className={` bg-dragimg bg-no-repeat bg-contain  ${
+          changeColor === true
+            ? " w-72 border-transparent bg-none"
+            : "w-64 h-56 border-dashed border-4 border-gray-600"
+        } `}
+        onClick={handleSelect}
         onDrop={addImage}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
-        
       >
-        <img src={image} alt="" className="bg-white px-4" />
-        <h1 className={`text-center ${(changeColor === true ) ? "text-transparent" : "text-black "}`}>Click or Drag your Image Here</h1>
+        <img src={image} alt="" className="bg-white px-4 pb-10" />
+        <h1
+          className={`text-center ${
+            changeColor === true ? "text-transparent" : "text-black "
+          }`}
+        >
+          Click or Drag your Image Here
+        </h1>
       </div>
-
     </div>
   );
 };
 
-export default DragImage;
+export default Photo2;
