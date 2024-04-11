@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: white;
+    background: rgb(222, 157, 252);
     min-height: 100vh;
 }
 
@@ -21,50 +21,45 @@ body {
 
 .rainDrop {
     font-size: var(--sz);
-    filter: blur(var(--blur)) ;
-    animation: animation 20s linear infinite;
+    animation: animation 30s linear infinite;
     transform: translate(var(--x-start), -15vh) rotate(0);
     opacity: var(--a);
 }
 
 .rainDrop--s {
-    --sz: 1%;
-    --blur: 2px;
+    --sz: 5rem;
     --a: 0.8;
-    --x-start:50vw;
-    --x-end:0;
-    --y-start:0;
-    --y-end:100vh;
+    --x-start:25vw;
+    --x-end:50;
+    --y-start:50;
+    --y-end:25vh;
     position: absolute;
 }
 
 .rainDrop--m {
     --sz: 2rem;
-    --blur: 1px;
     --a: 0.8;
-    --x-start:50vw;
-    --x-end:0;
-    --y-start:0;
-    --y-end:100vh;
+    --x-start:50vw
+    --x-end:50;
+    --y-start:50;
+    --y-end:50vh;
     position: absolute;
     z-index: 50;
 }
 .rainDrop--l {
     --sz: 3rem;
-    --blur: 0px;
     --a: 0.8;
-    --x-start:50vw;
+    --x-start:75vw;
     --x-end:0;
     --y-start:0;
-    --y-end:100vh;
+    --y-end:75vh;
     position: absolute;
     z-index: 80;
 }
 .rainDrop--xl {
     --sz: 6rem;
-    --blur: 4px;
     --a: 0.5;
-    --x-start:50vw;
+    --x-start:75vw;
     --x-end:0;
     --y-start:0;
     --y-end:100vh;
