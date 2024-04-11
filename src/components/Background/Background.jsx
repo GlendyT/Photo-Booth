@@ -17,22 +17,11 @@ import rm1 from "../img/rm (2).jpg"
 
 import React, { useEffect } from "react";
 
-const COUNT = 20;
+const COUNT = 100;
 const SIZES = [
   "rainDrop--s",
-  "rainDrop--s",
-  "rainDrop--s",
-  "rainDrop--s",
-  "rainDrop--m",
-  "rainDrop--m",
-  "rainDrop--m",
   "rainDrop--m",
   "rainDrop--l",
-  "rainDrop--l",
-  "rainDrop--l",
-  "rainDrop--l",
-  "rainDrop--xl",
-  "rainDrop--xl",
   "rainDrop--xl",
 ];
 
@@ -53,6 +42,9 @@ const EMOJIES = [
     "🐰",
     "🐋",
     "🫰",
+    "🔍",
+    ""⍤⃝",
+
     
         "Kim Namjoon",
     "Kim SeokJin",
@@ -111,7 +103,6 @@ const Background = () => {
 
   return (
     <div className="rain-container">
-      {/* This container will be populated with raindrops */}
     </div>
   );
 };

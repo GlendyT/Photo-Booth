@@ -1,7 +1,7 @@
 input[type='file'] {
 	display: none;
 }
-
+/*
 .drag_image {
 		position: relative;
 		width: 100%;
@@ -14,7 +14,7 @@ input[type='file'] {
 		background-position: 65% 20px;
 		background-size: 80%;
 		overflow: hidden;	
-}
+}*/
 
 /*estilos polaroid
 		background-color:white;
@@ -24,7 +24,7 @@ input[type='file'] {
 		*/
 
 
-
+/*
 .drag_image_prev {
     position: relative;
     height: 100%;
