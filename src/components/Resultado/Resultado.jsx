@@ -35,17 +35,17 @@ const Resultado = () => {
         });
     }, [elementRef]);
   return (
-    <div>
+    <> 
       <div className=" pt-6 bg-white" ref={elementRef}>
-        <DragImage changeColor={changeColor} setChangeColor={setChangeColor} selectImage={selectImage} refInputFile={refInputFile} />
-        <Photo1 changeColor={changeColor} setChangeColor={setChangeColor} selectImage={selectImage} refInputFile={refInputFile} />
+        <DragImage />
+        <Photo1  />
         <Photo2 changeColor={changeColor} setChangeColor={setChangeColor} selectImage={selectImage} refInputFile={refInputFile}/>
       </div>
       <Button
        htmlToImageConvert={htmlToImageConvert}
        selectImage={selectImage} 
       />
-    </div>
+    </>
   );
 };
 

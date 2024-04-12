@@ -29,7 +29,6 @@ const DragImage = () => {
       return false;
     }
   };
-
   const showImage = (polaroid) => {
     const fileReader = new FileReader();
     fileReader.readAsDataURL(polaroid);
@@ -47,7 +46,6 @@ const DragImage = () => {
 
     showImage(polaroid);
   };
-
   const uploadImage = (e) => {
     const files = e.target.files;
     const polaroid = files[0];
@@ -60,7 +58,6 @@ const DragImage = () => {
       setPolaroid(null);
     }
   };
-
   const handleDragOver = (e) => {
     e.preventDefault();
 
@@ -72,8 +69,6 @@ const DragImage = () => {
     setChangeColor(!changeColor)
 
   };
-
-
   useEffect(() => {
     setTimeout(() => {
       setError(false);
@@ -81,7 +76,7 @@ const DragImage = () => {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center  backdrop-blur-sm bg-white/50 ">
+    <div className="flex flex-col items-center">
 
       {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
 
@@ -93,15 +88,19 @@ const DragImage = () => {
       />
 
       <div
-        className={` bg-dragimg bg-no-repeat bg-contain  ${(changeColor === true) ? " w-72 border-transparent bg-none" : "w-64 h-56 border-dashed border-4 border-gray-600"} `}
+        className={` bg-dragimg bg-no-repeat bg-contain  ${(changeColor === true) ? " w-64  max-sm:w-40 border-transparent bg-none" : "w-64 h-56 max-sm:w-32 max-sm:h-32 border-dashed border-4 border-gray-600"} `}
         onClick={selectImage}
         onDrop={addImage}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         
       >
-        <img src={image} alt="" className="bg-white px-4" />
-        <h1 className={`text-center ${(changeColor === true ) ? "text-transparent" : "text-black "}`}>Click or Drag your Image Here</h1>
+        <img src={image} alt="" className="bg-white px-4 pb-10 max-sm:pb-0 max-sm:px-1" />
+        <h1
+          className={`text-center ${
+            changeColor === true ? " text-transparent max-sm:text-xs max-sm:truncate"  : "text-black "
+          }`}
+        >Click or Drag your Image Here</h1>
       </div>
 
     </div>
