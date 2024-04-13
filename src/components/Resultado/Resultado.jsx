@@ -85,7 +85,7 @@ const Resultado = () => {
   return (
     <>
       <div
-        className={`pt-4 bg-white max-md:mx-10 max-xl:mx-14 m-auto px-2 ${changeColor === true ? "bg-white" : "bg-white"} `}
+        className={`pt-4 bg-white max-md:mx-auto max-xl:mx-auto m-auto px-2 ${changeColor === true ? "bg-white" : "bg-white"} `}
         ref={elementRef}
       >
         <Photo
