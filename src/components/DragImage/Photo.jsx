@@ -1,10 +1,8 @@
-
-
 import React from "react";
 
-const Photo2 = ({ image, inputRef, selectImage, addImage, changeColor }) => {
+const Photo = ({ image, inputRef, selectImage, addImage, changeColor }) => {
   return (
-    <div className="flex flex-col items-center pb-10 ">
+    <div className="flex flex-col items-center ">
       {image ? (
         <img
           src={image}
@@ -16,7 +14,7 @@ const Photo2 = ({ image, inputRef, selectImage, addImage, changeColor }) => {
           className={` bg-dragimg bg-no-repeat bg-contain  ${
             changeColor === true
               ? " w-64  max-sm:w-40 border-transparent bg-none"
-              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-4 border-gray-600"
+              : " w-40 h-40 max-sm:w-36 max-sm:h-36 min-md:w-20 border-dashed border-4 border-gray-600"
           } `}
           onClick={selectImage}
         >
@@ -42,4 +40,4 @@ const Photo2 = ({ image, inputRef, selectImage, addImage, changeColor }) => {
   );
 };
 
-export default Photo2;
+export default Photo;

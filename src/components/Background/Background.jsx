@@ -1,10 +1,10 @@
 import "./Background.css";
 import jk from "../img/jk (1).jpg"
 import jk2 from "../img/jk (2).jpg"
-import jimin from "../img/Jimin (1).jpg"
-import jimin1 from "../img/Jimin (2).jpg"
 import v from "../img/v (1).jpg"
 import v1 from "../img/v (2).jpg"
+import jimin from "../img/Jimin (1).jpg"
+import jimin1 from "../img/Jimin (2).jpg"
 import jhope from "../img/jhope (1).jpg"
 import jhope1 from "../img/jhope (2).jpg"
 import suga from "../img/suga (1).jpg"
