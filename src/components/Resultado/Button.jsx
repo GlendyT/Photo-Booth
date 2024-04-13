@@ -1,22 +1,25 @@
-import { useState } from "react";
 
-const Button = ({htmlToImageConvert}) => {
-    const [buttonDisabled, setButtonDisabled] = useState(false);
 
-    const handleDownload = () => {
-        setButtonDisabled(true)
-        htmlToImageConvert();
-    }
+const Button = ({ htmlToImageConvert,resetPhotos, changeColor}) => {
+
+  const handleDownload = () => {
+
+    htmlToImageConvert();
+  };
   return (
-    <div className="flex flex-col">
-      <button className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-4  disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors"
-      onClick={handleDownload}
-      disabled={buttonDisabled}
+    <div className="flex flex-row gap-2">
+      <button
+        className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-4  disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors max-sm:text-xs max-sm:mt-2"
+        onClick={handleDownload}
+
       >
         Save Photobooth
       </button>
 
-      <button className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-4  disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors"
+      <button
+        className="bg-purple-800 rounded-lg text-white font-bold p-2 mt-4  disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors max-sm:text-xs max-sm:mt-2"
+        onClick={resetPhotos}
+
       >
         Create Another One
       </button>
@@ -25,3 +28,4 @@ const Button = ({htmlToImageConvert}) => {
 };
 
 export default Button;
+
