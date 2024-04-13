@@ -2,23 +2,30 @@
 
 import React from "react";
 
-const Photo2 = ({ image, inputRef, selectImage, addImage, changeColor }) => {
+const Photo2 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
+
+
+  const handleColor = () => {
+    selectImage();
+  };
+
+
   return (
     <div className="flex flex-col items-center pb-10 ">
       {image ? (
         <img
           src={image}
           alt=""
-          className="bg-white px-4 pb-0 max-sm:pb-0 max-sm:px-1"
+          className=" px-2 pb-8 max-sm:pb-0 max-sm:px-1 w-64 max-sm:w-40"
         />
       ) : (
         <div
           className={` bg-dragimg bg-no-repeat bg-contain  ${
             changeColor === true
-              ? " w-64  max-sm:w-40 border-transparent bg-none"
+              ? " border-transparent bg-none"
               : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-4 border-gray-600"
           } `}
-          onClick={selectImage}
+          onClick={handleColor}
         >
           <h1
             className={`text-center ${

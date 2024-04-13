@@ -1,4 +1,3 @@
-
 import { toPng } from "html-to-image";
 import Photo from "../DragImage/Photo";
 import Photo1 from "../DragImage/Photo1";
@@ -11,9 +10,9 @@ const Resultado = () => {
   const [error, setError] = useState(false);
   const [setMessageError] = useState("");
   const [imageSaved, setImageSaved] = useState(false);
-  const [changeColor, setChangeColor] = useState(false)
+  const [changeColor, setChangeColor] = useState(false);
   const refInputFiles = [useRef(null), useRef(null), useRef(null)]; // Array of refs for each input
-  const elementRef = useRef(null); 
+  const elementRef = useRef(null);
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
 
   const selectImage = (index) => {
@@ -58,12 +57,13 @@ const Resultado = () => {
 
   const resetPhotos = () => {
     setPolaroids([]);
+    setChangeColor(false);
     setError(false);
     setImageSaved(false);
   };
 
   const htmlToImageConvert = useCallback(() => {
-    if(!elementRef.current) return;
+    if (!elementRef.current) return;
 
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
@@ -71,12 +71,11 @@ const Resultado = () => {
         link.download = "PhotoBooth";
         link.href = dataUrl;
 
-        link.addEventListener('click', () => {
+        link.addEventListener("click", () => {
           setImageSaved(true); // Set the state to true when the download starts
         });
 
         link.click();
-        
       })
       .catch((err) => {
         console.log(err);
@@ -85,14 +84,17 @@ const Resultado = () => {
 
   return (
     <>
-      <div className=" pt-6 bg-white mx-12  max-md:mx-1 max-xl:mx-1" ref={elementRef}>
+      <div
+        className={`pt-4 bg-white max-md:mx-10 max-xl:mx-14 m-auto px-2 ${changeColor === true ? "bg-white" : "bg-white"} `}
+        ref={elementRef}
+      >
         <Photo
           image={polaroids[0]}
           inputRef={refInputFiles[0]}
           selectImage={() => selectImage(0)}
           elementRef={elementRef}
           addImage={(e) => addImage(0, e)}
-          changeColor ={changeColor}
+          changeColor={setChangeColor}
         />
         <Photo1
           image={polaroids[1]}
@@ -100,7 +102,7 @@ const Resultado = () => {
           selectImage={() => selectImage(1)}
           elementRef={elementRef}
           addImage={(e) => addImage(1, e)}
-          changeColor= {changeColor}
+          changeColor={setChangeColor}
         />
         <Photo2
           image={polaroids[2]}
@@ -108,9 +110,9 @@ const Resultado = () => {
           selectImage={() => selectImage(2)}
           elementRef={elementRef}
           addImage={(e) => addImage(2, e)}
-          changeColor ={changeColor}
+          changeColor={setChangeColor}
         />
-        </div>
+      </div>
 
       <Button
         htmlToImageConvert={htmlToImageConvert}

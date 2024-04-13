@@ -9,7 +9,7 @@ function App() {
       <h2 className=" uppercase font-bold text-yellow text-2xl max-sm:text-xs ">
         Are you ready for FESTA?
       </h2>
-      <h3 className="font-bold pb-4 uppercase max-sm:text-xs max-sm:pb-2 " >Image Should be in jpge or png</h3>
+      <h3 className="font-bold pb-4 uppercase max-sm:text-xs max-sm:pb-2 max-sm:justify-center" >Image Should be in jpge or png</h3>
       <Resultado/>
     </section>
     </main>
