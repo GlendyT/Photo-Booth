@@ -3,7 +3,8 @@ import Photo from "../DragImage/Photo";
 import Photo1 from "../DragImage/Photo1";
 import Photo2 from "../DragImage/Photo2";
 import Button from "./Button";
-import { useCallback, useRef, useState } from "react";
+import Loader from "../Loader/Loader";
+import { useCallback, useRef, useState, useEffect } from "react";
 
 const Resultado = () => {
   const [polaroids, setPolaroids] = useState([]);
@@ -11,9 +12,19 @@ const Resultado = () => {
   const [setMessageError] = useState("");
   const [imageSaved, setImageSaved] = useState(false);
   const [changeColor, setChangeColor] = useState(false);
+
   const refInputFiles = [useRef(null), useRef(null), useRef(null)]; // Array of refs for each input
   const elementRef = useRef(null);
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
+
+  useEffect(() => {
+    if (imageSaved) {
+      const timer = setTimeout(() => {
+        setImageSaved(false);
+      }, 6000);
+      return () => clearTimeout(timer);
+    }
+  }, [imageSaved]);
 
   const selectImage = (index) => {
     refInputFiles[index].current.click();
@@ -64,6 +75,7 @@ const Resultado = () => {
 
   const htmlToImageConvert = useCallback(() => {
     if (!elementRef.current) return;
+    setImageSaved(true);
 
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
@@ -72,20 +84,25 @@ const Resultado = () => {
         link.href = dataUrl;
 
         link.addEventListener("click", () => {
-          setImageSaved(true); // Set the state to true when the download starts
+          setImageSaved(true);
+
         });
 
         link.click();
       })
       .catch((err) => {
         console.log(err);
+        setImageSaved(false);
       });
   }, [elementRef]);
+
 
   return (
     <>
       <div
-        className={`pt-4 bg-white max-md:mx-auto max-xl:mx-auto m-auto px-2 ${changeColor === true ? "bg-white" : "bg-white"} `}
+        className={`pt-4 bg-white max-md:mx-auto max-xl:mx-auto m-auto px-2 ${
+          changeColor === true ? "bg-white" : "bg-white"
+        } `}
         ref={elementRef}
       >
         <Photo
@@ -118,8 +135,11 @@ const Resultado = () => {
         htmlToImageConvert={htmlToImageConvert}
         resetPhotos={resetPhotos}
       />
-      {error && <div>{setMessageError}</div>}
-      {imageSaved && <div>Image Saved Successfully</div>}
+      {imageSaved && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <Loader />
+        </div>
+      )}
     </>
   );
 };

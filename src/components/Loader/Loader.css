@@ -2,12 +2,12 @@
 
 .loader {
   position: relative;
-  width: 120px;
-  height: 55px;
+  width: 10rem;
+  height: 10rem;
   background-repeat: no-repeat;
   background-image:
   radial-gradient(circle 2.5px , #ff3d00  100%, transparent 0),
-  linear-gradient(#525252 90px, transparent 0),
+  linear-gradient(#525252 120px, transparent 0),
   linear-gradient(#ececec 120px, transparent 0),
   linear-gradient(to right, #eee 10%,#333 10%,#333 90%,#eee 90%)
   ;
@@ -18,7 +18,7 @@
 }
 .loader:before {
   content: "";
-  width: 70px;
+  width: 10rem;
   background-color: #fff;
   box-shadow: 0 0 10px #0003;
   position: absolute;

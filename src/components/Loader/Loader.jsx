@@ -4,7 +4,9 @@ import "./Loader.css";
 const Loader = () => {
   return (
     <>
-      <span class="loader"></span>
+      <span class="loader">
+        <div className="fixed right-5 bottom-5 flex items-center justify-center"></div>
+      </span>
     </>
   );
 };
