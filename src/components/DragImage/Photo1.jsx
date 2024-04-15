@@ -17,10 +17,10 @@ const Photo1 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
         />
       ) : (
         <div
-          className={` bg-dragimg bg-no-repeat bg-contain  ${
+          className={` bg-dragimg bg-no-repeat bg-contain backdrop-blur-sm bg-white/40 ${
             changeColor === true
               ? "  border-transparent bg-none"
-              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-x-4 border-gray-600"
+              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-x-4 border-gray-400"
           } `}
           onClick={handleColor}
         >
@@ -28,7 +28,7 @@ const Photo1 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
             className={`text-center ${
               changeColor === true
                 ? " text-transparent max-sm:text-xs max-sm:truncate"
-                : "text-black max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm"
+                : "text-black max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm "
             }`}
           >
             {" "}

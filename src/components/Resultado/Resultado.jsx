@@ -3,17 +3,28 @@ import Photo from "../DragImage/Photo";
 import Photo1 from "../DragImage/Photo1";
 import Photo2 from "../DragImage/Photo2";
 import Button from "./Button";
-import { useCallback, useRef, useState } from "react";
+import Loader from "../Loader/Loader";
+import { useCallback, useRef, useState, useEffect } from "react";
 
 const Resultado = () => {
   const [polaroids, setPolaroids] = useState([]);
   const [error, setError] = useState(false);
-  const [setMessageError] = useState("");
+  const [messageError, setMessageError] = useState("");
   const [imageSaved, setImageSaved] = useState(false);
   const [changeColor, setChangeColor] = useState(false);
+
   const refInputFiles = [useRef(null), useRef(null), useRef(null)]; // Array of refs for each input
   const elementRef = useRef(null);
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
+
+  useEffect(() => {
+    if (imageSaved) {
+      const timer = setTimeout(() => {
+        setImageSaved(false);
+      }, 6000);
+      return () => clearTimeout(timer);
+    }
+  }, [imageSaved]);
 
   const selectImage = (index) => {
     refInputFiles[index].current.click();
@@ -64,6 +75,7 @@ const Resultado = () => {
 
   const htmlToImageConvert = useCallback(() => {
     if (!elementRef.current) return;
+    setImageSaved(true);
 
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
@@ -72,22 +84,25 @@ const Resultado = () => {
         link.href = dataUrl;
 
         link.addEventListener("click", () => {
-          setImageSaved(true); // Set the state to true when the download starts
+          setImageSaved(true);
         });
 
         link.click();
       })
       .catch((err) => {
         console.log(err);
+        setImageSaved(false);
       });
   }, [elementRef]);
 
   return (
     <>
       <div
-        className={`pt-4 bg-white max-md:mx-auto max-xl:mx-auto m-auto px-2 ${changeColor === true ? "bg-white" : "bg-white"} `}
+        className={`pt-4 max-md:mx-auto max-xl:mx-auto m-auto px-2 bg-purple-950`}
         ref={elementRef}
       >
+
+
         <Photo
           image={polaroids[0]}
           inputRef={refInputFiles[0]}
@@ -95,6 +110,10 @@ const Resultado = () => {
           elementRef={elementRef}
           addImage={(e) => addImage(0, e)}
           changeColor={setChangeColor}
+          setError={setError}
+          error={error}
+          messageError={messageError}
+          
         />
         <Photo1
           image={polaroids[1]}
@@ -112,14 +131,20 @@ const Resultado = () => {
           addImage={(e) => addImage(2, e)}
           changeColor={setChangeColor}
         />
+        <div className="border-solid border-white border-4 my-2 mb-16 p-10 mx-2 text-white font-extrabold">
+          FESTA
+        </div>
       </div>
 
       <Button
         htmlToImageConvert={htmlToImageConvert}
         resetPhotos={resetPhotos}
       />
-      {error && <div>{setMessageError}</div>}
-      {imageSaved && <div>Image Saved Successfully</div>}
+      {imageSaved && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <Loader />
+        </div>
+      )}
     </>
   );
 };

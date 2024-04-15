@@ -1,6 +1,6 @@
 import React from "react";
 
-const Photo = ({ image, inputRef, selectImage, addImage, changeColor}) => {
+const Photo = ({ image, inputRef, selectImage, addImage, changeColor, error, setError, messageError}) => {
 
 
   const handleColor = () => {
@@ -9,6 +9,7 @@ const Photo = ({ image, inputRef, selectImage, addImage, changeColor}) => {
 
   return (
     <div className="flex flex-col items-center ">
+               {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
       {image ? (
         <img
           src={image}
@@ -17,10 +18,10 @@ const Photo = ({ image, inputRef, selectImage, addImage, changeColor}) => {
         />
       ) : (
         <div
-          className={` bg-dragimg bg-no-repeat bg-contain  ${
+          className={` bg-dragimg bg-no-repeat bg-contain backdrop-blur-sm bg-white/40 ${
             changeColor === true
               ? " border-transparent bg-none"
-              : " w-40 h-40 max-sm:w-36 max-sm:h-36 min-md:w-20 border-dashed border-4 border-gray-600"
+              : " w-40 h-40 max-sm:w-36 max-sm:h-36 min-md:w-20 border-dashed border-4 border-gray-400"
           } `}
           onClick={handleColor}
         >
