@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         "dragimg" :"url('/src/components/img/bg-upload.svg')",
+        "backg" :"url('/src/components/img/bg.jpg')",
       }),
       colors: {
         "yellow": "#FFFF00"

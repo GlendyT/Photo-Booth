@@ -9,7 +9,7 @@ import { useCallback, useRef, useState, useEffect } from "react";
 const Resultado = () => {
   const [polaroids, setPolaroids] = useState([]);
   const [error, setError] = useState(false);
-  const [setMessageError] = useState("");
+  const [messageError, setMessageError] = useState("");
   const [imageSaved, setImageSaved] = useState(false);
   const [changeColor, setChangeColor] = useState(false);
 
@@ -85,7 +85,6 @@ const Resultado = () => {
 
         link.addEventListener("click", () => {
           setImageSaved(true);
-
         });
 
         link.click();
@@ -96,15 +95,14 @@ const Resultado = () => {
       });
   }, [elementRef]);
 
-
   return (
     <>
       <div
-        className={`pt-4 bg-white max-md:mx-auto max-xl:mx-auto m-auto px-2 ${
-          changeColor === true ? "bg-white" : "bg-white"
-        } `}
+        className={`pt-4 max-md:mx-auto max-xl:mx-auto m-auto px-2 bg-purple-950`}
         ref={elementRef}
       >
+
+
         <Photo
           image={polaroids[0]}
           inputRef={refInputFiles[0]}
@@ -112,6 +110,10 @@ const Resultado = () => {
           elementRef={elementRef}
           addImage={(e) => addImage(0, e)}
           changeColor={setChangeColor}
+          setError={setError}
+          error={error}
+          messageError={messageError}
+          
         />
         <Photo1
           image={polaroids[1]}
@@ -129,6 +131,9 @@ const Resultado = () => {
           addImage={(e) => addImage(2, e)}
           changeColor={setChangeColor}
         />
+        <div className="border-solid border-white border-4 my-2 mb-16 p-10 mx-2 text-white font-extrabold">
+          FESTA
+        </div>
       </div>
 
       <Button
