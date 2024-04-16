@@ -12,6 +12,7 @@ const Resultado = () => {
   const [messageError, setMessageError] = useState("");
   const [imageSaved, setImageSaved] = useState(false);
   const [changeColor, setChangeColor] = useState(false);
+  const [photo2Complete, setPhoto2Complete] = useState(false);
 
   const refInputFiles = [useRef(null), useRef(null), useRef(null)]; // Array of refs for each input
   const elementRef = useRef(null);
@@ -29,7 +30,6 @@ const Resultado = () => {
   const selectImage = (index) => {
     refInputFiles[index].current.click();
   };
-
   const isImageValid = (polaroid) => {
     if (polaroid && typeImages.includes(polaroid.type)) {
       setError(false);
@@ -40,7 +40,6 @@ const Resultado = () => {
       return false;
     }
   };
-
   const showImage = (index, polaroid) => {
     const fileReader = new FileReader();
     fileReader.readAsDataURL(polaroid);
@@ -53,7 +52,6 @@ const Resultado = () => {
       });
     });
   };
-
   const addImage = (index, e) => {
     e.preventDefault();
 
@@ -65,13 +63,26 @@ const Resultado = () => {
       }
     });
   };
-
   const resetPhotos = () => {
     setPolaroids([]);
     setChangeColor(false);
     setError(false);
     setImageSaved(false);
   };
+
+  useEffect(() => {
+    if (polaroids[2] || polaroids[1] || polaroids[0]){
+      setPhoto2Complete(true);
+    }else {
+      setPhoto2Complete(false);
+    }
+  }, [polaroids[2]])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setError(false);
+    }, 5000);
+  }, [error]);
 
   const htmlToImageConvert = useCallback(() => {
     if (!elementRef.current) return;
@@ -101,8 +112,7 @@ const Resultado = () => {
         className={`pt-4 max-md:mx-auto max-xl:mx-auto m-auto px-2 bg-purple-950`}
         ref={elementRef}
       >
-
-
+                  {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
         <Photo
           image={polaroids[0]}
           inputRef={refInputFiles[0]}
@@ -113,7 +123,6 @@ const Resultado = () => {
           setError={setError}
           error={error}
           messageError={messageError}
-          
         />
         <Photo1
           image={polaroids[1]}
@@ -122,6 +131,9 @@ const Resultado = () => {
           elementRef={elementRef}
           addImage={(e) => addImage(1, e)}
           changeColor={setChangeColor}
+          setError={setError}
+          error={error}
+          messageError={messageError}
         />
         <Photo2
           image={polaroids[2]}
@@ -130,6 +142,9 @@ const Resultado = () => {
           elementRef={elementRef}
           addImage={(e) => addImage(2, e)}
           changeColor={setChangeColor}
+          setError={setError}
+          error={error}
+          messageError={messageError}
         />
         <div className="border-solid border-white border-4 my-2 mb-16 p-10 mx-2 text-white font-extrabold">
           FESTA
@@ -139,6 +154,8 @@ const Resultado = () => {
       <Button
         htmlToImageConvert={htmlToImageConvert}
         resetPhotos={resetPhotos}
+        photo2Complete={photo2Complete}
+        
       />
       {imageSaved && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">

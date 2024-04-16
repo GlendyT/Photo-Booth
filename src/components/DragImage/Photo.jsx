@@ -1,15 +1,24 @@
 import React from "react";
 
-const Photo = ({ image, inputRef, selectImage, addImage, changeColor, error, setError, messageError}) => {
-
-
+const Photo = ({
+  image,
+  inputRef,
+  selectImage,
+  addImage,
+  changeColor,
+}) => {
   const handleColor = () => {
-    selectImage()
-  }
+    selectImage();
+  };
+  const handleDragOver1 = (e) => {
+    e.preventDefault();
+  };
+  const handleDragLeave1 = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="flex flex-col items-center ">
-               {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
       {image ? (
         <img
           src={image}
@@ -24,6 +33,9 @@ const Photo = ({ image, inputRef, selectImage, addImage, changeColor, error, set
               : " w-40 h-40 max-sm:w-36 max-sm:h-36 min-md:w-20 border-dashed border-4 border-gray-400"
           } `}
           onClick={handleColor}
+          onDrop={addImage}
+          onDragOver={handleDragOver1}
+          onDragLeave={handleDragLeave1}
         >
           <h1
             className={`text-center ${

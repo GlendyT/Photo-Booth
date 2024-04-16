@@ -1,14 +1,21 @@
-
-
 import React from "react";
 
-const Photo2 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
-
-
+const Photo2 = ({
+  image,
+  inputRef,
+  selectImage,
+  addImage,
+  changeColor
+}) => {
   const handleColor = () => {
     selectImage();
   };
-
+  const handleDragOver3 = (e) => {
+    e.preventDefault();
+  };
+  const handleDragLeave3 = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="flex flex-col items-center ">
@@ -26,6 +33,9 @@ const Photo2 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
               : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-4 border-gray-400"
           } `}
           onClick={handleColor}
+          onDrop={addImage}
+          onDragOver={handleDragOver3}
+          onDragLeave={handleDragLeave3}
         >
           <h1
             className={`text-center ${
