@@ -1,10 +1,20 @@
 import React from "react";
 
-const Photo1 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
-
-
+const Photo1 = ({
+  image,
+  inputRef,
+  selectImage,
+  addImage,
+  changeColor,
+}) => {
   const handleColor = () => {
     selectImage();
+  };
+  const handleDragOver2 = (e) => {
+    e.preventDefault();
+  };
+  const handleDragLeave2 = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -23,6 +33,9 @@ const Photo1 = ({ image, inputRef, selectImage, addImage,changeColor }) => {
               : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-x-4 border-gray-400"
           } `}
           onClick={handleColor}
+          onDrop={addImage}
+          onDragOver={handleDragOver2}
+          onDragLeave={handleDragLeave2}
         >
           <h1
             className={`text-center ${
