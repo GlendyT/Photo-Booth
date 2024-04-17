@@ -109,7 +109,7 @@ const Resultado = () => {
   return (
     <>
       <div
-        className={`pt-4 max-md:mx-auto max-xl:mx-auto m-auto px-2 bg-purple-950`}
+        className={`pt-4 max-md:mx-auto max-xl:mx-auto m-auto px-2 bg-purple-950 shadow-lg`}
         ref={elementRef}
       >
                   {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
