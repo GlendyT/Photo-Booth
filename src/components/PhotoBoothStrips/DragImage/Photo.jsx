@@ -27,7 +27,7 @@ const Photo = ({
         />
       ) : (
         <div
-          className={` bg-dragimg bg-no-repeat bg-contain backdrop-blur-sm bg-white/40 ${
+          className={` bg-dragimg bg-no-repeat bg-contain backdrop-blur-sm bg-white/65 ${
             changeColor === true
               ? " border-transparent bg-none"
               : " w-40 h-40 max-sm:w-36 max-sm:h-36 min-md:w-20 border-dashed border-4 border-gray-400"

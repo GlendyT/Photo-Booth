@@ -1,12 +1,12 @@
 import { toPng } from "html-to-image";
-import Photo from "../DragImage/Photo";
-import Photo1 from "../DragImage/Photo1";
-import Photo2 from "../DragImage/Photo2";
+import Photo from "./DragImage/Photo";
+import Photo1 from "./DragImage/Photo1";
+import Photo2 from "./DragImage/Photo2";
 import Button from "./Button";
 import Loader from "../Loader/Loader";
 import { useCallback, useRef, useState, useEffect } from "react";
 
-const Resultado = () => {
+const PhotoBooth = () => {
   const [polaroids, setPolaroids] = useState([]);
   const [error, setError] = useState(false);
   const [messageError, setMessageError] = useState("");
@@ -71,17 +71,17 @@ const Resultado = () => {
   };
 
   useEffect(() => {
-    if (polaroids[2] || polaroids[1] || polaroids[0]){
+    if (polaroids[2] || polaroids[1] || polaroids[0]) {
       setPhoto2Complete(true);
-    }else {
+    } else {
       setPhoto2Complete(false);
     }
-  }, [polaroids[2]])
+  }, [polaroids[2]]);
 
   useEffect(() => {
     setTimeout(() => {
       setError(false);
-    }, 5000);
+    }, 4000);
   }, [error]);
 
   const htmlToImageConvert = useCallback(() => {
@@ -107,19 +107,24 @@ const Resultado = () => {
   }, [elementRef]);
 
   return (
-    <>
+    <div className="flex flex-col items-center ">
       <div
-        className={`pt-4 max-md:mx-auto max-xl:mx-auto m-auto px-2 bg-purple-950`}
+        className="bg-purple-950 "
         ref={elementRef}
       >
-                  {error && <div className="bg-red-700 text-white rounded-lg p-2">{messageError}</div>}
+        {error && (
+          <div className="bg-red-700 text-white rounded-lg p-2">
+            {messageError}
+          </div>
+        )}
+        <div className="pt-4 max-xl:mx-auto m-auto px-2  bg-purple-950"> 
         <Photo
           image={polaroids[0]}
           inputRef={refInputFiles[0]}
           selectImage={() => selectImage(0)}
           elementRef={elementRef}
           addImage={(e) => addImage(0, e)}
-          changeColor={setChangeColor}
+          changeColor={changeColor}
           setError={setError}
           error={error}
           messageError={messageError}
@@ -146,24 +151,33 @@ const Resultado = () => {
           error={error}
           messageError={messageError}
         />
-        <div className="border-solid border-white border-4 my-2 mb-16 p-10 mx-2 text-white font-extrabold">
+        <div className="border-solid border-white border-4 my-2 mb-20 p-10 mx-2 text-white font-extrabold text-center">
           FESTA
         </div>
+        </div>
       </div>
+      
 
       <Button
         htmlToImageConvert={htmlToImageConvert}
         resetPhotos={resetPhotos}
         photo2Complete={photo2Complete}
-        
       />
       {imageSaved && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
           <Loader />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
-export default Resultado;
+export default PhotoBooth;
+
+/*            <h2 className=" uppercase font-bold text-purple-500 text-2xl max-sm:text-xs ">
+          Are you ready for THE FESTA?
+        </h2>
+        
+                <h3 className="font-bold pb-4 uppercase max-sm:text-xs max-sm:pb-2 max-sm:justify-center text-purple-300">
+          Image Should be in jpge or png
+        </h3>*/
