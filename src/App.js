@@ -12,7 +12,7 @@ function App() {
 
   return (
     <main className=" relative min-h-screen p-4 flex bg-violet-950 gap-8 ">
-      <div className=" w-1/4 p-2 grid items-center justify-center content-center bg-purple-600 gap-10">
+      <div className=" w-1/4 p-2 grid items-center justify-center content-center bg-purple-600 gap-10 ">
         <button
           className={`bg-violet-900 text-white px-6 py-4 rounded-lg ${
             selectedOption === "Card" ? "opacity-50" : ""
@@ -32,7 +32,7 @@ function App() {
           Carrd
         </button>
       </div>
-      <div className={`w-3/4 py-4 ${selectedOption === "PhotoBooth" ? "bg-purple-500" : "bg-white" } `}>
+      <div className={`w-3/4  ${selectedOption === "PhotoBooth" ? "bg-purple-500 py-4" : "bg-white" } `}>
         {selectedOption === "PhotoBooth" && <PhotoBooth />}
         {selectedOption === "Card" && <Card />}
 

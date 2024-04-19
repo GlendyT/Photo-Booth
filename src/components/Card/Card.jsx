@@ -7,17 +7,17 @@ const Card = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-4 text-xl px-36 py-10">
-        <h1 className="text-purple-900 font-extrabold">
+      <div className="flex flex-col items-center gap-4 text-xl px-40 pt-28">
+        <h1 className="text-purple-900 font-extrabold text-center">
           FESTA is here, join us for streaming parties and fun activities
         </h1>
         <h2 className="font-extrabold text-purple-950">BTS ANNIVERSARY</h2>
 
-        <div className="bg-purple-600 p-10 flex flex-col">
-          <img src={randomItem.img} alt="" className="p-2 items-center" />
-          <div className="bg-white px-2 py-4 text-purple-900">
-            <h1 className="font-semiboldsans italic">{randomItem.title}</h1>
-            <h1 className="text-end font-semiboldsans text-black">
+        <div className="bg-purple-600 p-6 grid grid-row-2 justify-items-center">
+          <img src={randomItem.img} alt="" className=" pb-2 w-72 flex justify-center" />
+          <div className="bg-white px-2 py-4 text-purple-900 font-extrabold italic">
+            <h1 className="text-sm">{randomItem.title}</h1>
+            <h1 className="text-end text-black text-xs">
               - {randomItem.from}
             </h1>
           </div>
