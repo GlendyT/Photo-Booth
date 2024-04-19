@@ -2,6 +2,7 @@ import { useState } from "react";
 import Card from "./components/Card/Card";
 import PhotoBooth from "./components/PhotoBoothStrips/PhotoBooth";
 
+
 function App() {
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -10,26 +11,31 @@ function App() {
   };
 
   return (
-    <main className=" relative min-h-screen p-4 flex bg-backg3 bg-no-repeat bg-cover bg-center ">
-      <div className=" w-1/4 p-2 grid items-center justify-center content-center ">
+    <main className=" relative min-h-screen p-4 flex bg-violet-950 gap-8 ">
+      <div className=" w-1/4 p-2 grid items-center justify-center content-center bg-purple-600 gap-10">
         <button
-          className="bg-violet-950 text-white px-4 py-2 rounded mb-4"
+          className={`bg-violet-900 text-white px-6 py-4 rounded-lg ${
+            selectedOption === "Card" ? "opacity-50" : ""
+          }`}
           onClick={() => handleComponentSelect("PhotoBooth")}
           disabled={selectedOption === "PhotoBooth"}
         >
           PhotoBooth
         </button>
         <button
-          className="bg-violet-950 text-white px-4 py-2 rounded"
+          className={`bg-violet-900 text-white px-6 py-4 rounded-lg ${
+            selectedOption === "PhotoBooth" ? "opacity-50" : "bg-violet-950"
+          }`}
           onClick={() => handleComponentSelect("Card")}
           disabled={selectedOption === "Card"}
         >
           Carrd
         </button>
       </div>
-      <div className="w-3/4 ">
+      <div className={`w-3/4 py-4 ${selectedOption === "PhotoBooth" ? "bg-purple-500" : "bg-white" } `}>
         {selectedOption === "PhotoBooth" && <PhotoBooth />}
         {selectedOption === "Card" && <Card />}
+
       </div>
     </main>
   );
@@ -45,6 +51,8 @@ export default App;
   max-sm:justify-center max-sm:m-0 max-sm:px-4 max-sm:py-2
 
   grid grid-col text-center max-sm:grid-col max-md:gird-col
+
+  bg-backg3 bg-no-repeat bg-cover bg-center
 
   
 */
