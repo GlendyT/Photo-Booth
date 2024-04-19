@@ -22,7 +22,7 @@ const Resultado = () => {
     if (imageSaved) {
       const timer = setTimeout(() => {
         setImageSaved(false);
-      }, 6000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [imageSaved]);
