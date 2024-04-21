@@ -41,7 +41,7 @@ const Photo = ({
             className={`text-center ${
               changeColor === true
                 ? " text-transparent max-sm:text-xs max-sm:truncate"
-                : "text-black max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm"
+                : "text-purple-900 font-ballet max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm"
             }`}
           >
             Click to Add Your Photo
