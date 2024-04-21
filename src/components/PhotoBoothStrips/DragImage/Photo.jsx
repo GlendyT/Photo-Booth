@@ -27,7 +27,7 @@ const Photo = ({
         />
       ) : (
         <div
-          className={`  bg-white ${
+          className={`  bg-white cursor-grab${
             changeColor === true
               ? " border-transparent bg-none"
               : " w-40 h-40 max-sm:w-36 max-sm:h-36 min-md:w-20 border-4 border-purple-500"

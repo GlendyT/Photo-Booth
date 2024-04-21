@@ -6,6 +6,7 @@ import Button from "./Button";
 import Loader from "../Loader/Loader";
 import { useCallback, useRef, useState, useEffect } from "react";
 
+
 const PhotoBooth = () => {
   const [polaroids, setPolaroids] = useState([]);
   const [error, setError] = useState(false);
@@ -148,15 +149,8 @@ const PhotoBooth = () => {
             error={error}
             messageError={messageError}
           />
-          <div className="border-solid border-white border-4 my-2 mb-8 p-4 mx-2 text-white">
-
-            <span class="text-white text-7xl font-passions ">F 
-            <span className="text-xs absolute pt-8 font-mono"> BTS </span>
-            </span>
-            <span class="italic text-white absolute pt-12 font-ballet ">esta</span>
-
-            <h1 className="text-xs pb-2">(2024)</h1>
-            <div className="mx-10 py-2 border-white border-4 border-dashed"></div>
+          <div className="border-solid border-white border-4 my-2 mx-2 mb-8 p-3 text-white bg-backg1 bg-contain bg-no-repeat">
+            <div className="mx-10 p-4 border-white border-4 border-dashed mt-20"></div>
           </div>
         </div>
       </div>
