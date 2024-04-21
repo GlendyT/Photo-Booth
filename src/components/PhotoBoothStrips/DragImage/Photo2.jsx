@@ -27,7 +27,7 @@ const Photo2 = ({
         />
       ) : (
         <div
-          className={`  bg-white ${
+          className={`  bg-white cursor-grab ${
             changeColor === true
               ? " border-transparent bg-none"
               : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-4 border-purple-500"
@@ -44,7 +44,7 @@ const Photo2 = ({
                 : "text-black max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm"
             }`}
           >
-            Click or Tap to Add Your Photo
+            Click to Add Your Photo
           </h1>
         </div>
       )}
