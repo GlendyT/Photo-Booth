@@ -27,10 +27,10 @@ const Photo2 = ({
         />
       ) : (
         <div
-          className={` bg-dragimg bg-no-repeat bg-contain backdrop-blur-sm bg-white/65 ${
+          className={`  bg-white ${
             changeColor === true
               ? " border-transparent bg-none"
-              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-dashed border-4 border-gray-500"
+              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-4 border-purple-500"
           } `}
           onClick={handleColor}
           onDrop={addImage}

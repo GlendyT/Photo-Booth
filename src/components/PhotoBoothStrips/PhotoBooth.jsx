@@ -108,55 +108,58 @@ const PhotoBooth = () => {
 
   return (
     <div className="flex flex-col items-center ">
-      <div
-        className="bg-purple-950 "
-        ref={elementRef}
-      >
+      <div className="bg-purple-500" ref={elementRef}>
         {error && (
           <div className="bg-red-700 text-white rounded-lg p-2">
             {messageError}
           </div>
         )}
-        <div className="pt-4 max-xl:mx-auto m-auto px-2  bg-purple-950"> 
-        <Photo
-          image={polaroids[0]}
-          inputRef={refInputFiles[0]}
-          selectImage={() => selectImage(0)}
-          elementRef={elementRef}
-          addImage={(e) => addImage(0, e)}
-          changeColor={changeColor}
-          setError={setError}
-          error={error}
-          messageError={messageError}
-        />
-        <Photo1
-          image={polaroids[1]}
-          inputRef={refInputFiles[1]}
-          selectImage={() => selectImage(1)}
-          elementRef={elementRef}
-          addImage={(e) => addImage(1, e)}
-          changeColor={setChangeColor}
-          setError={setError}
-          error={error}
-          messageError={messageError}
-        />
-        <Photo2
-          image={polaroids[2]}
-          inputRef={refInputFiles[2]}
-          selectImage={() => selectImage(2)}
-          elementRef={elementRef}
-          addImage={(e) => addImage(2, e)}
-          changeColor={setChangeColor}
-          setError={setError}
-          error={error}
-          messageError={messageError}
-        />
-        <div className="border-solid border-white border-4 my-2 mb-20 p-10 mx-2 text-white font-extrabold text-center">
-          FESTA
-        </div>
+        <div className="pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500">
+          <Photo
+            image={polaroids[0]}
+            inputRef={refInputFiles[0]}
+            selectImage={() => selectImage(0)}
+            elementRef={elementRef}
+            addImage={(e) => addImage(0, e)}
+            changeColor={changeColor}
+            setError={setError}
+            error={error}
+            messageError={messageError}
+          />
+          <Photo1
+            image={polaroids[1]}
+            inputRef={refInputFiles[1]}
+            selectImage={() => selectImage(1)}
+            elementRef={elementRef}
+            addImage={(e) => addImage(1, e)}
+            changeColor={setChangeColor}
+            setError={setError}
+            error={error}
+            messageError={messageError}
+          />
+          <Photo2
+            image={polaroids[2]}
+            inputRef={refInputFiles[2]}
+            selectImage={() => selectImage(2)}
+            elementRef={elementRef}
+            addImage={(e) => addImage(2, e)}
+            changeColor={setChangeColor}
+            setError={setError}
+            error={error}
+            messageError={messageError}
+          />
+          <div className="border-solid border-white border-4 my-2 mb-8 p-4 mx-2 text-white">
+
+            <span class="text-white text-7xl font-monsieur">F 
+            <span className="text-xs absolute pt-8"> BTS </span>
+            </span>
+            <span class="italic text-white absolute pt-12 font-guwndolyn">esta</span>
+
+            <h1 className="text-xs pb-2">(2024)</h1>
+            <div className="mx-10 py-2 border-white border-4 border-dashed"></div>
+          </div>
         </div>
       </div>
-      
 
       <Button
         htmlToImageConvert={htmlToImageConvert}

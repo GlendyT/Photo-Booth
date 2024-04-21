@@ -5,16 +5,16 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         dragimg: "url('/src/components/img/bg-upload.svg')",
-        backg: "url('/src/components/img/bg.jpg')",
-        backg1: "url('/src/components/img/bg2.png')",
-        backg2: "url('/src/components/img/bg3.png')",
-        backg3: "url('/src/components/img/bg4.png')",
+        backg: "url('/src/components/img/photobooth_bg.jpg')",
+        backg1: "url('/src/components/img/festa_logo.png')",
       }),
-      colors: {
-        yellow: "#FFFF00",
-      },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
+        pinyon: ["Pinyon Script", "cursive"],
+        monsieur: ["Monsieur La Doulaise", "cursive"],
+        passions: ["Passions Conflict", "cursive"],
+        guwndolyn: ["Gwendolyn", "cursive"],
+        ballet: ["Ballet", "cursive"],
       },
     },
   },
