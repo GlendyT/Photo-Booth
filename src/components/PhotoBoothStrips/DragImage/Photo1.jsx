@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Photo1 = ({
   image,
   inputRef,
@@ -8,6 +9,9 @@ const Photo1 = ({
   changeColor,
 }) => {
   const handleColor = () => {
+    selectImage();
+  };
+  const handleImageClick = () => {
     selectImage();
   };
   const handleDragOver2 = (e) => {
@@ -20,11 +24,14 @@ const Photo1 = ({
   return (
     <div className="flex flex-col items-center ">
       {image ? (
+
         <img
           src={image}
           alt=""
-          className=" px-2 pb-2 max-sm:pb-2 max-sm:px-1 w-64 max-sm:w-40"
+          className=" object-cover w-40 h-40 pb-2 max-sm:pb-2 max-sm:px-1 max-sm:w-40"
+          onClick={handleImageClick}
         />
+
       ) : (
         <div
           className={`  bg-white cursor-grab ${
