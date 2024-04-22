@@ -1,13 +1,6 @@
 import React from "react";
 
-
-const Photo = ({
-  image,
-  inputRef,
-  selectImage,
-  addImage,
-  changeColor,
-}) => {
+const Photo = ({ image, inputRef, selectImage, addImage, changeColor }) => {
   const handleColor = () => {
     selectImage();
   };
@@ -24,7 +17,6 @@ const Photo = ({
   return (
     <div className="flex flex-col items-center ">
       {image ? (
-
         <img
           src={image}
           alt=""
