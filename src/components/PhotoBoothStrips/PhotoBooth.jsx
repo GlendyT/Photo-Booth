@@ -117,6 +117,8 @@ const PhotoBooth = () => {
         )}
         <div className="pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500">
           <Photo
+            polaroids={polaroids}
+            setPolaroids={setPolaroids}
             image={polaroids[0]}
             inputRef={refInputFiles[0]}
             selectImage={() => selectImage(0)}
