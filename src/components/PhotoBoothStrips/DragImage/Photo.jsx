@@ -1,11 +1,17 @@
 import React from "react";
 
-const Photo = ({ image, inputRef, selectImage, addImage, changeColor }) => {
+const Photo = ({
+  image,
+  inputRef,
+  selectImage,
+  addImage,
+  changeColor,
+}) => {
   const handleColor = () => {
     selectImage();
   };
   const handleImageClick = () => {
-    selectImage();
+    selectImage(); // Llama a la función para cambiar la imagen
   };
   const handleDragOver1 = (e) => {
     e.preventDefault();
