@@ -116,6 +116,7 @@ const PhotoBooth = () => {
           </div>
         )}
         <div className="pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500">
+          
           <Photo
             polaroids={polaroids}
             setPolaroids={setPolaroids}
@@ -169,11 +170,3 @@ const PhotoBooth = () => {
 };
 
 export default PhotoBooth;
-
-/*            <h2 className=" uppercase font-bold text-purple-500 text-2xl max-sm:text-xs ">
-          Are you ready for THE FESTA?
-        </h2>
-        
-                <h3 className="font-bold pb-4 uppercase max-sm:text-xs max-sm:pb-2 max-sm:justify-center text-purple-300">
-          Image Should be in jpge or png
-        </h3>*/
