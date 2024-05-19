@@ -16,8 +16,6 @@ function App() {
       className="relative min-h-screen px-6 pt-1 max-sm:justify-center max-sm:m-0 max-sm:px-4 max-sm:py-2 bg-backg bg-no-repeat bg-cover bg-center max-sm:bg-left  "
     >
       <section className="w-full justify-center grid grid-col text-center max-sm:grid-col max-md:gird-col  ">
-        <div className=" bg-black"></div>
-
         <PhotoBooth />
       </section>
     </main>
