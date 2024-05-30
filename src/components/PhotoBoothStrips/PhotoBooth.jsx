@@ -78,7 +78,7 @@ const PhotoBooth = () => {
     } else {
       setPhoto2Complete(false);
     }
-  }, [polaroids[2]]);
+  }, [polaroids]);
 
   useEffect(() => {
     setTimeout(() => {
