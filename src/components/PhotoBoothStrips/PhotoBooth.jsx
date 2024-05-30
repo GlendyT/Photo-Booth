@@ -1,10 +1,11 @@
-import { toPng } from "html-to-image";
+//import { toPng } from "html-to-image";
+import html2canvas from "html2canvas";
 import Photo from "./DragImage/Photo";
 import Photo1 from "./DragImage/Photo1";
 import Photo2 from "./DragImage/Photo2";
 import Button from "./Button";
 import Loader from "../Loader/Loader";
-import { useCallback, useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 
 
 const PhotoBooth = () => {
@@ -85,37 +86,42 @@ const PhotoBooth = () => {
     }, 4000);
   }, [error]);
 
-  const htmlToImageConvert = useCallback(() => {
-    if (!elementRef.current) return;
+
+  const handleDownloadImage = async () => {
+    const element = document.getElementById("print");
+    if (!element) return;
+
+    // Increase resolution by setting the scale option
+    const options = {
+      scale: 8, // You can adjust this value to increase or decrease resolution
+    };
+
+    const canvas = await html2canvas(element, options);
+    const data = canvas.toDataURL("image/jpeg"); // Changed from 'image/jpg' to 'image/jpeg'
+    const link = document.createElement("a");
+
     setImageSaved(true);
 
-    toPng(elementRef.current, { cacheBust: false })
-      .then((dataUrl) => {
-        const link = document.createElement("a");
-        link.download = "PhotoBooth";
-        link.href = dataUrl;
+    link.href = data;
+    link.download = "PhotoBooth.jpg";
 
-        link.addEventListener("click", () => {
-          setImageSaved(true);
-        });
+    document.body.appendChild(link);
+    link.click();
 
-        link.click();
-      })
-      .catch((err) => {
-        console.log(err);
-        setImageSaved(false);
-      });
-  }, [elementRef]);
+    setImageSaved(false);
+    document.body.removeChild(link);
+    setImageSaved(true);
+  };
 
   return (
     <div className="flex flex-col items-center ">
-      <div className="bg-purple-500" ref={elementRef}>
+      <div className="" id="print">
         {error && (
           <div className="bg-red-700 text-white rounded-lg p-2">
             {messageError}
           </div>
         )}
-        <div className="pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500">
+        <div className="pt-4 max-xl:mx-auto m-auto px-2 bg-white">
           
           <Photo
             polaroids={polaroids}
@@ -156,7 +162,7 @@ const PhotoBooth = () => {
       </div>
 
       <Button
-        htmlToImageConvert={htmlToImageConvert}
+        handleDownloadImage={handleDownloadImage}
         resetPhotos={resetPhotos}
         photo2Complete={photo2Complete}
       />
