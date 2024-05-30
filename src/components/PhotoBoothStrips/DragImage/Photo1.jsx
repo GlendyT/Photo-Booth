@@ -28,16 +28,16 @@ const Photo1 = ({
         <img
           src={image}
           alt=""
-          className=" object-cover w-40 h-40 pb-2 max-sm:pb-2 max-sm:px-1 max-sm:w-40"
+          className=" object-cover w-40 pb-2 max-sm:pb-2 max-sm:px-1 max-sm:w-40"
           onClick={handleImageClick}
         />
 
       ) : (
         <div
-          className={`  bg-white cursor-grab ${
+          className={`  bg-gradient-to-r from-amber-600 from-5% via-red-700 via-40% to-indigo-900 to-85% cursor-grab ${
             changeColor === true
               ? "  border-transparent bg-none"
-              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-x-4 border-purple-500"
+              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-x-4 border-white"
           } `}
           onClick={handleColor}
           onDrop={addImage}
@@ -48,7 +48,7 @@ const Photo1 = ({
             className={`text-center ${
               changeColor === true
                 ? " text-transparent max-sm:text-xs max-sm:truncate"
-                : "text-purple-900 font-ballet max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm "
+                : "text-white font-ballet max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm "
             }`}
           >
             {" "}

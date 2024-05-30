@@ -5,8 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         dragimg: "url('/src/components/img/bg-upload.svg')",
-        backg: "url('/src/components/img/photobooth_bg.jpg')",
-        backg1: "url('/src/components/img/festa_logo.png')",
+        backg: "url('/src/components/img/respira.png')",
       }),
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
