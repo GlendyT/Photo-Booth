@@ -1,4 +1,5 @@
 //import { useState } from "react";
+import AdsComponent from "./components/GoogleAd/AdsComponent";
 import PhotoBooth from "./components/PhotoBoothStrips/PhotoBooth";
 
 
@@ -17,7 +18,12 @@ function App() {
     >
       <section className="w-full justify-center grid grid-col text-center max-sm:grid-col max-md:gird-col  ">
         <PhotoBooth />
+
+        <span className="" >
+        <AdsComponent dataAdSlot='X7XXXXXX5X'/>
+        </span>
       </section>
+
     </main>
   );
 }
