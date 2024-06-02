@@ -20,7 +20,7 @@ function App() {
         <PhotoBooth />
 
         <span className="" >
-        <AdsComponent dataAdSlot='X7XXXXXX5X'/>
+        <AdsComponent dataAdSlot='pub-8740228129799106'/>
         </span>
       </section>
 
