@@ -20,14 +20,6 @@ const PhotoBooth = () => {
   const elementRef = useRef(null);
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
 
-  useEffect(() => {
-    if (imageSaved) {
-      const timer = setTimeout(() => {
-        setImageSaved(false);
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [imageSaved]);
 
   const selectImage = (index) => {
     refInputFiles[index].current.click();
@@ -72,6 +64,16 @@ const PhotoBooth = () => {
     setImageSaved(false);
   };
 
+    useEffect(() => {
+    if (imageSaved) {
+      const timer = setTimeout(() => {
+        setImageSaved(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [imageSaved]);
+
+  
   useEffect(() => {
     if (polaroids[2] || polaroids[1] || polaroids[0]) {
       setPhoto2Complete(true);
@@ -85,6 +87,8 @@ const PhotoBooth = () => {
       setError(false);
     }, 4000);
   }, [error]);
+
+
 
 
   const handleDownloadImage = async () => {

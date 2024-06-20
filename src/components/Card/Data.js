@@ -1,5 +1,5 @@
-import bgimage from "../img/bg.jpg";
-import bgimage1 from "../img/bg2.png";
+import bgimage from "../img/bg.jpeg";
+import bgimage1 from "../img/bg2.jpg";
 
 
 export const  SPOTIFY = {
