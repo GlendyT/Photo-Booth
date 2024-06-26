@@ -125,7 +125,7 @@ const PhotoBooth = () => {
             {messageError}
           </div>
         )}
-        <div className="pt-4 max-xl:mx-auto m-auto px-2 bg-white">
+        <div className={`pt-4 max-xl:mx-auto m-auto px-2 bg-white`}>
           
           <Photo
             polaroids={polaroids}

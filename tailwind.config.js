@@ -15,7 +15,16 @@ module.exports = {
         guwndolyn: ["Gwendolyn", "cursive"],
         ballet: ["Ballet", "cursive"],
       },
+      colors: {
+        army: "rgb(0,74,173)",
+        army2: "linear-gradient(90deg, rgba(0,74,173,1) 44%, rgba(203,108,230,1) 100%)"
+      }
     },
   },
   plugins: [],
 };
+
+
+/*
+background: rgb(0,74,173);
+background: linear-gradient(90deg, rgba(0,74,173,1) 44%, rgba(203,108,230,1) 100%);*/
