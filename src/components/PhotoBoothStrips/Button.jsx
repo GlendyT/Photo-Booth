@@ -20,7 +20,14 @@ const Button = ({ handleDownloadImage, resetPhotos, photo2Complete }) => {
       >
         Create Other
       </button>
-      <button className="bg-slate-700 rounded-lg text-white font-bold mt-4 max-sm:mt-2 ">
+
+    </div>
+  );
+};
+
+export default Button;
+
+/*      <button className="bg-slate-700 rounded-lg text-white font-bold mt-4 max-sm:mt-2 ">
         <a href="https://ko-fi.com/P5P1YQ11J" target="_blank" rel="noreferrer">
           <img
             src="https://storage.ko-fi.com/cdn/kofi5.png?v=3"
@@ -28,9 +35,4 @@ const Button = ({ handleDownloadImage, resetPhotos, photo2Complete }) => {
             className="w-28"
           />
         </a>
-      </button>
-    </div>
-  );
-};
-
-export default Button;
+      </button>*/
