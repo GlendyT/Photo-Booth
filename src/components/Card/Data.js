@@ -1,5 +1,12 @@
-import bgimage from "../img/bg.jpeg";
-import bgimage1 from "../img/bg2.jpg";
+import bg from "../img/bg.jpeg";
+import bg2 from "../img/bg2.jpg";
+import bg3 from "../img/bg3.jpg";
+import bg4 from "../img/bg4.jpg";
+import bg5 from "../img/bg5.jpg";
+import bg6 from "../img/bg6.jpg";
+import bg7 from "../img/bg7.jpg";
+import bg8 from "../img/bg8.jpeg";
+import bg9 from "../img/bg9.jpg";
 
 
 export const  SPOTIFY = {
@@ -15,48 +22,48 @@ export const  SPOTIFY = {
 
 export const  SCREEN = [
     {
-      img: bgimage,
+      img: bg,
       title: "SPECIAL THANKS TO OUR ETERNAL YOUTH, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg2,
       title: "SPECIAL THANKS TO OUR BIGGES VOICE, ARMY",
       from: "BTS",
     }
     ,
     {
-      img: bgimage1,
+      img: bg3,
       title: "SPECIAL THANKS TO THE MOST BEAUTIFUL, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg4,
       title: "SPECIAL THANKS TO OUR CHAPETER 1, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg5,
       title: "SPECIAL THANKS TO OUR HAPPINES, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg6,
       title: "SPECIAL THANKS TO THE BIGGEST LOVE, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg7,
       title: "SPECIAL THANKS TO OUR UNIVERSE, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg8,
       title: "SPECIAL THANKS TO SWEETEST, ARMY",
       from: "BTS",
     },
     {
-      img: bgimage1,
+      img: bg9,
       title: "SPECIAL THANKS TO OUR WINGS, ARMY",
       from: "BTS",
     },

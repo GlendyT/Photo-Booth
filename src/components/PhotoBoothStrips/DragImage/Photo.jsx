@@ -7,6 +7,7 @@ const Photo = ({
   addImage,
   changeColor,
 }) => {
+  
   const handleColor = () => {
     selectImage();
   };
