@@ -4,6 +4,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 export default function Navbar() {
   const location = useLocation();
   const [menu, setMenu] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -20,16 +21,96 @@ export default function Navbar() {
       setMenu("hobipalooza");
     }
   }, [location.pathname]);
+
   return (
     <>
-      <header className="w-full p-4 text-black flex flex-row items-center justify-center gap-2">
-      <Link
+      <div className="w-full p-4 text-black gap-2 bg-backmain bg-cover bg-no-repeat">
+        <div className="flex flex-row items-center justify-center max-sm:justify-start"> 
+
+          <button
+            className="md:hidden text-white text-xl"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            &#9776; {/* Unicode character for hamburger icon */}
+          </button>
+
+          <div className="hidden md:flex flex-row items-center gap-2">
+            <Link
+              to="/"
+              className={
+                menu === "menu"
+                  ? "text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl"
+              }
+            >
+              Home
+            </Link>
+            <Link
+              to="/polaroid"
+              className={
+                menu === "polaroid"
+                  ? "text-xl font-bold py-1 px-2 text-purple-400 underline rounded-xl"
+                  : "cursor-pointer text-white text-xl"
+              }
+            >
+              Polaroid
+            </Link>
+            <Link
+              to="/photobooth"
+              className={
+                menu === "photobooth"
+                  ? "text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl"
+              }
+            >
+              Photobooth
+            </Link>
+            <Link
+              to="/sugaverse"
+              className={
+                menu === "sugaverse"
+                  ? "text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl"
+              }
+            >
+              Sugaverse
+            </Link>
+            <Link
+              to="/hobipalooza"
+              className={
+                menu === "hobipalooza"
+                  ? "text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl"
+              }
+            >
+              Hobipalooza
+            </Link>
+            <Link
+              to="/rain"
+              className={
+                menu === "rain"
+                  ? "text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl"
+              }
+            >
+              Rain
+            </Link>
+          </div>
+        
+        </div>
+      </div>
+      
+      <div
+        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute block w-44 h-44 left-4 backdrop-blur-md z-10 `}
+      >
+        <Link
           to="/"
           className={
             menu === "menu"
-              ? " text-xl font-bold py-1 px-2 shadow-[inset_0px_0px_33px_6px_#3c366b,0px_3px_47px_0px_#553c9a] bg-clip-text bg-gradient-to-bl from-purple-700 via-purple-800 to-blue-900 transition-colors text-white cursor-pointer bg-white rounded-xl"
-              : "cursor-pointer text-white "
+              ? "block text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+              : "block cursor-pointer text-white text-xl"
           }
+          onClick={() => setIsMenuOpen(false)}
         >
           Home
         </Link>
@@ -37,9 +118,10 @@ export default function Navbar() {
           to="/polaroid"
           className={
             menu === "polaroid"
-              ? "text-xl font-bold py-1 px-2 shadow-[inset_0px_0px_33px_6px_#3c366b,0px_3px_47px_0px_#553c9a] bg-clip-text bg-gradient-to-bl from-purple-700 via-purple-800 to-blue-900 transition-colors text-white  cursor-pointer  bg-white rounded-xl"
-              : "cursor-pointer text-white"
+              ? "block text-xl font-bold py-1 px-2 text-purple-400 underline rounded-xl"
+              : "block cursor-pointer text-white text-xl"
           }
+          onClick={() => setIsMenuOpen(false)}
         >
           Polaroid
         </Link>
@@ -47,9 +129,10 @@ export default function Navbar() {
           to="/photobooth"
           className={
             menu === "photobooth"
-              ? " text-xl font-bold py-1 px-2 shadow-[inset_0px_0px_33px_6px_#3c366b,0px_3px_47px_0px_#553c9a] bg-clip-text bg-gradient-to-bl from-purple-700 via-purple-800 to-blue-900 transition-colors text-white cursor-pointer  bg-white rounded-xl"
-              : "cursor-pointer text-white"
+              ? "block text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+              : "block cursor-pointer text-white text-xl"
           }
+          onClick={() => setIsMenuOpen(false)}
         >
           Photobooth
         </Link>
@@ -57,9 +140,10 @@ export default function Navbar() {
           to="/sugaverse"
           className={
             menu === "sugaverse"
-              ? " text-xl font-bold py-1 px-2 shadow-[inset_0px_0px_33px_6px_#3c366b,0px_3px_47px_0px_#553c9a] bg-clip-text bg-gradient-to-bl from-purple-700 via-purple-800 to-blue-900 transition-colors text-white cursor-pointer  bg-white rounded-xl"
-              : "cursor-pointer text-white"
+              ? "block text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+              : "block cursor-pointer text-white text-xl"
           }
+          onClick={() => setIsMenuOpen(false)}
         >
           Sugaverse
         </Link>
@@ -67,9 +151,10 @@ export default function Navbar() {
           to="/hobipalooza"
           className={
             menu === "hobipalooza"
-              ? " text-xl font-bold py-1 px-2 shadow-[inset_0px_0px_33px_6px_#3c366b,0px_3px_47px_0px_#553c9a] bg-clip-text bg-gradient-to-bl from-purple-700 via-purple-800 to-blue-900 transition-colors text-white cursor-pointer  bg-white rounded-xl"
-              : "cursor-pointer text-white"
+              ? "block text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+              : "block cursor-pointer text-white text-xl"
           }
+          onClick={() => setIsMenuOpen(false)}
         >
           Hobipalooza
         </Link>
@@ -77,16 +162,15 @@ export default function Navbar() {
           to="/rain"
           className={
             menu === "rain"
-              ? " text-xl font-bold py-1 px-2 shadow-[inset_0px_0px_33px_6px_#3c366b,0px_3px_47px_0px_#553c9a] bg-clip-text bg-gradient-to-bl from-purple-700 via-purple-800 to-blue-900 transition-colors text-white cursor-pointer  bg-white rounded-xl"
-              : "cursor-pointer text-white"
+              ? "block text-xl font-bold py-1 px-2 underline text-purple-400 cursor-pointer rounded-xl"
+              : "block cursor-pointer text-white text-xl"
           }
+          onClick={() => setIsMenuOpen(false)}
         >
           Rain
         </Link>
-      </header>
-
+      </div>
       <Outlet />
     </>
   );
 }
-
