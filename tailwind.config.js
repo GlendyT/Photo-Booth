@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
+        dragimg1: "url('/src/components/img/1.png')",
         dragimg: "url('/src/components/img/bg-upload.svg')",
         backg: "url('/src/components/img/respira.png')",
       }),
