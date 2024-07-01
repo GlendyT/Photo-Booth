@@ -1,61 +1,32 @@
-import hw from "../../../img/1.png";
+import hw from "../../../img/2.avif";
 
-export default function TicketComponent({ user, albu, song }) {
+export default function TicketComponent({
+  user,
+  albu,
+  song,
+}) {
   return (
-    <main className="w-screen h-screen flex flex-col">
-	<section className="w-full flex-grow  flex items-center justify-center p-4">
-		<div className="flex w-full max-w-3xl text-zinc-50 h-64">
-			<div className="h-full  bg-dragimg1 flex items-center justify-center px-8 rounded-l-3xl">
-				
-			</div>
-			<div className="relative h-full flex flex-col items-center border-dashed justify-between border-2 bg-zinc-900 border-zinc-50">
-				<div className="absolute rounded-full w-8 h-8 bg-zinc-200 -top-5"></div>
-				<div className="absolute rounded-full w-8 h-8 bg-zinc-200 -bottom-5"></div>
-			</div>
-			<div className="h-full py-8 px-10 bg-zinc-900 flex-grow rounded-r-3xl flex flex-col">
-				<div className="flex w-full justify-between items-center">
-				</div>
-				<div className="flex w-full mt-auto justify-between">
-					<div className="flex flex-col">
-						<span className="text-xs text-zinc-400">Name</span>
-						<span className="font-mono">{user}</span>
-					</div>
-					<div className="flex flex-col">
-						<span className="text-xs text-zinc-400">City</span>
-						<span className="font-mono">{albu}</span>
-					</div>
-					<div className="flex flex-col">
-						<span className="text-xs text-zinc-400">Location</span>
-						<span className="font-mono">{song}</span>
-					</div>
-					<div className="flex flex-col">
-						<span className="text-xs text-zinc-400">Gate/Seat</span>
-						<span className="font-mono">A11/21C</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-</main>
-  );
-}
-
-
-/*    <div classNameName=" w-full">
-      <div classNameName="relative w-full h-full ">
-        <div classNameName="absolute flex flex-col justify-end w-full h-96 overflow-hidden inset-0 backface-hidden px-36 pb-8 max-sm:pb-2 max-sm:px-4 ">
-          <img
+    <div className=" w-10/12 h-96 bg-none max-sm:h-60 " >
+      <div className="relative w-full h-96 bg-transparent "   id="print"  >
+      <img
             src={hw}
             alt=""
-            classNameName=" absolute inset-0 object-contain backface-hidden w-full h-full rounded-xl"
+            className=" absolute inset-4 h-96 max-sm:h-36 max-md:h-80 max-lg:h-80 max-xl:h-96 max-2xl:h-96"
           />
-          <div classNameName="backface-hidden absolute inset-0 "></div>
-          <div classNameName="z-10 pl-2 mb-24 text-2xl font-bold text-white max-sm:text-xs pb-2 w-80 ">
-            <li classNameName="list-none w-60">Name: {user}</li>
-            <li classNameName="list-none w-60">City: {albu}</li>
-            <li classNameName="list-none w-full">Location: {song}</li>
-          </div>
+        <div className="absolute flex flex-col justify-end w-10/12 h-full inset-0 px-20 pb-32 max-sm:pb-36 max-sm:pl-10 max-sm:pr-20 max-md:pb-44 max-md:px-10 max-lg:pb-44 bg-transparent " >
+
+          <div className=" absolute inset-auto "></div>
+          <p className="z-10 mt-1 text-xl font-bold max-sm:text-xs  max-md:text-sm  text-white">
+            Name: {user}
+          </p>
+          <p className="z-10 mt-1 text-xl font-bold text-white max-sm:text-xs  max-md:text-sm">
+            Country: {albu}
+          </p>
+          <p className="z-10 mt-1 text-xl font-bold text-white max-sm:text-xs  max-md:text-sm">
+            Location: {song}
+          </p>
         </div>
       </div>
-    </div>*/
+    </div>
+  );
+}

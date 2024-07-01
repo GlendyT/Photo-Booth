@@ -1,19 +1,19 @@
 import "./Background.css";
-import jk from "../img/bg.jpeg"
-import jk2 from "../img/bg2.jpg"
-import v from "../img/bg3.jpg"
-import v1 from "../img/bg4.jpg"
-import jimin from "../img/bg5.jpg"
-import jimin1 from "../img/bg6.jpg"
-import jhope from "../img/bg7.jpg"
-import jhope1 from "../img/bg8.jpeg"
-import suga from "../img/bg9.jpg"
-import suga1 from "../img/bg.jpeg"
-import suga2 from "../img/bg2.jpg"
-import jin from "../img/bg3.jpg"
-import jin1 from "../img/bg4.jpg"
-import rm from "../img/bg5.jpg"
-import rm1 from "../img/bg6.jpg"
+import jk from "../img/bg.avif"
+import jk2 from "../img/bg2.avif"
+import v from "../img/bg3.avif"
+import v1 from "../img/bg4.avif"
+import jimin from "../img/bg5.avif"
+import jimin1 from "../img/bg6.avif"
+import jhope from "../img/bg7.avif"
+import jhope1 from "../img/bg8.avif"
+import suga from "../img/bg9.avif"
+import suga1 from "../img/bg.avif"
+import suga2 from "../img/bg2.avif"
+import jin from "../img/bg3.avif"
+import jin1 from "../img/bg4.avif"
+import rm from "../img/bg5.avif"
+import rm1 from "../img/bg6.avif"
 
 import React, { useEffect } from "react";
 
@@ -72,8 +72,8 @@ const Background = () => {
 
      const image = document.createElement("img");
      image.src=imageSrc;
-     image.style.width = "10rem ";
-     image.style.height = "12rem"
+     image.style.width = "12rem ";
+     image.style.height = "10rem"
 
      myEmoji.appendChild(image)
 
@@ -102,7 +102,7 @@ const Background = () => {
   }, []);
 
   return (
-    <div className="rain-container">
+    <div className="rain-container bg-backmain bg-cover bg-no-repeat">
     </div>
   );
 };

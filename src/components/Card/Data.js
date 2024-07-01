@@ -1,12 +1,12 @@
-import bg from "../img/bg.jpeg";
-import bg2 from "../img/bg2.jpg";
-import bg3 from "../img/bg3.jpg";
-import bg4 from "../img/bg4.jpg";
-import bg5 from "../img/bg5.jpg";
-import bg6 from "../img/bg6.jpg";
-import bg7 from "../img/bg7.jpg";
-import bg8 from "../img/bg8.jpeg";
-import bg9 from "../img/bg9.jpg";
+import bg from "../img/bg.avif";
+import bg2 from "../img/bg2.avif";
+import bg3 from "../img/bg3.avif";
+import bg4 from "../img/bg4.avif";
+import bg5 from "../img/bg5.avif";
+import bg6 from "../img/bg6.avif";
+import bg7 from "../img/bg7.avif";
+import bg8 from "../img/bg8.avif";
+import bg9 from "../img/bg8.avif";
 
 
 export const  SPOTIFY = {

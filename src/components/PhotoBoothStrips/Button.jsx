@@ -4,7 +4,7 @@ const Button = ({ handleDownloadImage, resetPhotos, photo2Complete }) => {
   };
 
   return (
-    <div className="flex max-sm:flex max-sm:flex-col gap-1 max-sm:justify-center">
+    <div className="flex max-sm:flex max-sm:flex-row gap-1 max-sm:justify-center">
       <button
         className="bg-black rounded-lg text-white font-bold p-2 mt-4 disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors max-sm:text-xs max-sm:mt-2 hover:bg-gradient-to-r from-amber-600 from-5% via-red-700 via-40% to-indigo-900 to-85% disabled:hover:bg-none"
         onClick={handleDownload}
@@ -18,7 +18,7 @@ const Button = ({ handleDownloadImage, resetPhotos, photo2Complete }) => {
         onClick={resetPhotos}
         disabled={!photo2Complete}
       >
-        Create Other
+        Restart
       </button>
 
     </div>
