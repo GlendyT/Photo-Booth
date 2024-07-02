@@ -31,7 +31,6 @@ module.exports = {
         monsieur: ["Monsieur La Doulaise", "cursive"],
         passions: ["Passions Conflict", "cursive"],
         guwndolyn: ["Gwendolyn", "cursive"],
-        ballet: ["Ballet", "cursive"],
         monotono: ["Monoton", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
         pixel: ["Pixelify Sans", "sans-serif"],

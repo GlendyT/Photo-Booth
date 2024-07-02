@@ -16,7 +16,7 @@ const Card = () => {
             alt=""
             className=" pb-2 w-72 flex justify-center"
           />
-          <div className="pt-0 italic font-ballet"> 
+          <div className="pt-0 italic"> 
           <h1 className="text-sm max-sm:text-xs">{randomItem.title}</h1>
           <h1 className="text-end text-black text-xs">- {randomItem.from}</h1>
           </div>
