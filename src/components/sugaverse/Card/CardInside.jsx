@@ -20,7 +20,7 @@ const dicImg = {
 
 const styles = {
   dday: {
-    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-20 max-ms:p-20`}",
+    div1: "{`justify-center bg-no-repeat bg-center bg-contain block px-16 pb-40 pt-20 max-sm:p-40 `}",
     div2: "p-0",
     div3: "text-white text-sm tracking-tight pb-20 font-dmmono max-sm:pt-5 max-sm:text-xs max-sm:pb-5",
     p: "text-white float-end font-dmmono max-sm:text-xs",

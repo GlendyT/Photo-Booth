@@ -7,7 +7,7 @@ export default function TicketComponent({
 }) {
   return (
     <div className=" w-10/12 h-96 bg-none max-sm:w-full " >
-      <div className="relative w-full h-96 bg-transparent "   id="print"  >
+      <div className="relative w-full h-96 max-sm:w-96 max-sm:h-44 bg-transparent  "   id="print"  >
       <img
             src={hw}
             alt=""
