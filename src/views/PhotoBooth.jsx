@@ -5,6 +5,8 @@ import Button from "../components/PhotoBoothStrips/Button";
 import Loader from "../components/Loader/Loader";
 import { useRef, useState, useEffect } from "react";
 import useDownload from "../hooks/useDownload";
+import Logo from "../components/PhotoBoothStrips/DragImage/Logo";
+import logo1 from "../../src/components/img/festa_logo.webp"
 
 
 const PhotoBooth = () => {
@@ -90,7 +92,7 @@ const PhotoBooth = () => {
 
 
   return (
-    <div className=" relative min-h-screen bg-backg bg-no-repeat bg-cover " >
+    <div className=" relative min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center pt-2" >
       <div className="flex flex-col items-center ">
       <div className="  " id="print">
         {error && (
@@ -98,7 +100,7 @@ const PhotoBooth = () => {
             {messageError}
           </div>
         )}
-        <div className={`pt-4 max-xl:mx-auto m-auto px-2 bg-white`}>
+        <div className={`pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500 pb-4`}>
           
           <Photo
             polaroids={polaroids}
@@ -135,7 +137,9 @@ const PhotoBooth = () => {
             error={error}
             messageError={messageError}
           />
+                  <Logo logo1={logo1}/>
         </div>
+
       </div>
 
       <Button
