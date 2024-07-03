@@ -1,4 +1,4 @@
-import bg from "../img/bg.avif";
+import bg from "../img/bg (1).avif";
 import bg2 from "../img/bg2.avif";
 import bg3 from "../img/bg3.avif";
 import bg4 from "../img/bg4.avif";
