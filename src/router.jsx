@@ -7,21 +7,24 @@ import Navbar from "./navbar/Navbar";
 import Hobi from "./views/Hobi";
 import { DownloadProvider } from "./context/DownloadProvider";
 import Suga from "./views/Suga";
+import Bingo from "./views/Bingo";
 
 export default function Router() {
   return (
     <BrowserRouter>
-    <DownloadProvider> 
-      <Routes>
-        <Route element={< Navbar />}>
-          <Route path="/" element={<App />} index />
-          <Route path="/polaroid" element={<Card />} />
-          <Route path="/photobooth" element={<PhotoBooth />} />
-          <Route path="/hobipalooza" element={<Hobi/>} />
-          <Route path="/sugaverse" element={<Suga />} />
-          <Route path="/rain" element={<Background />} />
-        </Route>
-      </Routes>
+      <DownloadProvider>
+
+          <Routes>
+            <Route element={<Navbar />}>
+              <Route path="/" element={<App />} index />
+              <Route path="/polaroid" element={<Card />} />
+              <Route path="/photobooth" element={<PhotoBooth />} />
+              <Route path="/sugaverse" element={<Suga />} />
+              <Route path="/hobipalooza" element={<Hobi />} />
+              <Route path="/bingo" element={<Bingo />} />
+              <Route path="/rain" element={<Background />} />
+            </Route>
+          </Routes>
       </DownloadProvider>
     </BrowserRouter>
   );
