@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
@@ -13,6 +9,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 @tailwind base;

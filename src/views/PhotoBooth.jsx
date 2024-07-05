@@ -6,11 +6,10 @@ import Loader from "../components/Loader/Loader";
 import { useRef, useState, useEffect } from "react";
 import useDownload from "../hooks/useDownload";
 import Logo from "../components/PhotoBoothStrips/DragImage/Logo";
-import logo1 from "../../src/components/img/festa_logo.webp"
-
+import logo1 from "../../src/components/img/festa_logo.webp";
 
 const PhotoBooth = () => {
-  const { handleDownloadImage } = useDownload()
+  const { handleDownloadImage } = useDownload();
   const [polaroids, setPolaroids] = useState([]);
   const [error, setError] = useState(false);
   const [messageError, setMessageError] = useState("");
@@ -21,7 +20,6 @@ const PhotoBooth = () => {
   const refInputFiles = [useRef(null), useRef(null), useRef(null)]; // Array of refs for each input
   const elementRef = useRef(null);
   const typeImages = ["image/png", "image/jpeg", "image/jpg"];
-
 
   const selectImage = (index) => {
     refInputFiles[index].current.click();
@@ -66,7 +64,7 @@ const PhotoBooth = () => {
     setImageSaved(false);
   };
 
-    useEffect(() => {
+  useEffect(() => {
     if (imageSaved) {
       const timer = setTimeout(() => {
         setImageSaved(false);
@@ -75,7 +73,6 @@ const PhotoBooth = () => {
     }
   }, [imageSaved]);
 
-  
   useEffect(() => {
     if (polaroids[2] || polaroids[1] || polaroids[0]) {
       setPhoto2Complete(true);
@@ -90,18 +87,18 @@ const PhotoBooth = () => {
     }, 4000);
   }, [error]);
 
-
   return (
-    <div className=" relative min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center pt-2" >
+    <div className=" relative min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center pt-2">
       <div className="flex flex-col items-center ">
-      <div className="  " id="print">
         {error && (
           <div className="bg-red-700 text-white rounded-lg p-2">
             {messageError}
           </div>
         )}
-        <div className={`pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500 pb-4`}>
-          
+        <div
+          className={`pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500 pb-4`}
+          id="print"
+        >
           <Photo
             polaroids={polaroids}
             setPolaroids={setPolaroids}
@@ -137,22 +134,20 @@ const PhotoBooth = () => {
             error={error}
             messageError={messageError}
           />
-                  <Logo logo1={logo1}/>
+          <Logo logo1={logo1} />
         </div>
 
+        <Button
+          handleDownloadImage={handleDownloadImage}
+          resetPhotos={resetPhotos}
+          photo2Complete={photo2Complete}
+        />
+        {imageSaved && (
+          <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+            <Loader />
+          </div>
+        )}
       </div>
-
-      <Button
-        handleDownloadImage={handleDownloadImage}
-        resetPhotos={resetPhotos}
-        photo2Complete={photo2Complete}
-      />
-      {imageSaved && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-          <Loader />
-        </div>
-      )}
-       </div>
     </div>
   );
 };
