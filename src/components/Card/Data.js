@@ -23,48 +23,48 @@ export const  SPOTIFY = {
 export const  SCREEN = [
     {
       img: bg,
-      title: "SPECIAL THANKS TO OUR ETERNAL YOUTH, ARMY",
+      title: " our eternal youth ",
       from: "BTS",
     },
     {
       img: bg2,
-      title: "SPECIAL THANKS TO OUR BIGGES VOICE, ARMY",
+      title: " our biggest voice ",
       from: "BTS",
     }
     ,
     {
       img: bg3,
-      title: "SPECIAL THANKS TO THE MOST BEAUTIFUL, ARMY",
+      title: "the most beautiful ",
       from: "BTS",
     },
     {
       img: bg4,
-      title: "SPECIAL THANKS TO OUR CHAPETER 1, ARMY",
+      title: " our chapeter 1 ",
       from: "BTS",
     },
     {
       img: bg5,
-      title: "SPECIAL THANKS TO OUR HAPPINES, ARMY",
+      title: "our happines",
       from: "BTS",
     },
     {
       img: bg6,
-      title: "SPECIAL THANKS TO THE BIGGEST LOVE, ARMY",
+      title: "the biggest love",
       from: "BTS",
     },
     {
       img: bg7,
-      title: "SPECIAL THANKS TO OUR UNIVERSE, ARMY",
+      title: "our universe",
       from: "BTS",
     },
     {
       img: bg8,
-      title: "SPECIAL THANKS TO SWEETEST, ARMY",
+      title: " sweetest ",
       from: "BTS",
     },
     {
       img: bg9,
-      title: "SPECIAL THANKS TO OUR WINGS, ARMY",
+      title: "our wings ",
       from: "BTS",
     },
   ]
