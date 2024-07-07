@@ -8,7 +8,7 @@ export default function Hobi() {
   const [song, setSong] = useState([]);
 
   return (
-    <div className=" min-h-screen bg-backhobi2 bg-no-repeat bg-center bg-cover  ">
+    <div className=" min-h-screen bg-backhobi2 bg-no-repeat bg-center bg-cover pt-16 ">
       <div className="flex flex-col items-center justify-center max-sm:pt-10"> 
       {!user.length > 0 ? (
         <Formulariohobi setUser={setUser} setAlbu={setAlbu} setSong={setSong} />

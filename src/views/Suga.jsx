@@ -12,7 +12,7 @@ function Suga() {
 
 
   return (
-    <div className=" min-h-screen  bg-backsuga bg-cover bg-no-repeat">
+    <div className=" min-h-screen  bg-backsuga bg-cover bg-no-repeat pt-16">
       <div className="flex flex-col items-center">
 
       {!descripcion.length > 0 ? (

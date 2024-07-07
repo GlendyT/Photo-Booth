@@ -88,15 +88,15 @@ const PhotoBooth = () => {
   }, [error]);
 
   return (
-    <div className=" relative min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center pt-2">
-      <div className="flex flex-col items-center ">
+    <div className=" relative min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center pt-16 max-sm:pt-12">
+      <div className="flex flex-col items-center justify-center ">
         {error && (
           <div className="bg-red-700 text-white rounded-lg p-2">
             {messageError}
           </div>
         )}
         <div
-          className={`pt-4 max-xl:mx-auto m-auto px-2  bg-purple-500 pb-4`}
+          className={`pt-2 max-xl:mx-auto m-auto px-2  bg-purple-500 pb-4`}
           id="print"
         >
           <Photo

@@ -10,7 +10,7 @@ const Card = () => {
 
   return (
     <>
-      <div className="relative min-h-screen flex flex-col items-center gap-4 text-xl px-40 pt-20 max-sm:px-10 bg-backpolaroid bg-cover bg-no-repeat">
+      <div className="relative min-h-screen flex flex-col items-center gap-4 text-xl justify-center max-sm:px-10 bg-backpolaroid bg-cover bg-no-repeat max-sm:bg-center">
         <div
           className="bg-white border-pink-300 border-4 p-6 grid grid-row-2 justify-items-center"
           id="print"
@@ -36,13 +36,31 @@ const Card = () => {
             </div>
           </div>
         </div>
+
         <button
-          className="py-4 px-3 bg-white text-black font-bold rounded-2xl"
+          className=" flex flex-row items-center justify-center gap-2 py-4 px-3 bg-white text-black font-bold rounded-2xl"
           onClick={handleDownloadImage}
+          
         >
+          
           Download
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-5 h-5 float-end"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+          />
+        </svg>
         </button>
-      </div>
+        </div>
+
     </>
   );
 };
