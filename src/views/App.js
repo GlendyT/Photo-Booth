@@ -64,7 +64,7 @@ useEffect(() => {
           </div>
         </Link>
 
-        <Link to="/rain" className="px-4 max-sm:py-6 py-16 bg-black  hover:bg-btsgif2 hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl  ">
+{ /*       <Link to="/rain" className="px-4 max-sm:py-6 py-16 bg-black  hover:bg-btsgif2 hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl  ">
           <div className=" text-white  ">
             <div className=" flex flex-row-2 gap-8 justify-center items-center max-sm:flex-col max-sm:text-center">
               <div className="flex flex-col gap-8">
@@ -75,7 +75,7 @@ useEffect(() => {
               </div>
             </div>
           </div>
-        </Link>
+        </Link>*/}
       </div>
 
       
