@@ -1,9 +1,28 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MagicShop from "../components/MagicShop/MagicShop";
+
 
 function App() {
+
+  const [ doors, setDoors] = useState(false)
+
+useEffect(() => {
+  const opendoors = setTimeout(() => {
+    setDoors(true)
+  }, 6000)
+
+  return () => clearTimeout(opendoors)
+}, [])
+
+
   return (
-    <div className=" relative min-h-screen bg-backmain bg-cover bg-no-repeat ">
-      <div className="grid grid-cols-4 px-40 py-20 gap-6 max-sm:flex max-sm:flex-col max-sm:py-1 max-sm:px-20 ">
+    <> 
+    {!doors ? (
+      <MagicShop/>
+    ) : (
+      <div className=" relative min-h-screen bg-backmain bg-cover bg-no-repeat ">
+      <div className="grid grid-cols-4 px-40 py-20 gap-6 max-sm:flex max-sm:flex-col max-sm:py-12 max-sm:px-20 ">
         <Link to="/polaroid" className="px-4 max-sm:py-6 py-16 bg-black hover:bg-btsgif3 hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl ">
           <div className="  text-white  ">
             <div className="flex flex-row-2 gap-8 justify-center items-center max-sm:flex-col max-sm:text-center">
@@ -61,9 +80,15 @@ function App() {
 
       
     </div>
+    ) }
+
+
+    </>
   );
 }
 
 export default App;
 
-/*    */
+/*     */
+
+

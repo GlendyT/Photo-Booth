@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="w-full p-4 text-black gap-2 bg-nav bg-cover bg-no-repeat">
+      <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start"> 
 
           <button
@@ -97,7 +97,7 @@ export default function Navbar() {
             >
               Bingo
             </Link>
-            <Link
+{  /*          <Link
               to="/rain"
               className={
                 menu === "rain"
@@ -106,7 +106,7 @@ export default function Navbar() {
               }
             >
               Rain
-            </Link>
+            </Link> */}
 
           </div>
         
@@ -114,7 +114,7 @@ export default function Navbar() {
       </div>
       
       <div
-        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute block w-44 h-56 left-4 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
+        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute block w-44 h-56 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
         <Link
           to="/"
@@ -182,7 +182,7 @@ export default function Navbar() {
         >
           Bingo
         </Link>
-        <Link
+{/*        <Link
           to="/rain"
           className={
             menu === "rain"
@@ -192,7 +192,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
         >
           Rain
-        </Link>
+        </Link>*/}
       </div>
       <Outlet />
     </>

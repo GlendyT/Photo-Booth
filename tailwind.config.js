@@ -19,6 +19,7 @@ module.exports = {
         btsgif1: "url('/src/components/img/btsgif.gif')",
         btsgif2: "url('/src/components/img/btsgif2.gif')",
         btsgif3: "url('/src/components/img/btsgit3.gif')",
+        magicdoors: "url('/src/components/img/magicshop.gif')",
         bingo: "url('/src/components/img/bingo.gif')",
         bingo2: "url('/src/components/img/BINGO AMRY tr.webp')",
         rmlogo: "url('/src/components/img/rm.png')",
