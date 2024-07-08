@@ -4,9 +4,9 @@ import bg3 from "../img/bg3.avif";
 import bg4 from "../img/bg4.avif";
 import bg5 from "../img/bg5.avif";
 import bg6 from "../img/bg6.avif";
-import bg7 from "../img/bg7.avif";
-import bg8 from "../img/bg8.jfif";
-import bg9 from "../img/bg9.jpg";
+import bg7 from "../img/bg7.webp";
+import bg8 from "../img/bg8.webp";
+import bg9 from "../img/bg9.webp";
 
 
 export const  SPOTIFY = {
