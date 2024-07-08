@@ -15,6 +15,7 @@ module.exports = {
         backphoto: "url('/src/components/img/photobooth_bg.avif')",
         logo: "url('/src/components/img/festa_logo.webp')",
         nav: "url('/src/components/img/Glendy_Header5.webp')",
+        bingoback: "url('/src/components/img/Background_BingoBA.webp')",
         gifhobi: "url('/src/components/img/hobigif.gif')",
         btsgif1: "url('/src/components/img/btsgif.gif')",
         btsgif2: "url('/src/components/img/btsgif2.gif')",
