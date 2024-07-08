@@ -23,12 +23,12 @@ export const  SPOTIFY = {
 export const  SCREEN = [
     {
       img: bg,
-      title: " our eternal youth ",
+      title: " our Eternal youth ",
       from: "BTS",
     },
     {
       img: bg2,
-      title: " our biggest voice ",
+      title: " our Biggest voice ",
       from: "BTS",
     }
     ,
@@ -39,32 +39,32 @@ export const  SCREEN = [
     },
     {
       img: bg4,
-      title: " our chapeter 1 ",
+      title: " our Chapter 1 ",
       from: "BTS",
     },
     {
       img: bg5,
-      title: "our happines",
+      title: "our Happiness",
       from: "BTS",
     },
     {
       img: bg6,
-      title: "the biggest love",
+      title: "the Biggest love",
       from: "BTS",
     },
     {
       img: bg7,
-      title: "our universe",
+      title: "our Universe",
       from: "BTS",
     },
     {
       img: bg8,
-      title: " sweetest ",
+      title: " Sweetest ",
       from: "BTS",
     },
     {
       img: bg9,
-      title: "our wings ",
+      title: "our Wings ",
       from: "BTS",
     },
   ]
