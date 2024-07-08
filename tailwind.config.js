@@ -14,7 +14,7 @@ module.exports = {
         backhobi2: "url('/src/components/img/jhope2.gif')",
         backphoto: "url('/src/components/img/photobooth_bg.avif')",
         logo: "url('/src/components/img/festa_logo.webp')",
-        nav: "url('/src/components/img/BackgroundHOME_VercelBA4.avif')",
+        nav: "url('/src/components/img/Glendy_Header5.webp')",
         gifhobi: "url('/src/components/img/hobigif.gif')",
         btsgif1: "url('/src/components/img/btsgif.gif')",
         btsgif2: "url('/src/components/img/btsgif2.gif')",

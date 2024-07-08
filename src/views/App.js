@@ -46,9 +46,27 @@ useEffect(() => {
             </div>
           </div>
         </Link>
-        <Link to="/sugaverse" className=" bg-sugalogo bg-contain bg-no-repeat bg-center px-10 max-sm:py-6 py-16 hover:bg-backsuga hover:bg-cover hover:bg-center hover:bg-no-repeat  hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl ">
+        <Link to="/sugaverse" className=" bg-black px-10 max-sm:py-6 py-16 hover:bg-backsuga hover:bg-cover hover:bg-center hover:bg-no-repeat  hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl ">
+        <div className="  text-white ">
+            <div className=" flex flex-row-2 gap-8 justify-center items-center max-sm:flex-col max-sm:text-center">
+              <div className="flex flex-col gap-8">
+                <div className="text-sm">
+                  BTS <h1 className="uppercase font-extrabold">SUGA</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </Link>
-        <Link to="/hobipalooza" className=" bg-hobilogo bg-contain bg-no-repeat bg-center  px-10 max-sm:py-6 py-16 hover:bg-gifhobi hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl ">
+        <Link to="/hobipalooza" className=" bg-black px-10 max-sm:py-6 py-16 hover:bg-gifhobi hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl ">
+        <div className="  text-white ">
+            <div className=" flex flex-row-2 gap-8 justify-center items-center max-sm:flex-col max-sm:text-center">
+              <div className="flex flex-col gap-8">
+                <div className="text-sm">
+                  BTS <h1 className=" font-extrabold">j-hope</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </Link>
 
         <Link to="/bingo" className="px-4 max-sm:py-6 py-16 bg-black  hover:bg-bingo hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl  ">
