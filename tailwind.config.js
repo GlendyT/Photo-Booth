@@ -22,11 +22,13 @@ module.exports = {
         btsgif3: "url('/src/components/img/btsgit3.gif')",
         magicdoors: "url('/src/components/img/magicshop.gif')",
         bingo2: "url('/src/components/img/BINGO AMRY tr.webp')",
-        sugalogoi: "url('/src/components/img/sugaverse.webp')",
-        jhopelogoi: "url('/src/components/img/hobipalloza.webp')",
+        sugalogoi4: "url('/src/components/img/sugaverse (4).webp')",
+        jhopelogoi: "url('/src/components/img/hobipalloza (1).webp')",
+        jhopelogoi1: "url('/src/components/img/hopedischarge.webp')",
         bingologoi: "url('/src/components/img/bingo.webp')",
         polaroidlogo: "url('/src/components/img/polaroid.webp')",
         photostrips: "url('/src/components/img/photostrip.webp')",
+        vlogo: "url('/src/components/img/vpassport.webp')"
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],

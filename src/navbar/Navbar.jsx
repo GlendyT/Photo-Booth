@@ -21,14 +21,17 @@ export default function Navbar() {
       setMenu("hobipalooza");
     } else if (location.pathname === "/bingo") {
       setMenu("bingo");
+    } else if (location.pathname === "/vpassport") {
+      setMenu("vpassport");
+    } else if (location.pathname === "/hobisback") {
+      setMenu("hobisback");
     }
   }, [location.pathname]);
 
   return (
     <>
       <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
-        <div className="flex flex-row items-center justify-center max-sm:justify-start"> 
-
+        <div className="flex flex-row items-center justify-center max-sm:justify-start">
           <button
             className="md:hidden text-white text-xl"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -97,7 +100,27 @@ export default function Navbar() {
             >
               Bingo
             </Link>
-{  /*          <Link
+            <Link
+              to="/vpassport"
+              className={
+                menu === "vpassport"
+                  ? "text-xl font-dmmono px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl font-dmmono"
+              }
+            >
+              Vpassport
+            </Link>
+            <Link
+              to="/hobisback"
+              className={
+                menu === "hobisback"
+                  ? "text-xl font-dmmono px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl font-dmmono"
+              }
+            >
+              Hobisback
+            </Link>
+            {/*          <Link
               to="/rain"
               className={
                 menu === "rain"
@@ -107,14 +130,14 @@ export default function Navbar() {
             >
               Rain
             </Link> */}
-
           </div>
-        
         </div>
       </div>
-      
+
       <div
-        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute block w-44 h-56 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
+        className={`md:hidden ${
+          isMenuOpen ? "block" : "hidden"
+        } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
         <Link
           to="/"
@@ -182,7 +205,30 @@ export default function Navbar() {
         >
           Bingo
         </Link>
-{/*        <Link
+        <Link
+          to="/vpassport"
+          className={
+            menu === "vpassport"
+              ? "block text-xl font-dmmono font-bold py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xl font-dmmono"
+          }
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Vpassport
+        </Link>
+        <Link
+          to="/hobisback"
+          className={
+            menu === "hobisback"
+              ? "block text-xl font-dmmono py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xl font-dmmono"
+          }
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Hobisback
+        </Link>
+
+        {/*        <Link
           to="/rain"
           className={
             menu === "rain"

@@ -8,23 +8,25 @@ import Hobi from "./views/Hobi";
 import { DownloadProvider } from "./context/DownloadProvider";
 import Suga from "./views/Suga";
 import Bingo from "./views/Bingo";
+import Vpassport from "./views/Vpassport";
+import Hobisback from "./views/Hobisback";
 
 export default function Router() {
   return (
     <BrowserRouter>
       <DownloadProvider>
-
-          <Routes>
-            <Route element={<Navbar />}>
-              <Route path="/" element={<App />} index />
-              <Route path="/polaroid" element={<Card />} />
-              <Route path="/photobooth" element={<PhotoBooth />} />
-              <Route path="/sugaverse" element={<Suga />} />
-              <Route path="/hobipalooza" element={<Hobi />} />
-              <Route path="/bingo" element={<Bingo />} />
-
-            </Route>
-          </Routes>
+        <Routes>
+          <Route element={<Navbar />}>
+            <Route path="/" element={<App />} index />
+            <Route path="/polaroid" element={<Card />} />
+            <Route path="/photobooth" element={<PhotoBooth />} />
+            <Route path="/sugaverse" element={<Suga />} />
+            <Route path="/hobipalooza" element={<Hobi />} />
+            <Route path="/bingo" element={<Bingo />} />
+            <Route path="/vpassport" element={<Vpassport />} />
+            <Route path="/hobisback" element={<Hobisback />} />
+          </Route>
+        </Routes>
       </DownloadProvider>
     </BrowserRouter>
   );
