@@ -32,15 +32,15 @@ export default function Navbar() {
     <>
       <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2">
-           <button
+          <button
             className=" sm:hidden text-white text-xs"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             &#9776;
-          </button> 
+          </button>
 
           <div className=" hidden sm:flex flex-row items-center gap-2">
-             <Link
+            <Link
               to="/"
               className={
                 menu === "menu"
@@ -49,7 +49,7 @@ export default function Navbar() {
               }
             >
               Home
-            </Link> 
+            </Link>
             <Link
               to="/polaroid"
               className={
@@ -124,7 +124,7 @@ export default function Navbar() {
         </div>
       </div>
 
-       <div
+      <div
         className={`sm:hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
@@ -217,7 +217,7 @@ export default function Navbar() {
         >
           Hobisback
         </Link>
-      </div> 
+      </div>
       <Outlet />
     </>
   );
