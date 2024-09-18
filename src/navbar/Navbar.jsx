@@ -209,8 +209,8 @@ export default function Navbar() {
           to="/vpassport"
           className={
             menu === "vpassport"
-              ? "block text-xl font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-michroma"
+              ? "block text-xs font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-michroma"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -244,3 +244,4 @@ export default function Navbar() {
     </>
   );
 }
+//cambios aqui
