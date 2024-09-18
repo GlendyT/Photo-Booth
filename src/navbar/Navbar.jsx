@@ -39,7 +39,7 @@ export default function Navbar() {
             &#9776;
           </button> */}
 
-          <div className="hidden md:flex flex-row items-center gap-2">
+          <div className=" md:flex flex-row items-center gap-2">
              <Link
               to="/"
               className={
