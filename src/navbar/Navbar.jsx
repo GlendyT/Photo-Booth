@@ -101,8 +101,7 @@ export default function Navbar() {
               Bingo
             </Link>
             <Link
-              to="https://v-passport.vercel.app/"
-              target="_blank"
+              to="/vpassport"
               className={
                 menu === "vpassport"
                   ? "text-xl font-dmmono px-2 underline text-violet-400 cursor-pointer rounded-xl"
@@ -207,8 +206,7 @@ export default function Navbar() {
           Bingo
         </Link>
         <Link
-          to="https://v-passport.vercel.app"
-          target="_blank"
+          to="/vpassport"
           className={
             menu === "vpassport"
               ? "block text-xl font-dmmono font-bold py-1  underline text-violet-400 cursor-pointer "
