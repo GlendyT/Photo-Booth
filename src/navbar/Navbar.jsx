@@ -31,15 +31,15 @@ export default function Navbar() {
   return (
     <>
       <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
-        <div className="flex flex-row items-center justify-center max-sm:justify-start">
-          {/* <button
-            className="md:hidden text-white text-xs"
+        <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2">
+           <button
+            className=" md:hidden text-white text-xs"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             &#9776;
-          </button> */}
+          </button> 
 
-          <div className=" md:flex flex-row items-center gap-2">
+          <div className=" hidden md:flex flex-row items-center gap-2">
              <Link
               to="/"
               className={
@@ -120,21 +120,11 @@ export default function Navbar() {
             >
               Hobisback
             </Link>
-            {/*          <Link
-              to="/rain"
-              className={
-                menu === "rain"
-                  ? "text-xs font-indie py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-indie"
-              }
-            >
-              Rain
-            </Link> */}
           </div>
         </div>
       </div>
 
-      {/* <div
+       <div
         className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
@@ -227,7 +217,7 @@ export default function Navbar() {
         >
           Hobisback
         </Link>
-      </div> */}
+      </div> 
       <Outlet />
     </>
   );
