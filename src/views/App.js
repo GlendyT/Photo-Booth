@@ -16,7 +16,6 @@ useEffect(() => {
 
   return (
     <>
-      (
       <div className=" relative min-h-screen bg-backmain  bg-cover bg-no-repeat max-sm:bg-center ">
         <div className="grid grid-cols-4 px-40 py-32 gap-6 max-sm:flex max-sm:flex-col max-sm:p-12  max-sm:gap-3">
           <Link
