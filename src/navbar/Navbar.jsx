@@ -135,7 +135,7 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`max-sm::hidden ${
+        className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
@@ -210,7 +210,7 @@ export default function Navbar() {
           className={
             menu === "vpassport"
               ? "block text-base font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-base font-michroma"
+              : "block cursor-pointer text-white text-xl font-michroma"
           }
           onClick={() => setIsMenuOpen(false)}
         >
