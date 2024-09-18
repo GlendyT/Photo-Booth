@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2">
            <button
-            className=" md:hidden text-white text-xs"
+            className=" sm:hidden text-white text-xs"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             &#9776;
@@ -125,7 +125,7 @@ export default function Navbar() {
       </div>
 
        <div
-        className={`md:hidden ${
+        className={`sm:hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
