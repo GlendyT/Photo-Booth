@@ -5,19 +5,11 @@ import CitizenResult from "../components/VPassport/CitizenResult";
 export default function Vpassport() {
   const [citizen, setCitizen] = useState([]);
   return (
-    <div
-      className={`relative min-h-screen bg-center bg-no-repeat bg-cover pt-16 ${
-        citizen.length > 0
-          ? "bg-largeScreen2  max-sm:bg-smallScreen"
-          : "bg-largeScreen  max-sm:bg-smallScreen2"
-      }`}
-    >
-      <div className="flex flex-col items-center justify-center">
-        {!citizen.length > 0 ? (
-          <FormularioVPassport setCitizen={setCitizen} />
-        ) : (
-          <CitizenResult citizen={citizen} setCitizen={setCitizen} />
-        )}
+    <div className="min-h-screen pt-16  bg-backmain  bg-cover bg-no-repeat max-sm:bg-center ">
+      <div className="flex flex-col justify-center items-center p-44">
+        <p className="  text-white text-5xl font-extrabold text-center">
+          Coming Soon....
+        </p>
       </div>
     </div>
   );
