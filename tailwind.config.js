@@ -32,7 +32,7 @@ module.exports = {
         vlogo: "url('/src/components/img/vpassport.webp')",
         
         largeScreen: "url('/src/components/VPassport/imgVPassport/Background Page Starts.jpg')",
-        largeScreen2: "url('/src/imgVPassport/Background Page Generated.webp')",
+        largeScreen2: "url('/src/components/VPassport/imgVPassport/Background Page Generated.webp')",
         rightSidePassport:
           "url('/src/components/VPassport/imgVPassport/Passport Image Generated Right Side.webp')",
         smallScreen: "/src/components/VPassport/imgVPassport/Background Generated Phone.webp')",
