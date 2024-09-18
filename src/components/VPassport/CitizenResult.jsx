@@ -12,8 +12,8 @@ export default function CitizenResult({citizen, setCitizen}) {
   }
   return (
     <>
-      <div className="flex items-center justify-center pt-20 pb-4 max-sm:pb-36 ">
-        <div className="flex flex-row bg-transparent" id="print">
+      <div className="relative flex items-center justify-center pt-20 pb-4 max-sm:pb-36 ">
+        <div className="relative flex flex-row bg-transparent" id="print">
           <CitizenDetail citizen={citizen}/>
         </div>
       </div>

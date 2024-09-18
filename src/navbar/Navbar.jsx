@@ -39,7 +39,7 @@ export default function Navbar() {
             &#9776;
           </button>
 
-          <div className=" hidden sm:flex flex-row items-center gap-2">
+           <div className=" hidden sm:flex flex-row items-center gap-2">
             <Link
               to="/"
               className={
@@ -120,14 +120,14 @@ export default function Navbar() {
             >
               Hobisback
             </Link>
-          </div>
+          </div> 
         </div>
       </div>
 
-      <div
+      {/* <div
         className={`sm:hidden ${
           isMenuOpen ? "block" : "hidden"
-        } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
+        } absolute block w-44 h-60 top-10 py-8 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
         <Link
           to="/"
@@ -217,7 +217,7 @@ export default function Navbar() {
         >
           Hobisback
         </Link>
-      </div>
+      </div> */}
       <Outlet />
     </>
   );
