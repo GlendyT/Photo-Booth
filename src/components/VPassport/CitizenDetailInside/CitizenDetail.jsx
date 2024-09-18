@@ -13,7 +13,7 @@ export const CitizenDetail = ({citizen}) => {
   return (
     <>
     <CitizenPage1 image={image} />
-    <div className="  shadow-md rounded-xl w-72 h-50 max-sm:w-44  ">
+    <div className="relative  shadow-md rounded-xl w-72 h-50 max-sm:w-44  ">
       <div className="relative w-full h-full ">
         <div className="absolute flex flex-col justify-center w-full h-full inset-0 pr-8 pb-24 max-sm:pb-10 max-sm:pr-4 ">
           <img
