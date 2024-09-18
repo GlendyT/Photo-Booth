@@ -134,7 +134,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div
+      {/* <div
         className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
@@ -227,19 +227,7 @@ export default function Navbar() {
         >
           Hobisback
         </Link>
-
-        {/*        <Link
-          to="/rain"
-          className={
-            menu === "rain"
-              ? "block text-xs font-indie  font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-indie "
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Rain
-        </Link>*/}
-      </div>
+      </div> */}
       <Outlet />
     </>
   );
