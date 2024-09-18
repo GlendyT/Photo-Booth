@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { VFormulario } from "../components/VPassport/VFormulario";
 import { VResultado } from "../components/VPassport/VResultado";
 
+
 export default function Vpassport() {
   const [citizen, setCitizen] = useState([]);
   return (

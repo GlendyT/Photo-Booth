@@ -16,7 +16,6 @@ useEffect(() => {
 
   return (
     <>
-      (
       <div className=" relative min-h-screen bg-backmain  bg-cover bg-no-repeat max-sm:bg-center ">
         <div className="grid grid-cols-4 px-40 py-32 gap-6 max-sm:flex max-sm:flex-col max-sm:p-12  max-sm:gap-3">
           <Link
@@ -43,6 +42,7 @@ useEffect(() => {
           <Link
             to="/vpassport"
             className="px-4 py-16 bg-vlogo bg-no-repeat bg-contain bg-center  hover:bg-gifV hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-sm:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,2)]"
+
           ></Link>
           <Link
             to="/hobisback"
