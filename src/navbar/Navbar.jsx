@@ -32,13 +32,7 @@ export default function Navbar() {
     <>
       <div className="absolute py-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2 px-6">
-          <button
-            className="md:hidden text-white text-xs"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            &#9776;
-          </button>
-          <div className="flex flex-row items-center gap-2 overflow-hidden overflow-x-auto max-sm:hidden">
+          <div className="flex flex-row items-center gap-2 overflow-hidden overflow-x-auto ">
             <Link
               to="/"
               className={
@@ -120,101 +114,6 @@ export default function Navbar() {
               Hobisback
             </Link>
           </div>
-
-          <div
-        className={`sm:hidden ${
-          isMenuOpen ? "" : "hidden"
-        } flex flex-col gap-2 absolute w-28 h-60 top-8 left-0 py-1 pl-2 backdrop-blur-sm bg-black/90 z-10 `}
-      >
-        <Link
-          to="/"
-          className={
-            menu === "menu"
-              ? "block text-xs font-bold font-bad py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-bad"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Home
-        </Link>
-        <Link
-          to="/polaroid"
-          className={
-            menu === "polaroid"
-              ? "block text-xs font-pacific font-bold py-1 text-violet-400 underline "
-              : "block cursor-pointer text-white text-xs font-pacific "
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Polaroid
-        </Link>
-        <Link
-          to="/photobooth"
-          className={
-            menu === "photobooth"
-              ? "block text-xs font-playwrite font-bold py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-playwrite"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Photobooth
-        </Link>
-        <Link
-          to="/sugaverse"
-          className={
-            menu === "sugaverse"
-              ? "block text-xs font-glich font-thin py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-glich font-thin"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Sugaverse
-        </Link>
-        <Link
-          to="/hobipalooza"
-          className={
-            menu === "hobipalooza"
-              ? "block text-xs font-bold font-rock py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-rock"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Hobipalooza
-        </Link>
-        <Link
-          to="/bingo"
-          className={
-            menu === "bingo"
-              ? "block text-xs font-semiboldsans font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-semiboldsans"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Bingo
-        </Link>
-        <Link
-          to="/vpassport"
-          className={
-            menu === "vpassport"
-              ? "block text-xs font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-michroma"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Vpassport
-        </Link>
-        <Link
-          to="/hobisback"
-          className={
-            menu === "hobisback"
-              ? "block text-xs font-dmmono py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-dmmono"
-          }
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Hobisback
-        </Link>
-      </div> 
         </div>
       </div>
       <Outlet />
