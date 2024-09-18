@@ -40,7 +40,7 @@ export default function Navbar() {
           </button>
 
           <div className="hidden md:flex flex-row items-center gap-2">
-            <Link
+            {/* <Link
               to="/"
               className={
                 menu === "menu"
@@ -49,7 +49,7 @@ export default function Navbar() {
               }
             >
               Home
-            </Link>
+            </Link> */}
             <Link
               to="/polaroid"
               className={
