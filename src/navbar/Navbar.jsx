@@ -199,7 +199,6 @@ export default function Navbar() {
             menu === "vpassport"
               ? "block text-xl font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
               : "block cursor-pointer text-white text-xl font-michroma"
-
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -216,7 +215,15 @@ export default function Navbar() {
         >
           Hobisback
         </Link>
-      </div> 
 
-
-*/
+        {/*        <Link
+          to="/rain"
+          className={
+            menu === "rain"
+              ? "block text-xl font-indie  font-bold py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xl font-indie "
+          }
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Rain
+        </Link> */
