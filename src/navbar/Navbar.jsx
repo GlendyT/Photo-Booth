@@ -135,7 +135,7 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:hidden ${
+        className={`max-sm::hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
