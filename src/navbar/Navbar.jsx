@@ -4,7 +4,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 export default function Navbar() {
   const location = useLocation();
   const [menu, setMenu] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+//  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -30,16 +30,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
+      <div className="absolute py-2 px-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2">
-          <button
-            className=" sm:hidden text-white text-xs"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            &#9776;
-          </button>
-
-           <div className=" hidden sm:flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 overflow-hidden overflow-x-auto">
             <Link
               to="/"
               className={
@@ -120,11 +113,23 @@ export default function Navbar() {
             >
               Hobisback
             </Link>
-          </div> 
+          </div>
         </div>
       </div>
 
-      {/* <div
+      <Outlet />
+    </>
+  );
+}
+
+/*
+           <button
+            className=" sm:hidden text-white text-xs"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            &#9776;
+          </button> 
+                 <div
         className={`sm:hidden ${
           isMenuOpen ? "block" : "hidden"
         } absolute block w-44 h-60 top-10 py-8 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
@@ -217,8 +222,7 @@ export default function Navbar() {
         >
           Hobisback
         </Link>
-      </div> */}
-      <Outlet />
-    </>
-  );
-}
+      </div> 
+
+
+*/
