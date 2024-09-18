@@ -61,7 +61,7 @@ export default function Formulariohobi({ setUser, setAlbu, setSong }) {
           </form>
         </div>
 
-        {error && <p className="error">All questions must be filled out</p>}
+        {error && <p className="error text-center text-red-500 font-extrabold">All questions must be filled out</p>}
       </div>
     </div>
   );

@@ -30,22 +30,15 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
-        <div className="flex flex-row items-center justify-center max-sm:justify-start">
-          <button
-            className="md:hidden text-white text-xl"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            &#9776; {/* Unicode character for hamburger icon */}
-          </button>
-
-          <div className="hidden md:flex flex-row items-center gap-2">
+      <div className="absolute py-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
+        <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2 px-6">
+          <div className="flex flex-row items-center gap-2 overflow-hidden overflow-x-auto ">
             <Link
               to="/"
               className={
                 menu === "menu"
-                  ? "text-xl font-bad font-extrabold py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-bad font-extrabold"
+                  ? "text-xs font-bad font-extrabold py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xs font-bad font-extrabold"
               }
             >
               Home
@@ -54,8 +47,8 @@ export default function Navbar() {
               to="/polaroid"
               className={
                 menu === "polaroid"
-                  ? "text-xl font-pacific py-1 px-2 text-violet-400 underline rounded-xl"
-                  : "cursor-pointer text-white text-xl font-pacific "
+                  ? "text-xs font-pacific py-1 px-2 text-violet-400 underline rounded-xl"
+                  : "cursor-pointer text-white text-xs font-pacific "
               }
             >
               Polaroid
@@ -64,8 +57,8 @@ export default function Navbar() {
               to="/photobooth"
               className={
                 menu === "photobooth"
-                  ? "text-xl font-playwrite py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-playwrite"
+                  ? "text-xs font-playwrite py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xs font-playwrite"
               }
             >
               Photobooth
@@ -74,8 +67,8 @@ export default function Navbar() {
               to="/sugaverse"
               className={
                 menu === "sugaverse"
-                  ? "text-xl font-glich py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-glich"
+                  ? "text-xs font-glich py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xs font-glich"
               }
             >
               Sugaverse
@@ -84,8 +77,8 @@ export default function Navbar() {
               to="/hobipalooza"
               className={
                 menu === "hobipalooza"
-                  ? "text-xl font-rock  py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-rock"
+                  ? "text-xs font-rock  py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xs font-rock"
               }
             >
               Hobipalooza
@@ -94,8 +87,8 @@ export default function Navbar() {
               to="/bingo"
               className={
                 menu === "bingo"
-                  ? "text-xl font-semiboldsans px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-semiboldsans"
+                  ? "text-xs font-semiboldsans px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xs font-semiboldsans"
               }
             >
               Bingo
@@ -114,37 +107,32 @@ export default function Navbar() {
               to="/hobisback"
               className={
                 menu === "hobisback"
-                  ? "text-xl font-dmmono px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-dmmono"
+                  ? "text-xs font-dmmono px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xs font-dmmono"
               }
             >
               Hobisback
             </Link>
-            {/*          <Link
-              to="/rain"
-              className={
-                menu === "rain"
-                  ? "text-xl font-indie py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-indie"
-              }
-            >
-              Rain
-            </Link> */}
           </div>
         </div>
       </div>
+      <Outlet />
+    </>
+  );
+}
 
-      <div
-        className={`md:hidden ${
+/*
+                 <div
+        className={`sm:hidden ${
           isMenuOpen ? "block" : "hidden"
-        } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
+        } absolute block w-44 h-60 top-10 py-8 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
         <Link
           to="/"
           className={
             menu === "menu"
-              ? "block text-xl font-bold font-bad py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-bad"
+              ? "block text-xs font-bold font-bad py-1 underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-bad"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -154,8 +142,8 @@ export default function Navbar() {
           to="/polaroid"
           className={
             menu === "polaroid"
-              ? "block text-xl font-pacific font-bold py-1 text-violet-400 underline "
-              : "block cursor-pointer text-white text-xl font-pacific "
+              ? "block text-xs font-pacific font-bold py-1 text-violet-400 underline "
+              : "block cursor-pointer text-white text-xs font-pacific "
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -165,8 +153,8 @@ export default function Navbar() {
           to="/photobooth"
           className={
             menu === "photobooth"
-              ? "block text-xl font-playwrite font-bold py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-playwrite"
+              ? "block text-xs font-playwrite font-bold py-1 underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-playwrite"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -176,8 +164,8 @@ export default function Navbar() {
           to="/sugaverse"
           className={
             menu === "sugaverse"
-              ? "block text-xl font-glich font-thin py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-glich font-thin"
+              ? "block text-xs font-glich font-thin py-1 underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-glich font-thin"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -187,8 +175,8 @@ export default function Navbar() {
           to="/hobipalooza"
           className={
             menu === "hobipalooza"
-              ? "block text-xl font-bold font-rock py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-rock"
+              ? "block text-xs font-bold font-rock py-1 underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-rock"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -198,8 +186,8 @@ export default function Navbar() {
           to="/bingo"
           className={
             menu === "bingo"
-              ? "block text-xl font-semiboldsans font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-semiboldsans"
+              ? "block text-xs font-semiboldsans font-bold py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-semiboldsans"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -209,8 +197,8 @@ export default function Navbar() {
           to="/vpassport"
           className={
             menu === "vpassport"
-              ? "block text-xs font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-michroma"
+              ? "block text-xl font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xl font-michroma"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -220,8 +208,8 @@ export default function Navbar() {
           to="/hobisback"
           className={
             menu === "hobisback"
-              ? "block text-xl font-dmmono py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-dmmono"
+              ? "block text-xs font-dmmono py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xs font-dmmono"
           }
           onClick={() => setIsMenuOpen(false)}
         >
@@ -244,4 +232,3 @@ export default function Navbar() {
     </>
   );
 }
-//cambios aqui
