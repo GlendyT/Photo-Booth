@@ -226,9 +226,4 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
         >
           Rain
-        </Link>*/}
-      </div>
-      <Outlet />
-    </>
-  );
-}
+        </Link> */
