@@ -97,8 +97,8 @@ export default function Navbar() {
               to="/vpassport"
               className={
                 menu === "vpassport"
-                  ? "text-xs font-michroma px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-michroma"
+                  ? "text-xl font-michroma px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl font-michroma"
               }
             >
               Vpassport
@@ -197,8 +197,9 @@ export default function Navbar() {
           to="/vpassport"
           className={
             menu === "vpassport"
-              ? "block text-xs font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-michroma"
+              ? "block text-xl font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
+              : "block cursor-pointer text-white text-xl font-michroma"
+
           }
           onClick={() => setIsMenuOpen(false)}
         >
