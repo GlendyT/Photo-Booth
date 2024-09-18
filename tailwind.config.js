@@ -17,6 +17,7 @@ module.exports = {
         nav: "url('/src/components/img/Glendy_Header5.webp')",
         bingoback: "url('/src/components/img/Background_BingoBA.webp')",
         gifhobi: "url('/src/components/img/hobigif.gif')",
+        gifV: "url('/src/components/VPassport/imgVPassport/kimtaehyung.gif')",
         btsgif1: "url('/src/components/img/btsgif.gif')",
         btsgif2: "url('/src/components/img/btsgif2.gif')",
         btsgif3: "url('/src/components/img/btsgit3.gif')",
@@ -28,7 +29,14 @@ module.exports = {
         bingologoi: "url('/src/components/img/bingo.webp')",
         polaroidlogo: "url('/src/components/img/polaroid.webp')",
         photostrips: "url('/src/components/img/photostrip.webp')",
-        vlogo: "url('/src/components/img/vpassport.webp')"
+        vlogo: "url('/src/components/img/vpassport.webp')",
+        
+        largeScreen: "url('/src/components/VPassport/imgVPassport/Background Page Starts.jpg')",
+        largeScreen2: "url('/src/components/VPassport/imgVPassport/Background Page Generated.webp')",
+        rightSidePassport:
+          "url('/src/components/VPassport/imgVPassport/Passport Image Generated Right Side.webp')",
+        smallScreen: "/src/components/VPassport/imgVPassport/Background Generated Phone.webp')",
+        smallScreen2: "/src/components/VPassport/imgVPassport/Background Starts Phone.webp')",
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
@@ -45,10 +53,14 @@ module.exports = {
         antonio: ["Antonio", "sans-serif"],
         jinora: ["Nokora", "sans-serif"],
         libre: ["Libre Caslon Text", "serif"],
+        michroma: ["Michroma", "sans-serif"],
       },
       colors: {
         army: "rgb(0,74,173)",
-        army2: "linear-gradient(90deg, rgba(0,74,173,1) 44%, rgba(203,108,230,1) 100%)"
+        army2: "linear-gradient(90deg, rgba(0,74,173,1) 44%, rgba(203,108,230,1) 100%)",
+        purpleButton: "rgb(93,40,95)",
+        blueButton: "rgb(04,84,139)",
+        greenButton: "rgb(32,95,30)",
       },
     },
   },
