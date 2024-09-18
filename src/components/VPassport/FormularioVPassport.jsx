@@ -11,11 +11,11 @@ export const FormularioVPassport = ({ setCitizen }) => {
       setError(true);
       return;
     }
-    setError(false)
+    setError(false);
     setCitizen([ciudadano]);
   };
   return (
-    <div className=" min-h-screen bg-largeScreen bg-cover bg-no-repeat max-sm:bg-smallScreen2 flex items-center justify-center ">
+    <div className="flex flex-col sm:justify-center items-center text-white max-sm:text-xs mt-44">
       <form
         className="backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs"
         onSubmit={handleSubmit}

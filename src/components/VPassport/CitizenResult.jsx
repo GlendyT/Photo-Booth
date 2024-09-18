@@ -11,7 +11,7 @@ export default function CitizenResult({citizen, setCitizen}) {
     setCitizen({})
   }
   return (
-    <div className="min-h-screen bg-largeScreen2 bg-center bg-no-repeat bg-cover max-sm:bg-smallScreen">
+    <>
       <div className="flex items-center justify-center pt-20 pb-4 max-sm:pb-36 ">
         <div className="flex flex-row bg-transparent" id="print">
           <CitizenDetail citizen={citizen}/>
@@ -21,6 +21,6 @@ export default function CitizenResult({citizen, setCitizen}) {
       <div className="flex flex-row gap-2 items-center justify-center">
         <ButtonCitizen handleDownloadImage={handleDownloadImage} handleRestart={handleRestart}/>
       </div>
-    </div>
+    </>
   );
 }
