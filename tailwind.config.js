@@ -31,12 +31,12 @@ module.exports = {
         photostrips: "url('/src/components/img/photostrip.webp')",
         vlogo: "url('/src/components/img/vpassport.webp')",
         
-        largeScreen: "url('/src/imgVPassport/Background Page Starts.jpg')",
+        largeScreen: "url('/src/components/VPassport/imgVPassport/Background Page Starts.jpg')",
         largeScreen2: "url('/src/imgVPassport/Background Page Generated.webp')",
         rightSidePassport:
-          "url('/src/imgVPassport/Passport Image Generated Right Side.webp')",
-        smallScreen: "url('/src/imgVPassport/Background Generated Phone.webp')",
-        smallScreen2: "url('/src/imgVPassport/Background Starts Phone.webp')",
+          "url('/src/components/VPassport/imgVPassport/Passport Image Generated Right Side.webp')",
+        smallScreen: "/src/components/VPassport/imgVPassport/Background Generated Phone.webp')",
+        smallScreen2: "/src/components/VPassport/imgVPassport/Background Starts Phone.webp')",
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
