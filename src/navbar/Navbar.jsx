@@ -32,15 +32,15 @@ export default function Navbar() {
     <>
       <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start">
-          <button
+          {/* <button
             className="md:hidden text-white text-xs"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            &#9776; {/* Unicode character for hamburger icon */}
-          </button>
+            &#9776;
+          </button> */}
 
           <div className="hidden md:flex flex-row items-center gap-2">
-            {/* <Link
+             <Link
               to="/"
               className={
                 menu === "menu"
@@ -49,7 +49,7 @@ export default function Navbar() {
               }
             >
               Home
-            </Link> */}
+            </Link> 
             <Link
               to="/polaroid"
               className={
