@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="absolute py-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
         <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2 px-6">
           <button
-            className=" sm:hidden text-white text-xs"
+            className="md:hidden text-white text-xs"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             &#9776;
@@ -122,7 +122,7 @@ export default function Navbar() {
           </div>
 
           <div
-        className={`max-sm:hidden ${
+        className={`sm:hidden ${
           isMenuOpen ? "" : "hidden"
         } flex flex-col gap-2 absolute w-28 h-60 top-8 left-0 py-1 pl-2 backdrop-blur-sm bg-black/90 z-10 `}
       >
