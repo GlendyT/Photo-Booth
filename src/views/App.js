@@ -17,7 +17,7 @@ useEffect(() => {
   return (
     <>
       <div className=" relative min-h-screen bg-backmain  bg-cover bg-no-repeat max-sm:bg-center ">
-        <div className="grid grid-cols-4 px-40 py-32 gap-6 max-sm:flex max-sm:flex-col max-sm:p-12  max-sm:gap-3">
+        <div className="grid grid-cols-4 px-40 py-32 gap-6 max-sm:flex max-sm:flex-col max-sm:py-12  max-sm:gap-3 max-sm:px-20">
           <Link
             to="/polaroid"
             className=" delay-150 hover:-translate-y-1 hover:scale-100 duration-700 px-4 py-16 bg-polaroidlogo bg-no-repeat bg-contain bg-center hover:bg-btsgif3 hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-sm:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,1)]"
@@ -45,7 +45,7 @@ useEffect(() => {
           ></Link>
           <Link
             to="/hobisback"
-            className=" delay-150 hover:-translate-y-1 hover:scale-100 duration-700 px-4  py-16 bg-jhopelogoi1 bg-no-repeat bg-contain bg-center hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-sm:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,2)]"
+            className=" delay-150 hover:-translate-y-1 hover:scale-100 duration-00 px-4  py-16 bg-jhopelogoi1 bg-no-repeat bg-contain bg-center hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-sm:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,2)]"
           ></Link>
         </div>
       </div>
