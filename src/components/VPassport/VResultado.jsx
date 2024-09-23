@@ -10,8 +10,8 @@ export const VResultado = ({ citizen, setCitizen }) => {
   };
 
   return (
-    <div className="relative sm:justify-center items-center max-sm:text-xs">
-      <div className="relative sm:max-w-sm w-full" id="print">
+    <div className="relative max-sm:text-xs">
+      <div className="relative w-96" id="print">
         <VCitizenDetail citizen={citizen} setCitizen={setCitizen} />
       </div>
       <div className="flex flex-row gap-2 items-center justify-center pt-4">

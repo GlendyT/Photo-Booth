@@ -30,187 +30,201 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="absolute py-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
-        <div className="flex flex-row items-center justify-center max-sm:justify-start gap-2 px-6">
-          <div className="flex flex-row items-center gap-2 overflow-hidden overflow-x-auto ">
+      <div className="absolute block py-2 pl-2 z-10 w-full bg-nav bg-cover bg-no-repeat">
+        <div className="flex flex-row items-center justify-center max-sm:justify-start">
+          <button
+            className="md:hidden text-white text-xl"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            &#9776; {/* Unicode character for hamburger icon */}
+          </button>
+
+          <div className="hidden md:flex flex-row items-center gap-2">
             <Link
               to="/"
-              className={
-                menu === "menu"
-                  ? "text-xs font-bad font-extrabold py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-bad font-extrabold"
-              }
+              className={` text-xl font-bad cursor-pointer
+                ${
+                  menu === "menu"
+                    ? " underline text-violet-400"
+                    : " text-white "
+                }`}
             >
               Home
             </Link>
             <Link
               to="/polaroid"
-              className={
-                menu === "polaroid"
-                  ? "text-xs font-pacific py-1 px-2 text-violet-400 underline rounded-xl"
-                  : "cursor-pointer text-white text-xs font-pacific "
-              }
+              className={` text-xl font-pacific cursor-pointer
+                ${
+                  menu === "polaroid"
+                    ? " text-violet-400 underline"
+                    : " text-white  "
+                }`}
             >
               Polaroid
             </Link>
             <Link
               to="/photobooth"
-              className={
-                menu === "photobooth"
-                  ? "text-xs font-playwrite py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-playwrite"
-              }
+              className={`text-xl font-playwrite cursor-pointer
+                ${
+                  menu === "photobooth"
+                    ? " underline text-violet-400 "
+                    : " text-white"
+                }`}
             >
               Photobooth
             </Link>
             <Link
               to="/sugaverse"
-              className={
-                menu === "sugaverse"
-                  ? "text-xs font-glich py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-glich"
-              }
+              className={` text-xl font-glich cursor-pointer
+                ${
+                  menu === "sugaverse"
+                    ? " underline text-violet-400 "
+                    : " text-white"
+                }`}
             >
               Sugaverse
             </Link>
             <Link
               to="/hobipalooza"
-              className={
-                menu === "hobipalooza"
-                  ? "text-xs font-rock  py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-rock"
-              }
+              className={` text-xl font-rock cursor-pointer
+                ${
+                  menu === "hobipalooza"
+                    ? " underline text-violet-400 "
+                    : " text-white"
+                }`}
             >
               Hobipalooza
             </Link>
             <Link
               to="/bingo"
-              className={
-                menu === "bingo"
-                  ? "text-xs font-semiboldsans px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-semiboldsans"
-              }
+              className={`text-xl font-semiboldsans cursor-pointer
+                ${
+                  menu === "bingo"
+                    ? " underline text-violet-400"
+                    : " text-white "
+                }`}
             >
               Bingo
             </Link>
             <Link
               to="/vpassport"
-              className={
-                menu === "vpassport"
-                  ? "text-xl font-michroma px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xl font-michroma"
-              }
+              className={` font-michroma text-xl cursor-pointer
+                ${
+                  menu === "vpassport"
+                    ? " underline text-violet-400"
+                    : "text-white "
+                }`}
             >
               Vpassport
             </Link>
             <Link
               to="/hobisback"
-              className={
+              className={` text-xl font-dmmono cursor-pointer ${
                 menu === "hobisback"
-                  ? "text-xs font-dmmono px-2 underline text-violet-400 cursor-pointer rounded-xl"
-                  : "cursor-pointer text-white text-xs font-dmmono"
-              }
+                  ? " underline text-violet-400 "
+                  : " text-white "
+              }`}
             >
               Hobisback
             </Link>
+            {/*          <Link
+              to="/rain"
+              className={
+                menu === "rain"
+                  ? "text-xl font-indie py-1 px-2 underline text-violet-400 cursor-pointer rounded-xl"
+                  : "cursor-pointer text-white text-xl font-indie"
+              }
+            >
+              Rain
+            </Link> */}
           </div>
         </div>
       </div>
-      <Outlet />
-    </>
-  );
-}
 
-/*
-                 <div
-        className={`sm:hidden ${
+      <div
+        className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
-        } absolute block w-44 h-60 top-10 py-8 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
+        } absolute block w-44 h-60 top-10 pt-2 pl-6 backdrop-blur-sm bg-black/90 z-10 `}
       >
         <Link
           to="/"
-          className={
-            menu === "menu"
-              ? "block text-xs font-bold font-bad py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-bad"
-          }
+          className={` block text-xl font-bold font-bad cursor-pointer ${
+            menu === "menu" ? " underline text-violet-400  " : "  text-white "
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Home
         </Link>
         <Link
           to="/polaroid"
-          className={
-            menu === "polaroid"
-              ? "block text-xs font-pacific font-bold py-1 text-violet-400 underline "
-              : "block cursor-pointer text-white text-xs font-pacific "
-          }
+          className={`  text-xl font-pacific block cursor-pointer ${
+            menu === "polaroid" ? " text-violet-400 underline " : " text-white "
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Polaroid
         </Link>
         <Link
           to="/photobooth"
-          className={
+          className={`block text-xl font-playwrite font-bold cursor-pointer${
             menu === "photobooth"
-              ? "block text-xs font-playwrite font-bold py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-playwrite"
-          }
+              ? " underline text-violet-400 "
+              : " text-white"
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Photobooth
         </Link>
         <Link
           to="/sugaverse"
-          className={
+          className={`block text-xl font-glich cursor-pointer ${
             menu === "sugaverse"
-              ? "block text-xs font-glich font-thin py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-glich font-thin"
-          }
+              ? " underline text-violet-400  "
+              : " text-white "
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Sugaverse
         </Link>
         <Link
           to="/hobipalooza"
-          className={
+          className={`block text-xl font-rock  cursor-pointer ${
             menu === "hobipalooza"
-              ? "block text-xs font-bold font-rock py-1 underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-rock"
-          }
+              ? " underline text-violet-400  "
+              : " text-white"
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Hobipalooza
         </Link>
         <Link
           to="/bingo"
-          className={
-            menu === "bingo"
-              ? "block text-xs font-semiboldsans font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-semiboldsans"
-          }
+          className={`block text-xl font-semiboldsans font-bold cursor-pointer ${
+            menu === "bingo" ? " underline text-violet-400  " : " text-white"
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Bingo
         </Link>
         <Link
           to="/vpassport"
-          className={
-            menu === "vpassport"
-              ? "block text-xl font-michroma font-bold py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xl font-michroma"
-          }
+          className={` font-michroma text-xl cursor-pointer
+            ${
+              menu === "vpassport"
+                ? " underline text-violet-400"
+                : "text-white "
+            }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Vpassport
         </Link>
         <Link
           to="/hobisback"
-          className={
+          className={`block text-xl font-dmmono cursor-pointer${
             menu === "hobisback"
-              ? "block text-xs font-dmmono py-1  underline text-violet-400 cursor-pointer "
-              : "block cursor-pointer text-white text-xs font-dmmono"
-          }
+              ? " underline text-violet-400  "
+              : " text-white "
+          }`}
           onClick={() => setIsMenuOpen(false)}
         >
           Hobisback
@@ -226,4 +240,9 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
         >
           Rain
-        </Link> */
+        </Link>*/}
+      </div>
+      <Outlet />
+    </>
+  );
+}

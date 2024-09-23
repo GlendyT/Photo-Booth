@@ -13,7 +13,7 @@ export default function Vpassport() {
           : "bg-largeScreen  max-sm:bg-smallScreen2"
       }`}
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center ">
         {!citizen.length > 0 ? (
           <VFormulario setCitizen={setCitizen} citizen={citizen} />
         ) : (
