@@ -24,7 +24,7 @@ export default function Router() {
             <Route path="/hobipalooza" element={<Hobi />} />
             <Route path="/bingo" element={<Bingo />} />
             <Route path="/vpassport" element={<Vpassport />} />
-            <Route path="/hobisback" element={<Hobisback />} />
+            <Route path="/hopeisback" element={<Hobisback />} />
           </Route>
         </Routes>
       </DownloadProvider>

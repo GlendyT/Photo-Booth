@@ -1,11 +1,11 @@
 
 import { useEffect, useState } from "react";
-import dday from "../../img/dday.avif";
-import d2 from "../../img/d2.avif";
-import agustd from "../../img/agustd.avif";
-import pp2 from "../../img/pp2.avif"
-import hgm from "../../img/hgm.avif"
-import yc from "../../img/agustdd.avif" 
+import dday from "../assetsSuga/dday.avif";
+import d2 from "../assetsSuga/d2.avif";
+import agustd from "../assetsSuga/agustd.avif";
+import pp2 from "../assetsSuga/pp2.avif"
+import hgm from "../assetsSuga/hgm.avif"
+import yc from "../assetsSuga/agustdd.avif" 
 import Spinner from "../sugacomponents/Spinner";
 import Buttons from "../Botones/Buttons";
 
