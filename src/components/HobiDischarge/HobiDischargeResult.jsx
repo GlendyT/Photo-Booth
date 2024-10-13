@@ -64,16 +64,16 @@ export const HobiDischargeResult = ({
           <canvas ref={canvasRef} className="mx-auto" />
           <div
             className={`absolute inset-0 flex flex-col font-extrabold font-providence items-center justify-end shadow-2xl ${
-              isMobile ? "pb-20" : "pb-14"
+              isMobile ? "pb-20" : "pb-[4.5rem]"
             }`}
           >
             <div
-              className={`text-xl px-14 max-sm:text-md ${getTextColor(diseño)}`}
+              className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
             >
               {name}
             </div>
             <div
-              className={`text-xl px-14 max-sm:text-md ${getTextColor(diseño)}`}
+              className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
             >
               from {country}
             </div>
@@ -85,13 +85,13 @@ export const HobiDischargeResult = ({
           onClick={handleOther}
           className=" bg-black text-white cursor-pointer p-3 font-providence uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors rounded-xl"
         >
-          Other
+          Back to main page
         </button>
         <button
           onClick={handleDownloadImage}
           className=" bg-black text-white cursor-pointer p-3 font-providence uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors rounded-xl"
         >
-          Share
+          Download
         </button>
       </div>
     </>

@@ -1,16 +1,25 @@
 import React from "react";
 
 export const HobiModalAccess = ({
-  hasSubmitted,
+  setHasSubmitted,
   setShowModal,
   generateWordDisplay,
   handleSubmit,
   isCorrectGuess,
   setInput,
   input,
-  showErrorMessage
+  showErrorMessage,
+  setShowErrorMessage
 }) => {
-
+  const handleCheckCorrectWord = () => {
+    if (!isCorrectGuess) {
+      setShowErrorMessage(true);
+    } else {
+      setShowModal(false);
+      setHasSubmitted(true);
+      setShowErrorMessage(false);
+    }
+  };
   return (
     <>
       <div className="justify-center items-center flex fixed inset-10 z-40 ">
@@ -42,30 +51,22 @@ export const HobiModalAccess = ({
             </form>
 
             <div className="flex items-center justify-end p-4 rounded-b">
-              {hasSubmitted && (
-                <div
-                  className={`text-white font-bold font-providence uppercase text-sm rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 ${
-                    isCorrectGuess
-                      ? "bg-emerald-500 active:bg-emerald-600 px-6 py-3"
-                      : "  "
-                  }`}
+              {isCorrectGuess ? (
+                <button
+                  className="bg-emerald-500 active:bg-emerald-600 px-6 py-3 text-white font-bold"
+                  onClick={handleCheckCorrectWord}
                 >
-                  {isCorrectGuess ? (
-                    <button onClick={() => setShowModal(false)}>
-                      Access Granted! click Here
-                    </button>
-                  ) : (
-                    <>
-                      {showErrorMessage && (
-                        <>
-                          <button className="bg-red-600 active:bg-red-600 px-6 py-3">
-                            Wrong, Try Again
-                          </button>
-                        </>
-                      )}
-                    </>
-                  )}
-                </div>
+                  Access Granted! Click Here
+                </button>
+              ) : (
+                <button
+                  className={`bg-purple-500 px-6 py-3 text-white font-bold transition-colors delay-75 ${
+                    showErrorMessage ? "bg-red-500" : "bg-purple-900"
+                  }`}
+                  onClick={handleSubmit}
+                >
+                  {showErrorMessage ? "Wrong, Try Again" : "Submit Guess"}
+                </button>
               )}
             </div>
           </div>

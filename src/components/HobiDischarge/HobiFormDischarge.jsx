@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { CardSelector } from "./CardSelector";
 import { CARDDESKTOP, CARDPHONE } from "./Data";
 
@@ -7,7 +7,7 @@ export const HobiFormDischarge = ({
   setName,
   setDiseño,
   setSelectedImage,
-  isMobile
+  isMobile,
 }) => {
   const [pais, setPais] = useState("");
   const [design, setDesign] = useState("");
@@ -17,8 +17,8 @@ export const HobiFormDischarge = ({
   const [charCountFrom, setCharCountFrom] = useState(0);
   const [selectedPhoto, setSelectedPhoto] = useState("");
 
-  const maxCharLimit = 15;
-  const maxFromLimit = 13;
+  const maxCharLimit = 21;
+  const maxFromLimit = 16;
 
   const handleTextArea = (e) => {
     const inputValue = e.target.value;
@@ -36,7 +36,7 @@ export const HobiFormDischarge = ({
     if (inputValue.length <= maxFromLimit) {
       setFrom(inputValue);
       setCharCountFrom(inputValue.length);
-      setDesign(inputValue)
+      setDesign(inputValue);
     }
   };
 
@@ -54,9 +54,6 @@ export const HobiFormDischarge = ({
     setSelectedImage(selectedPhoto);
   };
 
-
-
-
   return (
     <div className="flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
       <div className="relative sm:max-w-sm w-full">
@@ -70,7 +67,7 @@ export const HobiFormDischarge = ({
               {isMaxFromLimitReached && (
                 <span className="text-red-500">Too long!</span>
               )}{" "}
-              {charCountFrom}/12
+              {charCountFrom}/15
             </div>
             <input
               maxLength={maxFromLimit}
@@ -94,7 +91,7 @@ export const HobiFormDischarge = ({
               {isMaxCharLimitReached && (
                 <span className="text-red-500">Too long!</span>
               )}{" "}
-              {charCount}/14
+              {charCount}/20
             </div>
             <input
               maxLength={maxCharLimit}
@@ -120,6 +117,7 @@ export const HobiFormDischarge = ({
               id="btn"
               type="submit"
               className="w-full bg-black text-white cursor-pointer p-3 font-providence uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors"
+              disabled={!selectedPhoto}
             >
               Create post
             </button>
@@ -130,6 +128,21 @@ export const HobiFormDischarge = ({
             All questions must be filled out
           </p>
         )}
+        <div
+          className={` ${
+            selectedPhoto
+              ? "relative w-full px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 "
+              : "hidden"
+          } `}
+        >
+          Let's welcome Hobi with a special card
+          <p className="text-xs text-black max-sm:text-xs ">
+            This message will be shown in korean
+          </p>
+          "Welcome home, Jung Hoseok! We missed you and we are proud of you. Our
+          sunshine is home. Wishing you all the best of luck. Sending you all of
+          our love."
+        </div>
       </div>
     </div>
   );
