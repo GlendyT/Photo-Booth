@@ -6,7 +6,7 @@ import Loader from "../components/Loader/Loader";
 import { useRef, useState, useEffect } from "react";
 import useDownload from "../hooks/useDownload";
 import Logo from "../components/PhotoBoothStrips/DragImage/Logo";
-import logo1 from "../../src/components/img/festa_logo.webp";
+import logo1 from "../../src/components/PhotoBoothStrips/assetsBooth/festa_logo.webp";
 
 const PhotoBooth = () => {
   const { handleDownloadImage } = useDownload();

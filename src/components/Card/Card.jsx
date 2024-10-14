@@ -1,7 +1,7 @@
 import React from "react";
 import { SCREEN } from "./Data";
 import useDownload from "../../hooks/useDownload";
-import beyondarmy from "../img/Only-graphic-darkpurple.png";
+import beyondarmy from "./assetsCard/Only-graphic-darkpurple.png";
 
 const Card = () => {
   const { handleDownloadImage } = useDownload();

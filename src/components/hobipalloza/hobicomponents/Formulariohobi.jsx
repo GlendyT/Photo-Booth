@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Filtroalbum } from "./FiltroAlbum";
 import { rolas } from "../data/data";
-import hw from "../../img/hw.avif";
+import hw from "../assetsPalooza/hw.avif";
 
 export default function Formulariohobi({ setUser, setAlbu, setSong }) {
   const [nombre, setNombre] = useState("");

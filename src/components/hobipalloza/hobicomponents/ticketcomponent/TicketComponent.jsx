@@ -1,4 +1,4 @@
-import hw from "../../../img/2.avif";
+import hw from "../../assetsPalooza/2.avif";
 
 export default function TicketComponent({
   user,

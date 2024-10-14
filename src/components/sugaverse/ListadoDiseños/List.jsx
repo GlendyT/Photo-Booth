@@ -1,6 +1,6 @@
 
 
-export default function List({ design, setDesign, from }) {
+export default function List({ design, setDesign }) {
 
     return (
       <div>
