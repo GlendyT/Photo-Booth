@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import App from "./views/App";
 import PhotoBooth from "./views/PhotoBooth";
 import Card from "./components/Card/Card";
@@ -10,6 +11,8 @@ import Suga from "./views/Suga";
 import Bingo from "./views/Bingo";
 import Vpassport from "./views/Vpassport";
 import Hobisback from "./views/Hobisback";
+
+injectSpeedInsights();
 
 export default function Router() {
   return (
