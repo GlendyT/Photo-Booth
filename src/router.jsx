@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import { injectSpeedInsights } from "@vercel/speed-insights";
+import { Analytics } from "@vercel/analytics/react"
 import App from "./views/App";
 import PhotoBooth from "./views/PhotoBooth";
 import Card from "./components/Card/Card";
@@ -17,6 +18,7 @@ export default function Router() {
   return (
     <BrowserRouter>
       <DownloadProvider>
+        <Analytics/>
         <Routes>
           <Route element={<Navbar />}>
             <Route path="/" element={<App />} index />
