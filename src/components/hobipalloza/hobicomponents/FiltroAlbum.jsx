@@ -1,8 +1,10 @@
-export const Filtroalbum = ({ album, setAlbum }) => {
+export const Filtroalbum = ({ album, usuarioGenerado }) => {
   return (
     <select
+      id="album"
+      name="album"
       value={album}
-      onChange={(e) => setAlbum(e.target.value)}
+      onChange={usuarioGenerado}
       className="rounded py-2  text-center"
     >
       <option value="">Choose Your Favorite Album</option>

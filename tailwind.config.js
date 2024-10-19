@@ -86,6 +86,10 @@ module.exports = {
         libre: ["Libre Caslon Text", "serif"],
         michroma: ["Michroma", "sans-serif"],
         providence: ["Fuzzy Bubbles", "sans-serif"],
+        ballet: ["Ballet", "cursive"],
+        Rock: ["Rock Salt", "cursive"],
+        Monoton: ["Monoton", "sans-serif"],
+        Raleway: ["Raleway", "sans-serif"],
       },
       colors: {
         army: "rgb(0,74,173)",

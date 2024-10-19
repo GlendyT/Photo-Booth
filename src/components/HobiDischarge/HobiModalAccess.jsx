@@ -1,16 +1,19 @@
 import React from "react";
+import { ButtonUtils } from "../utils/ButtonUtils";
+import useRequestInfo from "../../hooks/useRequestInfo";
 
-export const HobiModalAccess = ({
-  setHasSubmitted,
-  setShowModal,
-  generateWordDisplay,
-  handleSubmit,
-  isCorrectGuess,
-  setInput,
-  input,
-  showErrorMessage,
-  setShowErrorMessage
-}) => {
+export const HobiModalAccess = () => {
+  const {
+    generateWordDisplay,
+    input,
+    setInput,
+    isCorrectGuess,
+    showErrorMessage,
+    setShowErrorMessage,
+    setShowModal,
+    setHasSubmitted,
+    handleCorrectWord,
+  } = useRequestInfo();
   const handleCheckCorrectWord = () => {
     if (!isCorrectGuess) {
       setShowErrorMessage(true);
@@ -35,14 +38,16 @@ export const HobiModalAccess = ({
               </p>
             </div>
             <form
-              onSubmit={handleSubmit}
+              onSubmit={handleCorrectWord}
               className="flex items-center justify-center"
             >
               <input
+                id="input"
+                name="input"
                 type="text"
-                placeholder="Write the correct word"
                 value={input}
                 maxLength={4}
+                placeholder="Write the correct word"
                 onChange={(e) => setInput(e.target.value)}
                 className={`text-center font-providence outline py-2 ${
                   isCorrectGuess ? "hidden" : ""
@@ -52,21 +57,22 @@ export const HobiModalAccess = ({
 
             <div className="flex items-center justify-end p-4 rounded-b">
               {isCorrectGuess ? (
-                <button
-                  className="bg-emerald-500 active:bg-emerald-600 px-6 py-3 text-white font-bold"
+                <ButtonUtils
+                  label="Access Granted! Click Here"
                   onClick={handleCheckCorrectWord}
-                >
-                  Access Granted! Click Here
-                </button>
+                  bgColor="bg-emerald-500 active:bg-emerald-600 "
+                  textColor="text-white"
+                  font="font-providence"
+                />
               ) : (
-                <button
-                  className={`bg-purple-500 px-6 py-3 text-white font-bold transition-colors delay-75 ${
-                    showErrorMessage ? "bg-red-500" : "bg-purple-900"
-                  }`}
-                  onClick={handleSubmit}
-                >
-                  {showErrorMessage ? "Wrong, Try Again" : "Submit Guess"}
-                </button>
+                <ButtonUtils
+                  label={showErrorMessage ? "Wrong, Try Again" : "Submit Guess"}
+                  onClick={handleCorrectWord}
+                  className={`bg-purple-500 delay-75`}
+                  bgColor={showErrorMessage ? "bg-red-500" : "bg-purple-900"}
+                  textColor="text-white"
+                  font="font-providence"
+                />
               )}
             </div>
           </div>

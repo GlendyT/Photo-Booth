@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CardInside from "../Card/CardInside";
 import useDownload from "../../../hooks/useDownload";
 import Header from "../Titulo/Header";
+import useRequestInfo from "../../../hooks/useRequestInfo";
 
 const notify = () => {
   toast.success('Image Downloaded!', {
@@ -19,9 +20,12 @@ const notify = () => {
 };
 
 
-export function ResultadoSuga({ descripcion,setDescripcion, remitente, diseño }) {
+export function ResultadoSuga() {
 
   const {handleDownloadImage} = useDownload()
+  const { resultado } = useRequestInfo()
+  const {name, content, diseño } = resultado
+
 
   const [imageSaved, setImageSaved] = useState(false);
 
@@ -38,21 +42,15 @@ export function ResultadoSuga({ descripcion,setDescripcion, remitente, diseño }
 
   const elementRef = useRef(null);
 
-  const handleLogout = () =>{
-    setDescripcion({})
-  }
-
-
   return (
     <div className="relative sm:justify-center items-center max-sm:text-xs">
       <div className="relative sm:max-w-sm w-full">
         <Header/>
             <CardInside
-             descripcion={descripcion}
-             remitente={remitente}
+             name={name}
+             content={content}
              diseño={diseño}
              elementRef={elementRef}
-             handleLogout= {handleLogout}
              handleDownloadImage={handleDownloadImage}
              notify= {notify}
             />

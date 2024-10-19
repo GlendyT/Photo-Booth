@@ -1,19 +1,10 @@
-import { useState } from "react";
+import { ButtonUtils } from "../utils/ButtonUtils";
+import useRequestInfo from "../../hooks/useRequestInfo";
 
-export const VFormulario = ({ setCitizen }) => {
-  const [ciudadano, setCiudadano] = useState("");
-  const [error, setError] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (ciudadano === "") {
-      setError(true);
-      return;
-    }
-    setError(false);
-    setCitizen([ciudadano]);
-  };
+export const VFormulario = () => {
+  const { usuario, usuarioGenerado, handleSubmit, maxFromLimit, error } =
+    useRequestInfo();
+  const { name } = usuario;
   return (
     <div className=" flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
       <div className="relative sm:max-w-sm w-full">
@@ -30,21 +21,28 @@ export const VFormulario = ({ setCitizen }) => {
             </label>
             <input
               id="name"
-              value={ciudadano}
-              onChange={(e) => setCiudadano(e.target.value)}
-              className="w-full p-3 text-black  border border-gray-100 rounded-md text-xs text-center"
+              name="name"
+              value={name}
               type="text"
               placeholder="YOUR NAME"
+              maxLength={maxFromLimit}
+              onChange={usuarioGenerado}
+              className="w-full p-3 text-black  border border-gray-100 rounded-md text-xs text-center"
             />
             {error && (
               <p className="text-white text-center font-bold uppercase font-dmmono pt-1 text-xs bg-blue-950 mt-2 rounded-sm px-2">
                 All questions must be filled out
               </p>
             )}
-            <input
-              type="submit"
-              className="bg-blue-950 w-full p-3 text-white uppercase font-bold hover:bg-purpleButton cursor-pointer transition-colors rounded-md text-xs"
-              value="GENERATE"
+            <ButtonUtils
+              label="GENERATE"
+              type="sumbit"
+              className=" w-full uppercase  text-xs"
+              bgColor="bg-blue-950"
+              textColor="text-white"
+              font="font-michroma"
+              disabled={!name}
+              disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
             />
           </form>
         </div>
