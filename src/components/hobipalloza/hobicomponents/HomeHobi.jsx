@@ -1,16 +1,13 @@
-
 import Botones from "./botones/Botones";
 import TicketComponent from "./ticketcomponent/TicketComponent";
 import TituloC from "./titulocomponent/TituloC";
 import useDownload from "../../../hooks/useDownload";
+import useRequestInfo from "../../../hooks/useRequestInfo";
 
 export default function HomeHobi({ user, setUser, albu, song }) {
-  const { handleDownloadImage } = useDownload()
+  const { handleDownloadImage } = useDownload();
+  const { handleResetContent } = useRequestInfo();
 
-
-  const handleLogout = () => {
-    setUser({});
-  };
   return (
     <>
       <TituloC />
@@ -21,15 +18,11 @@ export default function HomeHobi({ user, setUser, albu, song }) {
         Here is your ticket, keep supporting j-hope´s work!
       </p>
 
-      <TicketComponent
-        user={user}
-        albu={albu}
-        song={song}
-      />
+      <TicketComponent />
 
       <Botones
         handleDownloadImage={handleDownloadImage}
-        handleLogout={handleLogout}
+        handleResetContent={handleResetContent}
       />
     </>
   );

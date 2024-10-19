@@ -1,35 +1,16 @@
-
-import {  useState } from "react";
 import FormularioSuga from "../components/sugaverse/sugacomponents/FormularioSuga";
 import { ResultadoSuga } from "../components/sugaverse/sugacomponents/ResultadoSuga";
-
-
+import useRequestInfo from "../hooks/useRequestInfo";
 
 function Suga() {
-  const [descripcion, setDescripcion] = useState([]);
-  const [remitente, setRemitente] = useState([]);
-  const [diseño, setDiseño] = useState([]);
-
+  const { resultado, cargando } = useRequestInfo();
 
   return (
     <div className=" min-h-screen  bg-backsuga bg-cover bg-no-repeat pt-16">
       <div className="flex flex-col items-center">
-
-      {!descripcion.length > 0 ? (
-        <FormularioSuga setDescripcion={setDescripcion} setRemitente={setRemitente} setDiseño={setDiseño}  />
-      ) : (
-        <ResultadoSuga
-        descripcion={descripcion}
-        setDescripcion={setDescripcion}
-        remitente={remitente}
-        setRemitente={setRemitente}
-        diseño={diseño}
-        setDiseño={setDiseño}
-      />
-
-
-      )}
-       </div>
+        
+        {cargando ? <FormularioSuga /> : resultado && <ResultadoSuga />}
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { ButtonUtils } from "../utils/ButtonUtils";
 
-export const VButton = ({ handleDownloadImage, handleRestart }) => {
+export const VButton = ({ handleDownloadImage, handleResetContent }) => {
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const handleDownload = () => {
@@ -10,21 +11,25 @@ export const VButton = ({ handleDownloadImage, handleRestart }) => {
 
   return (
     <>
-      <button
-        type="button"
-        className="py-2 px-10 bg-black hover:bg-greenButton hover:text-black text-white font-bold uppercase rounded-lg"
-        onClick={handleRestart}
-      >
-        Restart
-      </button>
-      <button
-        type="button"
-        className={`py-2 px-10 bg-black hover:bg-blueButton hover:text-black text-white font-bold uppercase rounded-lg disabled:bg-blueButton disabled:text-black disabled:cursor-not-allowed`}
+      <ButtonUtils
+        label="RESTART"
+        onClick={handleResetContent}
+        className="  uppercase"
+        bgColor="bg-black"
+        textColor="text-white"
+        hoverColor="  hover:bg-greenButton hover:text-black"
+        font="font-michroma"
+      />
+      <ButtonUtils
+        label={buttonDisabled ? "Downloaded" : "Share"}
         onClick={() => handleDownload()}
         disabled={buttonDisabled}
-      >
-        {buttonDisabled ? "Downloaded" : "Share"}
-      </button>
+        className=" uppercase"
+        bgColor="bg-black"
+        textColor="text-white"
+        hoverColor="  hover:bg-greenButton hover:text-black"
+        font="font-michroma"
+      />
     </>
   );
 };

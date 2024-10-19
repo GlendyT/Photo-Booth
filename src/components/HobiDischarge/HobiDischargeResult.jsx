@@ -1,23 +1,20 @@
 import { useEffect, useRef } from "react";
 import useDownload from "../../hooks/useDownload";
 import { CARDDESKTOP, CARDPHONE } from "./Data";
+import { ButtonUtils } from "../utils/ButtonUtils";
+import useRequestInfo from "../../hooks/useRequestInfo";
 
-export const HobiDischargeResult = ({
-  name,
-  setCountry,
-  country,
-  selectedImage,
-  isMobile,
-  diseño,
-}) => {
-  const canvasRef = useRef(null);
+export const HobiDischargeResult = () => {
   const { handleDownloadImage } = useDownload();
+  const { isMobile, usuario, handleResetContent } = useRequestInfo();
+  const { diseño, name, content } = usuario;
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     const image = new Image();
-    image.src = selectedImage;
+    image.src = diseño;
 
     image.onload = () => {
       const maxWidth = window.innerWidth < 640 ? 350 : 500;
@@ -37,24 +34,20 @@ export const HobiDischargeResult = ({
 
       context.drawImage(image, 0, 0, imageWidth, imageHeight);
     };
-  }, [selectedImage]);
+  }, [diseño]);
 
   const getTextColor = () => {
     if (
-      selectedImage.includes(CARDPHONE.ver1P) ||
-      selectedImage.includes(CARDDESKTOP.ver1D)
+      diseño.includes(CARDPHONE.ver1P) ||
+      diseño.includes(CARDDESKTOP.ver1D)
     ) {
       return "text-[#7167e6]"; // Color 1
     } else if (
-      selectedImage.includes(CARDPHONE.ver2P) ||
-      selectedImage.includes(CARDDESKTOP.ver2D)
+      diseño.includes(CARDPHONE.ver2P) ||
+      diseño.includes(CARDDESKTOP.ver2D)
     ) {
       return "text-[rgb(188,79,77)]"; // Color 2
     }
-  };
-
-  const handleOther = () => {
-    setCountry({});
   };
 
   return (
@@ -75,24 +68,30 @@ export const HobiDischargeResult = ({
             <div
               className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
             >
-              from {country}
+              from {content}
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-row gap-2 pt-2">
-        <button
-          onClick={handleOther}
-          className=" bg-black text-white cursor-pointer p-3 font-providence uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors rounded-xl"
-        >
-          Back to main page
-        </button>
-        <button
+        <ButtonUtils
+          label="Back to main page"
+          onClick={handleResetContent}
+          className=" uppercase  "
+          bgColor="bg-black"
+          textColor="text-white"
+          font="font-providence"
+          disableColors=" disabled:bg-opacity-25 disabled:cursor-not-allowed"
+        />
+        <ButtonUtils
+          label={!handleDownloadImage ? "download" : "downloaded"}
           onClick={handleDownloadImage}
-          className=" bg-black text-white cursor-pointer p-3 font-providence uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors rounded-xl"
-        >
-          Download
-        </button>
+          className="  uppercase  "
+          bgColor="bg-black"
+          textColor="text-white"
+          font="font-providence"
+          disableColors=" disabled:bg-opacity-25 disabled:cursor-not-allowed"
+        />
       </div>
     </>
   );

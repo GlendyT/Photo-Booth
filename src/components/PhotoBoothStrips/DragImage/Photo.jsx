@@ -1,13 +1,6 @@
 import React from "react";
 
-const Photo = ({
-  image,
-  inputRef,
-  selectImage,
-  addImage,
-  changeColor,
-}) => {
-  
+const Photo = ({ image, inputRef, selectImage, addImage, changeColor }) => {
   const handleColor = () => {
     selectImage();
   };
@@ -27,7 +20,6 @@ const Photo = ({
         <img
           src={image}
           alt=""
-
           className=" object-cover w-40 pb-2 max-sm:pb-2 max-sm:px-1 max-sm:w-40"
           onClick={handleImageClick}
         />

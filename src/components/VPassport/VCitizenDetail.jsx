@@ -3,7 +3,7 @@ import rightSide from "./imgVPassport/Passport Image Generated Right Side.webp";
 import VCitizenDetailItem from "./VCitizenDetailItem.jsx";
 import VCitizenPage1 from "./VCitizenPage1.jsx";
 
-export const VCitizenDetail = ({ citizen }) => {
+export const VCitizenDetail = ({name}) => {
   const randomIndex = Math.floor(Math.random() * citiesVisited.length);
   const randomCity = citiesVisited[randomIndex];
   const { image, stamp } = randomCity;
@@ -36,7 +36,7 @@ export const VCitizenDetail = ({ citizen }) => {
                     label="Apellidos/Surname"
                     data={"BORAHAE"}
                   />
-                  <VCitizenDetailItem label="Names" data={citizen} />
+                  <VCitizenDetailItem label="Names" data={name} />
                   <VCitizenDetailItem label="Nacionality" data={"ARMY"} />
                 </div>
                 <div className="grid gap-2 max-sm:gap-0">
