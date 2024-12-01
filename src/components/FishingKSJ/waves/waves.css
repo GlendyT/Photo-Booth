@@ -1,0 +1,127 @@
+.header {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.waves {
+  width: 100%;
+  height: 50vh;
+  margin-top: auto;
+  min-height: 100px;
+  max-height: 150px;
+  z-index: 1;
+}
+
+/* Parabolic jump animation */
+@keyframes jump {
+  0% {
+    transform: translateX(90vw) translateY(0); /* Starting off-screen on the right */
+  }
+  20% {
+    transform: translateX(75vw) translateY(-50px); /* Ascending */
+  }
+  50% {
+    transform: translateX(50vw) translateY(-80px); /* Peak at middle of screen */
+  }
+  80% {
+    transform: translateX(25vw) translateY(-50px); /* Descending */
+  }
+  100% {
+    transform: translateX(-10vw) translateY(0); /* Ending off-screen on the left */
+  }
+}
+
+.fish {
+  position: absolute;
+  bottom: 20px;
+  height: auto;
+  width: 10vw; /* Set width based on viewport width for responsiveness */
+  max-width: 150px;
+}
+
+.fish img {
+  animation: jump 5s ease-in-out infinite;
+}
+
+/* Delay each fish */
+.fish img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fish img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.fish img:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Waves Animation */
+.parallax > use {
+  animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 3s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -7s;
+  animation-duration: 8s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -12s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -17s;
+  animation-duration: 20s;
+}
+.parallax > use:nth-child(5) {
+  animation-delay: -23s;
+  animation-duration: 18s;
+}
+.parallax > use:nth-child(6) {
+  animation-delay: -1s;
+  animation-duration: 8s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Shrinking for mobile */
+@media screen and (max-width: 1024px) {
+  .waves {
+    height: 80px;
+    min-height: 40px;
+  }
+  .fish {
+    width: 8vw; /* Adjust fish size on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .waves {
+    height: 60px;
+    min-height: 40px;
+  }
+  .fish {
+    width: 6vw; /* Further reduce fish size on smaller screens */
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .waves {
+    height: 90px;
+    min-height: 40px;
+  }
+  .fish {
+    width: 24vw; /* Minimum size for smallest screens */
+  }
+}

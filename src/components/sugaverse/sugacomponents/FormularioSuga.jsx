@@ -19,6 +19,7 @@ const FormularioSuga = () => {
     error,
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
+  console.log(name)
 
   return (
     <div className=" flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
