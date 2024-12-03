@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { commonClasses, links } from "../components/utils/LinkBoxes";
+import Waves from "../components/FishingKSJ/waves/Waves";
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-backmain bg-cover bg-no-repeat max-sm:bg-center items-center flex max-sm:justify-center py-4 ">
+    <div className="relative min-h-screen  ">
       <div className="flex flex-wrap items-center justify-center gap-4 max-sm:flex-col ">
         {links.map(({ to, bg, hoverBg, label }) => (
           <Link
@@ -14,6 +15,7 @@ function App() {
           ></Link>
         ))}
       </div>
+      <Waves/>
     </div>
   );
 }
