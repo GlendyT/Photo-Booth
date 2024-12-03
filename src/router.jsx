@@ -4,16 +4,15 @@ import { Analytics } from "@vercel/analytics/react";
 import App from "./views/App";
 import PhotoBooth from "./views/PhotoBooth";
 import Card from "./components/Card/Card";
-import { DownloadProvider } from "./context/DownloadProvider";
-import { RequestInfoProvider } from "./context/RequestInfoProvider";
-import { FishProvider } from "./context/FishProvider";
+//import Background from "./components/Background/Background";
 import Navbar from "./navbar/Navbar";
 import Hobi from "./views/Hobi";
+import { DownloadProvider } from "./context/DownloadProvider";
 import Suga from "./views/Suga";
 import Bingo from "./views/Bingo";
 import Vpassport from "./views/Vpassport";
 import Hobisback from "./views/Hobisback";
-import Fishing from "./views/Fishing";
+import { RequestInfoProvider } from "./context/RequestInfoProvider";
 
 export default function Router() {
   return (
@@ -31,15 +30,6 @@ export default function Router() {
               <Route path="/bingo" element={<Bingo />} />
               <Route path="/vpassport" element={<Vpassport />} />
               <Route path="/hopeisback" element={<Hobisback />} />
-
-              <Route
-                path="/seokjin"
-                element={
-                  <FishProvider>
-                    <Fishing />
-                  </FishProvider>
-                }
-              />
             </Route>
           </Routes>
         </RequestInfoProvider>
@@ -47,3 +37,5 @@ export default function Router() {
     </BrowserRouter>
   );
 }
+
+/*              <Route path="/rain" element={<Background />} />*/

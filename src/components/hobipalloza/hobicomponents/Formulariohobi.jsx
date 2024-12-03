@@ -17,10 +17,10 @@ export default function Formulariohobi() {
   } = useRequestInfo();
   const { name, album, song } = usuario;
   return (
-    <div className="   text-white max-sm:text-xs mt-14">
-      <div className=" sm:max-w-sm ">
+    <div className="  sm:justify-center items-center text-white max-sm:text-xs mt-14">
+      <div className=" relative sm:max-w-sm w-full">
         <img src={hw} typeof="image/png" alt="Titulo" className="pic" />
-        <div className=" mx-10">
+        <div className=" px-10 relative">
           <form
             className="mt-5 flex flex-col gap-4 text-black"
             onSubmit={handleSubmit}
