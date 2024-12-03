@@ -23,7 +23,7 @@ export const HobiFormDischarge = () => {
     <div className="flex flex-col items-center text-white max-sm:text-xs">
       <div className=" flex flex-col sm:max-w-sm ">
         <div className=" px-10 py-4  max-sm:px-10 max-sm:py-10 backdrop-blur-sm bg-black/20 rounded-3xl">
-          <form className="mt-5 font-providence" onSubmit={handleSubmit}>
+          <form className="mt-5 font-providence  flex flex-col gap-4 sm:justify-center items-center" onSubmit={handleSubmit}>
             <div
               className={`text-sm float-end ${
                 isMaxFromLimitReachedH ? "text-red-500" : "text-black"

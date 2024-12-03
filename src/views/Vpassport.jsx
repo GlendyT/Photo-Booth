@@ -6,7 +6,7 @@ export default function Vpassport() {
   const { resultado, cargando } = useRequestInfo();
   return (
     <div
-      className={`relative min-h-screen bg-center bg-no-repeat bg-cover flex items-center justify-center ${
+      className={` min-h-screen bg-center bg-no-repeat bg-cover flex items-center justify-center ${
         cargando
           ? "bg-largeScreen2  max-sm:bg-smallScreen"
           : resultado && "bg-largeScreen  max-sm:bg-smallScreen2"
