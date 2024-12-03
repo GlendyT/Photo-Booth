@@ -9,14 +9,14 @@ function Hobisback() {
   return (
     <>
       <div
-        className={`relative min-h-screen flex items-center justify-center bg-bghobiDesktop1 bg-cover bg-center bg-no-repeat max-sm:bg-center max-sm:bg-bghobidischargep ${
+        className={`relative min-h-screen flex items-center bg-bghobiDesktop1 bg-cover bg-center bg-no-repeat max-sm:bg-center max-sm:bg-bghobidischargep ${
           cargando
             ? "bg-bghobiDesktop1 max-sm:bg-bghobimobile2"
             : resultado && "bg-bghobiDesktop2 max-sm:bg-bghobimobile1"
         } ${isMobile ? "pt1" : "pt-16"} `}
       >
         <div
-          className={`flex flex-col justify-center items-center max-sm:px-2 ${
+          className={`flex flex-col justify-center max-sm:px-2 ${
             isCorrectGuess ? "" : "hidden"
           }`}
         >
