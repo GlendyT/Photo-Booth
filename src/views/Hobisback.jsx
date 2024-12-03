@@ -9,19 +9,18 @@ function Hobisback() {
   return (
     <>
       <div
-        className={`min-h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat  ${
+        className={`min-h-screen flex flex-col justify-center bg-cover bg-center bg-no-repeat  ${
           cargando
             ? "bg-bghobiDesktop1 max-sm:bg-bghobimobile2"
             : resultado && "bg-bghobiDesktop2 max-sm:bg-bghobimobile1"
         } ${isMobile ? "pt1" : ""} `}
       >
-        <div className={` ${isCorrectGuess ? "" : "hidden"}`}>
-          {cargando ? (
-            <HobiFormDischarge />
-          ) : (
-            resultado && <HobiDischargeResult />
-          )}
-        </div>
+       
+        {cargando && isCorrectGuess ? (
+          <HobiFormDischarge />
+        ) : (
+          resultado && <HobiDischargeResult />
+        )}
         <>{showModal ? <HobiModalAccess /> : null}</>
       </div>
     </>

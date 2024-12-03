@@ -92,26 +92,26 @@ export const HobiFormDischarge = () => {
               />
             </div>
           </form>
-        </div>
-        {error && (
-          <p className="text-red-700 text-center font-bold uppercase font-providence pt-1">
-            All questions must be filled out
-          </p>
-        )}
-        <div
-          className={` ${
-            diseño
-              ? "relative w-full px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 "
-              : "hidden"
-          } `}
-        >
-          Let's welcome Hobi with a special card
-          <p className="text-xs text-black max-sm:text-xs ">
-            This message will be shown in korean
-          </p>
-          "Welcome home, Jung Hoseok! We missed you and we are proud of you. Our
-          sunshine is home. Wishing you all the best of luck. Sending you all of
-          our love."
+          {error && (
+            <p className="text-red-700 text-center font-bold uppercase font-providence pt-1">
+              All questions must be filled out
+            </p>
+          )}
+          <div
+            className={` ${
+              diseño
+                ? "relative px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 "
+                : "hidden"
+            } `}
+          >
+            Let's welcome Hobi with a special card
+            <p className="text-xs text-black max-sm:text-xs ">
+              This message will be shown in korean
+            </p>
+            "Welcome home, Jung Hoseok! We missed you and we are proud of you.
+            Our sunshine is home. Wishing you all the best of luck. Sending you
+            all of our love."
+          </div>
         </div>
       </div>
     </div>
