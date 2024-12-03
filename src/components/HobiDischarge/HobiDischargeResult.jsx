@@ -71,7 +71,7 @@ export const HobiDischargeResult = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center gap-2 pt-2">
+      <div className="flex flex-wrap justify-center gap-2 pt-2">
         <ButtonUtils
           label="Back to main page"
           onClick={handleResetContent}

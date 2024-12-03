@@ -13,7 +13,7 @@ export const ButtonUtils = ({
 }) => {
   return (
     <button
-      className={`flex flex-row items-center justify-center cursor-pointer gap-2 py-4 px-3 font-bold  transition-all ${bgColor} ${textColor} ${font} ${hoverColor} ${className} rounded-xl ${disableColors} ${size}`}
+      className={`flex justify-center cursor-pointer gap-2 py-4 px-3 font-bold  transition-all ${bgColor} ${textColor} ${font} ${hoverColor} ${className} rounded-xl ${disableColors} ${size}`}
       onClick={onClick}
       disabled={disabled}
     >
