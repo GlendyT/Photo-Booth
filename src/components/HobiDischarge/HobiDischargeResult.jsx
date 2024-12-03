@@ -52,28 +52,26 @@ export const HobiDischargeResult = () => {
 
   return (
     <>
-      <div className="relative flex justify-center items-center max-sm:text-xs">
-        <div className="relative w-full" id="print">
-          <canvas ref={canvasRef} className="mx-auto" />
+      <div className="relative flex max-sm:text-xs">
+        <canvas ref={canvasRef} className="mx-auto" id="print" />
+        <div
+          className={`absolute inset-0 flex flex-col font-extrabold font-providence items-center justify-end shadow-2xl ${
+            isMobile ? "pb-20" : "pb-[4.5rem]"
+          }`}
+        >
           <div
-            className={`absolute inset-0 flex flex-col font-extrabold font-providence items-center justify-end shadow-2xl ${
-              isMobile ? "pb-20" : "pb-[4.5rem]"
-            }`}
+            className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
           >
-            <div
-              className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
-            >
-              {name}
-            </div>
-            <div
-              className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
-            >
-              from {content}
-            </div>
+            {name}
+          </div>
+          <div
+            className={`text-lg px-14 max-sm:text-md ${getTextColor(diseño)}`}
+          >
+            from {content}
           </div>
         </div>
       </div>
-      <div className="flex flex-row gap-2 pt-2">
+      <div className="flex flex-row justify-center gap-2 pt-2">
         <ButtonUtils
           label="Back to main page"
           onClick={handleResetContent}
