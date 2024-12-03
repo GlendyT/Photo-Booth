@@ -21,9 +21,9 @@ const FormularioSuga = () => {
   const { name, content, diseño } = usuario;
 
   return (
-    <div className=" flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
-      <div className="relative sm:max-w-sm w-full">
-        <div className="relative w-full px-10 py-4  max-sm:px-10 max-sm:py-10">
+    <div className=" text-white max-sm:text-xs">
+      <div className=" sm:max-w-sm ">
+        <div className=" px-10 py-4  max-sm:px-10 max-sm:py-10">
           <Header />
           <form className="mt-5 font-dmmono" onSubmit={handleSubmit}>
             <div className="my-5">
@@ -71,7 +71,7 @@ const FormularioSuga = () => {
                 {isMaxFromLimitReached && (
                   <span className="text-red-500">Too long!</span>
                 )}{" "}
-                {charCountFrom}/30
+                {charCountFrom}/15
               </div>
               <input
                 id="name"

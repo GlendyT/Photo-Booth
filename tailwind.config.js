@@ -11,6 +11,7 @@ module.exports = {
         btsgif1: "url('/src/components/img/btsgif.gif')",
         btsgif2: "url('/src/components/img/btsgif2.gif')",
         btsgif3: "url('/src/components/img/btsgit3.gif')",
+        btsgif4: "url('/src/components/img/btsgif4.gif')",
 
         //TODO: LOGOS INICIO
         jhopelogoi: "url('/src/components/img/hobipalloza (1).webp')",
@@ -19,6 +20,7 @@ module.exports = {
         polaroidlogo: "url('/src/components/img/polaroid.webp')",
         photostrips: "url('/src/components/img/photostrip.webp')",
         vlogo: "url('/src/components/img/vpassport.webp')",
+        jinlogo: "url('/src/components/img/jinlogo.webp')",
 
         //TODO: HOBIPALOOZA
         backhobi2:
@@ -56,7 +58,7 @@ module.exports = {
           "url('/src/components/HobiDischarge/assets/hobis_discharge_2_app_bg_desktop.webp')",
         bghobimobile1:
           "url('/src/components/HobiDischarge/assets/hobis_discharge_app_bg_mobile.webp')",
-          bghobimobile2:
+        bghobimobile2:
           "url('/src/components/HobiDischarge/assets/hobis_discharge_2_app_bg_mobile.webp')",
 
         //TODO: VPASSPORT
@@ -90,6 +92,7 @@ module.exports = {
         Rock: ["Rock Salt", "cursive"],
         Monoton: ["Monoton", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
+        PressGame: ['"Press Start 2P"', 'system-ui']
       },
       colors: {
         army: "rgb(0,74,173)",
@@ -104,6 +107,3 @@ module.exports = {
   plugins: [],
 };
 
-/*
-background: rgb(0,74,173);
-background: linear-gradient(90deg, rgba(0,74,173,1) 44%, rgba(203,108,230,1) 100%);*/
