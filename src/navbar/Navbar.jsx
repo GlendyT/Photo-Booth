@@ -55,7 +55,7 @@ export default function Navbar() {
           <Link
             key={name}
             to={path}
-            className={`block text-xl ${font} py-4 cursor-pointer ${
+            className={`block text-xl max-sm:text-base ${font} py-4 cursor-pointer ${
               menu === name ? "underline text-violet-400" : "text-white"
             }`}
             onClick={() => setIsMenuOpen(false)}

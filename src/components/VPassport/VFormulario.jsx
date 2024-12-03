@@ -2,7 +2,7 @@ import { ButtonUtils } from "../utils/ButtonUtils";
 import useRequestInfo from "../../hooks/useRequestInfo";
 
 export const VFormulario = () => {
-  const { usuario, usuarioGenerado, handleSubmit, maxFromLimit, error } =
+  const { usuario, usuarioGenerado, handleSubmit,  error, maxFromLimit } =
     useRequestInfo();
   const { name } = usuario;
   return (

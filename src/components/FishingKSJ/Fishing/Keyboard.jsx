@@ -47,7 +47,7 @@ export default function Keyboard() {
           const isPressed = pressedLetter === key;
 
           let buttonClass =
-            " border-2 py-1 px-2 text-lg uppercase font-bold cursor-pointer text-black ";
+            " border-2 py-1 px-2 text-lg max-sm:text-xs uppercase font-bold cursor-grab text-black ";
 
           if (isActive) {
             buttonClass += "bg-purple-600 text-white cursor-not-allowed";

@@ -92,6 +92,7 @@ module.exports = {
         Rock: ["Rock Salt", "cursive"],
         Monoton: ["Monoton", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
+        PressGame: ['"Press Start 2P"', 'system-ui']
       },
       colors: {
         army: "rgb(0,74,173)",
@@ -106,6 +107,3 @@ module.exports = {
   plugins: [],
 };
 
-/*
-background: rgb(0,74,173);
-background: linear-gradient(90deg, rgba(0,74,173,1) 44%, rgba(203,108,230,1) 100%);*/

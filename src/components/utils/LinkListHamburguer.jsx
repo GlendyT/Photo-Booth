@@ -46,6 +46,6 @@ export const LinkListHamburguer = [
     path: "/seokjin",
     name: "seokjin",
     label: "seokjin",
-    font: "font-providence",
+    font: "font-PressGame",
   },
 ];

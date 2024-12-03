@@ -1,5 +1,5 @@
 export const ButtonUtils = ({
-  label,
+  label ,
   onClick,
   className = "",
   icon,

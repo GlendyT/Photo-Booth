@@ -19,7 +19,6 @@ const FormularioSuga = () => {
     error,
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
-  console.log(name)
 
   return (
     <div className=" flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
@@ -72,7 +71,7 @@ const FormularioSuga = () => {
                 {isMaxFromLimitReached && (
                   <span className="text-red-500">Too long!</span>
                 )}{" "}
-                {charCountFrom}/30
+                {charCountFrom}/15
               </div>
               <input
                 id="name"

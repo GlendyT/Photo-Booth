@@ -6,7 +6,9 @@ import Confetti from "react-dom-confetti";
 import { CardModalAccess } from "./CardModalAccess";
 
 const VerticalLine = () => {
-  return <div className="w-[0.3em] h-7 bg-black -mx-0" />;
+  return (
+    <div className="w-[0.3em] h-7 bg-black -mx-0 max-sm:w-[0.2rem] max-sm:h-4" />
+  );
 };
 
 export const HangmanDrawing = () => {
@@ -25,7 +27,7 @@ export const HangmanDrawing = () => {
           isWinner ? "" : "w-72" ? "" : "w-80"
         }`}
       />
-      <div className="absolute right-0 top-28 flex flex-col items-center">
+      <div className="absolute right-0 top-28 max-sm:top-14 flex flex-col items-center">
         {!isWinner &&
           !isLoser &&
           Array.from({ length: correctGuessCount }).map((_, index) => (

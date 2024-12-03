@@ -14,6 +14,7 @@ const FishProvider = ({ children }) => {
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [pressedLetter, setPressedLetter] = useState(null);
   const [show, setShow] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   // Convertir palabra a minúsculas
   const wordToGuess = wordData.word.toLowerCase();
@@ -47,15 +48,23 @@ const FishProvider = ({ children }) => {
 
   useEffect(() => {
     const handler = (e) => {
-      const key = e.key.toLowerCase(); // Convertir tecla a minúscula
+      // Ignorar eventos dentro de inputs, textareas o elementos interactivos
+      if (
+        e.target.tagName === "INPUT" ||
+        e.target.tagName === "TEXTAREA" ||
+        e.target.isContentEditable
+      ) {
+        return;
+      }
 
+      const key = e.key.toLowerCase(); // Convertir tecla a minúscula
       if (!key.match(/^[a-z]$/)) return;
 
       e.preventDefault();
       addGuessedLetter(key);
     };
-    document.addEventListener("keypress", handler);
 
+    document.addEventListener("keypress", handler);
     return () => {
       document.removeEventListener("keypress", handler);
     };
@@ -97,11 +106,11 @@ const FishProvider = ({ children }) => {
     }
   }, [isWinner, isLoser]);
 
-  const closeModal = () => setShow(false);
-
   return (
     <FishContext.Provider
       value={{
+        showModal,
+        setShowModal,
         correctGuessCount: correctLetters.length,
         correctLetters,
         incorrectGuesses,
@@ -120,7 +129,6 @@ const FishProvider = ({ children }) => {
         wordData,
         setShow,
         show,
-        closeModal,
       }}
     >
       {children}
