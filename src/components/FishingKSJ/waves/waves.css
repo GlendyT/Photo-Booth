@@ -44,24 +44,7 @@
   animation-delay: 4s;
 }
 
-/* Animación de salto */
-@keyframes jump {
-  0% {
-    transform: translateX(90vw) translateY(0);
-  }
-  20% {
-    transform: translateX(75vw) translateY(-50px);
-  }
-  50% {
-    transform: translateX(50vw) translateY(-80px);
-  }
-  80% {
-    transform: translateX(25vw) translateY(-50px);
-  }
-  100% {
-    transform: translateX(-10vw) translateY(0);
-  }
-}
+
 
 /* Parallax Animation */
 .parallax > use {
@@ -84,14 +67,7 @@
   animation-duration: 20s;
 }
 
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
+
 
 @media screen and (max-width: 1536px) {
   .fish img {
