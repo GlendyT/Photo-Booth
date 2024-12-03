@@ -16,7 +16,7 @@ export const HobiFormDischarge = () => {
     isMobile,
     error,
     handleNameH,
-    handleContentH
+    handleContentH,
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
   return (
@@ -80,7 +80,7 @@ export const HobiFormDischarge = () => {
               label="Create post"
               type="submit"
               id="btn"
-              className="w-full  font-providence uppercase"
+              className=" font-providence uppercase"
               bgColor="bg-black"
               textColor="text-white"
               font="font-providence"
@@ -97,7 +97,7 @@ export const HobiFormDischarge = () => {
         <div
           className={` ${
             diseño
-              ? "relative w-full px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 "
+              ? " px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 "
               : "hidden"
           } `}
         >
