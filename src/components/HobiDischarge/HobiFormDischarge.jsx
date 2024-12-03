@@ -20,10 +20,10 @@ export const HobiFormDischarge = () => {
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
   return (
-    <div className="flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
+    <div className="flex flex-col sm:justify-center  text-white max-sm:text-xs">
       <div className="relative sm:max-w-sm w-full">
         <div className="relative w-full px-10 py-4  max-sm:px-10 max-sm:py-10 backdrop-blur-sm bg-black/20 rounded-3xl">
-          <form className="mt-5 font-providence   " onSubmit={handleSubmit}>
+          <form className="mt-5 font-providence" onSubmit={handleSubmit}>
             <div
               className={`text-sm float-end ${
                 isMaxFromLimitReachedH ? "text-red-500" : "text-black"
@@ -71,22 +71,24 @@ export const HobiFormDischarge = () => {
                   : "border-gray-300"
               }`}
             />
-            <CardSelector
-              ver1={isMobile ? CARDPHONE.ver1P : CARDDESKTOP.ver1D}
-              ver2={isMobile ? CARDPHONE.ver2P : CARDDESKTOP.ver2D}
-            />
+            <div className="flex flex-col justify-center">
+              <CardSelector
+                ver1={isMobile ? CARDPHONE.ver1P : CARDDESKTOP.ver1D}
+                ver2={isMobile ? CARDPHONE.ver2P : CARDDESKTOP.ver2D}
+              />
 
-            <ButtonUtils
-              label="Create post"
-              type="submit"
-              id="btn"
-              className=" font-providence uppercase"
-              bgColor="bg-black"
-              textColor="text-white"
-              font="font-providence"
-              disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
-              disabled={!diseño}
-            />
+              <ButtonUtils
+                label="Create post"
+                type="submit"
+                id="btn"
+                className=" font-providence uppercase"
+                bgColor="bg-black"
+                textColor="text-white"
+                font="font-providence"
+                disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
+                disabled={!diseño}
+              />
+            </div>
           </form>
         </div>
         {error && (
