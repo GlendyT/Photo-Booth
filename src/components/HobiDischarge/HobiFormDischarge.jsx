@@ -79,18 +79,18 @@ export const HobiFormDischarge = () => {
               ver1={isMobile ? CARDPHONE.ver1P : CARDDESKTOP.ver1D}
               ver2={isMobile ? CARDPHONE.ver2P : CARDDESKTOP.ver2D}
             />
-
-            <ButtonUtils
-              label="Create post"
-              type="submit"
-              id="btn"
-              className="w-full  font-providence uppercase"
-              bgColor="bg-black"
-              textColor="text-white"
-              font="font-providence"
-              disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
-              disabled={!diseño}
-            />
+            <div className="justify-center flex">
+              <ButtonUtils
+                label="Create post"
+                type="submit"
+                className="font-providence uppercase"
+                bgColor="bg-black"
+                textColor="text-white"
+                font="font-providence"
+                disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
+                disabled={!diseño}
+              />
+            </div>
           </form>
         </div>
         {error && (
