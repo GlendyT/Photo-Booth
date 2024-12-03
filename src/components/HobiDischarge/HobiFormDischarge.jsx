@@ -20,9 +20,9 @@ export const HobiFormDischarge = () => {
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
   return (
-    <div className="flex flex-col items-center text-white max-sm:text-xs">
+    <div className="flex flex-col items-center  text-white max-sm:text-xs">
       <div className=" sm:max-w-sm">
-        <div className=" px-10 py-4  max-sm:px-10 max-sm:py-10 ">
+        <div className=" flex flex-col items-center px-10 py-4  max-sm:px-10 max-sm:py-10 ">
           <form
             className=" font-providence backdrop-blur-sm bg-black/30 rounded-xl p-4 gap-4 sm:justify-center items-center text-white max-sm:text-xs  "
             onSubmit={handleSubmit}
@@ -45,7 +45,7 @@ export const HobiFormDischarge = () => {
               maxLength={maxFromLimitH}
               placeholder="Your Name"
               onChange={handleNameH}
-              className={`appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none  ${
+              className={`appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none   ${
                 isMaxFromLimitReachedH
                   ? "border-red-500 text-red-500"
                   : "border-gray-300"
@@ -100,7 +100,7 @@ export const HobiFormDischarge = () => {
           <div
             className={` ${
               diseño
-                ? "relative px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 "
+                ? "relative px-10 py-4 max-sm:px-2 max-sm:py-8 backdrop-blur-sm bg-black/20 rounded-3xl  my-2 text-center font-providence transition-transform delay-150 text-[rgb(112,128,144)] font-extrabold max-sm:backdrop-blur-3xl max-sm:bg-white/30 p-4 gap-4 sm:justify-center items-center max-sm:text-xs "
                 : "hidden"
             } `}
           >
