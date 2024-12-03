@@ -41,13 +41,7 @@ export const links = [
     hoverBg: "hover:bg-hopegif",
     label: "Hope is Back",
   },
-  {
-    to: "/seokjin",
-    bg: "bg-jinlogo",
-    hoverBg: "hover:bg-btsgif4",
-    label: "Fishing with KSJ",
-  },
 ];
 
 export const commonClasses =
-  "delay-150 hover:-translate-y-1 hover:scale-100 duration-700 px-36 max-sm:px-24 py-36 max-sm:py-14 bg-no-repeat bg-contain bg-center hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-sm:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,1)]";
+  "delay-150 hover:-translate-y-1 hover:scale-100 duration-700 px-4 py-16 bg-no-repeat bg-contain bg-center hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-sm:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,1)]";
