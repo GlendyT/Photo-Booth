@@ -5,9 +5,9 @@ export const CardSelector = ({ ver1, ver2 }) => {
   const { usuario, usuarioGenerado } = useRequestInfo();
   const { diseño } = usuario;
   return (
-    <div className="flex flex-col text-black font-extrabold">
+    <div className="flex flex-col justify-center text-black font-extrabold">
       <label className="pt-4 text-center">Select your Card</label>
-      <div className="py-2 flex gap-2 max-sm:text-xs ">
+      <div className="py-2 justify-center flex gap-2 max-sm:text-xs ">
         <label className="px-4 py-2 flex gap-4 cursor-pointer items-center">
           <input
             id="diseño"
