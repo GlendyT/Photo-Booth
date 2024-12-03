@@ -9,7 +9,7 @@ const Fishing = () => {
   const { showModal } = useFish();
   return (
     <div className="bg-[#2b74ce] flex flex-col min-h-screen font-PressGame justify-center ">
-      <div className="z-10">
+      <div className="">
         <div className="items-center flex flex-col max-sm:mt-9 max-sm:mx-8 mx-44">
           <iframe
             title="spotify"
