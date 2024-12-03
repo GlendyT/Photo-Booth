@@ -9,9 +9,7 @@ const Fishing = () => {
   const { showModal } = useFish();
   return (
     <div className="bg-[#2b74ce] flex flex-col min-h-screen font-PressGame relative ">
-      <div
-        className={`flex flex-col  items-center justify-center m-auto relative z-10 max-sm:mt-9 `}
-      >
+      <div className="items-center mx-96 max-sm:mt-9 z-10">
         <iframe
           title="spotify"
           style={{ borderRadius: "12px" }}
@@ -26,7 +24,7 @@ const Fishing = () => {
           While you play, do you want to listen to some music?
         </p>
 
-        <div className="flex flex-col gap-4 justify-center items-center">
+        <div className="flex flex-col gap-4 items-center">
           <HangmanDrawing />
           <HangmanWord />
           <Keyboard />
