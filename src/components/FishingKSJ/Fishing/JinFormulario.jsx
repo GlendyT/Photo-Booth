@@ -11,14 +11,15 @@ export const JinFormulario = () => {
     setShowModal(false);
   };
   return (
-    <div className=" flex justify-center items-center fixed inset-10 z-10">
-      <div className="relative px-10 py-4 z-50  max-sm:px-10 max-sm:py-10">
+    <div className=" flex justify-center items-center fixed inset-10 z-10  flex-col text-white max-sm:text-xs">
+      <div className=" px-10 py-4 z-50  max-sm:px-10 max-sm:py-10 sm:max-w-sm">
+        <div className="px-10 py-4  max-sm:px-0 max-sm:py-10"> 
         <form
-          className="mt-5 font-michroma backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs "
+          className="mt-5 font-PressGame backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs "
           onSubmit={handleSubmit}
         >
           <label
-            className="flex float-start text-xs mb-2 text-white text-center uppercase font-bold justify-center pb-4 font-PressGame"
+            className="flex float-start text-xs max-sm:text-[0.5rem] mb-2 text-white text-center uppercase font-bold justify-center pb-4 font-PressGame"
             htmlFor="name"
           >
             Unlock the game by adding your name
@@ -31,12 +32,12 @@ export const JinFormulario = () => {
             placeholder="YOUR NAME"
             maxLength={maxFromLimit}
             onChange={usuarioGenerado}
-            className="w-full p-3 text-black  border border-gray-100 rounded-md text-xs text-center"
+            className="w-full p-3 text-black  border border-gray-100 rounded-md text-[0.7rem] text-center max-sm:text-[0.5rem] "
           />
           <ButtonUtils
             label={name ? "UNLOCKED" : "LOCK"}
             type="sumbit"
-            className=" w-full uppercase  text-2xl"
+            className=" w-full uppercase text-lg max-sm:text-[0.5rem] flex items-center"
             bgColor="bg-blue-950"
             textColor="text-white"
             font=" font-PressGame "
@@ -70,8 +71,9 @@ export const JinFormulario = () => {
             }
           />
         </form>
+        </div>
       </div>
-      <div className="opacity-80 fixed inset-14 z-30 bg-black rounded-3xl max-sm:inset-8 max-lg:inset-8"></div>
+      <div className="opacity-80 fixed inset-20 z-30 bg-black rounded-3xl max-sm:inset-8 max-lg:inset-8"></div>
     </div>
   );
 };

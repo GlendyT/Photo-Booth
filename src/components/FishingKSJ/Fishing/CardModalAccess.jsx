@@ -33,12 +33,12 @@ export const CardModalAccess = () => {
                 <div id="print" className="relative">
                   <img src={card} alt="Certificate" className="w-full" />
 
-                  <div className="absolute inset-0 py-4  ">
-                    <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-xs">
+                  <div className="absolute inset-0 py-4 max-sm:py-1 ">
+                    <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[0.7rem]">
                       Fishing Certificate
                     </h1>
 
-                    <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-1 px-24 max-sm:px-4 text-sm max-sm:text-xs">
+                    <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-[0.3rem]">
                       <span className="">
                         This certificate is {isWinner ? "extended" : "invalid"}{" "}
                         to
@@ -72,7 +72,7 @@ export const CardModalAccess = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-2 items-center justify-center p-4 rounded-b ">
+                <div className="flex gap-2 items-center justify-center p-4 rounded-b max-sm:text-[0.5rem] ">
                   <button
                     onClick={handleDownloadImage}
                     className="bg-blue-800 hover:bg-blue-900 text-white p-2 rounded uppercase"

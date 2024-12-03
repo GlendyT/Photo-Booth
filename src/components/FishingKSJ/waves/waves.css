@@ -1,7 +1,10 @@
+
+
 .header {
   position: relative;
   text-align: center;
   z-index: 1;
+
 }
 
 .waves {
@@ -13,7 +16,6 @@
   z-index: 1;
 }
 
-/* Parabolic jump animation */
 @keyframes jump {
   0% {
     transform: translateX(90vw) translateY(0); /* Starting off-screen on the right */
