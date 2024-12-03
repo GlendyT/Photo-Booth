@@ -2,6 +2,7 @@ import "./waves.css";
 import fish1 from "../assets/fish1.webp";
 import fish2 from "../assets/fish2.webp";
 import fish3 from "../assets/fish3.webp";
+
 const Waves = () => {
   return (
     <div className="header">
@@ -49,15 +50,12 @@ const Waves = () => {
         </g>
       </svg>
       <div className="fish">
-        <img src={fish1} alt="" />
-        <img src={fish2} alt="" />
-        <img src={fish3} alt="" />
+        <img src={fish1} alt="Fish 1" />
+        <img src={fish2} alt="Fish 2" />
+        <img src={fish3} alt="Fish 3" />
       </div>
     </div>
   );
 };
 
 export default Waves;
-/*
-
-*/

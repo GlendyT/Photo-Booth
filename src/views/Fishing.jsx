@@ -10,7 +10,7 @@ const Fishing = () => {
   return (
     <div className="bg-[#2b74ce] flex flex-col min-h-screen font-PressGame justify-center ">
       <div className="">
-        <div className="items-center flex flex-col max-sm:mt-9 max-sm:mx-8 mx-44">
+        <div className="items-center flex flex-col max-sm:mt-9 max-sm:mx-8 mx-44 ">
           <iframe
             title="spotify"
             style={{
@@ -29,16 +29,15 @@ const Fishing = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-4 items-center  ">
           <HangmanDrawing />
           <HangmanWord />
           <Keyboard />
         </div>
+        <Waves />
       </div>
 
       {showModal ? <JinFormulario /> : null}
-
-      <Waves />
     </div>
   );
 };
