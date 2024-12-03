@@ -9,7 +9,7 @@ function Hobisback() {
   return (
     <>
       <div
-        className={`min-h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat  ${
+        className={`min-h-screen flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat  ${
           cargando
             ? "bg-bghobiDesktop1 max-sm:bg-bghobimobile2"
             : resultado && "bg-bghobiDesktop2 max-sm:bg-bghobimobile1"
