@@ -8,7 +8,7 @@ import useFish from "../hooks/useFishing";
 const Fishing = () => {
   const { showModal } = useFish();
   return (
-    <div className="bg-[#2b74ce] flex flex-col min-h-screen font-PressGame ">
+    <div className="bg-[#2b74ce] flex flex-col min-h-screen font-PressGame relative ">
       <div
         className={`flex flex-col  items-center justify-center m-auto relative z-10 max-sm:mt-9 `}
       >
