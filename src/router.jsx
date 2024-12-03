@@ -29,7 +29,7 @@ export default function Router() {
               <Route path="/sugaverse" element={<Suga />} />
               <Route path="/hobipalooza" element={<Hobi />} />
               <Route path="/bingo" element={<Bingo />} />
-              {/* <Route path="/vpassport" element={<Vpassport />} /> */}
+              <Route path="/vpassport" element={<Vpassport />} />
               <Route path="/hopeisback" element={<Hobisback />} />
 
               <Route
