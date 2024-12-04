@@ -1,15 +1,30 @@
+import { ButtonUtils } from "../../../utils/ButtonUtils";
 
-
-export default function Botones({handleLogout, handleDownloadImage}) {
-
-    const handleDownload = () => {
-      handleDownloadImage()
-
-      }
+export default function Botones({ handleResetContent, handleDownloadImage }) {
+  const handleDownload = () => {
+    handleDownloadImage();
+  };
   return (
-    <div className='mt-10 flex flex-row gap-4'>
-    <button className="bg-pink-600 py-1 px-4 text-white rounded-lg uppercase font-bold hover:bg-black hover:text-[#5abecd] transition-all"onClick={handleDownload}>Download</button>
-    <button className="bg-pink-600 py-4 px-4 text-white rounded-lg uppercase font-bold hover:bg-black hover:text-[#5abecd] transition-all" onClick={handleLogout}>Restart</button>
-  </div>
-  )
+    <div className=" max-sm:mt-2 mt-10 flex flex-row gap-4">
+      <ButtonUtils
+        label="Download"
+        onClick={handleDownload}
+        className=" mt-4   max-sm:mt-2 "
+        bgColor="bg-pink-600"
+        textColor="text-white"
+        hoverColor=" hover:bg-black hover:text-[#5abecd]"
+        font=" uppercase"
+      />
+
+      <ButtonUtils
+        label="Restart"
+        onClick={handleResetContent}
+        className=" mt-4   max-sm:mt-2 "
+        bgColor="bg-pink-600"
+        textColor="text-white"
+        hoverColor=" hover:bg-black hover:text-[#5abecd]"
+        font=" uppercase"
+      />
+    </div>
+  );
 }

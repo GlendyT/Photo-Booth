@@ -1,12 +1,12 @@
-import bg from "../img/bg.avif";
-import bg2 from "../img/bg2.avif";
-import bg3 from "../img/bg3.avif";
-import bg4 from "../img/bg4.avif";
-import bg5 from "../img/bg5.avif";
-import bg6 from "../img/bg6.avif";
-import bg7 from "../img/bg7.avif";
-import bg8 from "../img/bg8.avif";
-import bg9 from "../img/bg8.avif";
+import bg from "./assetsCard/bg (1).avif";
+import bg2 from "./assetsCard/bg2.avif";
+import bg3 from "./assetsCard/bg3.avif";
+import bg4 from "./assetsCard/bg4.avif";
+import bg5 from "./assetsCard/bg5.avif";
+import bg6 from "./assetsCard/bg6.avif";
+import bg7 from "./assetsCard/bg7.webp";
+import bg8 from "./assetsCard/bg8.webp";
+import bg9 from "./assetsCard/bg9.webp";
 
 
 export const  SPOTIFY = {
@@ -23,48 +23,48 @@ export const  SPOTIFY = {
 export const  SCREEN = [
     {
       img: bg,
-      title: "SPECIAL THANKS TO OUR ETERNAL YOUTH, ARMY",
+      title: " our Eternal youth ",
       from: "BTS",
     },
     {
       img: bg2,
-      title: "SPECIAL THANKS TO OUR BIGGES VOICE, ARMY",
+      title: " our Biggest voice ",
       from: "BTS",
     }
     ,
     {
       img: bg3,
-      title: "SPECIAL THANKS TO THE MOST BEAUTIFUL, ARMY",
+      title: "the most beautiful ",
       from: "BTS",
     },
     {
       img: bg4,
-      title: "SPECIAL THANKS TO OUR CHAPETER 1, ARMY",
+      title: " our Chapter 1 ",
       from: "BTS",
     },
     {
       img: bg5,
-      title: "SPECIAL THANKS TO OUR HAPPINES, ARMY",
+      title: "our Happiness",
       from: "BTS",
     },
     {
       img: bg6,
-      title: "SPECIAL THANKS TO THE BIGGEST LOVE, ARMY",
+      title: "the Biggest love",
       from: "BTS",
     },
     {
       img: bg7,
-      title: "SPECIAL THANKS TO OUR UNIVERSE, ARMY",
+      title: "our Universe",
       from: "BTS",
     },
     {
       img: bg8,
-      title: "SPECIAL THANKS TO SWEETEST, ARMY",
+      title: " Sweetest ",
       from: "BTS",
     },
     {
       img: bg9,
-      title: "SPECIAL THANKS TO OUR WINGS, ARMY",
+      title: "our Wings ",
       from: "BTS",
     },
   ]

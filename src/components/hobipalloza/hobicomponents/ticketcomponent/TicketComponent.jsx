@@ -1,30 +1,50 @@
-import hw from "../../../img/2.avif";
+import { useEffect, useRef } from "react";
+import useRequestInfo from "../../../../hooks/useRequestInfo";
+import hw from "../../assetsPalooza/2.avif";
 
-export default function TicketComponent({
-  user,
-  albu,
-  song,
-}) {
+export default function TicketComponent() {
+  const { usuario, isMobile } = useRequestInfo();
+  const { name, album, song } = usuario;
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
+    const image = new Image();
+    image.src = hw;
+
+    image.onload = () => {
+      const maxWidth = window.innerWidth < 640 ? 350 : 800;
+      const scale = maxWidth / image.width;
+      const imageWidth = image.width * scale;
+      const imageHeight = image.height * scale;
+
+      const pixelRatio = window.devicePixelRatio || 2;
+
+      canvas.width = imageWidth * pixelRatio;
+      canvas.height = imageHeight * pixelRatio;
+
+      canvas.style.width = `${imageWidth}px`;
+      canvas.style.height = `${imageHeight}px`;
+
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+      context.drawImage(image, 0, 0, imageWidth, imageHeight);
+    };
+  }, []);
+
   return (
-    <div className=" w-10/12 h-96 bg-none max-sm:h-60 " >
-      <div className="relative w-full h-96 bg-transparent "   id="print"  >
-      <img
-            src={hw}
-            alt=""
-            className=" absolute inset-4 h-96 max-sm:h-36 max-md:h-80 max-lg:h-80 max-xl:h-96 max-2xl:h-96"
-          />
-        <div className="absolute flex flex-col justify-end w-10/12 h-full inset-0 px-20 pb-32 max-sm:pb-36 max-sm:pl-10 max-sm:pr-20 max-md:pb-44 max-md:px-10 max-lg:pb-44 bg-transparent " >
-
-          <div className=" absolute inset-auto "></div>
-          <p className="z-10 mt-1 text-xl font-bold max-sm:text-xs  max-md:text-sm  text-white">
-            Name: {user}
-          </p>
-          <p className="z-10 mt-1 text-xl font-bold text-white max-sm:text-xs  max-md:text-sm">
-            Country: {albu}
-          </p>
-          <p className="z-10 mt-1 text-xl font-bold text-white max-sm:text-xs  max-md:text-sm">
-            Location: {song}
-          </p>
+    <div className="relative flex justify-center items-center max-sm:text-xs">
+      <div className="relative w-full" id="print">
+        <canvas ref={canvasRef} className="mx-auto" />
+        <div
+          className={`absolute inset-0 flex flex-col font-extrabold font-providence items-start justify-end text-white ${
+            isMobile ? "pb-20" : "pb-[6.5rem]"
+          }`}
+        >
+          <div className={`text-lg px-14 max-sm:text-md  }`}>Name:{name}</div>
+          <div className={`text-lg px-14 max-sm:text-md }`}>Country:{album}</div>
+          <div className={`text-lg px-14 max-sm:text-md }`}>Location:{song}</div>
         </div>
       </div>
     </div>

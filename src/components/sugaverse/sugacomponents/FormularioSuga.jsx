@@ -1,49 +1,24 @@
-import { useState } from "react";
 import Header from "../Titulo/Header";
 import List from "../ListadoDiseños/List";
+import { ButtonUtils } from "../../utils/ButtonUtils";
+import useRequestInfo from "../../../hooks/useRequestInfo";
 
-
-const FormularioSuga = ({ setDescripcion, setRemitente, setDiseño }) => {
-  const [description, setDescription] = useState("");
-  const [from, setFrom] = useState("");
-  const [design, setDesign] = useState("");
-  const [error, setError] = useState(false);
-  const [charCount, setCharCount] = useState(0);
-  const [charCountFrom, setCharCountFrom] = useState(0);
-  const maxCharLimit = 281;
-  const maxFromLimit = 31;
-
-  const handleTextArea = (e) => {
-    const inputValue = e.target.value;
-    if (inputValue.length <= maxCharLimit) {
-      setDescription(inputValue);
-      setCharCount(inputValue.length);
-    }
-  };
-  const handleFrom = (e) => {
-    const inputValue = e.target.value;
-    if (inputValue.length <= maxFromLimit) {
-      setFrom(inputValue);
-      setCharCountFrom(inputValue.length);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if ((description === "", from === "" || design === "")) {
-      setError(true);
-      return;
-    }
-    setError(false);
-
-    setDescripcion([description]);
-    setRemitente([from]);
-    setDiseño([design]);
-  };
-
-  const isMaxCharLimitReached = charCount === maxCharLimit;
-  const isMaxFromLimitReached = charCountFrom === maxFromLimit;
+const FormularioSuga = () => {
+  const {
+    usuario,
+    usuarioGenerado,
+    handleSubmit,
+    isMaxCharLimitReached,
+    isMaxFromLimitReached,
+    maxCharLimit,
+    charCount,
+    handleContent,
+    charCountFrom,
+    maxFromLimit,
+    handleName,
+    error,
+  } = useRequestInfo();
+  const { name, content, diseño } = usuario;
 
   return (
     <div className=" flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
@@ -58,17 +33,24 @@ const FormularioSuga = ({ setDescripcion, setRemitente, setDiseño }) => {
               >
                 Your Lyrics
               </label>
-              <div className={`text-sm mb-2 float-end ${isMaxCharLimitReached ? 'text-red-500' : 'text-black'}`}>
-                 {isMaxCharLimitReached && <span className="text-red-500">Too long!</span>} {charCount}/280
+              <div
+                className={`text-sm mb-2 float-end ${
+                  isMaxCharLimitReached ? "text-red-500" : "text-black"
+                }`}
+              >
+                {isMaxCharLimitReached && (
+                  <span className="text-red-500">Too long!</span>
+                )}{" "}
+                {charCount}/280
               </div>
               <textarea
                 maxLength={maxCharLimit}
                 placeholder="Write something"
                 rows={5}
-                id="descripcion"
-                name="descripcion"
-                value={description}
-                onChange={handleTextArea}
+                id="content"
+                name="content"
+                value={content}
+                onChange={handleContent}
                 className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none ${
                   isMaxCharLimitReached
                     ? "border-red-500 text-red-500"
@@ -86,16 +68,18 @@ const FormularioSuga = ({ setDescripcion, setRemitente, setDiseño }) => {
                   isMaxFromLimitReached ? "text-red-500" : "text-black"
                 }`}
               >
-                {isMaxFromLimitReached && <span className="text-red-500">Too long!</span>} {charCountFrom}/30 
+                {isMaxFromLimitReached && (
+                  <span className="text-red-500">Too long!</span>
+                )}{" "}
+                {charCountFrom}/30
               </div>
               <input
+                id="name"
+                name="name"
+                value={name}
+                onChange={handleName}
                 maxLength={maxFromLimit}
                 placeholder="Your Name"
-                id="remitente"
-                name="remitente"
-                type="text"
-                value={from}
-                onChange={handleFrom}
                 className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none ${
                   isMaxFromLimitReached
                     ? "border-red-500 text-red-500"
@@ -103,16 +87,18 @@ const FormularioSuga = ({ setDescripcion, setRemitente, setDiseño }) => {
                 }`}
               />
             </div>
-            <List setDesign={setDesign} />
-
-            <button
-              disabled={!design}
-              id="btn"
+            <List diseño={diseño} usuarioGenerado={usuarioGenerado} />
+            <ButtonUtils
+              label="Create Post"
               type="submit"
-              className="w-full bg-black text-white cursor-pointer p-3 font-pixel uppercase disabled:bg-opacity-25 disabled:cursor-not-allowed transition-colors"
-            >
-              Create post
-            </button>
+              id="btn"
+              disabled={!diseño}
+              className="w-full p-3 uppercase"
+              bgColor="bg-black"
+              textColor="text-white"
+              font="font-pixel"
+              disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
+            />
           </form>
         </div>
         {error && (

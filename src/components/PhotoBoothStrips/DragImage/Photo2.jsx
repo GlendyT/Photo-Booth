@@ -23,7 +23,7 @@ const Photo2 = ({
 
   return (
     <>
-    <div className="flex flex-col items-center pb-16 ">
+    <div className="flex flex-col items-center pb-4 ">
       {image ? (
 
         <img
@@ -35,10 +35,10 @@ const Photo2 = ({
 
       ) : (
         <div
-          className={` bg-gradient-to-r from-amber-600 from-5% via-red-700 via-40% to-indigo-900 to-85% cursor-grab ${
+          className={` bg-white cursor-grab ${
             changeColor === true
               ? " border-transparent bg-none"
-              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-4 border-white"
+              : "w-40 h-40 max-sm:w-36 max-sm:h-36 border-4 border-purple-500"
           } `}
           onClick={handleColor}
           onDrop={addImage}
@@ -49,7 +49,7 @@ const Photo2 = ({
             className={`text-center ${
               changeColor === true
                 ? " text-transparent max-sm:text-xs max-sm:truncate"
-                : "text-white font-ballet max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm"
+                : "text-black font-ballet max-sm:text-xs max-lg:text-sm max-xl:text-sm max-2xl:text-sm"
             }`}
           >
             Click to Add Your Photo
@@ -70,7 +70,3 @@ const Photo2 = ({
 };
 
 export default Photo2;
-
-/*    <div className="border-solid border-white border-4 my-2 mx-2 mb-4 p-3 text-white bg-backg1 bg-contain bg-no-repeat max-sm:p-1.5 max-sm:mx-1">
-            <div className="mx-10 p-4 border-white border-4 border-dashed mt-20"></div>
-          </div>*/
