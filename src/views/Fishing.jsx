@@ -21,3 +21,4 @@ const Fishing = () => {
 };
 
 export default Fishing;
+
