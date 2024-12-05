@@ -1,4 +1,4 @@
-import "./waves.css";
+
 import fish1 from "../assets/fish1.webp";
 import fish2 from "../assets/fish2.webp";
 import fish3 from "../assets/fish3.webp";
