@@ -26,7 +26,7 @@ const PhotoBooth = () => {
   } = useRequestInfo();
 
   return (
-    <div className="relative  min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center max-sm:pt-12">
+    <div className=" min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center max-sm:pt-12">
       <div className="flex flex-col items-center ">
         {error && (
           <div className="bg-red-700 text-white rounded-lg p-2">

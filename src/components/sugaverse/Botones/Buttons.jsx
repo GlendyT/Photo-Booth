@@ -10,7 +10,7 @@ export default function Buttons({ handleDownloadImage, handleResetContent }) {
     handleDownloadImage();
   };
   return (
-    <div className="flex flex-col-3 gap-2 mt-2">
+    <div className="flex flex-col-3 gap-2 mt-2 items-center justify-center">
       <ButtonUtils
         label="Download"
         onClick={handleDownload}
