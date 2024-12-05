@@ -18,8 +18,7 @@ const RequestInfoProvider = ({ children }) => {
   const [charCount, setCharCount] = useState(usuario.content.length || 0);
   const [charCountFrom, setCharCountFrom] = useState(usuario.name.length || 0);
   const maxCharLimit = 281;
-  const maxFromLimit = 15;
-  
+  const maxFromLimit = 31;
   const maxCharLimitH = 21;
   const maxFromLimitH = 16;
   const [currWord] = useState("hope");
@@ -276,9 +275,7 @@ const RequestInfoProvider = ({ children }) => {
         resetPhotos,
         typeImages,
         isImageValid,
-        showImage,
-        maxFromLimit,
-        maxCharLimit
+        showImage
       }}
     >
       {children}
