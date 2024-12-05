@@ -13,29 +13,28 @@ import Bingo from "./views/Bingo";
 import Vpassport from "./views/Vpassport";
 import Hobisback from "./views/Hobisback";
 import { RequestInfoProvider } from "./context/RequestInfoProvider";
+import Fishing from "./views/Fishing";
 
 export default function Router() {
   return (
     <BrowserRouter>
       <DownloadProvider>
         <RequestInfoProvider>
-          <FishProvider>
-            <Analytics />
-            <Routes>
-              <Route element={<Navbar />}>
-                <Route path="/" element={<App />} index />
-                <Route path="/polaroid" element={<Card />} />
-                <Route path="/photobooth" element={<PhotoBooth />} />
-                <Route path="/sugaverse" element={<Suga />} />
-                <Route path="/hobipalooza" element={<Hobi />} />
-                <Route path="/bingo" element={<Bingo />} />
-                <Route path="/vpassport" element={<Vpassport />} />
-                <Route path="/hopeisback" element={<Hobisback />} />
+          <Analytics />
+          <Routes>
+            <Route element={<Navbar />}>
+              <Route path="/" element={<App />} index />
+              <Route path="/polaroid" element={<Card />} />
+              <Route path="/photobooth" element={<PhotoBooth />} />
+              <Route path="/sugaverse" element={<Suga />} />
+              <Route path="/hobipalooza" element={<Hobi />} />
+              <Route path="/bingo" element={<Bingo />} />
+              <Route path="/vpassport" element={<Vpassport />} />
+              <Route path="/hopeisback" element={<Hobisback />} />
 
-                <Route path="/seokjin" element={<Fishing />} />
-              </Route>
-            </Routes>
-          </FishProvider>
+              <Route path="/seokjin" element={<Fishing />} />
+            </Route>
+          </Routes>
         </RequestInfoProvider>
       </DownloadProvider>
     </BrowserRouter>
