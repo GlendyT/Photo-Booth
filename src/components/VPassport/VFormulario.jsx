@@ -2,13 +2,13 @@ import { ButtonUtils } from "../utils/ButtonUtils";
 import useRequestInfo from "../../hooks/useRequestInfo";
 
 export const VFormulario = () => {
-  const { usuario, usuarioGenerado, handleSubmit, error, maxFromLimit } =
+  const { usuario, usuarioGenerado, handleSubmit, maxFromLimit, error } =
     useRequestInfo();
   const { name } = usuario;
   return (
-    <div className=" flex flex-col items-center text-white max-sm:text-xs">
-      <div className=" sm:max-w-sm">
-        <div className="  px-10 py-4  max-sm:px-10 max-sm:py-10">
+    <div className=" flex flex-col sm:justify-center items-center text-white max-sm:text-xs">
+      <div className="relative sm:max-w-sm w-full">
+        <div className="relative w-full px-10 py-4  max-sm:px-10 max-sm:py-10">
           <form
             className="mt-5 font-michroma backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs"
             onSubmit={handleSubmit}
