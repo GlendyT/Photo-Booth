@@ -34,17 +34,17 @@ export const CardModalAccess = () => {
                   <img src={card} alt="Certificate" className="aspect-video" />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
-                    <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[0.7rem]">
-                      Fishing Certificate
-                    </h1>
-
                     <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-[0.3rem]">
-                      <span className="">
+                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[0.7rem]">
+                        Fishing Certificate
+                      </h1>
+
+                      <span>
                         This certificate is {isWinner ? "extended" : "invalid"}{" "}
                         to
                       </span>
                       <span className=" font-extrabold underline ">{name}</span>
-                      <div className="">
+                      <div >
                         For {isWinner ? "" : "not"} fishing the song{" "}
                         <span className="uppercase text-blue-950 font-bold">
                           {wordToGuess}
