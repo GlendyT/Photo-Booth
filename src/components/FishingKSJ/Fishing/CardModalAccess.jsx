@@ -34,8 +34,8 @@ export const CardModalAccess = () => {
                   <img src={card} alt="Certificate" className="aspect-video" />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
-                    <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-[0.3rem]">
-                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[0.7rem]">
+                    <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
+                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-xs">
                         Fishing Certificate
                       </h1>
 
@@ -72,7 +72,7 @@ export const CardModalAccess = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-2 items-center justify-center p-4 max-sm:text-[0.5rem] ">
+                <div className="flex gap-2 items-center justify-center p-4 max-sm:text-xs">
                   <button
                     onClick={handleDownloadImage}
                     className="bg-blue-800 hover:bg-blue-900 text-white p-2 rounded-xl uppercase"

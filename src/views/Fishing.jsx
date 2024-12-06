@@ -24,7 +24,7 @@ const Fishing = () => {
             loading="lazy"
           ></iframe>
 
-          <p className="pb-2 text-lg font-extrabold text-center max-sm:text-[0.5rem]">
+          <p className="pb-2 text-lg font-extrabold text-center max-sm:text-xs">
             While you play, do you want to listen to some music?
           </p>
         </div>
