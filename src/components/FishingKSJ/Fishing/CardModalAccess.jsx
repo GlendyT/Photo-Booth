@@ -28,10 +28,10 @@ export const CardModalAccess = () => {
       {show && (
         <>
           <div className="flex justify-center items-center fixed inset-10 z-40">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="w-auto my-6 mx-auto max-w-3xl">
               <div className="  shadow-lg relative flex flex-col w-full outline-none focus:outline-none uppercase">
                 <div id="print" className="relative">
-                  <img src={card} alt="Certificate" className="w-full" />
+                  <img src={card} alt="Certificate" className="aspect-video" />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
                     <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[0.7rem]">

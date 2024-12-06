@@ -11,8 +11,8 @@ export const JinFormulario = () => {
     setShowModal(false);
   };
   return (
-    <div className=" flex justify-center items-center fixed inset-10 z-10  flex-col text-white max-sm:text-xs">
-      <div className=" px-10 py-4 z-50  max-sm:px-10 max-sm:py-10 sm:max-w-sm">
+    <div className=" flex justify-center items-center  fixed inset-10 z-10  flex-col text-white max-sm:text-xs">
+      <div className=" z-50  max-sm:px-10 max-sm:py-10 w-96">
         <div className="px-10 py-4  max-sm:px-0 max-sm:py-10"> 
         <form
           className="mt-5 font-PressGame backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs "

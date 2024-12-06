@@ -29,7 +29,7 @@ const Fishing = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 items-center  ">
+        <div className="flex flex-col gap-6 items-center  ">
           <HangmanDrawing />
           <HangmanWord />
           <Keyboard />
