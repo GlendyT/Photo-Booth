@@ -29,7 +29,7 @@ export const CardModalAccess = () => {
         <>
           <div className="flex justify-center items-center fixed inset-10 z-40">
             <div className="w-auto my-6 mx-auto max-w-3xl max-sm:max-w-2xl">
-              <div className="  shadow-lg relative flex flex-col w-full outline-none focus:outline-none uppercase">
+              <div className="  shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
                 <div id="print" className="relative">
                   <img src={card} alt="Certificate" className="aspect-video" />
 
@@ -72,10 +72,10 @@ export const CardModalAccess = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-2 items-center justify-center p-4 rounded-b max-sm:text-[0.5rem] ">
+                <div className="flex gap-2 items-center justify-center p-4 max-sm:text-[0.5rem] ">
                   <button
                     onClick={handleDownloadImage}
-                    className="bg-blue-800 hover:bg-blue-900 text-white p-2 rounded uppercase"
+                    className="bg-blue-800 hover:bg-blue-900 text-white p-2 rounded-xl uppercase"
                   >
                     Download
                   </button>
