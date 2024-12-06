@@ -12,8 +12,7 @@ export const JinFormulario = () => {
   };
   return (
     <div className=" flex justify-center items-center  fixed inset-10 z-10  flex-col text-white max-sm:text-xs">
-      <div className=" z-50  max-sm:px-10 max-sm:py-10 w-96">
-        <div className="px-10 py-4  max-sm:px-0 max-sm:py-10"> 
+      <div className=" z-50 px-10 py-4 max-sm:px-10 max-sm:py-10 w-96">
         <form
           className="mt-5 font-PressGame backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs "
           onSubmit={handleSubmit}
@@ -71,7 +70,6 @@ export const JinFormulario = () => {
             }
           />
         </form>
-        </div>
       </div>
       <div className="opacity-80 fixed inset-20 z-30 bg-black rounded-3xl max-sm:inset-8 max-lg:inset-8"></div>
     </div>

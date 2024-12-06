@@ -40,14 +40,14 @@ export default function Keyboard() {
 
   return (
     <div className="flex items-center justify-center gap-1 text-xs max-sm:px-4 ">
-      <div className="flex flex-wrap items-center justify-center gap-2 max-sm:flex-wrap">
+      <div className="flex flex-wrap items-center justify-center gap-2 max-sm:gap-1 max-sm:flex-wrap">
         {KEYS.map((key) => {
           const isActive = activeLetters.includes(key);
           const isInactive = inactiveLetters.includes(key);
           const isPressed = pressedLetter === key;
 
           let buttonClass =
-            " border-2 py-1 px-2 text-lg max-sm:text-xs uppercase font-bold cursor-grab text-black ";
+            " border-2 py-1 px-2 text-lg max-sm:text-[7px] uppercase font-bold cursor-grab text-black ";
 
           if (isActive) {
             buttonClass += "bg-purple-600 text-white cursor-not-allowed";

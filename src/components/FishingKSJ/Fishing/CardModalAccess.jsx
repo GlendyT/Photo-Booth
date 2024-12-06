@@ -35,16 +35,16 @@ export const CardModalAccess = () => {
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
                     <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
-                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-xs">
+                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[10px]">
                         Fishing Certificate
                       </h1>
 
-                      <span>
+                      <span className=" max-sm:text-[5px]">
                         This certificate is {isWinner ? "extended" : "invalid"}{" "}
                         to
                       </span>
-                      <span className=" font-extrabold underline ">{name}</span>
-                      <div >
+                      <span className=" font-extrabold underline  max-sm:text-[8px]">{name}</span>
+                      <div className=" max-sm:text-[5px]" >
                         For {isWinner ? "" : "not"} fishing the song{" "}
                         <span className="uppercase text-blue-950 font-bold">
                           {wordToGuess}
