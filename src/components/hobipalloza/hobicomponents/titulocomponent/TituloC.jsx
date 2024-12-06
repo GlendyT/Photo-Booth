@@ -1,7 +1,9 @@
 export default function TituloC() {
   return (
-    <div>
-      <div className="font-rock italic text-3xl text-white">HAPPY</div>
+    <>
+      <div className="font-rock italic text-3xl text-white text-center">
+        HAPPY
+      </div>
       <div className="conteudo">
         <ul>
           <li>HOPE-DAY!</li>
@@ -13,6 +15,6 @@ export default function TituloC() {
           <li>HOBIUARY!</li>
         </ul>
       </div>
-    </div>
+    </>
   );
 }

@@ -29,6 +29,7 @@ export const VButton = ({ handleDownloadImage, handleResetContent }) => {
         textColor="text-white"
         hoverColor="  hover:bg-greenButton hover:text-black"
         font="font-michroma"
+        disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed disabled:hover:text-white disabled:hover:bg-none disabled:bg-none"
       />
     </>
   );

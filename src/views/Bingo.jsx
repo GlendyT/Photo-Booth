@@ -21,9 +21,9 @@ export default function Bingo() {
   };
   return (
     <>
-      <div className="min-h-screen relative flex flex-col justify-center items-center bg-bingoback bg-center bg-no-repeat bg-cover ">
+      <div className="min-h-screen flex flex-col justify-center items-center bg-bingoback bg-center bg-no-repeat bg-cover ">
         <div
-          className="mx-96 max-sm:mx-0 max-sm:px-0 max-lg:mx-20 max-xl:mx-44 border-2 border-gray-200  bg-purple-400 max-sm:mt-16 "
+          className="mx-[24rem] max-sm:mx-0 max-sm:px-0 max-lg:mx-28 max-xl:mx-44 max-2xl:mx-80 border-2 border-gray-200  bg-purple-400 max-sm:mt-16 "
           id="print"
         >
           <div className="bg-bingo2 h-32 bg-center bg-no-repeat bg-contain"></div>

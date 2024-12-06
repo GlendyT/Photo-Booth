@@ -14,7 +14,7 @@ export default function BingoCard({ item,isClicked, handleClick}) {
         onClick={handleClick}
 
       >
-        <p className="text-xs">{item.name}</p>
+        <p className="text-xs max-sm:text-[0.6rem]">{item.name}</p>
         <Confetti
           active={isClicked}
           config={{ spread: 70, startVelocity: 30, elementCount: 50 }}

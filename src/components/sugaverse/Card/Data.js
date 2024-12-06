@@ -15,7 +15,7 @@ export const dicImg = {
   yc,
 };
 
-const commonDiv1Styles = "flex justify-center bg-no-repeat bg-cover bg-center aspect-[9/9] p-8 max-sm:p-4";
+const commonDiv1Styles = "flex justify-center bg-no-repeat bg-cover bg-center aspect-square p-8 max-sm:p-4";
 const commonTextStyles = "text-sm font-dmmono max-sm:text-xs tracking-tight";
 const commonPStyles = "font-dmmono text-right max-sm:text-xs";
 
