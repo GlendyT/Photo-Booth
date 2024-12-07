@@ -9,14 +9,14 @@ export const HobiFormDischarge = () => {
     handleSubmit,
     isMaxFromLimitReachedH,
     charCountFrom,
-    maxFromLimitH,
+    maxFromLimit,
     isMaxCharLimitReachedH,
     charCount,
     maxCharLimitH,
     isMobile,
     error,
     handleNameH,
-    handleContentH,
+    handleContentH
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
   return (

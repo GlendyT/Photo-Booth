@@ -1,8 +1,8 @@
-import { HangmanDrawing } from "../components/FishingKSJ/Fishing/HangmanDrawing";
-import HangmanWord from "../components/FishingKSJ/Fishing/HangmanWord";
+import { Fish } from "../components/FishingKSJ/Fishing/Fish";
 import { JinFormulario } from "../components/FishingKSJ/Fishing/JinFormulario";
-import Keyboard from "../components/FishingKSJ/Fishing/Keyboard";
+
 import Waves from "../components/FishingKSJ/waves/Waves";
+import { SpotifyPlaylist } from "../components/utils/SpotifyPlaylist";
 import useFish from "../hooks/useFishing";
 
 const Fishing = () => {
@@ -31,6 +31,9 @@ const Fishing = () => {
         <HangmanWord />
         <Keyboard />
       </div>
+      <Waves />
+
+      {showModal ? <JinFormulario /> : null}
       <Waves />
 
       {showModal ? <JinFormulario /> : null}
