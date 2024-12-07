@@ -8,8 +8,8 @@ export const VResultado = () => {
   const { usuario, handleResetContent } = useRequestInfo();
   const { name } = usuario;
   return (
-    <div className="relative max-sm:text-xs">
-      <div className="relative w-96" id="print">
+    <div className=" max-sm:text-xs">
+      <div className=" w-[80rem] max-sm:w-[25rem]" >
         <VCitizenDetail name={name} />
       </div>
       <div className="flex flex-row gap-2 items-center justify-center pt-4">
