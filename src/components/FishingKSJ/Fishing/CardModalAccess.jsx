@@ -35,7 +35,7 @@ export const CardModalAccess = () => {
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
                     <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
-                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-[10px]">
+                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-xs">
                         Fishing Certificate
                       </h1>
 
