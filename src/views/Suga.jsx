@@ -9,6 +9,7 @@ function Suga() {
     <div className=" min-h-screen flex justify-center items-center bg-backsuga bg-cover bg-no-repeat">
       <div className="flex flex-col items-center">
         {cargando ? <FormularioSuga /> : resultado && <ResultadoSuga />}
+       
       </div>
     </div>
   );

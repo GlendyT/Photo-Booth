@@ -31,9 +31,9 @@ const Fishing = () => {
         <HangmanWord />
         <Keyboard />
       </div>
-      <Waves />
 
       {showModal ? <JinFormulario /> : null}
+      <Waves />
     </div>
   );
 };

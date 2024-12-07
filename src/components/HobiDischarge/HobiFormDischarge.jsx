@@ -16,7 +16,7 @@ export const HobiFormDischarge = () => {
     isMobile,
     error,
     handleNameH,
-    handleContentH,
+    handleContentH
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
   return (

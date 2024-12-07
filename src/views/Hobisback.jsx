@@ -13,7 +13,7 @@ function Hobisback() {
           cargando
             ? "bg-bghobiDesktop1 max-sm:bg-bghobimobile2"
             : resultado && "bg-bghobiDesktop2 max-sm:bg-bghobimobile1"
-        } ${isMobile ? "pt1" : ""} `}
+        } ${isMobile ? "pt1" : "pt-16"} `}
       >
         <div className="flex flex-col items-center">
           {cargando && isCorrectGuess ? (

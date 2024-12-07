@@ -71,7 +71,7 @@ const FormularioSuga = () => {
                 {isMaxFromLimitReached && (
                   <span className="text-red-500">Too long!</span>
                 )}{" "}
-                {charCountFrom}/15
+                {charCountFrom}/30
               </div>
               <input
                 id="name"
