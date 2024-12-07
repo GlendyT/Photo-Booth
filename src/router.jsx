@@ -13,6 +13,7 @@ import Bingo from "./views/Bingo";
 import Vpassport from "./views/Vpassport";
 import Hobisback from "./views/Hobisback";
 import { RequestInfoProvider } from "./context/RequestInfoProvider";
+import Fishing from "./views/Fishing";
 
 export default function Router() {
   return (
@@ -30,6 +31,8 @@ export default function Router() {
               <Route path="/bingo" element={<Bingo />} />
               <Route path="/vpassport" element={<Vpassport />} />
               <Route path="/hopeisback" element={<Hobisback />} />
+
+              <Route path="/seokjin" element={<Fishing />} />
             </Route>
           </Routes>
         </RequestInfoProvider>

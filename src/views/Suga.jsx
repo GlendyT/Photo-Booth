@@ -10,6 +10,7 @@ function Suga() {
       <div className="flex flex-col items-center">
         
         {cargando ? <FormularioSuga /> : resultado && <ResultadoSuga />}
+       
       </div>
     </div>
   );
