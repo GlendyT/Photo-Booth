@@ -1,4 +1,4 @@
-import { createContext, useEffect, useRef, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const RequestInfoContext = createContext();
 
@@ -28,82 +28,7 @@ const RequestInfoProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(true);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [polaroids, setPolaroids] = useState([]);
-  const [messageError, setMessageError] = useState("");
-  const [imageSaved, setImageSaved] = useState(false);
-  const [changeColor, setChangeColor] = useState(false);
-  const [photo2Complete, setPhoto2Complete] = useState(false);
-
-  const refInputFiles = [useRef(null), useRef(null), useRef(null)]; // Array of refs for each input
-  const elementRef = useRef(null);
-  const typeImages = ["image/png", "image/jpeg", "image/jpg"];
-
-  const selectImage = (index) => {
-    refInputFiles[index].current.click();
-  };
-  const isImageValid = (polaroid) => {
-    if (polaroid && typeImages.includes(polaroid.type)) {
-      setError(false);
-      return true;
-    } else {
-      setError(true);
-      setMessageError("File is incorrect");
-      return false;
-    }
-  };
-  const showImage = (index, polaroid) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(polaroid);
-
-    fileReader.addEventListener("load", (e) => {
-      setPolaroids((prevPolaroids) => {
-        const updatedPolaroids = [...prevPolaroids];
-        updatedPolaroids[index] = e.target.result;
-        return updatedPolaroids;
-      });
-    });
-  };
-  const addImage = (index, e) => {
-    e.preventDefault();
-
-    const files = e.dataTransfer ? e.dataTransfer.files : e.target.files;
-
-    Array.from(files).forEach((file) => {
-      if (isImageValid(file)) {
-        showImage(index, file);
-      }
-    });
-  };
-  const resetPhotos = () => {
-    setPolaroids([]);
-    setChangeColor(false);
-    setError(false);
-    setImageSaved(false);
-  };
-
-  useEffect(() => {
-    if (imageSaved) {
-      const timer = setTimeout(() => {
-        setImageSaved(false);
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [imageSaved]);
-
-  useEffect(() => {
-    if (polaroids[2] || polaroids[1] || polaroids[0]) {
-      setPhoto2Complete(true);
-    } else {
-      setPhoto2Complete(false);
-    }
-  }, [polaroids]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setError(false);
-    }, 4000);
-  }, [error]);
-
+  
   const generateWordDisplay = () => {
     return isCorrectGuess ? currWord : "_".repeat(currWord.length).trim();
   };
@@ -249,14 +174,7 @@ const RequestInfoProvider = ({ children }) => {
         isMaxCharLimitReachedH,
         isMaxFromLimitReached,
         isMaxFromLimitReachedH,
-        polaroids,
-        setPolaroids,
-        messageError,
-        setMessageError,
-        changeColor,
-        setChangeColor,
-        photo2Complete,
-        setPhoto2Complete,
+
         //Handlers
         usuarioGenerado,
         generarUsuario,
@@ -268,14 +186,7 @@ const RequestInfoProvider = ({ children }) => {
         handleNameH,
         generateWordDisplay,
         handleCorrectWord,
-        refInputFiles,
-        elementRef,
-        selectImage,
-        addImage,
-        resetPhotos,
-        typeImages,
-        isImageValid,
-        showImage
+
       }}
     >
       {children}

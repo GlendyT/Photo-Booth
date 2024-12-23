@@ -1,20 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//import { injectSpeedInsights } from "@vercel/speed-insights";
 import { Analytics } from "@vercel/analytics/react";
+
+import { DownloadProvider } from "./context/DownloadProvider";
+import { RequestInfoProvider } from "./context/RequestInfoProvider";
+import { ImageCropProvider } from "./context/ImageCropProviders";
+import { FishProvider } from "./context/FishProvider";
+
 import App from "./views/App";
-import PhotoBooth from "./views/PhotoBooth";
 import Card from "./components/Card/Card";
-//import Background from "./components/Background/Background";
 import Navbar from "./navbar/Navbar";
 import Hobi from "./views/Hobi";
-import { DownloadProvider } from "./context/DownloadProvider";
 import Suga from "./views/Suga";
 import Bingo from "./views/Bingo";
 import Vpassport from "./views/Vpassport";
 import Hobisback from "./views/Hobisback";
-import { RequestInfoProvider } from "./context/RequestInfoProvider";
 import Fishing from "./views/Fishing";
-import { FishProvider } from "./context/FishProvider";
+import Polaroid2 from "./views/Polaroid2";
+import { PhotoBoothProvider } from "./context/PhotoboothProvider";
 
 export default function Router() {
   return (
@@ -22,26 +24,30 @@ export default function Router() {
       <DownloadProvider>
         <RequestInfoProvider>
           <FishProvider>
-            <Analytics />
-            <Routes>
-              <Route element={<Navbar />}>
-                <Route path="/" element={<App />} index />
-                <Route path="/polaroid" element={<Card />} />
-                <Route path="/photobooth" element={<PhotoBooth />} />
-                <Route path="/sugaverse" element={<Suga />} />
-                <Route path="/hobipalooza" element={<Hobi />} />
-                <Route path="/bingo" element={<Bingo />} />
-                <Route path="/vpassport" element={<Vpassport />} />
-                <Route path="/hopeisback" element={<Hobisback />} />
+           
+              <ImageCropProvider>
+              <PhotoBoothProvider>
+                <Analytics />
+                <Routes>
+                  <Route element={<Navbar />}>
+                    <Route path="/" element={<App />} index />
+                    <Route path="/polaroid" element={<Card />} />
+                    <Route path="/photobooth" element={<Polaroid2 />} />
+                    <Route path="/sugaverse" element={<Suga />} />
+                    <Route path="/hobipalooza" element={<Hobi />} />
+                    <Route path="/bingo" element={<Bingo />} />
+                    <Route path="/vpassport" element={<Vpassport />} />
+                    <Route path="/hopeisback" element={<Hobisback />} />
 
-                <Route path="/seokjin" element={<Fishing />} />
-              </Route>
-            </Routes>
+                    <Route path="/seokjin" element={<Fishing />} />
+                  </Route>
+                </Routes>
+                </PhotoBoothProvider>
+              </ImageCropProvider>
+            
           </FishProvider>
         </RequestInfoProvider>
       </DownloadProvider>
     </BrowserRouter>
   );
 }
-
-/*              <Route path="/rain" element={<Background />} />*/
