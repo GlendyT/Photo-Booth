@@ -7,23 +7,23 @@ import useDownload from "../hooks/useDownload";
 import Logo from "../components/PhotoBoothStrips/DragImage/Logo";
 import logo1 from "../../src/components/PhotoBoothStrips/assetsBooth/festa_logo.webp";
 import useRequestInfo from "../hooks/useRequestInfo";
+import usePhotobooth from "../hooks/usePhotobooth";
 
 const PhotoBooth = () => {
   const { handleDownloadImage } = useDownload();
+  const { error, messageError } = useRequestInfo();
   const {
-    error,
-    messageError,
     polaroids,
-    imageSaved,
+    refInputFiles,
+    selectImage,
+    elementRef,
+    addImage,
     changeColor,
     setChangeColor,
-    photo2Complete,
     resetPhotos,
-    refInputFiles,
-    elementRef,
-    selectImage,
-    addImage,
-  } = useRequestInfo();
+    photo2Complete,
+    imageSaved,
+  } = usePhotobooth();
 
   return (
     <div className=" min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center max-sm:pt-12">

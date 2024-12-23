@@ -1,9 +1,14 @@
+import useDownload from "../../hooks/useDownload";
+import usePhotobooth from "../../hooks/usePhotobooth";
 import { ButtonUtils } from "../utils/ButtonUtils";
 
-const Button = ({ handleDownloadImage, resetPhotos, photo2Complete }) => {
+const Button = () => {
+  const {resetPhotos,photo2Complete} = usePhotobooth();
+  const { handleDownloadImage } = useDownload();
   const handleDownload = () => {
     handleDownloadImage();
   };
+  
 
   return (
     <div className="flex max-sm:flex max-sm:flex-row gap-1 max-sm:justify-center">
