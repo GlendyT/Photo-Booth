@@ -14,7 +14,7 @@ const ImageCropModalContent = ({ handleDone, handleClose }) => {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center relative pt-36 ">
       <h5 className="text-gray-800 mb-4">Edit your picture</h5>
       <div className="border border-dashed border-gray-300 p-6 rounded-lg">
         <div className="flex justify-center">
