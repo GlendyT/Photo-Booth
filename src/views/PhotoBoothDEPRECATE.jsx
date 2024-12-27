@@ -9,7 +9,7 @@ import logo1 from "../../src/components/PhotoBoothStrips/assetsBooth/festa_logo.
 import useRequestInfo from "../hooks/useRequestInfo";
 import usePhotobooth from "../hooks/usePhotobooth";
 
-const PhotoBooth = () => {
+const PhotoBoothDeprecated = () => {
   const { handleDownloadImage } = useDownload();
   const { error, messageError } = useRequestInfo();
   const {
@@ -79,4 +79,4 @@ const PhotoBooth = () => {
   );
 };
 
-export default PhotoBooth;
+export default PhotoBoothDeprecated;

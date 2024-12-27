@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { LinkListHamburguer } from "../components/utils/LinkListHamburguer";
+import { LinkListHamburguer } from "../utils/LinkListHamburguer";
 
 export default function Navbar() {
   const location = useLocation();
@@ -29,10 +29,10 @@ export default function Navbar() {
 
   const handleClose = () => {
     setIsMenuOpen(false);
-  }
+  };
 
   return (
-    <div className="">
+    <>
       <div className="absolute block z-10">
         <div className="flex flex-row items-start justify-start max-sm:justify-start">
           <button
@@ -50,7 +50,12 @@ export default function Navbar() {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } flex flex-col justify-center items-start pl-4`}
       >
-        <button className="text-white text-3xl flex items-end justify-end w-full pr-5" onClick={handleClose}>x</button>
+        <button
+          className="text-white text-3xl flex items-end justify-end w-full pr-5"
+          onClick={handleClose}
+        >
+          x
+        </button>
         {LinkListHamburguer.map(({ path, name, label, font }) => (
           <Link
             key={name}
@@ -65,6 +70,6 @@ export default function Navbar() {
         ))}
       </div>
       <Outlet />
-    </div>
+    </>
   );
 }

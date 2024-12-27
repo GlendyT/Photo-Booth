@@ -1,9 +1,9 @@
 import useFish from "../../../hooks/useFishing";
 import useRequestInfo from "../../../hooks/useRequestInfo";
-import { ButtonUtils } from "../../utils/ButtonUtils";
+import { ButtonUtils } from "../../../utils/ButtonUtils";
 
 export const JinFormulario = () => {
-  const { usuario, usuarioGenerado, handleSubmit, maxFromLimit } =
+  const { usuario, handleSubmit, maxFromLimit, handleNameH } =
     useRequestInfo();
   const { name } = usuario;
   const { setShowModal } = useFish();
@@ -30,7 +30,7 @@ export const JinFormulario = () => {
             type="text"
             placeholder="YOUR NAME"
             maxLength={maxFromLimit}
-            onChange={usuarioGenerado}
+            onChange={handleNameH}
             className="w-full p-3 text-black  border border-gray-100 rounded-md text-[0.7rem] text-center max-sm:text-[0.5rem] "
           />
           <ButtonUtils
@@ -71,7 +71,7 @@ export const JinFormulario = () => {
           />
         </form>
       </div>
-      <div className="opacity-80 fixed inset-20 z-30 bg-black rounded-3xl max-sm:inset-8 max-lg:inset-8"></div>
+      <div className="opacity-90 fixed inset-40 z-30 bg-blue-950 rounded-3xl max-sm:inset-8 max-lg:inset-8"></div>
     </div>
   );
 };

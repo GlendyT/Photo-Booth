@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonUtils } from "../utils/ButtonUtils";
+import { ButtonUtils } from "../../utils/ButtonUtils";
 import useRequestInfo from "../../hooks/useRequestInfo";
 
 export const HobiModalAccess = () => {
@@ -78,7 +78,7 @@ export const HobiModalAccess = () => {
           </div>
         </div>
       </div>
-      <div className="opacity-35 fixed inset-10 z-30 bg-black "></div>
+      <div className="opacity-30 fixed inset-10 z-30 bg-purple-950 "></div>
     </>
   );
 };

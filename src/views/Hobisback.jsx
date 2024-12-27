@@ -3,7 +3,7 @@ import { HobiModalAccess } from "../components/HobiDischarge/HobiModalAccess.jsx
 import { HobiDischargeResult } from "../components/HobiDischarge/HobiDischargeResult.jsx";
 import useRequestInfo from "../hooks/useRequestInfo.jsx";
 function Hobisback() {
-  const { isCorrectGuess, isMobile, resultado, showModal, cargando } =
+  const {  isMobile, resultado, showModal, cargando } =
     useRequestInfo();
 
   return (
@@ -16,12 +16,12 @@ function Hobisback() {
         } ${isMobile ? "pt1" : "pt-16"} `}
       >
         <div className="flex flex-col items-center">
-          {cargando && isCorrectGuess ? (
+          {cargando ? (
             <HobiFormDischarge />
           ) : (
             resultado && <HobiDischargeResult />
           )}
-          {showModal ? <HobiModalAccess /> : null}
+           {showModal ? <HobiModalAccess /> : null} 
         </div>
       </div>
     </>

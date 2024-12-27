@@ -2,7 +2,7 @@ import { useState } from "react";
 import BingoCard from "../components/Bingo/BingoCard";
 import { menuItems } from "../components/Bingo/Data";
 import useDownload from "../hooks/useDownload";
-import { ButtonUtils } from "../components/utils/ButtonUtils";
+import { ButtonUtils } from "../utils/ButtonUtils";
 
 export default function Bingo() {
   const { handleDownloadImage } = useDownload();

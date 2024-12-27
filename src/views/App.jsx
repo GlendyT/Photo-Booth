@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { commonClasses, links } from "../components/utils/LinkBoxes";
+import { commonClasses, links } from "../utils/LinkBoxes";
 
 function App() {
   return (
-    <div className=" min-h-screen flex justify-center bg-backmain bg-cover bg-no-repeat max-sm:bg-center bg-black ">
-      <div className="flex flex-wrap items-center justify-center gap-2 max-sm:flex-col">
+    <div className=" min-h-screen flex justify-center bg-backmain bg-cover bg-no-repeat max-sm:bg-center ">
+      <div className="flex flex-wrap items-center justify-center gap-2 max-sm:flex-col py-4 px-1">
         {links.map(({ to, bg, hoverBg, label }) => (
           <Link
             key={to}

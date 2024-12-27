@@ -1,6 +1,6 @@
 import useDownload from "../../hooks/useDownload";
 import usePhotobooth from "../../hooks/usePhotobooth";
-import { ButtonUtils } from "../utils/ButtonUtils";
+import { ButtonUtils } from "../../utils/ButtonUtils";
 
 const Button = () => {
   const {resetPhotos,photo2Complete} = usePhotobooth();
