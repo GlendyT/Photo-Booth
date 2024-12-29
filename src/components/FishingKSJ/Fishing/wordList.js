@@ -2,7 +2,7 @@ export const wordList = [
     {
       id: 1,
       word: "ItsDefinitelyYou",
-      clue: "1st OST of JIN, the name of the Kdrama is of an Animal",
+      clue: "1st OST of JIN, the name of the Kdrama is of Animal",
       image: "https://i.scdn.co/image/ab67616d00001e0272b573d5d66d964760f34c07",
     },
     {
@@ -13,8 +13,8 @@ export const wordList = [
     },
     {
       id: 3,
-      word: "Abbys",
-      clue: "The name of the song is a the name of a color",
+      word: "Abyss",
+      clue: "The name of the song is a color",
       image: "https://i.scdn.co/image/ab67616d00001e02290931a28cb742da38ed8a18",
     },
     {

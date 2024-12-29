@@ -1,7 +1,7 @@
 import useDownload from "../../hooks/useDownload";
 import useFlip from "../../hooks/useFlip";
 import useRequestInfo from "../../hooks/useRequestInfo";
-import card from "./assets/Happy (V)irthday.png";
+import card from "./assets/VirthdayCard.webp";
 
 export const CardModalAccess = () => {
   const { handleDownloadImage } = useDownload();
@@ -16,8 +16,8 @@ export const CardModalAccess = () => {
           <div className="shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
             <div id="print" className="relative border-purpleButton border-4 ">
               <img src={card} alt="Certificate" className="w-auto h-96" />
-              <div className="absolute inset-0 flex flex-col justify-end items-center pb-4">
-                <div className="bg-pinzel bg-cover bg-center w-full flex flex-col items-center px-4 py-2 rounded-md text-purple-500 font-extrabold font-virthday text-base max-sm:text-xs">
+              <div className="absolute inset-0 flex flex-col justify-end items-center pb-40 pr-36">
+                <div className=" w-full flex flex-col items-center px-4 py-2 rounded-md text-black font-extrabold font-virthday text-base max-sm:text-xs">
                   From <span className="text-base">{name}</span>
                 </div>
               </div>
@@ -33,7 +33,7 @@ export const CardModalAccess = () => {
                 onClick={handleRestart}
                 className="bg-blue-950 p-2 text-white rounded-xl hover:bg-blue-900 hover:text-gray-200 transition-all uppercase"
               >
-                Cerrar
+                Restart
               </button>
             </div>
           </div>

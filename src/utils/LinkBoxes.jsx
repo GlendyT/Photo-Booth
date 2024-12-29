@@ -43,13 +43,13 @@ export const links = [
   },
   {
     to: "/seokjin",
-    bg: "bg-jinlogo",
+    bg: "bg-jinlogo ",
     hoverBg: "hover:bg-btsgif4",
     label: "Fishing with KSJ",
   },
   {
     to: "/(V)irthday",
-    bg: "bg-v2logo rounded-2xl",
+    bg: "bg-v2logo ",
     hoverBg: "hover:bg-btsgif5",
     label: "Fishing with KSJ",
   },

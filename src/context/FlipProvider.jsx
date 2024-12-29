@@ -7,7 +7,7 @@ const FlipContext = createContext();
 const FlipProvider = ({ children }) => {
   const [items, setItems] = useState( initialItems.flat() );
   const [prev, setPrev] = useState(-1);
-  const [timer, setTimer] = useState(5); // Timer in seconds
+  const [timer, setTimer] = useState(60); // Timer in seconds
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
   const [timeExpired, setTimeExpired] = useState(false); 
@@ -16,6 +16,8 @@ const FlipProvider = ({ children }) => {
   const [restart, setRestart] = useState(false); 
   const [gameStarted, setGameStarted] = useState(false); 
   const {setUsuario} = useRequestInfo();
+
+
 
   const handleUnlockClick = () => {
     setShowModal(false);
@@ -26,7 +28,7 @@ const FlipProvider = ({ children }) => {
     setGameOver(false);
     setWin(false);
     setTimeExpired(false);
-    setTimer(5);
+    setTimer(60);
     setPrev(-1);
     setRestart(true); 
     setGameStarted(false); 
@@ -37,6 +39,7 @@ const FlipProvider = ({ children }) => {
   const handleStartGame = () => {
     setGameStarted(true);
     setRestart(false);
+    setTimer(60);
     const shuffledItems = items.sort(() => Math.random() - 0.5);
     const initialItems = shuffledItems.map((item) => ({ ...item, price: "active" }));
     setItems(initialItems);
@@ -47,6 +50,11 @@ const FlipProvider = ({ children }) => {
     }, 2000);
 
     return () => clearTimeout(timeout);
+  };
+
+  const startTimer = () => {
+    setGameStarted(true);
+    setTimer(60); // Reinicia el temporizador
   };
 
 
@@ -137,7 +145,8 @@ const FlipProvider = ({ children }) => {
         showAccessModal,
         handleRestart,
         handleStartGame,
-        restart
+        restart,
+        startTimer
 
       }}
     >

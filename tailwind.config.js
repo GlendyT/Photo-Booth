@@ -40,8 +40,8 @@ module.exports = {
         polaroidlogo: "url('/src/components/img/polaroid.webp')",
         photostrips: "url('/src/components/img/photostrip.webp')",
         vlogo: "url('/src/components/img/vpassport.webp')",
-        jinlogo: "url('/src/components/img/jinlogo.webp')",
-        v2logo: "url('/src/components/img/virthday.png')",
+        jinlogo: "url('/src/components/img/jinlogo2.webp')",
+        v2logo: "url('/src/components/img/virthday.webp')",
 
         //TODO: HOBIPALOOZA
         backhobi2:

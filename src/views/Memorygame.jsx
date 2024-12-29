@@ -1,6 +1,7 @@
 import Card from "../components/Virthday/Card";
 import { VForm } from "../components/Virthday/VForm";
 import useFlip from "../hooks/useFlip";
+import { ButtonUtils } from "../utils/ButtonUtils";
 
 const Memorygame = () => {
   const { items, timer, timeExpired, handleStartGame } = useFlip();
@@ -10,15 +11,26 @@ const Memorygame = () => {
       <div className="flex flex-col gap-2 items-center justify-center min-h-screen ">
         <div className="text-2xl font-bold text-black font-virthday flex flex-row justify-between items-center gap-2">
           Memory Game{" "}
-          <button
-            onClick={handleStartGame}
-            className="bg-black text-white px-2 py-2 rounded-full text-lg"
+          <ButtonUtils
+           label="START"
+           onClick={handleStartGame}
+           bgColor="bg-black text-white rounded-full text-lg "
+           disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
+           disabled={timer === 60 ? false : true}
+          />
+          <span
+            className={`py-2 px-4 flex flex-col items-center text-xs text-white transition-colors rounded-lg  ${
+              timer === 60
+                ? "bg-black" 
+                : timer > 30
+                ? "bg-green-500" 
+                : timer > 10
+                ? "bg-yellow-500"
+                : "bg-red-500" 
+            }`}
           >
-            {" "}
-            START
-          </button>
-          <span className="bg-black text-white py-2 px-4 flex flex-col items-center text-xs">
-            Time Left<span className="text-2xl">{timer}</span>
+            {timer === 60 ? "Time" : timer > 0 ? "Time left" : "Time's up"}
+            <span className="text-2xl">{timer !== null ? timer : "..."}</span>
           </span>
         </div>
 
