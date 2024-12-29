@@ -31,7 +31,7 @@ const Memorygame = () => {
             }`}
           >
             {timer === 60 ? "Time" : timer > 0 ? "Time left" : "Time's up"}
-            <span className="text-2xl">{timer !== null ? timer : "..."}</span>
+            <span className="text-base">{timer !== null ? timer : "..."}</span>
           </span>
         </div>
 
