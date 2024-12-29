@@ -42,12 +42,12 @@ export const LinkListHamburguer = [
     label: "Hobisback",
     font: "font-providence",
   },
-  {
-    path: "/seokjin",
-    name: "seokjin",
-    label: "seokjin",
-    font: "font-PressGame",
-  },
+  // {
+  //   path: "/seokjin",
+  //   name: "seokjin",
+  //   label: "seokjin",
+  //   font: "font-PressGame",
+  // },
   {
     path: "/(V)irthday",
     name: "virthday",

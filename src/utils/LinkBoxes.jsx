@@ -41,12 +41,12 @@ export const links = [
     hoverBg: "hover:bg-hopegif",
     label: "Hope is Back",
   },
-  {
-    to: "/seokjin",
-    bg: "bg-jinlogo ",
-    hoverBg: "hover:bg-btsgif4",
-    label: "Fishing with KSJ",
-  },
+  // {
+  //   to: "/seokjin",
+  //   bg: "bg-jinlogo ",
+  //   hoverBg: "hover:bg-btsgif4",
+  //   label: "Fishing with KSJ",
+  // },
   {
     to: "/(V)irthday",
     bg: "bg-v2logo ",

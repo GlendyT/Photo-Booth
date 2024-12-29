@@ -14,11 +14,11 @@ export const CardModalAccess = () => {
       <div className="flex justify-center items-center fixed inset-10 z-40">
         <div className="w-auto my-2 mx-auto max-w-3xl max-sm:max-w-2xl">
           <div className="shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
-            <div id="print" className="relative border-purpleButton border-4 ">
+            <div id="print" className="relative ">
               <img src={card} alt="Certificate" className="w-auto h-96" />
               <div className="absolute inset-0 flex flex-col justify-end items-center pb-40 pr-36">
-                <div className=" w-full flex flex-col items-center px-4 py-2 rounded-md text-black font-extrabold font-virthday text-base max-sm:text-xs">
-                  From <span className="text-base">{name}</span>
+                <div className=" w-full flex flex-col items-center px-4 py-2 rounded-md text-black font-extrabold font-virthday text-base max-sm:text-xs max-md:text-xs max-lg:text-xs max-2xl:text-xs">
+                  From <span className="text-base max-lg:text-xs max-sm:text-xs max-sm:font-extrabold max-2xl:text-xs">{name}</span>
                 </div>
               </div>
             </div>

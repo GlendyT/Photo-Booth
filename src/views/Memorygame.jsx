@@ -9,17 +9,18 @@ const Memorygame = () => {
   return (
     <div className="min-h-screen bg-v2 bg-center bg-cover bg-no-repeat">
       <div className="flex flex-col gap-2 items-center justify-center min-h-screen ">
-        <div className="text-2xl font-bold text-black font-virthday flex flex-row justify-between items-center gap-2">
+        <div className="text-2xl font-bold text-black font-virthday flex flex-row justify-between items-center gap-2 pt-1">
           Memory Game{" "}
           <ButtonUtils
            label="START"
            onClick={handleStartGame}
-           bgColor="bg-black text-white rounded-full text-lg "
+           bgColor="bg-black text-white rounded-full text-lg  "
            disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
+           padding="py-2 px-2"
            disabled={timer === 60 ? false : true}
           />
           <span
-            className={`py-2 px-4 flex flex-col items-center text-xs text-white transition-colors rounded-lg  ${
+            className={`py-1 px-2 flex flex-col items-center text-xs text-white transition-colors rounded-lg  ${
               timer === 60
                 ? "bg-black" 
                 : timer > 30
@@ -46,7 +47,7 @@ const Memorygame = () => {
           </div>
         )}
 
-        <div className="w-96">
+        <div className="w-96 max-sm:px-4">
           <iframe
             title="Spotify Playlist"
             style={{ borderRadius: "12px" }}

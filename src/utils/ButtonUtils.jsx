@@ -10,10 +10,11 @@ export const ButtonUtils = ({
   size = " max-sm:text-xs text-md",
   font = "",
   disableColors = "",
+  padding = "py-4 px-3"
 }) => {
   return (
     <button
-      className={`flex justify-center cursor-pointer gap-2 py-4 px-3 font-bold  transition-all ${bgColor} ${textColor} ${font} ${hoverColor} ${className} rounded-xl ${disableColors} ${size}`}
+      className={`flex justify-center cursor-pointer gap-2 ${padding} font-bold  transition-all ${bgColor} ${textColor} ${font} ${hoverColor} ${className} rounded-xl ${disableColors} ${size}`}
       onClick={onClick}
       disabled={disabled}
     >
