@@ -6,7 +6,7 @@ const Card = ({ item }) => {
 
   return (
     <div
-      className="w-24 h-24 group perspective max-sm:h-16 max-sm:w-16 font-quatt  "
+      className="w-24 h-24 group perspective max-sm:h-16 max-sm:w-16 font-quatt   "
       onClick={() => onCardClick(item)}
     >
       <div

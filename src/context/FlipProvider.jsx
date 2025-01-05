@@ -7,7 +7,7 @@ const FlipContext = createContext();
 const FlipProvider = ({ children }) => {
   const [items, setItems] = useState( initialItems.flat() );
   const [prev, setPrev] = useState(-1);
-  const [timer, setTimer] = useState(60); // Timer in seconds
+  const [timer, setTimer] = useState(50); // Timer in seconds
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
   const [timeExpired, setTimeExpired] = useState(false); 
@@ -28,7 +28,7 @@ const FlipProvider = ({ children }) => {
     setGameOver(false);
     setWin(false);
     setTimeExpired(false);
-    setTimer(60);
+    setTimer(50);
     setPrev(-1);
     setRestart(true); 
     setGameStarted(false); 
@@ -39,7 +39,7 @@ const FlipProvider = ({ children }) => {
   const handleStartGame = () => {
     setGameStarted(true);
     setRestart(false);
-    setTimer(60);
+    setTimer(50);
     const shuffledItems = items.sort(() => Math.random() - 0.5);
     const initialItems = shuffledItems.map((item) => ({ ...item, price: "active" }));
     setItems(initialItems);
@@ -54,7 +54,7 @@ const FlipProvider = ({ children }) => {
 
   const startTimer = () => {
     setGameStarted(true);
-    setTimer(60); // Reinicia el temporizador
+    setTimer(50); // Reinicia el temporizador
   };
 
 
@@ -71,13 +71,18 @@ const FlipProvider = ({ children }) => {
       setTimeExpired(true);
     }
   }, [timer, gameStarted, gameOver]);
-
   useEffect(() => {
     if (items.every((item) => item.price === "correct")) {
-      setWin(true);
+      const timeout = setTimeout(() => {
+        setWin(true);
+      }, 4000); 
+  
       setGameOver(true);
+  
+      return () => clearTimeout(timeout);
     }
   }, [items]);
+  
 
   const check = (current) => {
     if (items[current].id === items[prev].id) {
