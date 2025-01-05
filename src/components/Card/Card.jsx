@@ -2,7 +2,8 @@ import React from "react";
 import { SCREEN } from "./Data";
 import useDownload from "../../hooks/useDownload";
 import beyondarmy from "./assetsCard/Only-graphic-darkpurple.png";
-import { ButtonUtils } from "../utils/ButtonUtils";
+import { ButtonUtils } from "../../utils/ButtonUtils";
+
 
 const Card = () => {
   const { handleDownloadImage } = useDownload();

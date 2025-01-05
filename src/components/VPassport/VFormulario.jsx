@@ -1,8 +1,8 @@
-import { ButtonUtils } from "../utils/ButtonUtils";
+import { ButtonUtils } from "../../utils/ButtonUtils";
 import useRequestInfo from "../../hooks/useRequestInfo";
 
 export const VFormulario = () => {
-  const { usuario, usuarioGenerado, handleSubmit, error, maxFromLimit } =
+  const { usuario, handleNameH, handleSubmit, error, maxFromLimit } =
     useRequestInfo();
   const { name } = usuario;
   return (
@@ -26,7 +26,7 @@ export const VFormulario = () => {
               type="text"
               placeholder="YOUR NAME"
               maxLength={maxFromLimit}
-              onChange={usuarioGenerado}
+              onChange={handleNameH}
               className="w-full p-3 text-black  border border-gray-100 rounded-md text-xs text-center"
             />
             {error && (

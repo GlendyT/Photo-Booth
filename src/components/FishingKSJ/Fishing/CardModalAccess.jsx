@@ -1,7 +1,7 @@
 import useDownload from "../../../hooks/useDownload";
 import useFish from "../../../hooks/useFishing";
 import useRequestInfo from "../../../hooks/useRequestInfo";
-import card from "../assets/certificado.webp";
+import card from "../assets/certificado2.webp";
 
 export const CardModalAccess = () => {
   const { handleDownloadImage } = useDownload();
@@ -9,10 +9,7 @@ export const CardModalAccess = () => {
   const { name } = usuario;
   const {
     isWinner,
-    wordToGuess,
     wordData,
-    correctLetters,
-    incorrectGuesses,
     show,
     handleStartOver,
     isLoser,
@@ -34,39 +31,17 @@ export const CardModalAccess = () => {
                   <img src={card} alt="Certificate" className="aspect-video" />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
-                    <div className="flex flex-col items-center justify-center text-center pt-2 max-sm:pt-0 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
-                      <h1 className=" flex justify-center items-center text-2xl font-extrabold max-sm:text-xs">
-                        Fishing Certificate
-                      </h1>
-
-                      <span className=" max-sm:text-[5px]">
-                        This certificate is {isWinner ? "extended" : "invalid"}{" "}
-                        to
-                      </span>
-                      <span className=" font-extrabold underline  max-sm:text-[8px]">{name}</span>
-                      <div className=" max-sm:text-[5px]" >
-                        For {isWinner ? "" : "not"} fishing the song{" "}
-                        <span className="uppercase text-blue-950 font-bold">
-                          {wordToGuess}
-                        </span>{" "}
-                        with{" "}
-                        <span className="font-bold text-blue-950">
-                          {correctLetters.length}{" "}
-                        </span>
-                        <span className="font-bold ">correct tries </span>
-                        and{" "}
-                        <span className=" font-bold text-blue-950">
-                          {" "}
-                          {incorrectGuesses.length}
-                        </span>{" "}
-                        incorrect tries
+                    <div className="flex flex-col items-center justify-center text-center pt-44 max-sm:pt-16 max-sm:mt-2 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
+                      <div>
+                        {name}
                       </div>
+
 
                       {wordData.image && (
                         <img
                           src={wordData.image}
                           alt="Word"
-                          className="w-20 h-20 mt-4 rounded-xl max-sm:w-10 max-sm:h-10 max-sm:mt-1"
+                          className="w-20 h-20 mt-14 rounded-xl max-sm:w-8 max-sm:h-8 max-sm:mt-6"
                         />
                       )}
                     </div>

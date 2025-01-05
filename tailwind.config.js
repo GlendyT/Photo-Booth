@@ -1,4 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
+
+const Myclass = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".my-rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
+    },
+    ".perspective": {
+      perspective: "1000px",
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden",
+    },
+  });
+});
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -12,6 +31,7 @@ module.exports = {
         btsgif2: "url('/src/components/img/btsgif2.gif')",
         btsgif3: "url('/src/components/img/btsgit3.gif')",
         btsgif4: "url('/src/components/img/btsgif4.gif')",
+        btsgif5: "url('/src/components/img/virthday.gif')",
 
         //TODO: LOGOS INICIO
         jhopelogoi: "url('/src/components/img/hobipalloza (1).webp')",
@@ -20,7 +40,8 @@ module.exports = {
         polaroidlogo: "url('/src/components/img/polaroid.webp')",
         photostrips: "url('/src/components/img/photostrip.webp')",
         vlogo: "url('/src/components/img/vpassport.webp')",
-        jinlogo: "url('/src/components/img/jinlogo.webp')",
+        jinlogo: "url('/src/components/img/jinlogo2.webp')",
+        v2logo: "url('/src/components/img/virthday.webp')",
 
         //TODO: HOBIPALOOZA
         backhobi2:
@@ -72,6 +93,11 @@ module.exports = {
           "/src/components/VPassport/imgVPassport/Background Generated Phone.webp')",
         smallScreen2:
           "/src/components/VPassport/imgVPassport/Background Starts Phone.webp')",
+
+        //TODO: Virthday
+        v: "url('https://ibighit.com/bts/images/bts/discography/v/layover/discography-cover.png')",
+        v2: "url('/src/components/img/vwallpaper.png')",
+        pinzel: "url('/src/components/Virthday/assets/pinzelaso.webp')",
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
@@ -92,7 +118,10 @@ module.exports = {
         Rock: ["Rock Salt", "cursive"],
         Monoton: ["Monoton", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
-        PressGame: ['"Press Start 2P"', 'system-ui']
+        PressGame: ['"Press Start 2P"', "system-ui"],
+        virthday: ["Unkempt", "serif"],
+        virthday2: ["Anton", "serif"],
+        virthday3: ["Permanent Marker", "serif"],
       },
       colors: {
         army: "rgb(0,74,173)",
@@ -102,7 +131,21 @@ module.exports = {
         blueButton: "rgb(04,84,139)",
         greenButton: "rgb(32,95,30)",
       },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-200%)" },
+        },
+        blurtext: {
+          "0%": { filter: "blur(0px)" },
+          "100%": { filter: "blur(4px)" },
+        },
+      },
+      animation: {
+        slide: " slide 25s linear infinite",
+        "blur-text-0": "blur-text 1.5s 0s infinite linear alternate",
+      },
     },
   },
-  plugins: [],
+  plugins: [Myclass],
 };

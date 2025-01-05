@@ -5,6 +5,7 @@ import { DownloadProvider } from "./context/DownloadProvider";
 import { RequestInfoProvider } from "./context/RequestInfoProvider";
 import { ImageCropProvider } from "./context/ImageCropProviders";
 import { FishProvider } from "./context/FishProvider";
+import { PhotoBoothProvider } from "./context/PhotoboothProvider";
 
 import App from "./views/App";
 import Card from "./components/Card/Card";
@@ -15,8 +16,9 @@ import Bingo from "./views/Bingo";
 import Vpassport from "./views/Vpassport";
 import Hobisback from "./views/Hobisback";
 import Fishing from "./views/Fishing";
-import Polaroid2 from "./views/Polaroid2";
-import { PhotoBoothProvider } from "./context/PhotoboothProvider";
+import Photobooth from "./views/Photobooth";
+import Memorygame from "./views/Memorygame";
+import { FlipProvider } from "./context/FlipProvider";
 
 export default function Router() {
   return (
@@ -24,27 +26,32 @@ export default function Router() {
       <DownloadProvider>
         <RequestInfoProvider>
           <FishProvider>
-           
-              <ImageCropProvider>
+            <ImageCropProvider>
               <PhotoBoothProvider>
                 <Analytics />
                 <Routes>
                   <Route element={<Navbar />}>
                     <Route path="/" element={<App />} index />
                     <Route path="/polaroid" element={<Card />} />
-                    <Route path="/photobooth" element={<Polaroid2 />} />
+                    <Route path="/photobooth" element={<Photobooth />} />
                     <Route path="/sugaverse" element={<Suga />} />
                     <Route path="/hobipalooza" element={<Hobi />} />
                     <Route path="/bingo" element={<Bingo />} />
                     <Route path="/vpassport" element={<Vpassport />} />
                     <Route path="/hopeisback" element={<Hobisback />} />
-
                     <Route path="/seokjin" element={<Fishing />} />
+                    <Route
+                      path="/(V)irthday"
+                      element={
+                        <FlipProvider>
+                          <Memorygame />
+                        </FlipProvider>
+                      }
+                    />
                   </Route>
                 </Routes>
-                </PhotoBoothProvider>
-              </ImageCropProvider>
-            
+              </PhotoBoothProvider>
+            </ImageCropProvider>
           </FishProvider>
         </RequestInfoProvider>
       </DownloadProvider>

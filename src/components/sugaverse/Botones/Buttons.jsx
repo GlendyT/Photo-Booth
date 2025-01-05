@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ButtonUtils } from "../../utils/ButtonUtils";
+import { ButtonUtils } from "../../../utils/ButtonUtils";
+
 
 export default function Buttons({ handleDownloadImage, handleResetContent }) {
   //deshabilitar el boton de descarga

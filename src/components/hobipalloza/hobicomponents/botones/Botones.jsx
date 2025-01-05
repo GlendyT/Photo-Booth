@@ -1,4 +1,5 @@
-import { ButtonUtils } from "../../../utils/ButtonUtils";
+import { ButtonUtils } from "../../../../utils/ButtonUtils";
+
 
 export default function Botones({ handleResetContent, handleDownloadImage }) {
   const handleDownload = () => {

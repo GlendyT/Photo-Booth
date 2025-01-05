@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ButtonUtils } from "../utils/ButtonUtils";
+import { ButtonUtils } from "../../utils/ButtonUtils";
 
 export const VButton = ({ handleDownloadImage, handleResetContent }) => {
   const [buttonDisabled, setButtonDisabled] = useState(false);
