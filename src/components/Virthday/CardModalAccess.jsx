@@ -16,7 +16,7 @@ export const CardModalAccess = () => {
           <div className="shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
             <div id="print" className="relative ">
               <img src={card} alt="Certificate" className="w-auto h-96" />
-              <div className="absolute inset-0 flex flex-col justify-end items-center pb-[11rem] pr-36">
+              <div className="absolute inset-0 flex flex-col justify-end items-center pb-[10rem] pr-36">
                 <div className=" w-full flex flex-col items-center px-4 py-2 rounded-md font-extrabold font-virthday3 text-xs max-sm:text-xs max-md:text-xs max-lg:text-xs max-2xl:text-xs text-white tracking-wide ">
                   From <span className="text-xs max-lg:text-xs max-sm:text-xs max-sm:font-extrabold max-2xl:text-xs">{name}</span>
                 </div>
