@@ -120,6 +120,8 @@ module.exports = {
         Raleway: ["Raleway", "sans-serif"],
         PressGame: ['"Press Start 2P"', "system-ui"],
         virthday: ["Unkempt", "serif"],
+        virthday2: ["Anton", "serif"],
+        virthday3: ["Permanent Marker", "serif"],
       },
       colors: {
         army: "rgb(0,74,173)",

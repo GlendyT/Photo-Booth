@@ -51,6 +51,7 @@ const Memorygame = () => {
             <VForm />
           </div>
         )}
+        <VForm />
 
         <div className="w-96 max-sm:px-4">
           <iframe
