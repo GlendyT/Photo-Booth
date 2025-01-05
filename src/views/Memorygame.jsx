@@ -4,8 +4,7 @@ import useFlip from "../hooks/useFlip";
 import { ButtonUtils } from "../utils/ButtonUtils";
 
 const Memorygame = () => {
-  const { items, timer, timeExpired, handleStartGame, win } =
-    useFlip();
+  const { items, timer, timeExpired, handleStartGame, win } = useFlip();
 
   return (
     <div className="min-h-screen bg-v2 bg-center bg-cover bg-no-repeat">
@@ -51,7 +50,6 @@ const Memorygame = () => {
             <VForm />
           </div>
         )}
-        <VForm />
 
         <div className="w-96 max-sm:px-4">
           <iframe
