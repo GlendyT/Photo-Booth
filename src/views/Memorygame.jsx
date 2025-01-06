@@ -4,7 +4,8 @@ import useFlip from "../hooks/useFlip";
 import { ButtonUtils } from "../utils/ButtonUtils";
 
 const Memorygame = () => {
-  const { items, timer, timeExpired, handleStartGame, win } = useFlip();
+  const { items, timer, timeExpired, handleStartGame, win, handleRestart } =
+    useFlip();
 
   return (
     <div className="min-h-screen bg-v2 bg-center bg-cover bg-no-repeat">
@@ -12,12 +13,12 @@ const Memorygame = () => {
         <div className="text-2xl font-bold text-black font-virthday flex flex-row justify-between items-center gap-2 pt-1">
           Memory Game{" "}
           <ButtonUtils
-            label="START"
-            onClick={handleStartGame}
-            bgColor="bg-black text-white rounded-full text-lg  "
+            label={timeExpired ? "YOU LOST - RE-START" : "START"}
+            onClick={timeExpired ? handleRestart : handleStartGame}
+            bgColor={`text-white rounded-full text-lg ${timeExpired ? "bg-red-500" : "bg-black"}`}
             disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
             padding="py-2 px-2"
-            disabled={timer === 50 ? false : true}
+            disabled={!timeExpired && timer !== 50}
           />
           <span
             className={`py-1 px-2 flex flex-col items-center text-xs text-white transition-colors rounded-lg  ${
@@ -45,7 +46,7 @@ const Memorygame = () => {
           ))}
         </div>
 
-        {(win || timeExpired) && (
+        {win && (
           <div className="flex flex-col items-center gap-4">
             <VForm />
           </div>
