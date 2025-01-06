@@ -62,13 +62,13 @@ export const initialItems = [
     },
     {
       id: 6,
-      img: "https://i.scdn.co/image/ab67616d00001e022f1a5b69c2bd76474bca8035",
+      img: "https://i.scdn.co/image/ab67616d00001e02501553b73780cd9b5993b1f8",
       price: "",
       id2: 11,
     },
     {
       id: 6,
-      img: "https://i.scdn.co/image/ab67616d00001e022f1a5b69c2bd76474bca8035",
+      img: "https://i.scdn.co/image/ab67616d00001e02501553b73780cd9b5993b1f8",
       price: "",
       id2: 12,
     },

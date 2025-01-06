@@ -75,7 +75,7 @@ const FlipProvider = ({ children }) => {
     if (items.every((item) => item.price === "correct")) {
       const timeout = setTimeout(() => {
         setWin(true);
-      }, 4000); 
+      }, 3000); 
   
       setGameOver(true);
   

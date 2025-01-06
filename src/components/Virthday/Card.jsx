@@ -11,7 +11,7 @@ const Card = ({ item }) => {
     >
       <div
         className={`relative preserve-3d w-full h-full duration-1000 ${
-          isFlipped(item) ? "my-rotate-y-180" : ""
+          isFlipped(item) ? "my-rotate-y-180  " : ""
         }`}
       >
         <div
@@ -24,8 +24,8 @@ const Card = ({ item }) => {
           <img
             src={item.img}
             alt=""
-            className={`absolute inset-0 backface-hidden object-contain ${
-              item.price === "wrong" ? "border-4 border-red-500" : "border-4 border-green-400"
+            className={`absolute inset-0 backface-hidden object-contain transition-colors ${
+              item.price === "wrong" ? "border-8 border-red-600" : "border-8 border-green-600"
             }`}
           />
         </div>
