@@ -19,6 +19,7 @@ import Fishing from "./views/Fishing";
 import Photobooth from "./views/Photobooth";
 import Memorygame from "./views/Memorygame";
 import { FlipProvider } from "./context/FlipProvider";
+import BalenTineS from "./views/BalenTineS";
 
 export default function Router() {
   return (
@@ -48,6 +49,7 @@ export default function Router() {
                         </FlipProvider>
                       }
                     />
+                    <Route path="/BalenTineS" element={<BalenTineS/>}/>
                   </Route>
                 </Routes>
               </PhotoBoothProvider>

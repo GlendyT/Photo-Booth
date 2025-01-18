@@ -53,6 +53,12 @@ export const links = [
     hoverBg: "hover:bg-btsgif5",
     label: "Fishing with KSJ",
   },
+  {
+    to: "BalenTineS",
+    bg: "bg-v2logo ",
+    hoverBg: "hover:bg-btsgif5",
+    label: "BalenTineS",
+  },
 ];
 
 export const commonClasses =

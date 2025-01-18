@@ -54,4 +54,10 @@ export const LinkListHamburguer = [
     label: "virthday",
     font: "font-virthday",
   },
+  {
+    path: "BalenTineS",
+    name: "BalenTineS",
+    label: "BalenTineS",
+    font: "BalenTineS",
+  },
 ];
