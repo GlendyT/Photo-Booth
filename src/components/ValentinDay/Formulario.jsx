@@ -1,7 +1,9 @@
 
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import { membersBts } from './data';
 import useDownload from '../../hooks/useDownload';
+import Card from './Card';
+
 
 export default function Formulario() {
   const [to, setTo] = useState("")
@@ -9,7 +11,8 @@ export default function Formulario() {
   const [selectedMembers, setSelectedMembers] = useState(null)
   const [cardData, setCardData] = useState(null)
   const [showForm, setShowForm] = useState(true)
-  const { handleDownloadImage } = useDownload();
+  const { handleDownloadImage } = useDownload()
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -26,6 +29,14 @@ export default function Formulario() {
     }
   }
 
+  const handleRestart = () => {
+    setTo("")
+    setFrom("")
+    setSelectedMembers(null)
+    setCardData(null)
+    setShowForm(true)
+  }
+
   return (
     <>
     {showForm  ? ( 
@@ -36,10 +47,8 @@ export default function Formulario() {
               <h3 className="text-2xl font-providence font-bold text-purple-800">Valentin's Day with BTS and Army</h3>
             </div>
 
-
-            <div className="relative p-2 flex-auto">
-              
-            </div>
+             { /**  <div className="relative p-2 flex-auto"></div>*/}
+            
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center justify-center"
@@ -90,26 +99,15 @@ export default function Formulario() {
 
       ) : ( 
         
-        <div className="flex items-center justify-center">
-        <div id="print" className="relative w-auto my-6 mx-auto max-w-3xl">
-          <div className="border border-gray-300 items-center justify-center shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none rounded-lg p-5">
-            <div className="justify-center mt-5">
-              <p>To: {cardData.to}</p>
-              <p>From: {cardData.from}</p>
-              <div className="flex items-center justify-center w-40 h-40">
-                {cardData.image && <img src={cardData.image} alt="" />}
-              </div>
-            </div>
-          </div>
+     <Card 
+       to={cardData.to}
+       from={cardData.from}
+       image={cardData.image}
+       onDownload={handleDownloadImage}
+       onRestart={handleRestart}
+      />
+  
 
-          <button
-            className="text-center font-bold border border-xl border-purple-950 rounded-md mt-5 items-center flex justify-center cursor-pointer"
-            onClick={handleDownloadImage}
-          >
-            Download
-          </button>
-        </div>
-      </div>
     )}
   
       <div className="opacity-30 fixed inset-10 z-30 bg-violet-900 "></div>
