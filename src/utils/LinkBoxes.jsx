@@ -59,6 +59,12 @@ export const links = [
     hoverBg: "hover:bg-btsgif5",
     label: "BalenTineS",
   },
+  {
+    to: "/piedra",
+    bg: "bg-v2logo ",
+    hoverBg: "hover:bg-btsgif5",
+    label: "Piedra",
+  },
 ];
 
 export const commonClasses =
