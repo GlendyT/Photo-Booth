@@ -54,9 +54,9 @@ export const links = [
     label: "Fishing with KSJ",
   },
   {
-    to: "BalenTineS",
-    bg: "bg-v2logo ",
-    hoverBg: "hover:bg-btsgif5",
+    to: "/BalenTineS",
+    bg: "bg-btslogo ",
+    hoverBg: "hover:bg-btsgif7",
     label: "BalenTineS",
   },
   {
