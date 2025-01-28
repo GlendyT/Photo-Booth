@@ -100,6 +100,12 @@ module.exports = {
         v: "url('https://ibighit.com/bts/images/bts/discography/v/layover/discography-cover.png')",
         v2: "url('/src/components/img/vwallpaper.png')",
         pinzel: "url('/src/components/Virthday/assets/pinzelaso.webp')",
+
+       //TODO: BalenTinS Day
+       BackgroundV: 
+         "url('/src/components/ValentinDay/assetsBts/Background BalenTinS.jpg')"
+
+
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
