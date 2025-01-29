@@ -1,15 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useEffect, useState } from "react";
+import { options } from "../components/RPS/rockpaper";
 
 const RPSContext = createContext();
 
 const RPSProvider = ({ children }) => {
-  const options = [
-    { id: 0, name: "Rock", emoji: "🪨", beats: [2, 3] },
-    { id: 1, name: "Paper", emoji: "📄", beats: [0] },
-    { id: 2, name: "Siccors", emoji: "✂️", beats: [1, 3] },
-  ];
-
   const getResult = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
       return 0;
@@ -35,17 +30,13 @@ const RPSProvider = ({ children }) => {
 
   useEffect(() => {
     if (userChoice !== null) {
-      setUserMessage(
-        ` ${options[userChoice]?.emoji} `
-      );
+      setUserMessage(` ${options[userChoice]?.emoji} `);
     }
   }, [userChoice]);
 
   useEffect(() => {
     if (computerChoice !== null) {
-      setComputerMessage(
-        ` ${options[computerChoice]?.emoji} `
-      );
+      setComputerMessage(` ${options[computerChoice]?.emoji} `);
     }
   }, [computerChoice]);
 
@@ -105,7 +96,7 @@ const RPSProvider = ({ children }) => {
         maxTurns,
         userWins,
         computerWins,
-        setComputerMessage
+        setComputerMessage,
       }}
     >
       {children}
