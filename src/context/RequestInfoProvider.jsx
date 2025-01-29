@@ -136,8 +136,6 @@ const RequestInfoProvider = ({ children }) => {
     setUsuario({
       ...usuario,
       diseño: memberId,
-      name: selectedMember?.name || "",
-      content: "Some content", // Agrega el contenido que necesitas aquí
       image: selectedMember?.image || "",
     });
   };

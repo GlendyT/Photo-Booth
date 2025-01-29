@@ -20,13 +20,10 @@ export default function ListV() {
         >
         </select> */}
 
-        <div>
-          <label
-            htmlFor="membersBts"
-            className=" text-purple-700 font-bold mb-2"
-          >
-            Make a choice :
-          </label>
+        <div className=" flex flex-col gap-2 items-center justify-center "> 
+              <label htmlFor='membersBts' className=' text-purple-700 font-bold mb-2'>
+                 Make a choice :
+              </label>
 
           <select
             id="diseno"
