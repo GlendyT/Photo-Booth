@@ -103,7 +103,7 @@ module.exports = {
 
        //TODO: BalenTinS Day
        BackgroundV: 
-         "url('/src/components/ValentinDay/assetsBts/Background BalenTinS.jpg')"
+         "url('/src/components/ValentinDay/assetsBts/Background BalenTinS.webp')"
 
 
       },
