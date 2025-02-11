@@ -1,10 +1,8 @@
 import useRequestInfo from "../../hooks/useRequestInfo";
-import { membersBts} from "./data";
-
-
 export default function ListV() {
-  const { usuario, usuarioGenerado1 } = useRequestInfo();
+  const { usuario, usuarioGenerado } = useRequestInfo();
   const { diseño } = usuario;
+  console.log(usuario);
 
   return (
     <div>
@@ -21,24 +19,29 @@ export default function ListV() {
         >
         </select> */}
 
-        <div className=" flex flex-col gap-2 items-center justify-center "> 
-              <label htmlFor='membersBts' className=' text-purple-700 font-bold mb-2'>
-                 Make a choice :
-              </label>
+        <div className=" flex flex-col gap-2 items-center justify-center ">
 
-             <select
-              id="diseno"
-              name="diseño"
-              value={diseño} 
-              onChange={usuarioGenerado1}>
-               <option value="" className='text-2xl font-providence font-bold text-purple-800 border border-purple-900' >  Pick a member or the group  </option>
-               {membersBts.map((members) =>(
-                
-               <option key={members.id} value={members.id} > {members.name}  </option>
-               ) )}
-             </select>
-             </div>
+          <select
+            id="diseno"
+            name="diseño"
+            value={diseño}
+            onChange={usuarioGenerado}
+            className="shadow border rounded w-full py-2 px-3 text-gray-700  "
+          >
+            <option value="">Select your artwork </option>
+            <option value="btsflower">BTS</option>
+            <option value="rmflower">Nam</option>
+            <option value="jinflower">Jin</option>
+            <option value="sugaflower">Yoongi</option>
+            <option value="jhopeflower">Hobi</option>
+            <option value="jiminflower">Jimin</option>
+            <option value="vflower">V</option>
+            <option value="jungkookflower">JK</option>
+          </select>
+        </div>
       </div>
     </div>
   );
 }
+
+//TODO: el value del option debe ser igual al btsImg de data.js, para que se pueda mostrar la imagen en el card

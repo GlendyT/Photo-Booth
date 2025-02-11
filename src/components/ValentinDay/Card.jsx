@@ -1,21 +1,26 @@
 import useRequestInfo from "../../hooks/useRequestInfo";
 import useDownload from "../../hooks/useDownload";
+import { btsImg, membersBts } from "./data";
+import { useRef } from "react";
 
 
 
 export default function Card() {
   const { usuario, handleResetContent } = useRequestInfo();
-  const { name, content, image } = usuario;
+  const { name, content, diseño } = usuario;
   const { handleDownloadImage } = useDownload();
+  
+    const elementRef = useRef(null);
+  
 
 
   return (
-    <div className="justify-center items-center flex flex-col gap-2 ">
+    <div className="justify-center items-center flex flex-col gap-2" elementRef={elementRef}>
       <div
         id="print"
         className="border border-gray-100 shadow-lg flex flex-col w-full bg-violet-400 outline-none focus:outline-none rounded-sm p-5"
       >
-            {image && (
+            {/* {image && (
               <div className="relative flex items-center justify-center overflow-hidden rounded-lg ">
                <img
                 src={image}
@@ -30,9 +35,27 @@ export default function Card() {
                </div>
               </div>
             )}
+           */}
+
+                   <>
+                     <div
+                       className={membersBts[diseño].div1}
+                       style={{ backgroundImage: `url(${btsImg[diseño]})` }}
+                       id="print"
+                     >
+                       <div className={membersBts[diseño].div2}>
+                         <div className={membersBts[diseño].div3}>{content}</div>
+                         <p className={membersBts[diseño].p}>- {name}</p>
+                       </div>
+                     </div>
+          
+                   </>
           
           {/* <p className="mt-2">To: {name}</p> */}
           {/* <p className="mb-4">From: {content}</p> */}
+
+
+
         
       </div>
 

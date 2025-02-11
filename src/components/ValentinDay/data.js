@@ -1,42 +1,75 @@
-import btsflower from "./assetsBts/btsflower.webp"
-import rmflower from "./assetsBts/rmflower.webp"
-import jinflower from "./assetsBts/jinflower.webp"
-import sugaflower from "./assetsBts/sugaflower.webp"
-import jhopeflower from "./assetsBts/jhopeflower.webp"
-import jiminflower from "./assetsBts/jiminflower.webp"
-import vflower from "./assetsBts/vflower.webp"
-import jungkookflower from "./assetsBts/jungkookflower.webp"
+import btsflower from "./assetsBts/btsflower.webp";
+import rmflower from "./assetsBts/rmflower.webp";
+import jinflower from "./assetsBts/jinflower.webp";
+import sugaflower from "./assetsBts/sugaflower.webp";
+import jhopeflower from "./assetsBts/jhopeflower.webp";
+import jiminflower from "./assetsBts/jiminflower.webp";
+import vflower from "./assetsBts/vflower.webp";
+import jungkookflower from "./assetsBts/jungkookflower.webp";
 
+export const btsImg = {
+  btsflower,
+  rmflower,
+  jinflower,
+  sugaflower,
+  jhopeflower,
+  jiminflower,
+  vflower,
+  jungkookflower,
+};
 
-const commonStyles = "text-3xl text-black italic font-bold"
+const commonStylesDiv1 =
+  "flex justify-center bg-no-repeat bg-cover bg-center aspect-square p-8 max-sm:p-4";
+const commonTextStyles = "text-sm font-dmmono max-sm:text-xs tracking-tight";
+const commonPStyles = "font-dmmono text-right max-sm:text-xs";
 
-export const membersBts = [
-    {
-        id: 1, 
-        name: "BTS", 
-        image: btsflower,
-        textStyle: `${commonStyles} pl-28 mt-12 text-purple-300 `
-    },
-    {
-        id: 2, name: "Kim Namjoon", image: rmflower
-    },
-    {
-        id: 3, name: "Kim Seokjin", image: jinflower
-    },
-    {
-        id: 4, name: "Min Yoongi", image: sugaflower
-    },
-    {
-        id: 5, name: "Jung Hoseok", image: jhopeflower
-    },
-    {
-        id: 6, name: "Park Jimin", image: jiminflower
-    },
-    {
-        id: 7, name: "Kim Taehyung", image: vflower
-    },
-    {
-        id: 8, name: "Jeon Jungkook", image: jungkookflower
-    },
-    
-]
+export const membersBts = {
+  btsflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  rmflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  jinflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  sugaflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  jhopeflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  jiminflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  vflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+  jungkookflower: {
+    div1: `${commonStylesDiv1}`,
+    div2: "flex flex-col gap-20",
+    div3: `${commonTextStyles} text-white pb-20 max-sm:pb-5`,
+    p: `${commonPStyles} text-white`,
+  },
+};
