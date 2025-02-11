@@ -2,7 +2,7 @@ import useRequestInfo from "../../hooks/useRequestInfo";
 export default function ListV() {
   const { usuario, usuarioGenerado } = useRequestInfo();
   const { diseño } = usuario;
-  console.log(usuario);
+ 
 
   return (
     <div>
