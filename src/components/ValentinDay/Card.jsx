@@ -12,18 +12,18 @@ export default function Card() {
         id="print"
         className="border border-gray-300 shadow-lg flex flex-col w-full bg-violet-500 outline-none focus:outline-none rounded-lg p-5"
       >
-       
-            {image && (
-              <img
-                src={image}
-                alt=""
-                className="flex items-center justify-center w-40"
-              />
-            )}
-          
-          <p className="mt-2">To: {name}</p>
-          <p className="mb-4">From: {content}</p>
-        
+
+        {image && (
+          <img
+            src={image}
+            alt=""
+            className="flex items-center justify-center w-40"
+          />
+        )}
+
+        <p className="mt-2">To: {name}</p>
+        <p className="mb-4">From: {content}</p>
+
       </div>
 
       <div className="flex justify-center mt-5 items-center space-x-4">
