@@ -10,7 +10,7 @@ export default function BalenTineS() {
   const { resultado, cargando} = useRequestInfo()
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-BackgroundV">
+    <div className="flex justify-center items-center bg-BackgroundV bg-cover h-screen">
      <div className="flex flex-col items-center">
       { cargando ? <Formulario/> : resultado && <Card/>}
 

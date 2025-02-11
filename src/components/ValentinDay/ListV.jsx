@@ -1,5 +1,6 @@
 import useRequestInfo from "../../hooks/useRequestInfo";
-import { membersBts } from "./data";
+import { membersBts} from "./data";
+
 
 export default function ListV() {
   const { usuario, usuarioGenerado1 } = useRequestInfo();
@@ -25,27 +26,18 @@ export default function ListV() {
                  Make a choice :
               </label>
 
-          <select
-            id="diseno"
-            name="diseño"
-            value={diseño}
-            onChange={usuarioGenerado1}
-          >
-            <option
-              value=""
-              className="text-2xl font-providence font-bold text-purple-800 border border-purple-900"
-            >
-              {" "}
-              Pick a member or the group{" "}
-            </option>
-            {membersBts.map((members) => (
-              <option key={members.id} value={members.id}>
-                {" "}
-                {members.name}{" "}
-              </option>
-            ))}
-          </select>
-        </div>
+             <select
+              id="diseno"
+              name="diseño"
+              value={diseño} 
+              onChange={usuarioGenerado1}>
+               <option value="" className='text-2xl font-providence font-bold text-purple-800 border border-purple-900' >  Pick a member or the group  </option>
+               {membersBts.map((members) =>(
+                
+               <option key={members.id} value={members.id} > {members.name}  </option>
+               ) )}
+             </select>
+             </div>
       </div>
     </div>
   );
