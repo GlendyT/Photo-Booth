@@ -28,8 +28,8 @@ export default function Card() {
                        id="print"
                      >
                        <div className={membersBts[diseño].div2}>
-                         <div className={membersBts[diseño].div3}>{name}</div>
-                         <p className={membersBts[diseño].p}> {content}</p>
+                         <div className={membersBts[diseño].div3}>To: {name}</div>
+                         <p className={membersBts[diseño].p}>From: {content}</p>
                        </div>
                      </div>
 
@@ -49,7 +49,7 @@ export default function Card() {
         <button
           type="button"
           onClick={handleResetContent}
-          className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 "
+          className="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 "
         >
           Restart
         </button>

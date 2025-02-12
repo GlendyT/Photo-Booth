@@ -7,7 +7,7 @@ export default function ListV() {
   return (
     <div>
       <div className="my-5">
-        <label className="text-sm mb-2 text-white">Design</label>
+        <label className="text-sm mb-4 mt-6 text-white">  </label>
 
         {/* <select
           id="diseno"
@@ -28,7 +28,7 @@ export default function ListV() {
             onChange={usuarioGenerado}
             className="shadow border rounded w-full py-2 px-3 text-gray-700  "
           >
-            <option value="">Select your artwork </option>
+            <option value="">Select BTS or a member </option>
             <option value="btsflower">BTS</option>
             <option value="rmflower">Nam</option>
             <option value="jinflower">Jin</option>

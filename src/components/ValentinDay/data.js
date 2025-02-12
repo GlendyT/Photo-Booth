@@ -18,58 +18,58 @@ export const btsImg = {
   jungkookflower,
 };
 
-const commonStylesDiv1 = " font-bold relative h-[500px] w-[400px] shadow-lg border-lg rounded-lg outline-none focus:outline-none bg-no-repeat bg-cover bg-center";
+const commonStylesDiv1 = "font-flower relative h-[500px] w-[400px] shadow shadow-lg border-lg rounded-lg outline-none focus:outline-none bg-no-repeat bg-cover bg-center";
 
-const commonTextStyles = "  text-pink-700 text-2xl italic absolute";
-const commonPStyles = "font-bold text-pink-700 italic text-2xl absolute";
+const commonTextStyles = " font-Nickainley text-pink-500 text-xl  absolute";
+const commonPStyles = "font-Nickainley text-pink-500  text-xl absolute";
 
 export const membersBts = {
   btsflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[64px] left-[110px]`,
-    p: `${commonPStyles} right-[37px] top-[145px] rotate-[-17deg]`,
+    div3: `${commonTextStyles} top-[60px] left-[60px]`,
+    p: `${commonPStyles} right-[55px] top-[145px] `,
   },
   rmflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[62px] left-[110px] `,
-    p: `${commonPStyles} bottom-[203px] left-[109px] rotate-[-23deg]`,
+    div3: `${commonTextStyles} top-[68px] left-[59px] `,
+    p: `${commonPStyles} bottom-[250px] left-[53px]`,
   },
   jinflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[62px] right-[58px]`,
-    p: `${commonPStyles} right-[55px] bottom-[212px] rotate-[-17deg]`,
+    div3: `${commonTextStyles} top-[80px] right-[80px]`,
+    p: `${commonPStyles} right-[55px] bottom-[260px] `,
   },
   sugaflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[62px] left-[110px] `,
-    p: `${commonPStyles} bottom-[238px] left-[100px] rotate-[-20deg]`,
+    div3: `${commonTextStyles} top-[65px] left-[60px] `,
+    p: `${commonPStyles} bottom-[260px] left-[60px] `,
   },
   jhopeflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} mt-[77px] right-[45px]  `,
-    p: `${commonPStyles} bottom-[77px] right-[89px] rotate-[-22deg]`,
+    div3: `${commonTextStyles} top-[90px] right-[80px] `,
+    p: `${commonPStyles} bottom-[90px] right-[95px]`,
   },
   jiminflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[69px] left-[107px]`,
-    p: `${commonPStyles} bottom-[105px] right-[70px] rotate-[-19deg]`,
+    div3: `${commonTextStyles} top-[68px] left-[60px]`,
+    p: `${commonPStyles} bottom-[105px] right-[70px] `,
   },
   vflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[217px] right-[130px] text-2xl `,
-    p: `${commonPStyles} bottom-[90px] right-[82px] rotate-[-19deg] `,
+    div3: `${commonTextStyles} bottom-[235px] right-[130px]  `,
+    p: `${commonPStyles} bottom-[130px] right-[82px]  `,
   },
   jungkookflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[70px] right-[66px] `,
-    p: `${commonPStyles}  bottom-[208px] right-[50px] rotate-[-19deg]`,
+    div3: `${commonTextStyles} top-[80px] right-[90px] `,
+    p: `${commonPStyles}  bottom-[230px] right-[60px] `,
   },
 };
