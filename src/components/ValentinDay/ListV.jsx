@@ -30,13 +30,13 @@ export default function ListV() {
           >
             <option value="">Select BTS or a member </option>
             <option value="btsflower">BTS</option>
-            <option value="rmflower">Nam</option>
+            <option value="rmflower">Namjoon</option>
             <option value="jinflower">Jin</option>
             <option value="sugaflower">Yoongi</option>
             <option value="jhopeflower">Hobi</option>
             <option value="jiminflower">Jimin</option>
-            <option value="vflower">V</option>
-            <option value="jungkookflower">JK</option>
+            <option value="vflower">Taehyung</option>
+            <option value="jungkookflower">Jungkook</option>
           </select>
         </div>
       </div>

@@ -29,7 +29,7 @@ export default function Card() {
                      >
                        <div className={membersBts[diseño].div2}>
                          <div className={membersBts[diseño].div3}>To: {name}</div>
-                         <p className={membersBts[diseño].p}>From: {content}</p>
+                         <p className={membersBts[diseño].p}>Love: {content}</p>
                        </div>
                      </div>
 

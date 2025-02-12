@@ -57,8 +57,8 @@ export const LinkListHamburguer = [
   {
     path: "/BalenTineS",
     name: "BalenTineS",
-    label: "BalenTineS",
-    font: "font-BalenTineS",
+    label: "Valentine's Day",
+    font: "font-montserrat",
   },
   // {
   //   path: "/piedra",

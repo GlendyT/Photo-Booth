@@ -130,7 +130,7 @@ module.exports = {
         virthday: ["Unkempt", "serif"],
         virthday2: ["Anton", "serif"],
         virthday3: ["Permanent Marker", "serif"],
-        dancing: ["Dancing Script", "cursive"],
+        montserrat: ["Montserrat Alternates", "serif"],
         
       },
       colors: {
