@@ -43,7 +43,7 @@ module.exports = {
         vlogo: "url('/src/components/img/vpassport.webp')",
         jinlogo: "url('/src/components/img/jinlogo2.webp')",
         v2logo: "url('/src/components/img/virthday.webp')",
-        btslogo: "url('/src/components/img/Valentine3.webp')",
+        btslogo: "url('/src/components/img/Valentin.webp')",
 
         //TODO: HOBIPALOOZA
         backhobi2:

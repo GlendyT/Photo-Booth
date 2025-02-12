@@ -55,7 +55,7 @@ export const links = [
   },
   {
     to: "/BalenTineS",
-    bg: "bg-btslogo ",
+    bg: "bg-btslogo",
     hoverBg: "hover:bg-btsgif7",
     label: "BalenTineS",
   },
