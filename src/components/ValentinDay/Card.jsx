@@ -19,7 +19,7 @@ export default function Card() {
 
       <div
          id="print"
-         className= " flex flex-col w-full "
+         className= "flex flex-col w-full shadow-2xl shadow-black/80"
       >
                 <>
                      <div
@@ -41,7 +41,7 @@ export default function Card() {
         <button
           type="button"
           onClick={handleDownloadImage}
-          className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+          className="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-600"
         >
           Download
         </button>
@@ -49,7 +49,7 @@ export default function Card() {
         <button
           type="button"
           onClick={handleResetContent}
-          className="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 "
+          className="bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 "
         >
           Restart
         </button>

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Frijole&family=Gloria+Hallelujah&family=Monoton&family=Permanent+Marker&family=Rock+Salt&family=Rubik+Lines&family=Titan+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
