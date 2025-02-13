@@ -45,10 +45,10 @@ export const membersBts = {
   jinflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles}  top-[205px] right-[130px] text-pink-600 `,
-    p: `${commonPStyles}   right-[115px] bottom-[244px]  text-pink-600`,
-    to: `${commontStyles} top-[219px] left-[253px] text-pink-600`,
-    from: `${commonfStyles} bottom-[230px] left-[253px] text-pink-600`,
+    div3: `${commonTextStyles}  top-[205px] right-[139px] text-pink-600 `,
+    p: `${commonPStyles}   right-[123px] bottom-[244px]  text-pink-600`,
+    to: `${commontStyles} top-[219px] left-[243px] text-pink-600`,
+    from: `${commonfStyles} bottom-[230px] left-[245px] text-pink-600`,
   },
   sugaflower: {
     div1: `${commonStylesDiv1}`,
@@ -85,9 +85,9 @@ export const membersBts = {
   jungkookflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[190px] right-[127px]  `,
-    p: `${commonPStyles}  bottom-[264px] right-[111px] `,
-    to: `${commontStyles} top-[203px] left-[255px] `,
-    from: `${commonfStyles} bottom-[252px] left-[256px] `,
+    div3: `${commonTextStyles} top-[160px] right-[127px]  `,
+    p: `${commonPStyles}  bottom-[290px] right-[111px] `,
+    to: `${commontStyles} top-[175px] left-[255px] `,
+    from: `${commonfStyles} bottom-[275px] left-[256px] `,
   },
 };
