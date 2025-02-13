@@ -28,8 +28,10 @@ export default function Card() {
                        id="print"
                      >
                        <div className={membersBts[diseño].div2}>
-                         <div className={membersBts[diseño].div3}>To: {name}</div>
-                         <p className={membersBts[diseño].p}>Love: {content}</p>
+                         <div className={membersBts[diseño].div3}>To: </div>
+                         <div className={membersBts[diseño].to}>{name} </div>
+                         <p className={membersBts[diseño].p}>Love:</p>
+                         <div className={membersBts[diseño].from}>{content}</div>
                        </div>
                      </div>
 
