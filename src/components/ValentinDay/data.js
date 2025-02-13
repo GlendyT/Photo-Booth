@@ -30,9 +30,9 @@ export const membersBts = {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
     div3: `${commonTextStyles} top-[70px] left-[60px] text-pink-600`,
-    p: `${commonPStyles} top-[145px] right-[180px] text-pink-600 `,
+    p: `${commonPStyles} top-[160px] right-[180px] text-pink-600 `,
     to: `${commontStyles} top-[70px] left-[85px] text-pink-600`,
-    from: `${commonfStyles} top-[145px] left-[224px] text-pink-600`,
+    from: `${commonfStyles} top-[160px] left-[224px] text-pink-600`,
   },
   rmflower: {
     div1: `${commonStylesDiv1}`,
