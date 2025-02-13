@@ -77,10 +77,10 @@ export const membersBts = {
   vflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[150px] right-[194px] `,
-    p: `${commonPStyles} bottom-[130px] right-[179px]  `,
+    div3: `${commonTextStyles} bottom-[150px] right-[192px] `,
+    p: `${commonPStyles} bottom-[130px] right-[174px]  `,
     to: `${commontStyles} bottom-[150px] left-[210px] `,
-    from: `${commonfStyles} bottom-[130px] left-[225px]`,
+    from: `${commonfStyles} bottom-[130px] left-[230px]`,
   },
   jungkookflower: {
     div1: `${commonStylesDiv1}`,

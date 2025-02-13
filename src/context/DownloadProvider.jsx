@@ -11,7 +11,7 @@ const DownloadProvider = ({ children}) => {
         if (!element) return;
     
         const options = {
-          scale: 8,
+          scale: 4,
         };
         const canvas = await html2canvas(element, options);
         const data = canvas.toDataURL("image/png", 1.0);

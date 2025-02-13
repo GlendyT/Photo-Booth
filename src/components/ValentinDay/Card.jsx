@@ -17,15 +17,14 @@ export default function Card() {
 
       <div
         //  id="print"
-         className= "flex flex-col  shadow-2xl shadow-black/80"
+         className= "flex flex-col shadow-2xl shadow-black/80"
       >
                 <>
-                <div className={membersBts[diseño].div1} id="print">
-         <img
-      src={btsImg[diseño]}
-      alt="BTS"
-      className="absolute top-0 left-0 w-full h-full object-cover"
-    />
+                <div className={membersBts[diseño].div1}  id="print">
+                 <img
+                   src={btsImg[diseño]}
+                   alt="BTS"
+                  />
                        <div className={membersBts[diseño].div2}>
                          <div className={membersBts[diseño].div3}>To: </div>
                          <div className={membersBts[diseño].to}>{name} </div>
