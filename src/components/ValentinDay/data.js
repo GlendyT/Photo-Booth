@@ -77,7 +77,7 @@ export const membersBts = {
   vflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[100px] right-[246px]  `,
+    div3: `${commonTextStyles} bottom-[100px] right-[246px] `,
     p: `${commonPStyles} bottom-[80px] right-[230px]  `,
     to: `${commontStyles} bottom-[100px] left-[159px] `,
     from: `${commonfStyles} bottom-[80px] left-[175px]`,
