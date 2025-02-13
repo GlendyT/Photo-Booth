@@ -51,7 +51,7 @@ export default function Router() {
                         </FlipProvider>
                       }
                     />
-                    <Route path="/BalenTineS" element={<BalenTineS />} />
+                    <Route path="/Love Notes" element={<BalenTineS />} />
                     <Route
                       path="/piedra"
                       element={
