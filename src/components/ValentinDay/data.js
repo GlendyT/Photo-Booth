@@ -61,10 +61,10 @@ export const membersBts = {
   jhopeflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[110px] right-[235px] text-pink-600   `,
-    p: `${commonPStyles} bottom-[95px] right-[220px] text-pink-600 `,
-    to: `${commontStyles} bottom-[110px] left-[170px] text-pink-600 `,
-    from: `${commonfStyles} bottom-[95px] left-[185px] text-pink-600  `,
+    div3: `${commonTextStyles} bottom-[110px] right-[235px] text-pink-900   `,
+    p: `${commonPStyles} bottom-[95px] right-[220px] text-pink-900 `,
+    to: `${commontStyles} bottom-[110px] left-[170px] text-pink-900 `,
+    from: `${commonfStyles} bottom-[95px] left-[185px] text-pink-900 `,
   },
   jiminflower: {
     div1: `${commonStylesDiv1}`,
