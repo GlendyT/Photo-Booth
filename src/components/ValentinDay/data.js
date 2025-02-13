@@ -29,18 +29,18 @@ export const membersBts = {
   btsflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[63px] left-[60px] text-pink-600`,
+    div3: `${commonTextStyles} top-[70px] left-[60px] text-pink-600`,
     p: `${commonPStyles} top-[145px] right-[180px] text-pink-600 `,
-    to: `${commontStyles} top-[63px] left-[85px] text-pink-600`,
+    to: `${commontStyles} top-[70px] left-[85px] text-pink-600`,
     from: `${commonfStyles} top-[145px] left-[224px] text-pink-600`,
   },
   rmflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
     div3: `${commonTextStyles} bottom-[263px] left-[59px] text-pink-600 `,
-    p: `${commonPStyles} bottom-[245px] left-[59px] text-pink-600`,
-    to: `${commontStyles} bottom-[263px] left-[80px] text-pink-600`,
-    from: `${commonfStyles} bottom-[245px] left-[95px] text-pink-600`,
+    p: `${commonPStyles} bottom-[230px] left-[59px] text-pink-600`,
+    to: `${commontStyles} bottom-[249px] left-[59px] text-pink-600`,
+    from: `${commonfStyles} bottom-[215px] left-[59px] text-pink-600`,
   },
   jinflower: {
     div1: `${commonStylesDiv1}`,
@@ -61,10 +61,10 @@ export const membersBts = {
   jhopeflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[110px] right-[235px] text-pink-900   `,
-    p: `${commonPStyles} bottom-[95px] right-[220px] text-pink-900 `,
-    to: `${commontStyles} bottom-[110px] left-[170px] text-pink-900 `,
-    from: `${commonfStyles} bottom-[95px] left-[185px] text-pink-900 `,
+    div3: `${commonTextStyles} bottom-[110px] right-[210px] text-pink-900   `,
+    p: `${commonPStyles} bottom-[95px] right-[195px] text-pink-900 `,
+    to: `${commontStyles} bottom-[110px] left-[196px] text-pink-900 `,
+    from: `${commonfStyles} bottom-[95px] left-[210px] text-pink-900 `,
   },
   jiminflower: {
     div1: `${commonStylesDiv1}`,
