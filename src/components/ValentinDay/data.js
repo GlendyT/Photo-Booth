@@ -18,7 +18,7 @@ export const btsImg = {
   jungkookflower,
 };
 
-const commonStylesDiv1 = " relative h-[500px] w-[400px] shadow-lg outline-none focus:outline-none bg-no-repeat bg-cover bg-center";
+const commonStylesDiv1 = " relative h-[500px] w-[400px] shadow-lg outline-none focus:outline-none bg-no-repeat bg-contain bg-center";
 
 const commonTextStyles = " font-montserrat text-pink-400 text-xs font-bold absolute";
 const commonPStyles = "font-montserrat text-pink-400 font-bold text-xs absolute";
@@ -77,10 +77,10 @@ export const membersBts = {
   vflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[100px] right-[246px] `,
-    p: `${commonPStyles} bottom-[80px] right-[230px]  `,
-    to: `${commontStyles} bottom-[100px] left-[159px] `,
-    from: `${commonfStyles} bottom-[80px] left-[175px]`,
+    div3: `${commonTextStyles} bottom-[150px] right-[192px] `,
+    p: `${commonPStyles} bottom-[130px] right-[174px]  `,
+    to: `${commontStyles} bottom-[150px] left-[210px] `,
+    from: `${commonfStyles} bottom-[130px] left-[230px]`,
   },
   jungkookflower: {
     div1: `${commonStylesDiv1}`,

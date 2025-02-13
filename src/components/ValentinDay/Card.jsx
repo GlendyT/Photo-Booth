@@ -12,21 +12,19 @@ export default function Card() {
 
     const elementRef = useRef(null);
 
-
-
   return (
     <div elementRef={elementRef}>
 
       <div
-         id="print"
-         className= "flex flex-col w-full shadow-2xl shadow-black/80"
+        //  id="print"
+         className= "flex flex-col shadow-2xl shadow-black/80"
       >
                 <>
-                     <div
-                       className={membersBts[diseño].div1}
-                       style={{ backgroundImage: `url(${btsImg[diseño]}) `}}
-                       id="print"
-                     >
+                <div className={membersBts[diseño].div1}  id="print">
+                 <img
+                   src={btsImg[diseño]}
+                   alt="BTS"
+                  />
                        <div className={membersBts[diseño].div2}>
                          <div className={membersBts[diseño].div3}>To: </div>
                          <div className={membersBts[diseño].to}>{name} </div>
