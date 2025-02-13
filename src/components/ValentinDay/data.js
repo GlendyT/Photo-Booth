@@ -61,10 +61,10 @@ export const membersBts = {
   jhopeflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} bottom-[110px] right-[235px]  `,
-    p: `${commonPStyles} bottom-[95px] right-[220px] `,
-    to: `${commontStyles} bottom-[110px] left-[170px] `,
-    from: `${commonfStyles} bottom-[95px] left-[185px] `,
+    div3: `${commonTextStyles} bottom-[110px] right-[235px] text-pink-600   `,
+    p: `${commonPStyles} bottom-[95px] right-[220px] text-pink-600 `,
+    to: `${commontStyles} bottom-[110px] left-[170px] text-pink-600 `,
+    from: `${commonfStyles} bottom-[95px] left-[185px] text-pink-600  `,
   },
   jiminflower: {
     div1: `${commonStylesDiv1}`,
@@ -85,9 +85,9 @@ export const membersBts = {
   jungkookflower: {
     div1: `${commonStylesDiv1}`,
     div2: "flex flex-col gap-20",
-    div3: `${commonTextStyles} top-[160px] right-[127px]  `,
-    p: `${commonPStyles}  bottom-[290px] right-[111px] `,
-    to: `${commontStyles} top-[175px] left-[255px] `,
-    from: `${commonfStyles} bottom-[275px] left-[256px] `,
+    div3: `${commonTextStyles} top-[160px] right-[146px] text-pink-600 `,
+    p: `${commonPStyles}  bottom-[290px] right-[130px] text-pink-600 `,
+    to: `${commontStyles} top-[175px] left-[238px] text-pink-600`,
+    from: `${commonfStyles} bottom-[275px] left-[239px] text-pink-600 `,
   },
 };
