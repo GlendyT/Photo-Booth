@@ -54,4 +54,16 @@ export const LinkListHamburguer = [
     label: "virthday",
     font: "font-virthday",
   },
+  {
+    path: "/LoveNotes",
+    name: "LoveNotes",
+    label: "Valentine's Day",
+    font: "font-playwrite",
+  },
+  // {
+  //   path: "/piedra",
+  //   name: "piedra",
+  //   label: "Piedra",
+  //   font: "font-virthday",
+  // },
 ];

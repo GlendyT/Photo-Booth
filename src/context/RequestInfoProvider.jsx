@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { membersBts } from "../components/ValentinDay/data";
 
 const RequestInfoContext = createContext();
 
@@ -28,6 +29,9 @@ const RequestInfoProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(true);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedMembers, setSelectedMembers] = useState(null)
+  const [cardData, setCardData] = useState(null)
+  const [showForm, setShowForm] = useState(true)
   
   const generateWordDisplay = () => {
     return isCorrectGuess ? currWord : "_".repeat(currWord.length).trim();
@@ -125,6 +129,18 @@ const RequestInfoProvider = ({ children }) => {
     });
   };
 
+  const usuarioGenerado1 = (event) => {
+    const memberId = event.target.value;
+    const selectedMember = membersBts.find((member) => member.id === Number(memberId));
+    
+    setUsuario({
+      ...usuario,
+      diseño: memberId,
+      image: selectedMember?.image || "",
+    });
+  };
+
+
   const generarUsuario = (dato) => {
     setCargando(true);
     try {
@@ -141,6 +157,24 @@ const RequestInfoProvider = ({ children }) => {
     setCharCount(0);
     setCharCountFrom(0);
   };
+
+  
+  // Card para dia de san valentin BTS
+
+  const handleSubmit1 = (e) => {
+      e.preventDefault()
+      if(selectedMembers !== null) {
+        const selected = membersBts.find((members) => members.id === parseInt(selectedMembers) )
+        if (selected) {
+          setCardData({
+            image: selected.image,
+          })
+          generarUsuario(usuario)
+          setShowForm(false)
+        }
+      }
+    }
+
 
   return (
     <RequestInfoContext.Provider
@@ -174,6 +208,12 @@ const RequestInfoProvider = ({ children }) => {
         isMaxCharLimitReachedH,
         isMaxFromLimitReached,
         isMaxFromLimitReachedH,
+        selectedMembers,
+        setSelectedMembers,
+        cardData,
+        setCardData,
+        showForm,
+        setShowForm,
 
         //Handlers
         usuarioGenerado,
@@ -186,6 +226,8 @@ const RequestInfoProvider = ({ children }) => {
         handleNameH,
         generateWordDisplay,
         handleCorrectWord,
+        handleSubmit1,
+        usuarioGenerado1
 
       }}
     >

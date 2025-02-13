@@ -32,6 +32,7 @@ module.exports = {
         btsgif3: "url('/src/components/img/btsgit3.gif')",
         btsgif4: "url('/src/components/img/btsgif4.gif')",
         btsgif5: "url('/src/components/img/virthday.gif')",
+        btsgif7: "url('/src/components/img/btsgif7.gif')",
 
         //TODO: LOGOS INICIO
         jhopelogoi: "url('/src/components/img/hobipalloza (1).webp')",
@@ -42,6 +43,7 @@ module.exports = {
         vlogo: "url('/src/components/img/vpassport.webp')",
         jinlogo: "url('/src/components/img/jinlogo2.webp')",
         v2logo: "url('/src/components/img/virthday.webp')",
+        btslogo: "url('/src/components/img/Valentine3.webp')",
 
         //TODO: HOBIPALOOZA
         backhobi2:
@@ -98,6 +100,12 @@ module.exports = {
         v: "url('https://ibighit.com/bts/images/bts/discography/v/layover/discography-cover.png')",
         v2: "url('/src/components/img/vwallpaper.png')",
         pinzel: "url('/src/components/Virthday/assets/pinzelaso.webp')",
+
+       //TODO: Love Notes
+       BackgroundV: 
+         "url('/src/components/ValentinDay/assetsBts/BackgroundBalenTinS.webp')"
+
+
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
@@ -122,6 +130,8 @@ module.exports = {
         virthday: ["Unkempt", "serif"],
         virthday2: ["Anton", "serif"],
         virthday3: ["Permanent Marker", "serif"],
+        montserrat: ["Montserrat Alternates", "serif"],
+        
       },
       colors: {
         army: "rgb(0,74,173)",

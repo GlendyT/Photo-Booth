@@ -10,12 +10,14 @@ const Memorygame = () => {
   return (
     <div className="min-h-screen bg-v2 bg-center bg-cover bg-no-repeat">
       <div className="flex flex-col gap-2 items-center justify-center min-h-screen ">
-        <div className="text-2xl font-bold text-black font-virthday flex flex-row justify-between items-center gap-2 pt-1">
+        <div className="text-2xl font-bold text-black font-virthday flex flex-row justify-between items-center gap-2 pt-1 backdrop-blur-xl bg-white/50 rounded-2xl ">
           Memory Game{" "}
           <ButtonUtils
             label={timeExpired ? "YOU LOST - RE-START" : "START"}
             onClick={timeExpired ? handleRestart : handleStartGame}
-            bgColor={`text-white rounded-full text-lg ${timeExpired ? "bg-red-500" : "bg-black"}`}
+            bgColor={`text-white rounded-full text-lg ${
+              timeExpired ? "bg-red-500" : "bg-black"
+            }`}
             disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
             padding="py-2 px-2"
             disabled={!timeExpired && timer !== 50}

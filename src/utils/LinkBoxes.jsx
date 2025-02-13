@@ -53,6 +53,18 @@ export const links = [
     hoverBg: "hover:bg-btsgif5",
     label: "Fishing with KSJ",
   },
+  {
+    to: "/LoveNotes",
+    bg: "bg-btslogo",
+    hoverBg: "hover:bg-btsgif7",
+    label: "LoveNotes",
+  },
+  // {
+  //   to: "/piedra",
+  //   bg: "bg-v2logo ",
+  //   hoverBg: "hover:bg-btsgif5",
+  //   label: "Piedra",
+  // },
 ];
 
 export const commonClasses =

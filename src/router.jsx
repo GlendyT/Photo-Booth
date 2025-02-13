@@ -19,6 +19,9 @@ import Fishing from "./views/Fishing";
 import Photobooth from "./views/Photobooth";
 import Memorygame from "./views/Memorygame";
 import { FlipProvider } from "./context/FlipProvider";
+import LoveNotes from "./views/LoveNotes";
+import RPS from "./views/RPS";
+import { RPSProvider } from "./context/RPSProvider";
 
 export default function Router() {
   return (
@@ -46,6 +49,15 @@ export default function Router() {
                         <FlipProvider>
                           <Memorygame />
                         </FlipProvider>
+                      }
+                    />
+                    <Route path="/lovenotes" element={<LoveNotes />} />
+                    <Route
+                      path="/piedra"
+                      element={
+                        <RPSProvider>
+                          <RPS />
+                        </RPSProvider>
                       }
                     />
                   </Route>
