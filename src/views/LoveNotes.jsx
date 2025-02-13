@@ -5,7 +5,7 @@ import useRequestInfo from "../hooks/useRequestInfo";
 
 
 
-export default function BalenTineS() {
+export default function LoveNotes() {
 
   const { resultado, cargando} = useRequestInfo()
 

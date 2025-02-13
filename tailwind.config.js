@@ -101,7 +101,7 @@ module.exports = {
         v2: "url('/src/components/img/vwallpaper.png')",
         pinzel: "url('/src/components/Virthday/assets/pinzelaso.webp')",
 
-       //TODO: BalenTinS Day
+       //TODO: Love Notes
        BackgroundV: 
          "url('/src/components/ValentinDay/assetsBts/BackgroundBalenTinS.webp')"
 

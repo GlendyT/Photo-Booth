@@ -54,10 +54,10 @@ export const links = [
     label: "Fishing with KSJ",
   },
   {
-    to: "/BalenTineS",
+    to: "/LoveNotes",
     bg: "bg-btslogo",
     hoverBg: "hover:bg-btsgif7",
-    label: "BalenTineS",
+    label: "LoveNotes",
   },
   // {
   //   to: "/piedra",
