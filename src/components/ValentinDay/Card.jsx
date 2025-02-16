@@ -12,26 +12,34 @@ export default function Card() {
 
   return (
     <div elementRef={elementRef}>
-      <div id="print" className=" flex flex-col w-full ">
-        <>
-          <div
-            className={membersBts[diseño].div1}
-            style={{ backgroundImage: `url(${btsImg[diseño]}) ` }}
-            id="print"
-          >
-            <div className={membersBts[diseño].div2}>
-              <div className={membersBts[diseño].div3}>{name}</div>
-              <p className={membersBts[diseño].p}> {content}</p>
-            </div>
-          </div>
-        </>
+
+      <div
+        //  id="print"
+         className= "flex flex-col shadow-2xl shadow-black/80"
+      >
+                <>
+                <div className={membersBts[diseño].div1}  id="print">
+                 <img
+                   src={btsImg[diseño]}
+                   alt="BTS"
+                  />
+                       <div className={membersBts[diseño].div2}>
+                         <div className={membersBts[diseño].div3}>To: </div>
+                         <div className={membersBts[diseño].to}>{name} </div>
+                         <p className={membersBts[diseño].p}>Love:</p>
+                         <div className={membersBts[diseño].from}>{content}</div>
+                       </div>
+                     </div>
+
+                   </>
+
       </div>
 
       <div className="flex justify-center mt-5 items-center space-x-4">
         <button
           type="button"
           onClick={handleDownloadImage}
-          className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+          className="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-600"
         >
           Download
         </button>
@@ -39,7 +47,7 @@ export default function Card() {
         <button
           type="button"
           onClick={handleResetContent}
-          className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 "
+          className="bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 "
         >
           Restart
         </button>

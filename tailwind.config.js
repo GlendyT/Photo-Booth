@@ -43,7 +43,7 @@ module.exports = {
         vlogo: "url('/src/components/img/vpassport.webp')",
         jinlogo: "url('/src/components/img/jinlogo2.webp')",
         v2logo: "url('/src/components/img/virthday.webp')",
-        btslogo: "url('/src/components/img/Valentin.jpg')",
+        btslogo: "url('/src/components/img/Valentine3.webp')",
 
         //TODO: HOBIPALOOZA
         backhobi2:
@@ -101,9 +101,9 @@ module.exports = {
         v2: "url('/src/components/img/vwallpaper.png')",
         pinzel: "url('/src/components/Virthday/assets/pinzelaso.webp')",
 
-       //TODO: BalenTinS Day
+       //TODO: Love Notes
        BackgroundV: 
-         "url('/src/components/ValentinDay/assetsBts/Background BalenTinS.webp')"
+         "url('/src/components/ValentinDay/assetsBts/BackgroundBalenTinS.webp')"
 
 
       },
@@ -130,6 +130,8 @@ module.exports = {
         virthday: ["Unkempt", "serif"],
         virthday2: ["Anton", "serif"],
         virthday3: ["Permanent Marker", "serif"],
+        montserrat: ["Montserrat Alternates", "serif"],
+        
       },
       colors: {
         army: "rgb(0,74,173)",

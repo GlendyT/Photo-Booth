@@ -7,7 +7,7 @@ export default function ListV() {
   return (
     <div>
       <div className="my-5">
-        <label className="text-sm mb-2 text-white">Design</label>
+        <label className="text-sm mb-4 mt-6 text-white">  </label>
 
         {/* <select
           id="diseno"
@@ -28,15 +28,15 @@ export default function ListV() {
             onChange={usuarioGenerado}
             className="shadow border rounded w-full py-2 px-3 text-gray-700  "
           >
-            <option value="">Select your artwork </option>
+            <option value="">Select BTS or a member </option>
             <option value="btsflower">BTS</option>
-            <option value="rmflower">Nam</option>
+            <option value="rmflower">Namjoon</option>
             <option value="jinflower">Jin</option>
             <option value="sugaflower">Yoongi</option>
             <option value="jhopeflower">Hobi</option>
             <option value="jiminflower">Jimin</option>
-            <option value="vflower">V</option>
-            <option value="jungkookflower">JK</option>
+            <option value="vflower">Taehyung</option>
+            <option value="jungkookflower">Jungkook</option>
           </select>
         </div>
       </div>

@@ -47,10 +47,10 @@ export default function Formulario() {
 
   return (
     <div className="flex  ">
-      <div className="border border-gray-300 shadow-lg relative flex flex-col w-full bg-purple-100 outline-none focus:outline-none rounded-lg p-5">
+      <div className="border border-gray-300 shadow-lg relative flex flex-col w-full bg-pink-100 outline-none focus:outline-none rounded-lg p-5">
         <div className="flex items-center justify-center mt-5">
           <h3 className="text-2xl font-providence font-bold text-purple-800">
-            Valentin's Day with BTS and Army
+            Valentine's Day with BTS and Army
           </h3>
         </div>
 

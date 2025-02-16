@@ -55,10 +55,10 @@ export const LinkListHamburguer = [
     font: "font-virthday",
   },
   {
-    path: "/BalenTineS",
-    name: "BalenTineS",
-    label: "BalenTineS",
-    font: "font-BalenTineS",
+    path: "/LoveNotes",
+    name: "LoveNotes",
+    label: "Love Notes",
+    font: "font-playwrite",
   },
   // {
   //   path: "/piedra",
