@@ -24,12 +24,12 @@ export const LinkListHamburguer = [
     label: "Hobipalooza",
     font: "font-rock",
   },
-  {
-    path: "/bingo",
-    name: "bingo",
-    label: "Bingo",
-    font: "font-semiboldsans",
-  },
+  // {
+  //   path: "/bingo",
+  //   name: "bingo",
+  //   label: "Bingo",
+  //   font: "font-semiboldsans",
+  // },
   {
     path: "/vpassport",
     name: "vpassport",
@@ -42,12 +42,6 @@ export const LinkListHamburguer = [
     label: "Hobisback",
     font: "font-providence",
   },
-  // {
-  //   path: "/seokjin",
-  //   name: "seokjin",
-  //   label: "seokjin",
-  //   font: "font-PressGame",
-  // },
   {
     path: "/(V)irthday",
     name: "virthday",
@@ -60,6 +54,13 @@ export const LinkListHamburguer = [
     label: "Love Notes",
     font: "font-playwrite",
   },
+  {
+    path: "/seokjin",
+    name: "seokjin",
+    label: "seokjin",
+    font: "font-PressGame",
+  },
+  
   // {
   //   path: "/piedra",
   //   name: "piedra",

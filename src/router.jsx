@@ -28,43 +28,57 @@ export default function Router() {
     <BrowserRouter>
       <DownloadProvider>
         <RequestInfoProvider>
-          <FishProvider>
-            <ImageCropProvider>
-              <PhotoBoothProvider>
-                <Analytics />
-                <Routes>
-                  <Route element={<Navbar />}>
-                    <Route path="/" element={<App />} index />
-                    <Route path="/polaroid" element={<Card />} />
-                    <Route path="/photobooth" element={<Photobooth />} />
-                    <Route path="/sugaverse" element={<Suga />} />
-                    <Route path="/hobipalooza" element={<Hobi />} />
-                    <Route path="/bingo" element={<Bingo />} />
-                    <Route path="/vpassport" element={<Vpassport />} />
-                    <Route path="/hopeisback" element={<Hobisback />} />
-                    <Route path="/seokjin" element={<Fishing />} />
-                    <Route
-                      path="/(V)irthday"
-                      element={
-                        <FlipProvider>
-                          <Memorygame />
-                        </FlipProvider>
-                      }
-                    />
-                    <Route path="/lovenotes" element={<LoveNotes />} />
-                    <Route
-                      path="/piedra"
-                      element={
-                        <RPSProvider>
-                          <RPS />
-                        </RPSProvider>
-                      }
-                    />
-                  </Route>
-                </Routes>
-              </PhotoBoothProvider>
-            </ImageCropProvider>
-          </FishProvider>
+         
+            <Analytics />
+            <Routes>
+              <Route element={<Navbar />}>
+                <Route path="/" element={<App />} index />
+                <Route path="/polaroid" element={<Card />} />
+                <Route
+                  path="/photobooth"
+                  element={
+                    <ImageCropProvider>
+                      <PhotoBoothProvider>
+                        {" "}
+                        <Photobooth />
+                      </PhotoBoothProvider>
+                    </ImageCropProvider>
+                  }
+                />
+                <Route path="/sugaverse" element={<Suga />} />
+                <Route path="/hobipalooza" element={<Hobi />} />
+                <Route path="/bingo" element={<Bingo />} />
+                <Route path="/vpassport" element={<Vpassport />} />
+                <Route path="/hopeisback" element={<Hobisback />} />
+
+                <Route
+                  path="/seokjin"
+                  element={
+                    <FishProvider>
+                      <Fishing />
+                    </FishProvider>
+                  }
+                />
+                <Route
+                  path="/(V)irthday"
+                  element={
+                    <FlipProvider>
+                      <Memorygame />
+                    </FlipProvider>
+                  }
+                />
+                <Route path="/lovenotes" element={<LoveNotes />} />
+                <Route
+                  path="/piedra"
+                  element={
+                    <RPSProvider>
+                      <RPS />
+                    </RPSProvider>
+                  }
+                />
+              </Route>
+            </Routes>
+        
         </RequestInfoProvider>
       </DownloadProvider>
     </BrowserRouter>

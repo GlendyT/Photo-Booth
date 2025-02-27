@@ -50,9 +50,9 @@ const Waves = () => {
         </g>
       </svg>
       <div className="fish">
-        <img src={fish1} alt="Fish 1" />
-        <img src={fish2} alt="Fish 2" />
-        <img src={fish3} alt="Fish 3" />
+        <img src={fish1} alt="fishjin1" />
+        <img src={fish2} alt="fishjin2" />
+        <img src={fish3} alt="fishjin3" />
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const Card = ({ item }) => {
         >
           <img
             src={item.img}
-            alt=""
+            alt="virthday"
             className={`absolute inset-0 backface-hidden object-contain transition-colors ${
               item.price === "wrong" ? "border-8 border-red-600" : "border-8 border-green-600"
             }`}

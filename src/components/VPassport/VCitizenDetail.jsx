@@ -16,13 +16,13 @@ export const VCitizenDetail = ({name}) => {
           <div className="absolute flex flex-col justify-center w-full h-full inset-0 pr-2 pb-10 max-sm:pb-10 max-sm:pr-4 ">
             <img
               src={rightSide}
-              alt=""
+              alt="vpassport"
               className=" absolute inset-0 object-cover  w-full"
             />
              <div className=" absolute inset-0 max-sm:hidden ">
               <img
                 src={stamp}
-                alt=""
+                alt="vpassportstamp"
                 className="-rotate-90 relative pt-24 px-14 m-10 max-sm:pt-0 max-sm:m-0 max-sm:px-0 max-sm:w-14"
               />
             </div> 

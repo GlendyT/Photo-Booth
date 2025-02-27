@@ -19,7 +19,7 @@ const Photo = ({ image, inputRef, selectImage, addImage, changeColor }) => {
       {image ? (
         <img
           src={image}
-          alt=""
+          alt="photoboothbts4"
           className=" object-cover w-40 pb-2 max-sm:pb-2 max-sm:px-1 max-sm:w-40"
           onClick={handleImageClick}
         />

@@ -19,11 +19,11 @@ const Card = () => {
         >
           <img
             src={randomItem.img}
-            alt=""
+            alt="polaroidbts"
             className="w-72 flex justify-center border-pink-300 border-4  "
           />
           <div className="pt-4 flex flex-row-2 justify-between w-full items-center text-pink-300">
-            <img src={beyondarmy} alt="" className="w-14 h-14 pl-2" />
+            <img src={beyondarmy} alt="beyondthearmy" className="w-14 h-14 pl-2" />
             <div className="text-lg max-sm:text-sm">
               <p className="  font-jinora italic">
                 Special thanks to{" "}

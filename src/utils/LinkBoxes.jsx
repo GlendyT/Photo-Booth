@@ -23,12 +23,12 @@ export const links = [
     hoverBg: "hover:bg-gifhobi",
     label: "Hobipalooza",
   },
-  {
-    to: "/bingo",
-    bg: "bg-bingologoi",
-    hoverBg: "hover:bg-btsgif2",
-    label: "Bingo",
-  },
+  // {
+  //   to: "/bingo",
+  //   bg: "bg-bingologoi",
+  //   hoverBg: "hover:bg-btsgif2",
+  //   label: "Bingo",
+  // },
   {
     to: "/vpassport",
     bg: "bg-vlogo",
@@ -41,12 +41,6 @@ export const links = [
     hoverBg: "hover:bg-hopegif",
     label: "Hope is Back",
   },
-  // {
-  //   to: "/seokjin",
-  //   bg: "bg-jinlogo ",
-  //   hoverBg: "hover:bg-btsgif4",
-  //   label: "Fishing with KSJ",
-  // },
   {
     to: "/(V)irthday",
     bg: "bg-v2logo ",
@@ -58,6 +52,12 @@ export const links = [
     bg: "bg-btslogo",
     hoverBg: "hover:bg-btsgif7",
     label: "LoveNotes",
+  },
+  {
+    to: "/seokjin",
+    bg: "bg-jinlogo ",
+    hoverBg: "hover:bg-btsgif4",
+    label: "Fishing with KSJ",
   },
   // {
   //   to: "/piedra",

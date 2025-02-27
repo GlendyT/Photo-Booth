@@ -12,27 +12,21 @@ export default function Card() {
 
   return (
     <div elementRef={elementRef}>
-
       <div
         //  id="print"
-         className= "flex flex-col shadow-2xl shadow-black/80"
+        className="flex flex-col shadow-2xl shadow-black/80"
       >
-                <>
-                <div className={membersBts[diseño].div1}  id="print">
-                 <img
-                   src={btsImg[diseño]}
-                   alt="BTS"
-                  />
-                       <div className={membersBts[diseño].div2}>
-                         <div className={membersBts[diseño].div3}>To: </div>
-                         <div className={membersBts[diseño].to}>{name} </div>
-                         <p className={membersBts[diseño].p}>Love:</p>
-                         <div className={membersBts[diseño].from}>{content}</div>
-                       </div>
-                     </div>
-
-                   </>
-
+        <>
+          <div className={membersBts[diseño].div1} id="print">
+            <img src={btsImg[diseño]} alt="btsmembers" />
+            <div className={membersBts[diseño].div2}>
+              <div className={membersBts[diseño].div3}>To: </div>
+              <div className={membersBts[diseño].to}>{name} </div>
+              <p className={membersBts[diseño].p}>Love:</p>
+              <div className={membersBts[diseño].from}>{content}</div>
+            </div>
+          </div>
+        </>
       </div>
 
       <div className="flex justify-center mt-5 items-center space-x-4">
