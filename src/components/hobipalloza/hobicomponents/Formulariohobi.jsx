@@ -18,7 +18,7 @@ export default function Formulariohobi() {
   const { name, album, song } = usuario;
   return (
     <div className="   text-white max-sm:text-xs w-96">
-      <img src={hw} typeof="image/png" alt="Titulo" className="pic" />
+      <img src={hw} typeof="image/png" alt="hobipalooza" className="pic" />
       <div className=" mx-10">
         <form
           className="mt-5 flex flex-col gap-4 text-black"

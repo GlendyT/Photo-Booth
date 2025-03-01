@@ -28,7 +28,7 @@ export const CardModalAccess = () => {
             <div className="w-auto my-6 mx-auto max-w-3xl max-sm:max-w-2xl">
               <div className="  shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
                 <div id="print" className="relative">
-                  <img src={card} alt="Certificate" className="aspect-video" />
+                  <img src={card} alt="fishingwithjin" className=" object-contain" />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
                     <div className="flex flex-col items-center justify-center text-center pt-44 max-sm:pt-16 max-sm:mt-2 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
@@ -40,7 +40,7 @@ export const CardModalAccess = () => {
                       {wordData.image && (
                         <img
                           src={wordData.image}
-                          alt="Word"
+                          alt="songbyjin"
                           className="w-20 h-20 mt-14 rounded-xl max-sm:w-8 max-sm:h-8 max-sm:mt-6"
                         />
                       )}

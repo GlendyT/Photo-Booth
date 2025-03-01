@@ -74,7 +74,7 @@ const CardRPS = () => {
           {userMessage && (
             <img
               src={options[computerChoice]?.emoji}
-              alt="imagenes"
+              alt="rockpapersiccors"
               className={`w-20 rounded-full p-2  ${
                 result === 2
                   ? "bg-green-400"
@@ -98,7 +98,7 @@ const CardRPS = () => {
               key={option.id}
               className="px-4 py-2 m-2 text-xl font-bold text-white bg-yellow-500 rounded-full  focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <img src={option.emoji} alt="imagenes" className="w-20" />
+              <img src={option.emoji} alt="rockpapersiccors2" className="w-20" />
             </div>
           ))}
         </div>

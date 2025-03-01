@@ -8,7 +8,7 @@ export default function OptionButton({ option, handlePlay, disabled, turns, maxT
       onClick={() => handlePlay(option.id)}
       title={option.name}
     >
-      <img src={option.emoji} alt="imagenes" className="w-20" />
+      <img src={option.emoji} alt="rockpapersiccors4" className="w-20" />
     </button>
   );
 }

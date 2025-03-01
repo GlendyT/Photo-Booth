@@ -34,6 +34,7 @@ export default function CardInside({
             style={{ backgroundImage: `url(${dicImg[diseño]})` }}
             id="print"
           >
+            
             <div className={styles[diseño].div2}>
               <div className={styles[diseño].div3}>{content}</div>
               <p className={styles[diseño].p}>- {name}</p>

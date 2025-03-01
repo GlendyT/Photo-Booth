@@ -46,9 +46,9 @@ export default function Navbar() {
 
       <div
         ref={menuRef}
-        className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out bg-black/90 backdrop-blur-sm w-44 ${
+        className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out bg-black/90 backdrop-blur-sm w-48 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } flex flex-col justify-center items-start pl-4`}
+        }  flex flex-col justify-center items-start pl-4 overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent`}
       >
         <button
           className="text-white text-3xl flex items-end justify-end w-full pr-5"

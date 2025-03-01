@@ -71,5 +71,11 @@ export const wordList = [
       clue: "Jin wrote this song to ARMY",
       image: "https://i.scdn.co/image/ab67616d00001e021dcf069284321bef1306d6ec",
     },
+    {
+      id: 13,
+      word: "closetoyou",
+      clue: "3rd OST of Jin",
+      image: "https://i.scdn.co/image/ab67616d00001e021dcf069284321bef1306d6ec",
+    },
   
   ];

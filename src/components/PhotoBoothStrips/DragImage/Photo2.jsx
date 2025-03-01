@@ -28,7 +28,7 @@ const Photo2 = ({
 
         <img
           src={image}
-          alt=""
+          alt="photoboothbts6"
           className=" object-cover w-40 pb-2 max-sm:pb-0 max-sm:px-1 max-sm:w-40"
           onClick={handleImageClick}
         />
