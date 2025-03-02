@@ -14,13 +14,14 @@ export const CardModalAccess = () => {
   };
 
   return (
-    <div className="flex flex-col items-center m-auto gap-6 relative z-10 ">
+    <div className="flex justify-center items-center inset-10 z-40 ">
+      <div className="w-auto my-2 mx-auto max-w-3xl max-sm:max-w-2xl"> 
       <div id="print" className="relative">
         <img src={card} alt="fishingwithjin" className=" object-contain" />
 
-        <div className="absolute inset-0 py-4 max-sm:py-1 ">
+        <div className="absolute inset-0 flex items-center justify-center ">
           <div className="flex flex-col items-center justify-center text-center gap-5 px-24 max-sm:px-4 text-sm max-sm:text-xs pt-24 max-sm:pt-2">
-            <div className="flex flex-col items-center justify-center gap-16 max-sm:gap-1 pt-20 max-sm:pt-2 max-sm:mt-8">
+            <div className="flex flex-col items-center justify-center gap-16 max-sm:gap-1 pt-2 max-sm:pt-2 max-sm:mt-8">
               <p className="max-sm:text-xs ">{name}</p>
 
               {wordData.image && (
@@ -51,6 +52,7 @@ export const CardModalAccess = () => {
         >
           {isWinner || isLoser ? "Play again" : ""}
         </button>
+      </div>
       </div>
     </div>
   );
