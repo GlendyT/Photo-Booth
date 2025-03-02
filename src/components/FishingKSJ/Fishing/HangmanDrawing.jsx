@@ -3,7 +3,6 @@ import fish1 from "../assets/jin_winner.webp";
 import loser from "../assets/jin_loser.webp";
 import useFish from "../../../hooks/useFishing";
 import Confetti from "react-dom-confetti";
-import { CardModalAccess } from "./CardModalAccess";
 
 const VerticalLine = () => {
   return (
@@ -35,7 +34,7 @@ export const HangmanDrawing = () => {
           ))}
       </div>
 
-      <CardModalAccess />
+     
     </div>
   );
 };
