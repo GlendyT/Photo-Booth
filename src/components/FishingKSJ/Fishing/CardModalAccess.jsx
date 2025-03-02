@@ -32,7 +32,7 @@ export const CardModalAccess = () => {
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
                     <div className="flex flex-col items-center justify-center text-center pt-44 max-sm:pt-16 max-sm:mt-2 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
-                      <div>
+                      <div className="max-sm:text-xs">
                         {name}
                       </div>
 
@@ -41,7 +41,7 @@ export const CardModalAccess = () => {
                         <img
                           src={wordData.image}
                           alt="songbyjin"
-                          className="w-20 h-20 mt-14 rounded-xl max-sm:w-8 max-sm:h-8 max-sm:mt-6"
+                          className="w-20 h-20 mt-14 rounded-xl max-sm:w-8 max-sm:h-8 max-sm:mt-6 max-2xl:w-10 max-2xl:h-10"
                         />
                       )}
                     </div>
@@ -58,7 +58,7 @@ export const CardModalAccess = () => {
                     onClick={handleCloseandrestart}
                     className={` ${
                       isWinner || isLoser
-                        ? "px-4 py-2 bg-black text-white rounded-xl hover:bg-slate-500 hover:text-black transition-all uppercase"
+                        ? "px-4 py-2 bg-black text-white rounded-xl hover:bg-slate-500 hover:text-black transition-all uppercase max-sm:text-xs"
                         : ""
                     }`}
                   >
