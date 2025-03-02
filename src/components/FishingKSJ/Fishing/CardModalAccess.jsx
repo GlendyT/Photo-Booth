@@ -31,7 +31,7 @@ export const CardModalAccess = () => {
                   <img src={card} alt="fishingwithjin" className=" object-contain" />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
-                    <div className="flex flex-col items-center justify-center text-center pt-44 max-sm:pt-16 max-sm:mt-2 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
+                    <div className="flex flex-col items-center justify-center text-center  max-sm:pt-16 max-sm:mt-2 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
                       <div className="max-sm:text-xs">
                         {name}
                       </div>
