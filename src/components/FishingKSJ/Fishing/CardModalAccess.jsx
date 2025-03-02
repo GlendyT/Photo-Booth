@@ -7,14 +7,8 @@ export const CardModalAccess = () => {
   const { handleDownloadImage } = useDownload();
   const { usuario } = useRequestInfo();
   const { name } = usuario;
-  const {
-    isWinner,
-    wordData,
-    show,
-    handleStartOver,
-    isLoser,
-    setShow,
-  } = useFish();
+  const { isWinner, wordData, show, handleStartOver, isLoser, setShow } =
+    useFish();
   const handleCloseandrestart = () => {
     handleStartOver();
     setShow(false);
@@ -28,22 +22,25 @@ export const CardModalAccess = () => {
             <div className="w-auto my-6 mx-auto max-w-3xl">
               <div className="  shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
                 <div id="print" className="relative">
-                  <img src={card} alt="fishingwithjin" className=" object-contain" />
+                  <img
+                    src={card}
+                    alt="fishingwithjin"
+                    className=" object-contain"
+                  />
 
                   <div className="absolute inset-0 py-4 max-sm:py-1 ">
-                    <div className="flex flex-col items-center justify-center text-center max-sm:mt-2 gap-5 max-sm:gap-0 px-24 max-sm:px-4 text-sm max-sm:text-xs">
-                      <p className="max-sm:text-xs max-sm:pt-20">
-                        {name}
-                      </p>
+                    <div className="flex flex-col items-center justify-center text-center gap-5 px-24 max-sm:px-4 text-sm max-sm:text-xs pt-24 max-sm:pt-2">
+                      <div className="flex flex-col items-center justify-center gap-16 max-sm:gap-1 pt-20 max-sm:pt-14">
+                        <p className="max-sm:text-xs ">{name}</p>
 
-
-                      {wordData.image && (
-                        <img
-                          src={wordData.image}
-                          alt="songbyjin"
-                          className="w-20 h-20 mt-14 rounded-xl max-sm:w-8 max-sm:h-8 max-sm:mt-6"
-                        />
-                      )}
+                        {wordData.image && (
+                          <img
+                            src={wordData.image}
+                            alt="songbyjin"
+                            className="w-12 h-12 rounded-xl max-sm:w-8 max-sm:h-8 max-sm:mt-6"
+                          />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
