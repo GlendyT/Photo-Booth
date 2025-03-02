@@ -28,7 +28,7 @@ export const CardModalAccess = () => {
                 <img
                   src={wordData.image}
                   alt="songbyjin"
-                  className="w-12 h-12 rounded-xl max-md:w-8 max-md:h-8 max-md:mt-6"
+                  className="w-12 h-12 rounded-xl max-md:w-8 max-md:h-8 max-md:mt-6 pt-2 max-2xl:pt-8"
                 />
               )}
             </div>
