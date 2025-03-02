@@ -25,7 +25,7 @@ export const CardModalAccess = () => {
       {show && (
         <>
           <div className="flex justify-center items-center fixed inset-10 z-40">
-            <div className="w-auto my-6 mx-auto max-w-3xl max-sm:max-w-2xl">
+            <div className="w-auto my-6 mx-auto max-w-3xl">
               <div className="  shadow-lg flex flex-col w-full outline-none focus:outline-none uppercase">
                 <div id="print" className="relative">
                   <img src={card} alt="fishingwithjin" className=" object-contain" />
