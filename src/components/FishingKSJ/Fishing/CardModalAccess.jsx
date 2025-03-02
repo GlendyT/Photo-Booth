@@ -21,7 +21,7 @@ export const CardModalAccess = () => {
 
         <div className="absolute inset-0 flex items-center justify-center ">
           <div className="flex flex-col items-center justify-center text-center gap-5 px-10 text-sm max-md:text-xs pt-6 ">
-            <div className="flex flex-col items-center justify-center gap-16 max-md:gap-1 pt-2 max-md:pt-2 max-md:mt-8">
+            <div className="flex flex-col items-center justify-center gap-11 max-md:gap-4 pt-4 max-md:pt-2 max-md:mt-8">
               <p className="max-md:text-xs max-sm:text-green-500 max-md:text-red-500 max-lg:text-blue-400 max-xl:text-yellow-500 max-2xl:text-pink-400 ">{name}</p>
 
               {wordData.image && (
