@@ -101,8 +101,10 @@ const FishProvider = ({ children }) => {
 
   useEffect(() => {
     if (isWinner || isLoser) {
-      const timer = setTimeout(() => setShow(true), 2000);
+      const timer = setTimeout(() => setShow(true), 3000);
       return () => clearTimeout(timer);
+    } else{
+      setShow(false);
     }
   }, [isWinner, isLoser]);
 
