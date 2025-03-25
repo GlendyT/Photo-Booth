@@ -3,6 +3,7 @@ import { rolas } from "../data/data";
 import hw from "../assetsPalooza/hw.avif";
 import useRequestInfo from "../../../hooks/useRequestInfo";
 import { ButtonUtils } from "../../../utils/ButtonUtils";
+import { InputName } from "../../../utils/InputName";
 
 export default function Formulariohobi() {
   const {
@@ -24,24 +25,19 @@ export default function Formulariohobi() {
           className="mt-5 flex flex-col gap-4 text-black"
           onSubmit={handleSubmit}
         >
-          <div
-            className={`text-sm float-end text-end font-extrabold ${
-              isMaxFromLimitReachedH ? "text-red-500 " : "text-[#31c4bd]"
-            }`}
-          >
-            {isMaxFromLimitReachedH && (
-              <span className="text-red-500">Too long!</span>
-            )}{" "}
-            {charCountFrom}/15
-          </div>
-          <input
-            maxLength={maxFromLimit}
-            value={name}
+          <InputName
+            isMaxFromLimitReachedH={isMaxFromLimitReachedH}
+            charCountFrom={charCountFrom}
             id="name"
             name="name"
+            value={name}
             onChange={handleNameH}
+            maxLength={maxFromLimit}
             placeholder="Use your Twitter/X @username"
-            className="rounded py-2  text-center"
+            className="rounded py-2  text-center "
+            placeholderColor="text-gray-500"
+            maxLengthColor="text-[#31c4bd] font-extrabold"
+            classNameBG="bg-gray-100 font-"
           />
 
           <Filtroalbum album={album} usuarioGenerado={usuarioGenerado} />

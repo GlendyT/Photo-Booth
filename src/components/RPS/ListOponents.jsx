@@ -1,37 +1,50 @@
 import useRequestInfo from "../../hooks/useRequestInfo";
-import { membersBts } from "../ValentinDay/data";
+import { membersBts } from "./rockpaper";
 
 export default function ListOponents() {
   const { usuario, usuarioGenerado } = useRequestInfo();
-  const { song } = usuario;
+  const { song, name } = usuario;
 
   return (
-    <div>
-      <div className="my-5">
-        <label className="text-sm mb-2 text-white">Design</label>
+    <div className="my-5">
+      <label className="text-sm mb-2 text-violet-950 font-extrabold text-center flex items-center justify-center">
+        Choose Your Oponent
+      </label>
 
-        <div className=" flex flex-col gap-2 items-center justify-center "> 
-          <select
-            id="diseno"
-            name="song"
-            value={song}
-            onChange={usuarioGenerado}
-          >
-            <option
-              value=""
-              className="text-2xl font-providence font-bold text-purple-800 border border-purple-900"
+      <div className=" flex justify-center ">
+        <label className=" py-2 flex flex-wrap items-center justify-center gap-2 ">
+          {membersBts.map((members) => (
+            <label
+              key={members.name}
+              value={members.name}
+              className={`flex items-center justify-center gap-2 max-sm:gap-1 max-sm:flex-wrap border  border-none p-1 rounded-md text-violet-950 ${
+                name
+                  ? "cursor-pointer bg-purple-400"
+                  : "cursor-not-allowed bg-purple-300"
+              }`}
             >
               {" "}
-              Choose your oponent{" "}
-            </option>
-            {membersBts.map((members) => (
-              <option key={members.name} value={members.name}>
-                {" "}
-                {members.name}{" "}
-              </option>
-            ))}
-          </select>
-        </div>
+              {members.name}{" "}
+              <input
+                id="song"
+                name="song"
+                type="radio"
+                value={members.name}
+                checked={song === members.name}
+                onChange={usuarioGenerado}
+                className="hidden"
+                disabled={!name}
+              />
+              <span
+                className={`w-4 h-4 object-cover rounded ${
+                  song === members.name
+                    ? "ring-4 bg-purple-900"
+                    : "bg-violet-300 outline-violet-500 outline"
+                }`}
+              ></span>
+            </label>
+          ))}
+        </label>
       </div>
     </div>
   );

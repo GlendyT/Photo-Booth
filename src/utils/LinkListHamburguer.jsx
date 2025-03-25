@@ -61,10 +61,10 @@ export const LinkListHamburguer = [
     font: "font-PressGame",
   },
   
-  // {
-  //   path: "/piedra",
-  //   name: "piedra",
-  //   label: "Piedra",
-  //   font: "font-virthday",
-  // },
+  {
+    path: "/rps",
+    name: "rps",
+    label: "RPS",
+    font: "font-fuzzybubbles",
+  },
 ];

@@ -29,10 +29,11 @@ module.exports = {
         hopegif: "url('/src/components/HobiDischarge/assets/hopeisback.gif')",
         btsgif1: "url('/src/components/img/btsgif.gif')",
         btsgif2: "url('/src/components/img/btsgif2.gif')",
-        btsgif3: "url('/src/components/img/btsgit3.gif')",
+        btsgif3: "url('/src/components/img/btsgif3.gif')",
         btsgif4: "url('/src/components/img/btsgif4.gif')",
         btsgif5: "url('/src/components/img/virthday.gif')",
         btsgif7: "url('/src/components/img/btsgif7.gif')",
+        btsgif8: "url('/src/components/img/btsgif8.gif')",
 
         //TODO: LOGOS INICIO
         jhopelogoi: "url('/src/components/img/hobipalloza (1).webp')",
@@ -44,6 +45,7 @@ module.exports = {
         jinlogo: "url('/src/components/img/jinlogo2.webp')",
         v2logo: "url('/src/components/img/virthday.webp')",
         btslogo: "url('/src/components/img/Valentine3.webp')",
+        rpslogo: "url('/src/components/img/RPS.png')",
 
         //TODO: HOBIPALOOZA
         backhobi2:
@@ -101,11 +103,13 @@ module.exports = {
         v2: "url('/src/components/img/vwallpaper.png')",
         pinzel: "url('/src/components/Virthday/assets/pinzelaso.webp')",
 
-       //TODO: Love Notes
-       BackgroundV: 
-         "url('/src/components/ValentinDay/assetsBts/BackgroundBalenTinS.webp')"
+        //TODO: Love Notes
+        BackgroundV:
+          "url('/src/components/ValentinDay/assetsBts/BackgroundBalenTinS.webp')",
 
-
+        //TODO: Rock Paper Scissors
+        rpsmob: "url('/src/components/RPS/assets/RPS (1).png')",
+        rpsweb: "url('/src/components/RPS/assets/RPS (2).png')",
       },
       fontFamily: {
         semiboldsans: ["Recursive", "sans-serif"],
@@ -131,7 +135,7 @@ module.exports = {
         virthday2: ["Anton", "serif"],
         virthday3: ["Permanent Marker", "serif"],
         montserrat: ["Montserrat Alternates", "serif"],
-        
+        fuzzybubbles: ["Fuzzy Bubbles", "sans-serif"],
       },
       colors: {
         army: "rgb(0,74,173)",

@@ -2,6 +2,7 @@ import Header from "../Titulo/Header";
 import List from "../ListadoDiseños/List";
 import useRequestInfo from "../../../hooks/useRequestInfo";
 import { ButtonUtils } from "../../../utils/ButtonUtils";
+import { InputName } from "../../../utils/InputName";
 
 const FormularioSuga = () => {
   const {
@@ -9,13 +10,13 @@ const FormularioSuga = () => {
     usuarioGenerado,
     handleSubmit,
     isMaxCharLimitReached,
-    isMaxFromLimitReached,
+    isMaxFromLimitReachedH,
     maxCharLimit,
     charCount,
     handleContent,
     charCountFrom,
-    maxFromLimit,
-    handleName,
+    maxFromLimitH,
+    handleNameH,
     error,
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
@@ -59,34 +60,20 @@ const FormularioSuga = () => {
               />
             </div>
 
-            <div className="my-5 ">
-              <label className="flex float-start text-sm mb-2 text-white">
-                From
-              </label>
-              <div
-                className={`text-sm mb-2 float-end ${
-                  isMaxFromLimitReached ? "text-red-500" : "text-black"
-                }`}
-              >
-                {isMaxFromLimitReached && (
-                  <span className="text-red-500">Too long!</span>
-                )}{" "}
-                {charCountFrom}/30
-              </div>
-              <input
-                id="name"
-                name="name"
-                value={name}
-                onChange={handleName}
-                maxLength={maxFromLimit}
-                placeholder="Your Name"
-                className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none ${
-                  isMaxFromLimitReached
-                    ? "border-red-500 text-red-500"
-                    : "border-gray-300"
-                }`}
-              />
-            </div>
+            <InputName
+              from="From"
+              fromColor="text-white"
+              maxLengthColor="text-black"
+              isMaxFromLimitReachedH={isMaxFromLimitReachedH}
+              charCountFrom={charCountFrom}
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleNameH}
+              maxLength={maxFromLimitH}
+              placeholder="Your Name"
+              className={` text-gray-700  `}
+            />
             <List diseño={diseño} usuarioGenerado={usuarioGenerado} />
             <ButtonUtils
               label="Create Post"

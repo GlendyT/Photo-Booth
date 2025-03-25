@@ -2,6 +2,7 @@ import { CardSelector } from "./CardSelector";
 import { CARDDESKTOP, CARDPHONE } from "./Data";
 import { ButtonUtils } from "../../utils/ButtonUtils";
 import useRequestInfo from "../../hooks/useRequestInfo";
+import { InputName } from "../../utils/InputName";
 
 export const HobiFormDischarge = () => {
   const {
@@ -9,14 +10,14 @@ export const HobiFormDischarge = () => {
     handleSubmit,
     isMaxFromLimitReachedH,
     charCountFrom,
-    maxFromLimitH,
     isMaxCharLimitReachedH,
     charCount,
     maxCharLimitH,
     isMobile,
     error,
     handleNameH,
-    handleContentH
+    handleContentH,
+    maxFromLimit,
   } = useRequestInfo();
   const { name, content, diseño } = usuario;
   return (
@@ -26,29 +27,18 @@ export const HobiFormDischarge = () => {
           className=" font-providence backdrop-blur-sm bg-black/30 rounded-xl p-4 gap-4 sm:justify-center items-center text-white max-sm:text-xs  "
           onSubmit={handleSubmit}
         >
-          <div
-            className={`text-sm float-end ${
-              isMaxFromLimitReachedH ? "text-red-500" : "text-black"
-            }`}
-          >
-            {isMaxFromLimitReachedH && (
-              <span className="text-red-500">Too long!</span>
-            )}{" "}
-            {charCountFrom}/15
-          </div>
-          <input
+          <InputName
+            isMaxFromLimitReachedH={isMaxFromLimitReachedH}
+            charCountFrom={charCountFrom}
             id="name"
             name="name"
-            type="text"
             value={name}
-            maxLength={maxFromLimitH}
-            placeholder="Your Name"
             onChange={handleNameH}
-            className={`appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none   ${
-              isMaxFromLimitReachedH
-                ? "border-red-500 text-red-500"
-                : "border-gray-300"
-            }`}
+            maxLength={maxFromLimit}
+            placeholder="Your Name"
+            className=" text-black text-base "
+            placeholderColor="text-gray-500"
+            maxLengthColor="text-black"
           />
           <div
             className={`text-sm float-end ${
