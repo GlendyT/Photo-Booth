@@ -1,5 +1,5 @@
 export const ButtonUtils = ({
-  label ,
+  label,
   onClick,
   className = "",
   icon,
@@ -7,10 +7,10 @@ export const ButtonUtils = ({
   bgColor = "bg-white",
   textColor = "text-black",
   hoverColor = "transition-colors",
-  size = " max-sm:text-xs text-md",
+  size = " max-md:text-xs text-md",
   font = "",
   disableColors = "",
-  padding = "py-4 px-3"
+  padding = "py-4 px-3",
 }) => {
   return (
     <button

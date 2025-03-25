@@ -1,72 +1,60 @@
 import useRequestInfo from "../../hooks/useRequestInfo";
 import { ButtonUtils } from "../../utils/ButtonUtils";
+import { InputName } from "../../utils/InputName";
 import ListOponents from "./ListOponents";
 
-
 const FormOponent = () => {
+  const {
+    usuario,
+    handleSubmit,
+    handleNameH,
+    isMaxFromLimitReachedH,
+    charCountFrom,
+    maxFromLimitH,
+  } = useRequestInfo();
+  const { name, song } = usuario;
 
-    const {
-        usuario,
-        handleSubmit,
-        handleNameH,
-        isMaxFromLimitReachedH,
-        charCountFrom,
-        maxFromLimitH,
-      } = useRequestInfo();
-      const { name,  song } = usuario;
-      
   return (
     <div className="flex  ">
-      <div className="border border-gray-300 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none rounded-lg p-5">
-        <div className="flex items-center justify-center mt-5">
-          <h3 className="text-2xl font-providence font-bold text-purple-800">
-            Rock, Paper, Scissors
+      <div className=" w-96 relative flex flex-col outline-none focus:outline-none rounded-lg p-5">
+        <div className="flex items-center justify-center ">
+          <h3 className="text-2xl font-providence font-extrabold text-purple-950">
+            Rock-Paper-Scissors
           </h3>
         </div>
 
-        <form className="mt-5 font-dmmono" onSubmit={handleSubmit}>
-          <div className="my-5 ">
-            <div
-              className={`text-sm mb-2 float-end ${
-                isMaxFromLimitReachedH ? "text-red-500" : "text-black"
-              }`}
-            >
-              {isMaxFromLimitReachedH && (
-                <span className="text-red-500">Too long!</span>
-              )}{" "}
-              {charCountFrom}/15
-            </div>
-            <input
-              id="name"
-              name="name"
-              value={name}
-              onChange={handleNameH}
-              maxLength={maxFromLimitH}
-              placeholder="Write your name"
-              className={`appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none ${
-                isMaxFromLimitReachedH
-                  ? "border-red-500 text-red-500"
-                  : "border-gray-300"
-              }`}
-            />
-          </div>
-          <ListOponents/>
+        <form className=" font-dmmono" onSubmit={handleSubmit}>
+          <InputName
+            isMaxFromLimitReachedH={isMaxFromLimitReachedH}
+            charCountFrom={charCountFrom}
+            id="name"
+            name="name"
+            value={name}
+            onChange={handleNameH}
+            maxLength={maxFromLimitH}
+            placeholder="write one name"
+            placeholderColor={"placeholder-violet-600 "}
+            classNameBG={"bg-transparent"}
+          />
+          <ListOponents />
 
           <ButtonUtils
-            label="Start to Play"
+            label="Start the game"
             type="submit"
             id="btn"
             disabled={!song}
-            className="w-full p-3 uppercase bg-purple-800"
-            bgColor="bg-black"
+            className="w-full uppercase bg-purple-700"
+            bgColor="bg-purple-800"
             textColor="text-white"
             font="font-pixel"
             disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"
+            padding="py-2 px-1"
+            size="text-md"
           />
         </form>
       </div>
     </div>
   );
-}
+};
 
-export default FormOponent
+export default FormOponent;

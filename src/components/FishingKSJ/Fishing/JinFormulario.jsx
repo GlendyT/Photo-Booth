@@ -1,10 +1,17 @@
 import useFish from "../../../hooks/useFishing";
 import useRequestInfo from "../../../hooks/useRequestInfo";
 import { ButtonUtils } from "../../../utils/ButtonUtils";
+import { InputName } from "../../../utils/InputName";
 
 export const JinFormulario = () => {
-  const { usuario, handleSubmit, maxFromLimit, handleNameH } =
-    useRequestInfo();
+  const {
+    usuario,
+    handleSubmit,
+    maxFromLimitH,
+    handleNameH,
+    isMaxFromLimitReachedH,
+    charCountFrom,
+  } = useRequestInfo();
   const { name } = usuario;
   const { setShowModal } = useFish();
   const handleCloseModal = () => {
@@ -14,31 +21,33 @@ export const JinFormulario = () => {
     <div className=" flex justify-center items-center  fixed inset-10 z-10  flex-col text-white max-sm:text-xs">
       <div className=" z-50 px-10 py-4 max-sm:px-10 max-sm:py-10 w-96">
         <form
-          className="mt-5 font-PressGame backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col gap-4 sm:justify-center items-center text-white max-sm:text-xs "
+          className=" font-PressGame backdrop-blur-xl bg-black/50 rounded-xl p-4 flex flex-col sm:justify-center items-center text-white max-sm:text-xs "
           onSubmit={handleSubmit}
         >
           <label
-            className="flex float-start text-xs max-sm:text-[0.5rem] mb-2 text-white text-center uppercase font-bold justify-center pb-4 font-PressGame"
+            className="flex float-start text-xs max-sm:text-[0.5rem] text-white text-center uppercase font-bold justify-center font-PressGame"
             htmlFor="name"
           >
             Unlock the game by adding your name
           </label>
-          <input
+          <InputName
+            isMaxFromLimitReachedH={isMaxFromLimitReachedH}
+            charCountFrom={charCountFrom}
             id="name"
             name="name"
             value={name}
-            type="text"
-            placeholder="YOUR NAME"
-            maxLength={maxFromLimit}
             onChange={handleNameH}
-            className="w-full p-3 text-black  border border-gray-100 rounded-md text-[0.7rem] text-center max-sm:text-[0.5rem] "
+            maxLength={maxFromLimitH}
+            placeholder="YOUR NAME"
+            className=" text-sm text-center py-3"
+            placeholderColor="text-black text-xs"
+            maxLengthColor="text-white"
           />
           <ButtonUtils
             label={name ? "UNLOCKED" : "LOCK"}
             type="sumbit"
-            className=" w-full uppercase text-lg max-sm:text-[0.5rem] flex items-center"
-            bgColor="bg-blue-950"
-            textColor="text-white"
+            className=" w-full uppercase text-lg max-sm:text-[0.5rem] flex items-center bg-blue-950"
+            textColor="text-black"
             font=" font-PressGame "
             disabled={!name}
             disableColors="disabled:bg-opacity-25 disabled:cursor-not-allowed"

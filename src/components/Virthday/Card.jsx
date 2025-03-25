@@ -2,7 +2,6 @@ import useFlip from "../../hooks/useFlip";
 
 const Card = ({ item }) => {
   const { onCardClick, isFlipped } = useFlip();
-  
 
   return (
     <div
@@ -25,13 +24,13 @@ const Card = ({ item }) => {
             src={item.img}
             alt="virthday"
             className={`absolute inset-0 backface-hidden object-contain transition-colors ${
-              item.price === "wrong" ? "border-8 border-red-600" : "border-8 border-green-600"
+              item.price === "wrong"
+                ? "border-8 border-red-600"
+                : "border-8 border-green-600"
             }`}
           />
         </div>
       </div>
-      
-      
     </div>
   );
 };

@@ -7,3 +7,15 @@ export const options = [
   { id: 1, name: "Paper", emoji: paper, beats: [0] },
   { id: 2, name: "Siccors", emoji: siccors, beats: [1, 3] },
 ];
+
+
+export const membersBts = [
+  { name: "RM", emoji: "🐨" },
+  { name: "Jin", emoji: "🐹" },
+  { name: "Suga", emoji: "🐱" },
+  { name: "Jhope", emoji: "🦄" },
+  { name: "Jimin", emoji: "🐥" },
+  { name: "V", emoji: "🐯" },
+  { name: "Jungkook", emoji: "🐰" },
+  { name: "BTS", emoji: "🐰" },
+]

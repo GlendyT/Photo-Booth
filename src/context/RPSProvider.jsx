@@ -27,7 +27,7 @@ const RPSProvider = ({ children }) => {
   const [turns, setTurns] = useState(0);
   const [userWins, setUserWins] = useState(0);
   const [computerWins, setComputerWins] = useState(0);
-  const {handleResetContent} = useRequestInfo()
+  const { handleResetContent } = useRequestInfo();
   const maxTurns = 3;
 
   useEffect(() => {
@@ -81,11 +81,11 @@ const RPSProvider = ({ children }) => {
     setComputerWins(0);
     setDisabled(false);
   };
-  
+
   const resetAll = () => {
-    handleResetContent()
-    reset()
-  }
+    handleResetContent();
+    reset();
+  };
 
   return (
     <RPSContext.Provider
@@ -104,7 +104,7 @@ const RPSProvider = ({ children }) => {
         userWins,
         computerWins,
         setComputerMessage,
-        resetAll
+        resetAll,
       }}
     >
       {children}

@@ -19,7 +19,6 @@ const RequestInfoProvider = ({ children }) => {
   const [charCount, setCharCount] = useState(usuario.content.length || 0);
   const [charCountFrom, setCharCountFrom] = useState(usuario.name.length || 0);
   const maxCharLimit = 281;
-  const maxFromLimit = 31;
   const maxCharLimitH = 21;
   const maxFromLimitH = 16;
   const [currWord] = useState("hope");
@@ -81,14 +80,6 @@ const RequestInfoProvider = ({ children }) => {
   };
 
   // Maneja el conteo de caracteres en el input (From)
-  const handleName = (e) => {
-    const inputValue = e.target.value;
-    if (inputValue.length <= maxFromLimit) {
-      setCharCountFrom(inputValue.length);
-      usuarioGenerado(e);
-    }
-  };
-
   const handleContentH = (e) => {
     const inputValue = e.target.value;
     if (inputValue.length <= maxCharLimitH) {
@@ -108,7 +99,6 @@ const RequestInfoProvider = ({ children }) => {
 
   const isMaxCharLimitReached = charCount === maxCharLimit;
   const isMaxCharLimitReachedH = charCount === maxCharLimitH;
-  const isMaxFromLimitReached = charCountFrom === maxFromLimit;
   const isMaxFromLimitReachedH = charCountFrom === maxFromLimitH;
 
   const handleSubmit = (e) => {
@@ -206,7 +196,6 @@ const RequestInfoProvider = ({ children }) => {
         setCharCountFrom,
         isMaxCharLimitReached,
         isMaxCharLimitReachedH,
-        isMaxFromLimitReached,
         isMaxFromLimitReachedH,
         selectedMembers,
         setSelectedMembers,
@@ -222,7 +211,6 @@ const RequestInfoProvider = ({ children }) => {
         handleSubmit,
         handleContent,
         handleContentH,
-        handleName,
         handleNameH,
         generateWordDisplay,
         handleCorrectWord,

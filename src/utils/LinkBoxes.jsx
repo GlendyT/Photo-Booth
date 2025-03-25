@@ -59,13 +59,13 @@ export const links = [
     hoverBg: "hover:bg-btsgif4",
     label: "Fishing with KSJ",
   },
-  // {
-  //   to: "/piedra",
-  //   bg: "bg-v2logo ",
-  //   hoverBg: "hover:bg-btsgif5",
-  //   label: "Piedra",
-  // },
+  {
+    to: "/rps",
+    bg: "bg-rpslogo ",
+    hoverBg: "hover:bg-btsgif8",
+    label: "RPS",
+  },
 ];
 
 export const commonClasses =
-  "delay-150 hover:-translate-y-1 hover:scale-100 duration-700 px-36 max-md:px-24 py-36 max-md:py-14 bg-no-repeat bg-contain bg-center hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-3xl max-md:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,1)]";
+  "delay-150  duration-700 px-36 max-md:px-24 py-20 max-md:py-14 bg-no-repeat bg-contain bg-center hover:bg-cover hover:bg-center hover:bg-no-repeat hover:outline-4 hover:outline hover:outline-white hover:rounded-xl max-md:px-20 drop-shadow-[0_35px_35px_rgba(0,0,0,1)]";

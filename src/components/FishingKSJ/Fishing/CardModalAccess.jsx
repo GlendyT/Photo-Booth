@@ -1,7 +1,7 @@
 import useDownload from "../../../hooks/useDownload";
 import useFish from "../../../hooks/useFishing";
 import useRequestInfo from "../../../hooks/useRequestInfo";
-import card from "../assets/certificado2.webp";
+import card from "../assets/certificado2.png";
 
 export const CardModalAccess = () => {
   const { handleDownloadImage } = useDownload();
