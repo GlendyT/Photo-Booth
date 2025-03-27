@@ -2,6 +2,9 @@ import { createContext, useEffect, useState } from "react";
 
 import useImageCrop from "../hooks/useImageCrop";
 import { readFile } from "../components/Photobooth/cropImage";
+import { btsPersonalizedBG } from "../components/Photobooth/btsPersonalizedBG";
+import useRequestInfo from "../hooks/useRequestInfo";
+import { useNavigate } from "react-router-dom";
 
 const PhotoBoothContext = createContext();
 
@@ -90,7 +93,10 @@ const PhotoBoothProvider = ({ children }) => {
   const [changeColor, setChangeColor] = useState(false);
   const [imageSaved, setImageSaved] = useState(false);
   const [photo2Complete, setPhoto2Complete] = useState(false);
-  const {  setImage } = useImageCrop();
+  const [backgroundImage, setBackgroundImage] = useState(null);
+  const { setImage } = useImageCrop();
+  const { usuarioGenerado, setUsuario } = useRequestInfo();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (imageSaved) {
@@ -121,6 +127,19 @@ const PhotoBoothProvider = ({ children }) => {
     setImage(imageDataUrl);
     setOpenModal(true);
   };
+  const handleSelection = (event) => {
+    usuarioGenerado(event); // Actualiza el diseño seleccionado
+    const selectedMember = btsPersonalizedBG.find(
+      (member) => member.name === event.target.value
+    );
+    if (selectedMember) {
+      setBackgroundImage(selectedMember.image); // Pasa la imagen seleccionada
+
+      // Actualiza la URL con el nombre de la imagen
+      const imageName = selectedMember.image.split("/").pop().split(".")[0]; // Extrae el nombre de la imagen
+      navigate(`?style=${imageName}`, { replace: true });
+    }
+  };
 
   const resetPhotos = () => {
     setPreview1(null);
@@ -128,6 +147,9 @@ const PhotoBoothProvider = ({ children }) => {
     setPreview3(null);
     setChangeColor(false);
     setImageSaved(false);
+    setBackgroundImage(null);
+    setUsuario({ name: "", content: "", diseño: "", album: "", song: "" });
+    navigate("/photobooth", { replace: true });
   };
 
   useEffect(() => {
@@ -174,7 +196,10 @@ const PhotoBoothProvider = ({ children }) => {
         handleFileChangePhoto1,
         handleFileChangePhoto2,
         handleFileChangePhoto3,
-        resetPhotos
+        resetPhotos,
+        backgroundImage,
+        setBackgroundImage,
+        handleSelection,
       }}
     >
       {children}

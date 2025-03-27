@@ -69,6 +69,7 @@ module.exports = {
         //TODO: PHOTOBOOTH
         backphoto:
           "url('/src/components/PhotoBoothStrips/assetsBooth/photobooth_bg.avif')",
+        rmphotobooth: "url('/src/components/Photobooth/img/rm.png')",
 
         //TODO: BACKGROUND AND LOGOS
         dragimg: "url('/src/components/img/bg-upload.svg')",
