@@ -1,6 +1,6 @@
 import usePhotobooth from "../../hooks/usePhotobooth";
 
-const Photo1 = ({ handleFileChange, preview }) => {
+const Photo1 = ({ handleFileChange, preview, backgroundImage }) => {
   const { changeColor } = usePhotobooth();
   return (
     <div className="flex flex-col items-center ">
@@ -13,7 +13,7 @@ const Photo1 = ({ handleFileChange, preview }) => {
             src={preview}
             height={192}
             width={192}
-            className=" object-cover w-40 h-40 pb-2 max-sm:pb-2 max-sm:px-0 max-sm:w-40"
+            className={`object-cover h-40 pb-2 max-sm:px-0  w-40 `}
             alt="photoboothbts2"
           />
         ) : (
@@ -21,8 +21,8 @@ const Photo1 = ({ handleFileChange, preview }) => {
             className={`  bg-white cursor-grab ${
               changeColor === true
                 ? "  border-transparent bg-none"
-                : "w-40 h-40 max-sm:w-40 max-sm:h-36 border-x-4 border-purple-500"
-            } `}
+                : "w-40 h-40 max-sm:w-40 max-sm:h-36 border-x-4 "
+            } ${backgroundImage ? "border-dashed" : "border-purple-500"}`}
           >
             <h1
               className={`text-center ${

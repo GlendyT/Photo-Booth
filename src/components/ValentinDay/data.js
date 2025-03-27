@@ -18,12 +18,17 @@ export const btsImg = {
   jungkookflower,
 };
 
-const commonStylesDiv1 = " relative h-[500px] w-[400px] shadow-lg outline-none focus:outline-none bg-no-repeat bg-contain bg-center";
+const commonStylesDiv1 =
+  " relative h-[500px] w-[400px] shadow-lg outline-none focus:outline-none bg-no-repeat bg-contain bg-center";
 
-const commonTextStyles = " font-montserrat text-pink-400 text-xs font-bold absolute";
-const commonPStyles = "font-montserrat text-pink-400 font-bold text-xs absolute";
-const commontStyles = "font-montserrat text-pink-400 font-bold text-xs absolute";
-const commonfStyles = "font-montserrat text-pink-400 font-bold text-xs absolute";
+const commonTextStyles =
+  " font-montserrat text-pink-400 text-xs font-bold absolute";
+const commonPStyles =
+  "font-montserrat text-pink-400 font-bold text-xs absolute";
+const commontStyles =
+  "font-montserrat text-pink-400 font-bold text-xs absolute";
+const commonfStyles =
+  "font-montserrat text-pink-400 font-bold text-xs absolute";
 
 export const membersBts = {
   btsflower: {

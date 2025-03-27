@@ -2,25 +2,12 @@ import useRequestInfo from "../../hooks/useRequestInfo";
 export default function ListV() {
   const { usuario, usuarioGenerado } = useRequestInfo();
   const { diseño } = usuario;
- 
 
   return (
     <div>
       <div className="my-5">
-        <label className="text-sm mb-4 mt-6 text-white">  </label>
-
-        {/* <select
-          id="diseno"
-          name="diseño"
-          value={diseño}
-          placeholder="Select Your ArtWork"
-          onChange={usuarioGenerado}
-          className="shadow border rounded w-full py-2 px-3 text-gray-700  "
-        >
-        </select> */}
-
+        <label className="text-sm mb-4 mt-6 text-white"> </label>
         <div className=" flex flex-col gap-2 items-center justify-center ">
-
           <select
             id="diseno"
             name="diseño"
