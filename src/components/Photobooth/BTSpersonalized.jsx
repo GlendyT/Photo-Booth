@@ -3,7 +3,7 @@ import { btsPersonalizedBG } from "./btsPersonalizedBG";
 import useRequestInfo from "../../hooks/useRequestInfo";
 import usePhotobooth from "../../hooks/usePhotobooth";
 
-export const BTSpersonalized = ({ setBackgroundImage }) => {
+export const BTSpersonalized = () => {
   const { usuario } = useRequestInfo();
   const {handleSelection} = usePhotobooth()
   const { diseño } = usuario;

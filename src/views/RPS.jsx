@@ -16,7 +16,7 @@ export default function RPS() {
           
 
           {cargando ? <FormOponent /> : resultado && <CardRPS />}
-          {}
+      
         </div>
       </div>
     </div>

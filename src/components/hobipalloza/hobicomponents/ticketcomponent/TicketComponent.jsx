@@ -43,8 +43,12 @@ export default function TicketComponent() {
           }`}
         >
           <div className={`text-lg px-14 max-sm:text-md  }`}>Name:{name}</div>
-          <div className={`text-lg px-14 max-sm:text-md }`}>Country:{album}</div>
-          <div className={`text-lg px-14 max-sm:text-md }`}>Location:{song}</div>
+          <div className={`text-lg px-14 max-sm:text-md }`}>
+            Country:{album}
+          </div>
+          <div className={`text-lg px-14 max-sm:text-md }`}>
+            Location:{song}
+          </div>
         </div>
       </div>
     </div>

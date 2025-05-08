@@ -12,10 +12,9 @@ const FlipProvider = ({ children }) => {
   const [win, setWin] = useState(false);
   const [timeExpired, setTimeExpired] = useState(false); 
   const [showAccessModal, setShowAccessModal] = useState(false);
-  const { setShowModal } = useRequestInfo();
   const [restart, setRestart] = useState(false); 
   const [gameStarted, setGameStarted] = useState(false); 
-  const {setUsuario} = useRequestInfo();
+  const {setUsuario, setShowModal} = useRequestInfo();
 
 
 
@@ -36,6 +35,8 @@ const FlipProvider = ({ children }) => {
     setUsuario({ name: "", content: "", diseño: "", album: "", song: "" });
     
   };
+
+
   const handleStartGame = () => {
     setGameStarted(true);
     setRestart(false);
@@ -71,6 +72,8 @@ const FlipProvider = ({ children }) => {
       setTimeExpired(true);
     }
   }, [timer, gameStarted, gameOver]);
+
+  
   useEffect(() => {
     if (items.every((item) => item.price === "correct")) {
       const timeout = setTimeout(() => {

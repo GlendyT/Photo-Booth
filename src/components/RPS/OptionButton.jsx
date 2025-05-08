@@ -14,7 +14,11 @@ export default function OptionButton({
       onClick={() => handlePlay(option.id)}
       title={option.name}
     >
-      <img src={option.emoji} alt="rockpapersiccors4" className="w-20 max-md:w-10" />
+      <img
+        src={option.emoji}
+        alt="rockpapersiccors4"
+        className="w-20 max-md:w-10"
+      />
     </button>
   );
 }
