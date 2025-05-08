@@ -61,6 +61,8 @@ const RequestInfoProvider = ({ children }) => {
       return () => clearTimeout(timer); // Limpiar el temporizador al desmontar o cuando cambie el estado
     }
   }, [showErrorMessage]);
+
+  
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
   };

@@ -3,7 +3,7 @@ import usePhotobooth from "../../hooks/usePhotobooth";
 import { ButtonUtils } from "../../utils/ButtonUtils";
 
 const Button = () => {
-  const { resetPhotos, photo2Complete,backgroundImage } = usePhotobooth();
+  const { resetPhotos, photo2Complete, backgroundImage } = usePhotobooth();
   const { handleDownloadImage } = useDownload();
   const handleDownload = () => {
     handleDownloadImage();

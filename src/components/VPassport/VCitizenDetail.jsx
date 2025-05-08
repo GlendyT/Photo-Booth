@@ -1,9 +1,9 @@
-import { citiesVisited } from "./Cities.js";
+import { citiesVisited } from "./data/Cities.js";
 import rightSide from "./imgVPassport/Passport Image Generated Right Side.webp";
 import VCitizenDetailItem from "./VCitizenDetailItem.jsx";
 import VCitizenPage1 from "./VCitizenPage1.jsx";
 
-export const VCitizenDetail = ({name}) => {
+export const VCitizenDetail = ({ name }) => {
   const randomIndex = Math.floor(Math.random() * citiesVisited.length);
   const randomCity = citiesVisited[randomIndex];
   const { image, stamp } = randomCity;
@@ -19,13 +19,13 @@ export const VCitizenDetail = ({name}) => {
               alt="vpassport"
               className=" absolute inset-0 object-cover  w-full"
             />
-             <div className=" absolute inset-0 max-sm:hidden ">
+            <div className=" absolute inset-0 max-sm:hidden ">
               <img
                 src={stamp}
                 alt="vpassportstamp"
                 className="-rotate-90 relative pt-24 px-14 m-10 max-sm:pt-0 max-sm:m-0 max-sm:px-0 max-sm:w-14"
               />
-            </div> 
+            </div>
             <div className=" -rotate-90 flex flex-col mb-16 ">
               <p className="flex text-center font-michroma font-extrabold pb-4 text-xs uppercase max-sm:text-[9px] max-sm:pb-0">
                 Republic of ARMY

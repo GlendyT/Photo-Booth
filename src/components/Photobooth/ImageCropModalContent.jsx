@@ -1,8 +1,8 @@
-import { readFile } from './cropImage';
-import Button from './base/Button';
-import Cropper from '../Photobooth/cropper/Cropper';
-import { ZoomSlider } from '../Photobooth/cropper/Sliders';
-import useImageCrop from '../../hooks/useImageCrop';
+import { readFile } from "./cropImage";
+import Button from "./base/Button";
+import Cropper from "../Photobooth/cropper/Cropper";
+import { ZoomSlider } from "../Photobooth/cropper/Sliders";
+import useImageCrop from "../../hooks/useImageCrop";
 
 const ImageCropModalContent = ({ handleDone, handleClose }) => {
   const { setImage } = useImageCrop();
@@ -23,7 +23,7 @@ const ImageCropModalContent = ({ handleDone, handleClose }) => {
           </div>
         </div>
         <ZoomSlider className="mb-4" />
-        
+
         <input
           type="file"
           multiple

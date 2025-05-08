@@ -33,8 +33,6 @@ export const HangmanDrawing = () => {
             <VerticalLine key={index} />
           ))}
       </div>
-
-     
     </div>
   );
 };

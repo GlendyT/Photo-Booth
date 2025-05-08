@@ -25,10 +25,8 @@ const Photobooth = () => {
     handleFileChangePhoto2,
     handleFileChangePhoto3,
     backgroundImage,
-    setBackgroundImage,
   } = usePhotobooth();
   const { getProcessedImage, resetStates } = useImageCrop();
-  
 
   const handleDone = async () => {
     const avatar = await getProcessedImage();
@@ -45,12 +43,11 @@ const Photobooth = () => {
     resetStates();
     setOpenModal(false);
   };
-  
 
   return (
     <div className=" min-h-screen bg-backphoto bg-no-repeat bg-cover bg-center">
       <div className="flex flex-row gap-4 max-md:gap-1 items-center justify-center ">
-        <BTSpersonalized setBackgroundImage={setBackgroundImage} />
+        <BTSpersonalized />
         <div
           className={`pt-10  bg-center bg-no-repeat pb-4 relative object-cover ${
             backgroundImage ? "px-10 bg-transparent" : "px-2 bg-purple-500 "
@@ -103,5 +100,3 @@ const Photobooth = () => {
 };
 
 export default Photobooth;
-
-
