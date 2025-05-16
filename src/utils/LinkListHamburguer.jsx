@@ -24,6 +24,7 @@ export const LinkListHamburguer = [
     label: "Hobipalooza",
     font: "font-rock",
   },
+  
   // {
   //   path: "/bingo",
   //   name: "bingo",
@@ -65,6 +66,12 @@ export const LinkListHamburguer = [
     path: "/rps",
     name: "rps",
     label: "RPS",
+    font: "font-fuzzybubbles",
+  },
+    {
+    path: "/tictactoe",
+    name: "tictactoe",
+    label: "tictactoe",
     font: "font-fuzzybubbles",
   },
 ];
