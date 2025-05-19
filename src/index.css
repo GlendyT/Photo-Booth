@@ -286,7 +286,7 @@
   scrollbar-width: thin;
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   background-color: transparent;
   width: 1px;
 }
@@ -296,4 +296,42 @@
 }
 .scrollback-hidden::-webkit-scrollbar-thumb {
   background-color: transparent;
+}
+
+.test {
+  position: relative;
+  animation: test 20s infinite;
+  transition: all;
+}
+@keyframes test {
+  0% {
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    color: white;
+  }
+  25% {
+    background-color: #684a83;
+    top: 0px;
+    left: 150px;
+    color: #a279aa;
+  }
+  50% {
+    background-color: #6b0b3d;
+    top: 0%;
+    left: -150px;
+    color: #ca79ca;
+  }
+  75% {
+    background-color: #684a83;
+    top: 0%;
+    left: 150px;
+    color: #a279aa;
+  }
+  100% {
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    color: white;
+  }
 }

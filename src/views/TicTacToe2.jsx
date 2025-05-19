@@ -2,7 +2,7 @@ import Tic from "../components/TicTacToe/Tic";
 
 const TicTacToe2 = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-violet-200">
+    <div className="min-h-screen flex items-center justify-center bg-purple-950">
       <Tic />
     </div>
   );

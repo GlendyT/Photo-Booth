@@ -17,7 +17,8 @@ const TicTacToeContext = createContext();
 const arr = new Array(DIMENSIONS ** 2).fill(null);
 const board = new Board();
 
-const borderClass = "border border-gray-300"; // Reemplazo simple para `border` styled-components
+const borderClass =
+  "shadow-[0px_1px_6px_10px_rgba(147,_51,_234,_0.5)] border-purple-400 border-2 "; // Reemplazo simple para `border` styled-components
 
 const TicTacToeProvider = ({ children }) => {
   const squares = arr;
