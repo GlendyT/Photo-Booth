@@ -22,6 +22,8 @@ import { FlipProvider } from "./context/FlipProvider";
 import LoveNotes from "./views/LoveNotes";
 import RPS from "./views/RPS";
 import { RPSProvider } from "./context/RPSProvider";
+import TicTacToe2 from "./views/TicTacToe2";
+import { TicTacToeProvider } from "./context/TicTacToeProvider";
 
 export default function Router() {
   return (
@@ -73,6 +75,14 @@ export default function Router() {
                   <RPSProvider>
                     <RPS />
                   </RPSProvider>
+                }
+              />
+              <Route
+                path="/tictactoe"
+                element={
+                  <TicTacToeProvider>
+                    <TicTacToe2 />
+                  </TicTacToeProvider>
                 }
               />
             </Route>

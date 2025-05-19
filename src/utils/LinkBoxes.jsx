@@ -65,6 +65,12 @@ export const links = [
     hoverBg: "hover:bg-btsgif8",
     label: "RPS",
   },
+    {
+    to: "/tictactoe",
+    bg: "bg-rpslogo ",
+    hoverBg: "hover:bg-btsgif8",
+    label: "TicTacToe",
+  },
 ];
 
 export const commonClasses =
